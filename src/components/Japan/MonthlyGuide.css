@@ -1,0 +1,102 @@
+.mmg-wrapper {
+  background: #ffffff;
+  padding: 100px 20px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-align: center;
+}
+
+.mmg-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.mmg-subtitle {
+  color: #C09551;
+  font-size: 21px;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.mmg-title {
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+
+/* GRID */
+.mmg-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 25px;
+}
+
+/* CARD */
+.mmg-card {
+  background: #F5F4EF;
+  border: 1px solid #e6d3b6;
+  padding: 18px 10px;
+  transition: 0.3s ease;
+}
+
+.mmg-card h4 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.mmg-stars {
+  margin-bottom: 8px;
+}
+
+.mmg-star {
+  font-size: 12px;
+  color: #d6c3a2;
+  margin: 0 1px;
+}
+
+.mmg-star.filled {
+  color: #C09551;
+}
+
+.mmg-temp {
+  font-size: 13px;
+  text-align: center;
+  color: #555;
+  text-align: center;
+}
+
+/* HOVER EFFECT */
+.mmg-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .mmg-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .mmg-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .mmg-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mmg-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mmg-title {
+    font-size: 26px;
+  }
+}

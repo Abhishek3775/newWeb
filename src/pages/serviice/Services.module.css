@@ -1,0 +1,551 @@
+/* =====================================================
+   Services.module.css
+   Desktop : CSS Grid 2-col, images connect seamlessly
+   Mobile  : Each pair stacks — image top, content bottom
+   ===================================================== */
+
+*, *::before, *::after {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+
+
+
+.servicesPage {
+  width: 100%;
+  overflow-x: hidden;
+  background: #fff;
+}
+
+/* =====================================================
+   HERO
+   ===================================================== */
+.servicesHeroSection {
+  background-image: url("../../assets2/Services/image 1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  min-height: 500px;
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.servicesHeroOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.52);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.servicesHeroSubtitle {
+  color: #C09551;
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.servicesHeroTitle {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.servicesHeroTagline {
+  color: #C09551;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.servicesHeroDesc {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.88);
+  max-width: 620px;
+  margin-bottom: 32px;
+}
+
+.heroBtn {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.6);
+  padding: 10px 28px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 13px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+.heroBtn:hover { background: rgba(255,255,255,0.15); }
+
+.sArrow {
+  margin-top: 24px;
+  font-size: 24px;
+  color: rgba(255,255,255,0.7);
+  animation: bounce 1.6s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(6px); }
+}
+
+/* =====================================================
+   PILLARS
+   ===================================================== */
+.pillarsSection {
+  background: #f5f4ef;
+  text-align: center;
+  padding: 72px 24px;
+}
+.pillarsSection h2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 16px;
+}
+.pillarsSection p {
+  color: #555;
+  font-size: 15px;
+  max-width: 660px;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+/* =====================================================
+   SERVICES GRID
+   ===================================================== */
+.servicesGrid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 520px;
+  width: 100%;
+  gap: 0;
+}
+
+/* image LEFT, content RIGHT */
+.spImgLeft  .sgImage   { grid-column: 1; grid-row: 1; }
+.spImgLeft  .sgContent { grid-column: 2; grid-row: 1; }
+
+/* image RIGHT, content LEFT */
+.spImgRight .sgImage   { grid-column: 2; grid-row: 1; }
+.spImgRight .sgContent { grid-column: 1; grid-row: 1; }
+
+/* ── Image cell ─────────────────────────────────────── */
+.sgImage {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page1  { background-image: url("../../assets2/Services/2.png");  }
+.page2  { background-image: url("../../assets2/Services/3.jpg");  }
+.page3  { background-image: url("../../assets2/Services/4.jpg");  }
+.page4  { background-image: url("../../assets2/Services/5.jpg");  }
+.page5  { background-image: url("../../assets2/Services/6.jpg");  }
+.page6  { background-image: url("../../assets2/Services/7.jpg");  }
+.page7  { background-image: url("../../assets2/Services/8.jpg");  }
+.page8  { background-image: url("../../assets2/Services/9.jpg");  }
+.page9  { background-image: url("../../assets2/Services/10.jpg"); }
+
+/* ── Content cell ───────────────────────────────────── */
+.sgContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 56px 64px;
+  background: #fff;
+  height: 100%;
+  overflow-y: visible;
+}
+
+/* =====================================================
+   SHARED TEXT STYLES
+   ===================================================== */
+.serviceSubtitle {
+  color: #C09551;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.serviceTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.serviceDesc {
+  color: #444;
+  font-size: 14.5px;
+  line-height: 1.75;
+  margin-bottom: 22px;
+}
+
+.serviceList {
+  list-style: none;
+  font-size: 14px;
+  color: #222;
+  line-height: 2;
+  margin-bottom: 28px;
+}
+
+.serviceList li::before {
+  content: "• ";
+  color: #C09551;
+  font-weight: bold;
+}
+
+.viewBtn {
+  align-self: flex-start;
+  background: #C09551;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.25s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.viewBtn:hover { background: #C09551; color: #111; }
+
+/* =====================================================
+   STATS
+   ===================================================== */
+.statsSection {
+  background-color: #f8f7f3;
+  text-align: center;
+  padding: 80px 24px;
+}
+
+.statsTop {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px 80px;
+  margin-bottom: 72px;
+}
+.statsTop > div { min-width: 120px; }
+.statsTop h3 {
+  color: #C09551;
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.statsTop p {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #555;
+  text-transform: uppercase;
+}
+
+.statsIcons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 48px;
+  background: #fff;
+  padding: 60px 24px;
+  border-radius: 8px;
+  margin-bottom: 72px;
+}
+
+.icon {
+  display: flex;
+  color: #C09551;
+  height: 44px;
+  width: 44px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background: #f8f7f3;
+}
+
+.iconCard { width: 260px; text-align: center; }
+.iconCard h4 { font-size: 17px; font-weight: 600; color: #111; margin-bottom: 10px; }
+.iconCard p  { font-size: 14px; color: #555; line-height: 1.65; }
+
+.testimonial {
+  background: #f5f4ef;
+  padding: 56px 24px;
+  border-radius: 8px;
+  /* text-align: center; */
+}
+.stars { display: flex; justify-content: center; gap: 6px; margin-bottom: 20px; }
+.star  { color: #C09551; font-size: 18px; }
+.quote {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+  max-width: 680px;
+  margin: 0 auto 22px;
+  line-height: 1.8;
+}
+.author { font-size: 14px; color: #222; line-height: 1.6; text-align: center; }
+
+/* =====================================================
+   JOURNEY
+   ===================================================== */
+.journeySection {
+  background: #fff;
+  text-align: center;
+  padding: 60px 24px 0;
+}
+.journeySubtitle {
+  color: #C09551;
+  letter-spacing: 2px;
+  font-size: 21px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.journeyTitle {
+  font-size: 40px;
+  color: #111;
+  font-weight: 700;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+.journeyText {
+  color: #444;
+  font-size: 15px;
+  max-width: 580px;
+  margin: 0 auto 48px;
+  line-height: 1.75;
+}
+/* ================= CONTACT ================= */
+
+.journey-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  /* background-color: red; */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #131313;
+  font-size: 15px;
+  /* width: 300px;;
+  background-color: blue; */
+}
+
+.icon-box {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #d8d3cb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #131313;
+  transition: 0.3s ease;
+}
+
+.icon-box svg {
+  font-size: 16px;
+}
+
+.icon-box:hover {
+  border-color: #C09551;
+  color: #C09551;
+}
+
+.divider {
+  width: 1px;
+  height: 45px;
+  background: #d8d3cb;
+}
+.journeyBtn {
+  background: #C09551;
+  color: #fff;
+  border: none;
+  padding: 13px 36px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 60px;
+  transition: background 0.25s;
+}
+.journeyBtn:hover { background: #C09551; color: #111; }
+
+.partners {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 48px;
+  padding-bottom: 60px;
+}
+.partners img {
+  width: 80px;
+  opacity: 0.85;
+  filter: grayscale(100%) brightness(30%);
+}
+
+/* =====================================================
+   RESPONSIVE — Laptop (≤ 1024px)
+   ===================================================== */
+@media (max-width: 1024px) {
+  .servicesHeroTitle { font-size: 54px; }
+  .sp                { grid-template-rows: 460px; }
+  .sgContent         { padding: 44px 44px; }
+  .serviceTitle      { font-size: 26px; }
+  .serviceDesc       { font-size: 14px; }
+  .statsTop          { gap: 40px 60px; }
+  .journeyTitle      { font-size: 34px; }
+}
+
+/* =====================================================
+   RESPONSIVE — Tablet & Mobile (≤ 768px)
+   ===================================================== */
+@media (max-width: 768px) {
+  .servicesHeroTitle   { font-size: 42px; }
+  .servicesHeroTagline { font-size: 15px; }
+  .servicesHeroDesc    { font-size: 14px; }
+  .pillarsSection      { padding: 48px 20px; }
+  .pillarsSection h2   { font-size: 22px; }
+
+  .sp {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+  }
+
+  .sgImage {
+    order: 0;
+    width: 100%;
+    height: 280px;
+    min-height: 280px;
+    grid-column: unset;
+    grid-row: unset;
+  }
+
+  .sgContent {
+    order: 1;
+    height: auto;
+    overflow-y: visible;
+    padding: 36px 28px;
+    grid-column: unset;
+    grid-row: unset;
+  }
+
+  .serviceTitle { font-size: 22px; }
+  .serviceDesc  { font-size: 14px; }
+  .serviceList  { font-size: 14px; }
+
+  .statsTop   { gap: 28px 40px; }
+  .statsTop h3{ font-size: 28px; }
+  .statsIcons { flex-direction: column; align-items: center; gap: 36px; }
+  .icon       { margin: 0 auto 12px; }
+
+  .journeyTitle   { font-size: 28px; }
+  .journeyContact { gap: 18px; margin-bottom: 28px; }
+  .partners       { gap: 32px; }
+  .partners img   { width: 65px; }
+}
+
+/* =====================================================
+   RESPONSIVE — Mobile L (≤ 480px)
+   ===================================================== */
+@media (max-width: 480px) {
+  .servicesHeroSection  { height: 70vh; min-height: 420px; }
+  .servicesHeroTitle    { font-size: 32px; }
+  .servicesHeroSubtitle { font-size: 11px; }
+  .servicesHeroTagline  { font-size: 13px; }
+  .servicesHeroDesc     { font-size: 13px; }
+
+  .pillarsSection    { padding: 36px 16px; }
+  .pillarsSection h2 { font-size: 19px; }
+  .pillarsSection p  { font-size: 13.5px; }
+
+  .sgImage   { height: 240px; min-height: 240px; }
+  .sgContent { padding: 28px 18px; }
+
+  .serviceSubtitle { font-size: 10px; }
+  .serviceTitle    { font-size: 20px; margin-bottom: 10px; }
+  .serviceDesc     { font-size: 13.5px; margin-bottom: 16px; }
+  .serviceList     { font-size: 13px; margin-bottom: 18px; }
+  .viewBtn         { padding: 9px 18px; font-size: 12px; }
+
+  .statsSection { padding: 48px 16px; }
+  .statsTop     { gap: 18px 28px; }
+  .statsTop h3  { font-size: 24px; }
+  .statsTop p   { font-size: 11px; }
+  .statsIcons   { padding: 32px 16px; }
+  .iconCard     { width: 100%; max-width: 280px; }
+  .testimonial  { padding: 36px 16px; }
+  .quote        { font-size: 13.5px; }
+
+  .journeySection  { padding: 36px 16px 0; }
+  .journeyTitle    { font-size: 24px; }
+  .journeyText     { font-size: 13.5px; margin-bottom: 28px; }
+  .contactItem     { font-size: 13px; }
+  .journeyBtn      { padding: 10px 24px; font-size: 13px; margin-bottom: 44px; }
+  .partners img    { width: 54px; }
+}
+
+/* =====================================================
+   RESPONSIVE — Mobile M (≤ 390px)
+   ===================================================== */
+@media (max-width: 390px) {
+  .servicesHeroTitle { font-size: 26px; }
+  .sgImage   { height: 210px; min-height: 210px; }
+  .sgContent { padding: 24px 16px; }
+  .serviceTitle { font-size: 18px; }
+  .serviceDesc  { font-size: 13px; }
+  .statsTop h3  { font-size: 22px; }
+  .journeyTitle { font-size: 22px; }
+  .partners img { width: 46px; }
+}
+
+/* =====================================================
+   RESPONSIVE — Mobile S (≤ 320px)
+   ===================================================== */
+@media (max-width: 320px) {
+  .servicesHeroSection { height: 65vh; min-height: 360px; }
+  .servicesHeroTitle   { font-size: 22px; }
+  .sgImage   { height: 190px; min-height: 190px; }
+  .sgContent { padding: 20px 14px; }
+  .serviceTitle { font-size: 17px; }
+  .serviceDesc  { font-size: 12.5px; }
+  .viewBtn      { font-size: 11px; padding: 8px 14px; }
+  .statsTop h3  { font-size: 20px; }
+  .journeyTitle { font-size: 20px; }
+  .partners img { width: 42px; }
+}

@@ -1,0 +1,151 @@
+.b-j-section {
+  background: #f4f1eb;
+  padding: 100px 6%;
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.b-j-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Sub Heading */
+.b-j-sub {
+  color: #b68c3b;
+  text-align: center;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+/* Main Title */
+.b-j-title {
+  font-size: 42px;
+  font-weight: 500;
+  color: #2c2c2c;
+  margin-bottom: 20px;
+}
+
+/* Description */
+.b-j-desc {
+  color: #666;
+  font-size: 15px;
+  max-width: 750px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/* Contact Row */
+.b-j-contact-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.b-j-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+.b-j-icon {
+  font-size: 16px;
+  border: 1px solid black;
+  padding: 3px;
+  color: #444;
+}
+
+.divider {
+  width: 1px;
+  height: 22px;
+  background: #c9c9c9;
+}
+
+/* Buttons */
+.b-j-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.b-j-btn {
+  padding: 14px 30px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  transition: 0.3s ease;
+}
+
+/* Primary Gold Button */
+.b-j-btn.primary {
+  background: #b68c3b;
+  color: #fff;
+}
+
+.b-j-btn.primary:hover {
+  background: #a77e2f;
+}
+
+/* Secondary Outline Button */
+.b-j-btn.secondary {
+  background: transparent;
+  border: 1px solid #b68c3b;
+  color: #b68c3b;
+}
+
+.b-j-btn.secondary:hover {
+  background: #b68c3b;
+  color: #fff;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .b-j-title {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .b-j-section {
+    padding: 70px 5%;
+  }
+
+  .b-j-title {
+    font-size: 28px;
+  }
+
+  .b-j-contact-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .divider {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .b-j-title {
+    font-size: 24px;
+  }
+
+  .b-j-desc {
+    font-size: 14px;
+  }
+
+  .b-j-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

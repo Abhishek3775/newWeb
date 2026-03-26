@@ -1,0 +1,147 @@
+.visit-section {
+
+  padding: 80px 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.visit-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.visit-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.visit-header h2 {
+  font-size: 42px;
+  font-weight: 500;
+  color: #2b2b2b;
+  margin-bottom: 15px;
+}
+
+.visit-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Grid */
+.visit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* Card */
+.visit-card {
+  padding: 40px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #F5F4EE;;
+}
+
+.season-label {
+  font-size: 13px;
+  color: #c09551;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.visit-card h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #2b2b2b;
+}
+
+.visit-card p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #444;
+  /* background-color: red; */
+}
+
+.info-row span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* List */
+.visit-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+.visit-card ul li {
+  margin-bottom: 8px;
+  color: #444;
+  position: relative;
+  padding-left: 15px;
+}
+
+.visit-card ul li::before {
+  content: "›";
+  position: absolute;
+  left: 0;
+  color: #c09551;
+}
+
+/* Bottom */
+.best-for {
+  border-top: 1px solid #c09551;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #444;
+}
+
+.best-for span {
+  color: #c09551;
+  font-weight: 600;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .visit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visit-header h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .visit-card {
+    padding: 25px;
+  }
+
+  .visit-header h2 {
+    font-size: 26px;
+  }
+
+  .info-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

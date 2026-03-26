@@ -1,0 +1,116 @@
+/* ================= HERO SECTION ================= */
+
+.sah-hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+/* Background image */
+.sah-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dark overlay */
+.sah-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Content */
+.sah-hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 16px;
+  color: #ffffff;
+}
+
+/* Title */
+.sah-hero-title {
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #F5F4EF;
+}
+
+/* Subtitle */
+.sah-hero-subtitle {
+  margin-top: 16px;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Description */
+.sah-hero-description {
+  margin-top: 16px;
+  max-width: 700px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: center;
+  opacity: 0.6;
+}
+
+/* Stats */
+.sah-hero-stats {
+ display: flex;
+ margin-top: 20px;
+ 
+}
+
+.sah-stat-box h3 {
+  color: #C09551;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.sah-stat-box p {
+  margin-top: 8px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  opacity: 0.7;
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .sah-hero-title {
+    font-size: 4rem;
+  }
+
+  .sah-hero-description {
+    font-size: 1rem;
+  }
+
+  .sah-hero-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .sah-hero-title {
+    font-size: 5rem;
+  }
+
+  .sah-hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .sah-hero-description {
+    font-size: 1.05rem;
+  }
+}

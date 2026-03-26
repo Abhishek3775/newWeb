@@ -1,0 +1,110 @@
+
+.chx-hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  min-height: 520px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background Image */
+.chx-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Dark Overlay */
+.chx-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 2;
+}
+
+/* Content */
+.chx-hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 900px;
+  padding: 20px;
+  color: #ffffff;
+}
+
+/* Subtitle */
+.chx-hero-subtitle {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #C09551;
+  margin-bottom: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Title */
+.chx-hero-title {
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+/* Highlight */
+.chx-hero-highlight {
+  color: #C09551;
+  font-weight: 400;
+}
+
+/* Description */
+.chx-hero-description {
+  font-size: 16px;
+  /* max-width: 650px; */
+  margin: 0 auto;
+  opacity: 0.9;
+  line-height: 1.6;
+  text-align: center;
+
+
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .chx-hero-title {
+    font-size: 48px;
+  }
+
+  .chx-hero-description {
+    font-size: 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .chx-hero-wrapper {
+    height: 80vh;
+  }
+
+  .chx-hero-title {
+    font-size: 34px;
+  }
+
+  .chx-hero-subtitle {
+    font-size: 12px;
+  }
+
+  .chx-hero-description {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+}

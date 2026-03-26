@@ -1,0 +1,244 @@
+/* html , body {
+  overflow: hidden;
+} */
+.dates-section {
+  background: #f3f1ed;
+  padding: 80px 5%;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.sub-heading {
+  color: #b58b3e;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.main-heading {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.description {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  color: #555;
+  text-align: center;
+  font-size: 15px;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+}
+
+.legend2 {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.dot{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.dot.available { background: #f3f1ed; border: 1px solid #a17a32;}
+.dot.limited { background: #b98b3e; }
+.dot.sold { background: #111; }
+
+.available { background: #f3f1ed; }
+.limited { background: #b58b3e; }
+.sold { background: #f3f1ed; }
+
+/* Table */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+thead {
+  background: #b58b3e;
+  color: #fff;
+}
+
+th, td {
+  padding: 18px;
+  text-align: center;
+  font-size: 14px;
+}
+
+td:first-child {
+  text-align: left;
+}
+
+tbody tr {
+  border-bottom: 1px solid #eee;
+}
+
+.calendar-icon {
+  margin-right: 8px;
+  color: #b58b3e;
+}
+
+.tag {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 12px;
+  background: #f4e7c2;
+  padding: 4px 8px;
+  margin-left: 10px;
+  border-radius: 4px;
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.badge.available {
+  border: 1px solid #d4af37;
+  color: #b58b3e;
+}
+
+.badge.limited {
+  background: #b58b3e;
+  color: #fff;
+}
+
+.badge.sold {
+  border: 1px solid #000;
+  color: #000;
+}
+
+/* Buttons */
+.reserve-btn,
+.waitlist-btn {
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.reserve-btn {
+  background: #b58b3e;
+  color: #fff;
+}
+
+.waitlist-btn {
+  border: 1px solid #b58b3e;
+  background: transparent;
+  color: #b58b3e;
+}
+
+.reserve-btn:hover {
+  background: #a17a32;
+}
+
+.waitlist-btn:hover {
+  background: #b58b3e;
+  color: #fff;
+}
+
+/* Notes */
+.pricing-note {
+  background: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px ;
+  margin-top: 40px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.bottom-section {
+  margin-top: 40px;
+}
+
+.specialist-btn {
+  margin-top: 15px;
+  padding: 12px 24px;
+  background: #b58b3e;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.specialist-btn:hover {
+  background: #a17a32;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .main-heading {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  th, td {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .legend {
+    align-items: center;
+  }
+
+  .legend2 {
+    flex-direction: column;
+    align-items:flex-start ;
+    gap: 10px;
+  }
+
+  .main-heading {
+    font-size: 28px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .dates-section {
+    padding: 60px 4%;
+  }
+
+  .main-heading {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .dot{
+    align-items: flex-start;
+    
+  }
+
+  table {
+    min-width: 700px;
+  }
+}

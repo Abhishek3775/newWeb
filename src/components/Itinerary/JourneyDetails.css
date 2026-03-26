@@ -1,0 +1,227 @@
+.j-d-section {
+  background: #fff;
+  padding: 90px 6%;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.j-d-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================= HEADINGS ================= */
+
+.j-d-sub-heading {
+  text-align: center;
+  color: #b68c3b;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.j-d-main-heading {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: #2c2c2c;
+}
+
+.j-d-description {
+  text-align: center;
+  color: #666;
+  margin-bottom: 60px;
+  font-size: 14px;
+}
+
+/* ================= GRID ================= */
+
+.j-d-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+/* ================= FAQ SECTION ================= */
+
+.j-d-faq-title {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.faq-item {
+  border: 1px solid #d9cbb2;
+  background: #F5F4EF;
+  margin-bottom: 10px;
+}
+
+.faq-item.active {
+  background: #F5F4EF;
+  border: 1px solid #b68c3b;
+}
+
+.j-d-faq-question {
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.j-d-faq-answer {
+  padding: 18px;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+  border-top: 1px solid #d9cbb2;
+}
+
+/* Arrow */
+.arrow {
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+/* ================= RIGHT CARDS ================= */
+
+.j-d-card {
+  background: #fff;
+  border: 1px solid #d9cbb2;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.j-d-card h4 {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Travel Info Items */
+
+.j-d-info-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.j-d-info-item strong {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.j-d-info-item p {
+  font-size: 13px;
+  color: #666;
+}
+
+.j-d-icon {
+  font-size: 18px;
+  color: #b68c3b;
+  margin-top: 3px;
+}
+
+/* ================= DOWNLOAD ================= */
+
+.j-d-download-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f3f3f3;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  border: 1px solid #e0e0e0;
+}
+
+.j-d-download-item small {
+  color: #777;
+}
+
+/* ================= CONTACT BOX ================= */
+
+.j-d-contact-card {
+  background: #F5F4EF;
+  padding: 20px;
+  border: 1px solid #d9cbb2;
+}
+
+.j-d-contact-card h4 {
+  margin-bottom: 10px;
+}
+
+.j-d-contact-card p {
+  font-size: 13px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.j-d-contact-card button {
+  width: 100%;
+  background: #b68c3b;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.j-d-contact-card button:hover {
+  background: #a77e2f;
+}
+
+.j-d-contact-card small {
+  font-size: 12px;
+  color: #666;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .j-d-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .j-d-main-heading {
+    font-size: 30px;
+  }
+
+  .j-d-section {
+    padding: 60px 5%;
+  }
+}
+
+@media (max-width: 480px) {
+  .j-d-faq-question {
+    font-size: 13px;
+    word-spacing: normal;  /* add karo */
+    text-align: left;      /* add karo */
+  }
+
+  .j-d-info-item {
+    word-spacing: normal; 
+  }
+
+  .j-d-info-item p,
+  .j-d-info-item strong {
+    text-align: left;
+    word-spacing: normal;
+  }
+
+  .j-d-faq-answer {
+    font-size: 12px;
+    word-spacing: normal;
+    text-align: left;
+  }
+}

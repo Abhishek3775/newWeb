@@ -1,0 +1,83 @@
+/* ====================================
+   LUXURY BENEFITS SECTION (lux- prefix)
+==================================== */
+
+.lux-section-wrapper {
+  background-color: #F5F4EF;
+  padding: 80px 20px;
+}
+
+.lux-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.lux-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Card */
+.lux-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  transition: all 0.3s ease;
+}
+
+.lux-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Icon */
+.lux-icon-wrapper {
+  margin-bottom: 20px;
+}
+
+.lux-icon-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Title */
+.lux-card-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+/* Description */
+.lux-card-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .lux-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .lux-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lux-card {
+    padding: 30px 20px;
+  }
+
+  .lux-card-title {
+    font-size: 18px;
+  }
+}

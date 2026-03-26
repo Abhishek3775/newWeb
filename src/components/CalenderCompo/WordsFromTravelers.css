@@ -1,0 +1,103 @@
+/* ======================================
+   WORDS FROM TRAVELERS (wft- prefix)
+====================================== */
+
+.wft-section {
+  padding: 80px 20px;
+  background: #ffffff;
+}
+
+.wft-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.wft-heading {
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+.wft-heading span {
+  color: #C09551;
+}
+
+/* Grid Layout */
+.wft-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Card */
+.wft-card {
+  border: 1px solid #f5f4ef;
+  padding: 30px;
+  text-align: left;
+  background: #fafafa;
+  transition: all 0.3s ease;
+}
+
+.wft-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Stars */
+.wft-stars {
+  color: #C09551;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Review Text */
+.wft-review {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Author */
+.wft-author {
+  margin-top: 15px;
+}
+
+.wft-name {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 3px;
+  color: #222;
+}
+
+.wft-location {
+  font-size: 13px;
+  color: #C09551;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .wft-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .wft-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wft-heading {
+    font-size: 28px;
+  }
+
+  .wft-card {
+    padding: 20px;
+  }
+}

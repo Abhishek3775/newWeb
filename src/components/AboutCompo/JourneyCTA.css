@@ -1,0 +1,91 @@
+.journey-sec-wrapper {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 140px 20px;
+  text-align: center;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #fff;
+}
+
+.journey-sec-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.journey-sec-content {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  z-index: 2;
+}
+
+/* Title */
+.journey-sec-title {
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+/* Description */
+.journey-sec-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #f0f0f0;
+  margin-bottom: 35px;
+}
+
+/* Button */
+.journey-sec-btn {
+  padding: 14px 32px;
+  background: #C09551;
+  border: none;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.journey-sec-btn:hover {
+  background: #a87f43;
+  transform: translateY(-2px);
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 1024px) {
+  .journey-sec-title {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .journey-sec-wrapper {
+    padding: 100px 20px;
+  }
+
+  .journey-sec-title {
+    font-size: 28px;
+  }
+
+  .journey-sec-description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .journey-sec-title {
+    font-size: 22px;
+  }
+
+  .journey-sec-btn {
+    padding: 12px 24px;
+    font-size: 12px;
+  }
+}

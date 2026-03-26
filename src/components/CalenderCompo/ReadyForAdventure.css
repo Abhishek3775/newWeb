@@ -1,0 +1,123 @@
+/* ===================================
+   READY FOR ADVENTURE (rfa- prefix)
+=================================== */
+
+.rfa-section-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 100px 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Dark Overlay */
+.rfa-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* Content */
+.rfa-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  color: #ffffff;
+}
+
+/* Title */
+.rfa-title {
+  font-size: 42px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+/* Description */
+.rfa-description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 35px;
+  opacity: 0.9;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+/* Buttons Container */
+.rfa-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Primary Button */
+.rfa-btn-primary {
+  background-color: #C09551;
+  color: #ffffff;
+  padding: 12px 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.rfa-btn-primary:hover {
+  background-color: #a8793f;
+}
+
+/* Outline Button */
+.rfa-btn-outline {
+  background: transparent;
+  border: 1px solid #C09551;
+  color: #C09551;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.rfa-btn-outline:hover {
+  background: #C09551;
+  color: #ffffff;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .rfa-title {
+    font-size: 34px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .rfa-section-wrapper {
+    padding: 80px 20px;
+  }
+
+  .rfa-title {
+    font-size: 26px;
+  }
+
+  .rfa-description {
+    font-size: 14px;
+  }
+
+  .rfa-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .rfa-btn-primary,
+  .rfa-btn-outline {
+    width: 100%;
+  }
+}

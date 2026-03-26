@@ -1,0 +1,205 @@
+.vessel-stay-section {
+  background: #f9f8f5;
+  padding: 80px 20px;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  text-align: center;
+}
+
+.vessel-stay-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === Tabs === */
+.vessel-stay-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.vessel-stay-tabs button {
+  background: none;
+  border: 1px solid #c89c5d;
+  color: #c89c5d;
+  padding: 10px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.vessel-stay-tabs button.active,
+.vessel-stay-tabs button:hover {
+  background: #c89c5d;
+  color: #fff;
+}
+
+/* === Suite Cards === */
+.vessel-stay-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.vessel-suite-card {
+  background: #fff;
+  border: 1px solid #e5decf;
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.vessel-suite-card:hover {
+  transform: translateY(-4px);
+}
+
+.vessel-suite-image-wrapper {
+  position: relative;
+}
+
+.vessel-suite-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.vessel-suite-size {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #00000099;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.vessel-suite-content {
+  padding: 20px;
+}
+
+.vessel-suite-title {
+  font-size: 22px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.vessel-suite-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px;
+}
+
+.vessel-suite-features li {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.vessel-suite-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.vessel-suite-price {
+  color: #222;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.vessel-suite-link {
+  color: #c89c5d;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 500;
+  background:none;
+  border: none;
+}
+
+.vessel-suite-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* === Amenities === */
+.vessel-amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.vessel-amenity-card {
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  padding: 25px 20px;
+  transition: all 0.3s ease;
+}
+
+.vessel-amenity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.vessel-amenity-icon {
+  color: #c89c5d;
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.vessel-amenity-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.vessel-amenity-desc {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .vessel-stay-tabs {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .vessel-suite-image {
+    height: 200px;
+  }
+
+  .vessel-suite-content {
+    padding: 15px;
+  }
+
+  .vessel-suite-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vessel-suite-image {
+    height: 180px;
+  }
+
+  .vessel-suite-title {
+    font-size: 1rem;
+  }
+
+  .vessel-amenity-card {
+    padding: 20px;
+  }
+}

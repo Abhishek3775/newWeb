@@ -1,0 +1,89 @@
+.awards {
+  padding: 100px 6%;
+  background-color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== HEADER ===== */
+.awards-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 70px;
+}
+
+.awards-header h2 {
+  font-size: 2.6rem;
+  font-weight: 400;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.awards-header p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ===== GRID ===== */
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 22px;
+}
+
+/* ===== CARD ===== */
+.award-card {
+  background: #f7f6f2;
+  padding: 30px 18px;
+  text-align: center;
+}
+
+.award-icon {
+  font-size: 1.8rem;
+  color: #caa15a;
+  margin-bottom: 10px;
+}
+
+.award-year {
+  font-size: 0.75rem;
+  color: #caa15a;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.award-card h3 {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #222;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.award-card p {
+  font-size: 0.75rem;
+  color: #777;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 992px) {
+  .awards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 576px) {
+  .awards {
+    padding: 80px 5%;
+  }
+
+  .awards-header h2 {
+    font-size: 2rem;
+  }
+
+  .awards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

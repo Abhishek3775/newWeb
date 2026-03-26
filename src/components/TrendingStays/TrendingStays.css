@@ -1,0 +1,141 @@
+.stays {
+  padding: 100px 6%;
+  background-color: #f7f6f2;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== HEADER ===== */
+.stays-header {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 70px;
+}
+
+.stays-header .tag {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #caa15a;
+  font-weight: 600;
+}
+
+.stays-header h2 {
+  font-size: 2.6rem;
+  font-weight: 400;
+  margin: 14px 0;
+  color: #111;
+}
+
+.stays-header p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* ===== GRID ===== */
+.stays-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ===== CARD ===== */
+.stay-card {
+  position: relative;
+  height: 280px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* ===== WHITE TAG (TOP) ===== */
+.stay-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: #ffffff;
+  color: #caa15a;
+  font-size: 0.65rem;
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* ===== OVERLAY ===== */
+.stay-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 18px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0)
+  );
+  color: #fff;
+}
+
+.stay-overlay .location {
+  font-size: 0.7rem;
+  letter-spacing: 1.4px;
+  opacity: 0.85;
+  text-transform: uppercase;
+}
+
+.stay-overlay h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+/* ===== BUTTON ===== */
+.stays-btn-wrapper {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.stays-btn {
+  background: #caa15a;
+  color: #000;
+  border: none;
+  padding: 14px 30px;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.stays-btn:hover {
+  background: #b8954f;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 992px) {
+  .stays-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stay-card {
+    height: 260px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 576px) {
+  .stays {
+    padding: 80px 5%;
+  }
+
+  .stays-header h2 {
+    font-size: 2rem;
+  }
+
+  .stays-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stay-card {
+    height: 220px;
+  }
+}

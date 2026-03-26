@@ -1,0 +1,134 @@
+/* ================= WRAPPER ================= */
+
+.re-wrapper {
+  background: #F5F4EF;
+  padding: 120px 20px;
+  text-align: center;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ================= CONTAINER ================= */
+
+.re-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* ================= TEXT ================= */
+
+.re-subtitle {
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: #C09551;
+  margin-bottom: 15px;
+}
+
+.re-title {
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.re-description {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.re-note {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 40px;
+}
+
+/* ================= CONTACT ================= */
+
+.re-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.re-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #444;
+}
+
+.re-icon {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.re-divider {
+  width: 1px;
+  height: 40px;
+  background: #ccc;
+}
+
+/* ================= BUTTON ================= */
+
+.re-button {
+  background: #C09551;
+  color: #fff;
+  border: none;
+  padding: 18px 50px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.re-button:hover {
+  background: #a97d3f;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  .re-title {
+    font-size: 34px;
+  }
+
+  .re-description {
+    font-size: 14px;
+  }
+
+  .re-contact {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .re-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .re-wrapper {
+    padding: 80px 15px;
+  }
+
+  .re-title {
+    font-size: 26px;
+  }
+
+  .re-button {
+    width: 100%;
+    padding: 16px;
+  }
+}

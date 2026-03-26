@@ -1,0 +1,127 @@
+/* =====================================
+   DISCOVER MORE SECTION
+   Accent: #C09551
+===================================== */
+
+.dm-section {
+  background: #f5f4ef;
+  padding: 100px 20px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.dm-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Heading */
+.dm-heading {
+  text-align: center;
+  color: #C09551;
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin-bottom: 60px;
+}
+
+/* Grid Layout */
+.dm-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Card */
+.dm-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.dm-card img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+/* Hover Zoom */
+.dm-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Overlay */
+.dm-overlay {
+  position: absolute;
+  inset: 0;
+  /* background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.2)
+  ); */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 25px;
+  color: #ffffff;
+}
+
+.dm-overlay h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.dm-overlay p {
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .dm-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dm-card img {
+    height: 380px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .dm-section {
+    padding: 70px 15px;
+  }
+
+  .dm-heading {
+    font-size: 26px;
+  }
+
+  .dm-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dm-card img {
+    height: 350px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .dm-card img {
+    height: 300px;
+  }
+
+  .dm-overlay h3 {
+    font-size: 18px;
+  }
+
+  .dm-overlay p {
+    font-size: 13px;
+  }
+}

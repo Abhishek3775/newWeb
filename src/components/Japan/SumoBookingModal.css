@@ -1,0 +1,194 @@
+/* ================= OVERLAY ================= */
+
+.sbm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 40px;
+}
+
+/* ================= MODAL ================= */
+
+.sbm-modal {
+  background: #ffffff;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 80vh;              /* Reduced height */
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ================= CLOSE BUTTON ================= */
+
+.sbm-close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* ================= LEFT IMAGE ================= */
+
+.sbm-left {
+  max-height: 80vh;
+}
+
+.sbm-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.sbm-right {
+  padding: 35px 40px;         /* Reduced padding */
+  overflow-y: auto;           /* Scroll inside */
+}
+
+.sbm-right h2 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+/* ================= FORM ================= */
+
+.sbm-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;                 /* Reduced spacing */
+}
+
+.sbm-row {
+  display: flex;
+  gap: 12px;
+}
+
+.sbm-row input,
+.sbm-row select,
+.sbm-form textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+  background: #fafafa;
+}
+
+.sbm-row input:focus,
+.sbm-row select:focus,
+.sbm-form textarea:focus {
+  border-color: #C09551;
+  background: #fff;
+}
+
+/* ================= TEXTAREA ================= */
+
+.sbm-form textarea {
+  min-height: 90px;          /* Reduced height */
+  resize: none;
+}
+
+/* ================= CHECKBOX ================= */
+
+.sbm-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  color: #555;
+}
+
+.sbm-checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ================= SUBMIT BUTTON ================= */
+
+.sbm-submit {
+  background: #C09551;
+  border: none;
+  padding: 13px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 5px;
+}
+
+.sbm-submit:hover {
+  background: #a77c3f;
+}
+
+/* ================= SCROLLBAR STYLE ================= */
+
+.sbm-right::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sbm-right::-webkit-scrollbar-thumb {
+  background: #C09551;
+  border-radius: 4px;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .sbm-modal {
+    grid-template-columns: 1fr;
+    max-height: 90vh;
+  }
+
+  .sbm-left {
+    height: 220px;
+  }
+
+  .sbm-right {
+    padding: 25px;
+  }
+
+  .sbm-row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .sbm-overlay {
+    padding: 20px;
+  }
+
+  .sbm-right h2 {
+    font-size: 20px;
+  }
+
+  .sbm-submit {
+    font-size: 13px;
+    padding: 12px;
+  }
+}

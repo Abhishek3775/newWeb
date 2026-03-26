@@ -1,0 +1,129 @@
+.redefine-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: #f5f4ef;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.redefine-content {
+  flex: 0.5;
+  min-width: 320px;
+  max-width: 550px;
+  margin-left: 130px;
+  font-size: 13px;
+
+}
+
+.redefine-image {
+  flex: 0.4;
+  width: 200px;
+  height: 560px;
+  /* background-image: url("../../../assets2/Services/aviation/2.jpg"); */
+  background-image: url("../assets2/Services/aviation/2.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 3px;
+}
+
+/* Text styles */
+.redefine-subtitle {
+  color: #b58a2f;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.redefine-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+.redefine-desc {
+  color: #444;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.redefine-list {
+  list-style: none;
+  margin: 25px 0 45px;
+}
+
+.redefine-list li {
+  font-size: 16px;
+  color: #333;
+  line-height: 2;
+  position: relative;
+  padding-left: 25px;
+}
+
+.redefine-list li::before {
+  content: "✓";
+  color: #b58a2f;
+  position: absolute;
+  left: 0;
+}
+
+/* Trusted box */
+.trusted-box {
+  background: #fff;
+  /* border-left: 3px solid #b58a2f; */
+  padding: 15px 20px;
+  border-radius: 3px;
+  width: fit-content;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  left: 840px;
+  top: 1490px;
+}
+
+.trusted-title {
+  color: #b58a2f;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.trusted-text {
+  font-size: 13.5px;
+  color: #444;
+  margin-top: 4px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+  .redefine-title {
+    font-size: 34px;
+  }
+
+  .redefine-image {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .redefine-section {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 60px 5%;
+  }
+
+  .redefine-content {
+    max-width: 100%;
+  }
+
+  .redefine-image {
+    width: 100%;
+    height: 320px;
+    margin-bottom: 40px;
+  }
+
+  .trusted-box {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,146 @@
+/* ===== SECTION BACKGROUND ===== */
+.essential-section {
+  background-color: #d7d3cc;
+  padding: 90px 20px;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== HEADINGS ===== */
+.sub-heading {
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #C09551;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.main-heading {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 400;
+  color: #2b2b2b;
+  margin-bottom: 60px;
+}
+
+/* ===== GRID LAYOUT ===== */
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 35px;
+}
+
+/* ===== LEFT INFO GRID ===== */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.info-card {
+  background-color: #ffffff;
+  padding: 15px;
+  min-height: 120px;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-card h4 {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #C09551;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.info-card p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* ===== RIGHT TIPS ===== */
+.tips-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.tips-card {
+  background-color: #ffffff;
+  padding: 26px;
+  /* background-color: red; */
+}
+
+/* ===== TIPS HEADINGS ===== */
+.tips-card h4 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #111;
+}
+
+.tips-card h4 img {
+  width: 18px;
+  height: 18px;
+}
+
+/* ===== LIST RESET ===== */
+.tips-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ===== LIST ITEM ALIGNMENT ===== */
+.tips-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Arrow icon */
+.tips-card li img {
+  width: 14px;
+  height: 14px;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+/* Text span */
+.tips-card li span {
+  flex: 1;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .grid-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 32px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}

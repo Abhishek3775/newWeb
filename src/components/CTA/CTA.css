@@ -1,0 +1,64 @@
+.cta {
+  padding: 100px 6%;
+  text-align: center;
+  background-color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Heading */
+.cta h2 {
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #111;
+  margin-bottom: 14px;
+}
+
+/* Description */
+.cta p {
+  font-size: 0.95rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+/* Button */
+.cta-btn {
+  background: #caa15a;
+  color: #000;
+  border: none;
+  padding: 14px 34px;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  background: #b8954f;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .cta h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .cta {
+    padding: 80px 5%;
+  }
+
+  .cta h2 {
+    font-size: 2rem;
+  }
+
+  .cta p {
+    font-size: 0.9rem;
+  }
+
+  .cta-btn {
+    padding: 12px 28px;
+  }
+}

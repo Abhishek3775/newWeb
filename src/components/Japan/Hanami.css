@@ -1,0 +1,207 @@
+/* =============================== */
+/* JAPAN HANAMI SECTION */
+/* =============================== */
+
+.japan-hanami-section {
+  background-color: #ffffff;
+  padding: 100px 20px;
+  box-sizing: border-box;
+}
+
+/* Container */
+.japan-hanami-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #f5f4ef;
+  padding: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* ================= LEFT ================= */
+
+.japan-hanami-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.japan-hanami-subtitle {
+  color: #b58b45;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.japan-hanami-title {
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 400;
+  margin: 12px 0 22px;
+  color: #1f1f1f;
+}
+
+.japan-hanami-description {
+  font-size: 16px;
+  color: #444;
+  max-width: 540px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* Tags */
+.japan-hanami-tags {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.japan-hanami-tags span {
+  background: #ffffff;
+  padding: 10px 18px;
+  font-size: 14px;
+  color: #555;
+  border-radius: 4px;
+  border: 1px solid #e6dfd3;
+}
+
+/* ================= RIGHT ================= */
+
+.japan-hanami-right {
+  flex: 0 0 320px;
+  display: flex;
+  justify-content: center;
+}
+
+.japan-hanami-date-card {
+  background: #ffffff;
+  padding: 45px 35px;
+  text-align: center;
+  border: 1px solid #e0d9cc;
+  width: 100%;
+}
+
+.japan-hanami-date-card h2 {
+  font-size: 30px;
+  color: #b58b45;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+.japan-hanami-divider {
+  width: 40px;
+  height: 2px;
+  background: #b58b45;
+  margin: 0 auto 18px;
+}
+
+.japan-hanami-date-card p {
+  font-size: 14px;
+  color: #444;
+}
+
+/* ================= BUTTON ================= */
+
+.japan-hanami-button-wrapper {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.japan-hanami-button {
+  background: #b58b45;
+  color: #ffffff;
+  padding: 16px 42px;
+  border: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.japan-hanami-button:hover {
+  background: #a17935;
+  transform: translateY(-2px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Large Screens */
+@media (min-width: 1600px) {
+  .japan-hanami-container {
+    padding: 90px;
+  }
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+  .japan-hanami-container {
+    padding: 60px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .japan-hanami-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px;
+  }
+
+  .japan-hanami-right {
+    width: 100%;
+  }
+
+
+
+  .japan-hanami-date-card {
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .japan-hanami-tags {
+    justify-content: center;
+  }
+}
+
+/* Mobile Large */
+@media (max-width: 768px) {
+  .japan-hanami-section {
+    padding: 70px 20px;
+  }
+
+  .japan-hanami-container {
+    padding: 40px 25px;
+    gap: 40px;
+  }
+
+  .japan-hanami-description {
+    font-size: 15px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .japan-hanami-section {
+    padding: 60px 15px;
+  }
+
+  .japan-hanami-container {
+    padding: 30px 20px;
+  }
+
+  .japan-hanami-title {
+    font-size: 28px;
+  }
+
+  .japan-hanami-description {
+    font-size: 14px;
+  }
+
+  .japan-hanami-button {
+    width: 100%;
+    max-width: 280px;
+  }
+}

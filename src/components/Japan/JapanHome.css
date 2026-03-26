@@ -1,0 +1,145 @@
+/* ========================= */
+/* JAPAN HERO SECTION */
+/* ========================= */
+
+.japan-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Overlay */
+.japan-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* Content Wrapper */
+.japan-hero-inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #ffffff;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Subtitle */
+.japan-hero-subtitle {
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+  text-align: center;
+}
+
+/* Title */
+.japan-hero-title {
+  font-size: clamp(40px, 8vw, 110px);
+  font-weight: 300;
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+
+/* Description */
+.japan-hero-description {
+  font-size: clamp(14px, 2vw, 18px);
+  line-height: 1.8;
+  /* max-width: 650px; */
+  margin: 0 auto 50px auto;
+  opacity: 0.9;
+  text-align: center;
+
+}
+
+/* Button Wrap */
+.japan-hero-button-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+/* Button */
+.japan-hero-button {
+  background: #C09551;
+  color: #F5F4EF;
+  border: none;
+  padding: 18px 48px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.japan-hero-button:hover {
+  background: #a67d3f;
+  transform: translateY(-2px);
+}
+
+/* ========================= */
+/* RESPONSIVE BREAKPOINTS */
+/* ========================= */
+
+/* Large Screens */
+@media (min-width: 1600px) {
+  .japan-hero-title {
+    font-size: 120px;
+  }
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+  .japan-hero-section {
+    min-height: 90vh;
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .japan-hero-section {
+    min-height: 85vh;
+  }
+
+  .japan-hero-description {
+    margin-bottom: 40px;
+  }
+}
+
+/* Mobile Large */
+@media (max-width: 768px) {
+  .japan-hero-section {
+    min-height: 75vh;
+  }
+
+  .japan-hero-button {
+    padding: 16px 36px;
+  }
+}
+
+/* Mobile Small */
+@media (max-width: 480px) {
+  .japan-hero-section {
+    min-height: 70vh;
+  }
+
+  .japan-hero-subtitle {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .japan-hero-button {
+    width: 100%;
+    max-width: 280px;
+  }
+}

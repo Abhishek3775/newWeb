@@ -1,0 +1,202 @@
+/* ================= SECTION ================= */
+
+.saus-section {
+  padding: 80px 5%;
+  background: #f3f3f3;
+}
+
+.saus-container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* ================= HEADER ================= */
+
+.saus-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.saus-header h2 {
+  font-size: 38px;
+  font-weight: 400;
+  color: #333;
+  flex: 1;
+}
+
+.saus-header p {
+  max-width: 420px;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  text-align: right;
+}
+
+/* ================= SLIDER ================= */
+
+.saus-slider-wrapper {
+  position: relative;
+}
+
+/* .saus-card {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 4px;
+} */
+
+.saus-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;   /* uniform ratio */
+  overflow: hidden;
+}
+
+.saus-card img {
+  width: 100%;
+  height: 100%;
+
+  /* width: 878px;
+height: 1232px; */
+  object-fit: cover;
+
+}
+
+/* TEXT OVERLAY */
+
+.saus-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  color: #fff;
+}
+
+.saus-text h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.saus-text p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ================= ARROWS ================= */
+
+.saus-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #999;
+  background: #fff;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.saus-arrow:hover {
+  background: #C09551;
+  color: #fff;
+  border-color: #C09551;
+}
+
+.saus-prev {
+  left: -25px;
+}
+
+.saus-next {
+  right: -25px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Large Desktop */
+@media (max-width: 1400px) {
+  .saus-card {
+    height: 550px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+  .saus-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .saus-header p {
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .saus-card {
+    height: 480px;
+  }
+
+  .saus-prev {
+    left: -15px;
+  }
+
+  .saus-next {
+    right: -15px;
+  }
+}
+
+/* Small Tablet */
+@media (max-width: 768px) {
+
+  .saus-section {
+    padding: 60px 5%;
+  }
+
+  .saus-card {
+    height: 420px;
+  }
+
+  .saus-arrow {
+    display: none; /* hide arrows on mobile */
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+
+  .saus-header h2 {
+    font-size: 26px;
+  }
+
+  .saus-card {
+    height: 350px;
+  }
+
+  .saus-text {
+    padding: 18px;
+  }
+
+  .saus-text h3 {
+    font-size: 16px;
+  }
+
+  .saus-text p {
+    font-size: 13px;
+  }
+}

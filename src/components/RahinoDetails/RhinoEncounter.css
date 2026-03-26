@@ -1,0 +1,159 @@
+/* WRAPPER */
+.encounter-wrapper {
+  width: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ================= TOP SECTION ================= */
+
+.encounter-top {
+  background: #ffffff;
+  padding: 100px 5%;
+}
+
+.encounter-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+/* LEFT SIDE */
+.encounter-left {
+  flex: 1;
+}
+
+.encounter-left h2 {
+  font-size: 40px;
+  font-weight: 300;
+  color: #131313;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.accent-line {
+  width: 60px;
+  height: 2px;
+  background: #C09551;
+}
+
+/* RIGHT SIDE */
+.encounter-right {
+  flex: 1.2;
+}
+
+.main-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #131313;
+  margin-bottom: 40px;
+}
+
+/* QUOTE BOX */
+.quote-box {
+  border-left: 3px solid #C09551;
+  padding-left: 25px;
+}
+
+.quote-box p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #131313;
+  margin-bottom: 10px;
+}
+
+.quote-box span {
+  font-size: 13px;
+  color: #555;
+}
+
+/* ================= STATS SECTION ================= */
+
+.encounter-stats {
+  background: #F5F4EF;
+  padding: 70px 5%;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+
+/* STAT ITEM */
+.stat-item h3 {
+  font-size: 28px;
+  color: #C09551;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.stat-item h4 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #131313;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .encounter-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .encounter-left h2 {
+    font-size: 32px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .encounter-top {
+    padding: 70px 6%;
+  }
+
+  .encounter-left h2 {
+    font-size: 26px;
+  }
+
+  .main-text {
+    font-size: 14px;
+  }
+
+  .quote-box p {
+    font-size: 16px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .encounter-stats {
+    padding: 60px 6%;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .accent-line {
+    width: 40px;
+  }
+
+  .stat-item h3 {
+    font-size: 22px;
+  }
+}

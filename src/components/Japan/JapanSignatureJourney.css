@@ -1,0 +1,155 @@
+/* ================= SECTION ================= */
+
+.japan-signature-section {
+  background: #f8f6f3;
+  padding: 90px 6% 120px;
+  position: relative;
+}
+
+/* HEADER */
+.japan-signature-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.japan-signature-header h2 {
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.japan-signature-header p {
+  max-width: 380px;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* CARD */
+.japan-signature-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.japan-signature-card:hover{
+  cursor: pointer;
+}
+
+/* IMAGE */
+.japan-signature-image {
+  position: relative;
+  height: 560px;
+  overflow: hidden;
+}
+
+.japan-signature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* NIGHT BADGE */
+.japan-signature-nights {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #fff;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+/* OVERLAY */
+.japan-signature-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 24px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+  color: #fff;
+}
+
+.japan-signature-locations {
+  font-size: 12px;
+  color: #C09551;
+}
+
+.japan-signature-overlay h3 {
+  font-size: 18px;
+  margin: 6px 0;
+  font-weight: 400;
+}
+
+.japan-signature-overlay p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* FOOTER */
+.japan-signature-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 2px;
+  margin-top: 10px;
+}
+
+.japan-signature-price {
+  font-size: 13px;
+}
+
+.japan-signature-view {
+  font-size: 12px;
+  color: #C09551;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* NAV BUTTONS */
+.japan-signature-nav {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 16px;
+}
+
+.japan-signature-nav button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+  .japan-signature-image {
+    height: 480px;
+  }
+
+  .japan-signature-header {
+    flex-direction: column;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+  .japan-signature-section {
+    padding: 70px 20px 110px;
+  }
+
+  .japan-signature-image {
+    height: 380px;
+  }
+}

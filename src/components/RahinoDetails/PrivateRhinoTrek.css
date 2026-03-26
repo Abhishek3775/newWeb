@@ -1,0 +1,178 @@
+/* SECTION */
+.private-section {
+  width: 100%;
+  padding: 80px 5%;
+  background: #ffffff;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* CONTAINER */
+.private-container {
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+  gap: 50px;
+  align-items: stretch;
+}
+
+/* ================= IMAGE SIDE ================= */
+
+.private-image-wrapper {
+  flex: 1;
+  position: relative;
+}
+
+.private-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* PRICE BADGE */
+.price-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #ffffff;
+  padding: 10px 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-size: 12px;
+}
+
+.price-badge .from {
+  display: block;
+  font-size: 10px;
+  color: #C09551;
+  margin-bottom: 3px;
+  letter-spacing: 1px;
+}
+
+.price-badge .price {
+  font-weight: 500;
+  color: #131313;
+}
+
+/* ================= CONTENT SIDE ================= */
+
+.private-content {
+  flex: 1;
+  background: #F5F4EF;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.private-label {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #C09551;
+  margin-bottom: 10px;
+}
+
+.private-content h2 {
+  font-size: 28px;
+  font-weight: 400;
+  color: #131313;
+  margin-bottom: 20px;
+}
+
+.private-description {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* INFO ROW */
+.private-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 13px;
+  color: #131313;
+  margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.private-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn-outline {
+  padding: 12px 28px;
+  border: 1px solid #C09551;
+  background: transparent;
+  color: #C09551;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #C09551;
+  color: #ffffff;
+}
+
+.btn-filled {
+  padding: 12px 28px;
+  border: none;
+  background: #C09551;
+  color: #ffffff;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-filled:hover {
+  background: #a67d3f;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .private-container {
+    flex-direction: column;
+  }
+
+  .private-image-wrapper {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .private-content {
+    padding: 35px;
+  }
+
+  .private-content h2 {
+    font-size: 22px;
+  }
+
+  .private-description {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .private-section {
+    padding: 60px 5%;
+  }
+
+  .private-content {
+    padding: 25px;
+  }
+
+  .private-buttons {
+    flex-direction: column;
+  }
+
+  .btn-outline,
+  .btn-filled {
+    width: 100%;
+    text-align: center;
+  }
+}

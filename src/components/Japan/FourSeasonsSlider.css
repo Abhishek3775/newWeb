@@ -1,0 +1,145 @@
+.fs-season-wrapper {
+  background-color: #F5F4EF;
+  padding: 100px 20px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.fs-season-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.fs-season-subtitle {
+  color: #C09551;
+  letter-spacing: 3px;
+  font-size: 21px;
+  text-align: center;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.fs-season-title {
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+
+/* SWIPER WRAPPER */
+.fs-swiper-wrapper {
+  position: relative;
+}
+
+/* CARD */
+.fs-season-card {
+  background: white;
+  text-align: left;
+}
+
+/* IMAGE */
+.fs-season-image {
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+}
+
+.fs-season-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* TAG */
+.fs-season-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: white;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+/* OVERLAY */
+.fs-season-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
+
+.fs-name {
+  color: #C09551;
+}
+
+.fs-season-name {
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.fs-season-temp {
+  font-size: 14px;
+}
+
+/* CONTENT */
+.fs-season-content {
+  padding: 20px;
+}
+
+.fs-season-content p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.fs-season-btn {
+  background: none;
+  border: none;
+  color: #C09551;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* NAV BUTTONS */
+.fs-nav-btn {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.3s ease;
+}
+
+.fs-nav-btn:hover {
+  background: #C09551;
+  color: white;
+  border-color: #C09551;
+}
+
+.fs-nav-left {
+  left: -60px;
+}
+
+.fs-nav-right {
+  right: -60px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .fs-season-image {
+    height: 350px;
+  }
+
+  .fs-nav-btn {
+    display: none;
+  }
+}

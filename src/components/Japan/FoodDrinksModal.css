@@ -1,0 +1,146 @@
+/* ================= OVERLAY ================= */
+
+.fdm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+/* ================= MODAL ================= */
+
+.fdm-modal {
+  width: 100%;
+  max-width: 1100px;
+  height: 75vh;         
+  overflow: hidden;      
+  background: #ffffff;
+  position: relative;
+  padding: 0px;         
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  display: flex;
+  align-items: center;   
+}
+
+/* CLOSE BUTTON */
+
+.fdm-close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= LAYOUT ================= */
+
+.fdm-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;               /* gap kam */
+  align-items: center;
+  width: 100%;
+}
+
+/* ================= IMAGE ================= */
+
+.fdm-image {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.fdm-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= CONTENT ================= */
+
+.fdm-subtitle {
+  color: #C09551;
+  font-size: 12px;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.fdm-content h2 {
+  font-size: 32px;     /* thoda compact */
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.fdm-description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.fdm-content h4 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.fdm-list {
+  list-style: none;
+  padding: 0;
+}
+
+.fdm-list li {
+  margin-bottom: 8px;
+  padding-left: 18px;
+  position: relative;
+  font-size: 13px;
+  color: #555;
+}
+
+.fdm-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 1px;
+  background: #C09551;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+
+  .fdm-modal {
+    height: auto;
+    max-height: 90vh;
+    overflow-y: auto;   /* mobile pe scroll allowed */
+  }
+
+  .fdm-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .fdm-image img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .fdm-content h2 {
+    font-size: 24px;
+  }
+
+  .fdm-description {
+    font-size: 13px;
+  }
+}

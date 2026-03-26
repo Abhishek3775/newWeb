@@ -1,0 +1,108 @@
+/* ===== Brand Strip Section ===== */
+
+.brand-strip {
+  background: #ffffff;
+  padding: 40px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Slider Wrapper */
+.brand-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Moving Track */
+.brand-track {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+}
+
+/* Logo */
+.brand-item {
+  flex: 0 0 auto;
+}
+
+.brand-item img {
+  height: 120px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0);
+  opacity: 0.85;
+  transition: 0.3s ease;
+}
+
+.brand-item img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Infinite Scroll Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ========================= */
+/* Responsive Breakpoints */
+/* ========================= */
+
+/* Large Screens */
+@media (min-width: 1400px) {
+  .brand-item img {
+    height: 150px;
+  }
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+  .brand-track {
+    gap: 60px;
+  }
+  .brand-item img {
+    height: 110px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .brand-track {
+    gap: 50px;
+  }
+  .brand-item img {
+    height: 90px;
+  }
+}
+
+/* Mobile Large */
+@media (max-width: 768px) {
+  .brand-track {
+    gap: 40px;
+  }
+  .brand-item img {
+    height: 75px;
+  }
+}
+
+/* Mobile Small */
+@media (max-width: 480px) {
+  .brand-strip {
+    padding: 30px 0;
+  }
+
+  .brand-track {
+    gap: 30px;
+  }
+
+  .brand-item img {
+    height: 60px;
+  }
+}

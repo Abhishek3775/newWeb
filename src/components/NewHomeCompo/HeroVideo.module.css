@@ -1,0 +1,40 @@
+/* ===== CONTAINER ===== */
+.hero {
+  width: 100%;
+  min-height: 100vh; /* full screen */
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== IMAGE ===== */
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills full area */
+  display: block;
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+  .hero {
+    min-height: 80vh;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+  .hero {
+    min-height: 70vh;
+  }
+
+  .image {
+    object-position: center;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 400px) {
+  .hero {
+    min-height: 60vh;
+  }
+}

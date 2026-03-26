@@ -1,0 +1,127 @@
+.faqSection {
+  position: relative;
+  background-color: #fbf8f0;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  padding: 80px 20px;
+  overflow: hidden; /* ensures pseudo-element stays inside */
+  background-image: url("../../assets/linePattern2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* background image layer */
+.faqSection::before {
+  content: "";
+  position: absolute;
+  top: 460px;
+  left: 600px;
+  width: 50%;
+  height: 50%;
+  /* background-image: url("../../assets2/Services/background.png"); */
+  transform: rotate(90deg) scale(6); /* ✅ Rotate image 90° clockwise */
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.1; /* 👈 change this value (0.1–0.5) for desired lightness */
+  z-index: 0;
+}
+
+/* keeps all content above the background */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.subtitle {
+  color: #b48a36;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  font-size: clamp(21px, 1vw, 14px);
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(26px, 2.5vw, 36px);
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.faqItem {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.faqItem.active {
+  border-color: #d1b37b;
+}
+
+.faqHeader {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: clamp(14px, 1.2vw, 16px);
+  font-weight: 500;
+  color: #222;
+  transition: background 0.3s ease;
+}
+
+.faqHeader:hover {
+  background-color: #f4f1ec;
+}
+
+.icon {
+  color: #b48a36;
+  font-size: 14px;
+}
+
+.faqContent {
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 20px;
+}
+
+.faqContent p {
+  padding: 10px 0 20px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .faqSection {
+    padding: 60px 15px;
+  }
+
+  .faqHeader {
+    padding: 16px;
+  }
+}

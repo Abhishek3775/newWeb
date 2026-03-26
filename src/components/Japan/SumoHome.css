@@ -1,0 +1,118 @@
+/* ================= HERO SECTION ================= */
+
+.sumo-hero {
+  position: relative;
+  height: 95vh;
+  min-height: 700px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #ffffff;
+}
+
+/* ================= DARK OVERLAY ================= */
+
+.sumo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.55) 40%,
+    rgba(0, 0, 0, 0.25) 70%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  z-index: 1;
+}
+
+/* ================= CONTENT ================= */
+
+.sumo-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.sumo-content h1 {
+  font-size: 72px;
+  font-weight: 300;
+  line-height: 1.05;
+  margin-bottom: 30px;
+}
+
+.sumo-content p {
+  font-size: 16px;
+  opacity: 0.85;
+  margin-bottom: 35px;
+  letter-spacing: 0.3px;
+}
+
+/* ================= BUTTON ================= */
+
+.sumo-btn {
+  background: #C09551;
+  border: none;
+  padding: 14px 30px;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.sumo-btn:hover {
+  background: #a77c3f;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .sumo-content h1 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  .sumo-hero {
+    padding: 0 6%;
+    min-height: 600px;
+  }
+
+  .sumo-content h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sumo-hero {
+    height: 85vh;
+    padding: 0 5%;
+  }
+
+  .sumo-content h1 {
+    font-size: 38px;
+  }
+
+  .sumo-content p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sumo-hero {
+    height: 80vh;
+  }
+
+  .sumo-content h1 {
+    font-size: 30px;
+  }
+
+  .sumo-btn {
+    padding: 12px 22px;
+    font-size: 13px;
+  }
+}

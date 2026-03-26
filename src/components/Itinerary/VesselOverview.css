@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* ===========================
+   SECTION
+   =========================== */
+.vo-section {
+  background: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  box-sizing: border-box;
+}
+
+.vo-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===========================
+   HEADINGS
+   =========================== */
+.vo-subtitlE {
+  color: #c89c5d;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.vo-title {
+  font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.vo-description {
+  max-width: 850px;
+  margin: 0 auto 48px;
+  color: #555;
+  font-size: clamp(0.85rem, 1.3vw, 1rem);
+  line-height: 1.65;
+}
+
+/* ===========================
+   IMAGE WRAPPER
+   =========================== */
+.vo-image-wrapper {
+  position: relative;
+  background: #fff;
+  border: 1px solid #e5decf;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.09);
+}
+
+.vo-image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  height: clamp(220px, 45vw, 560px);
+}
+
+/* Gradient overlay — keeps stats readable on any photo */
+.vo-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 55%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.28) 60%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* ===========================
+   STATS BAR
+   =========================== */
+.vo-stats {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 8px 48px;
+  padding: 20px 24px 24px;
+  z-index: 2;
+}
+
+.vo-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: #f9f8f5;
+  text-align: center;
+  min-width: 72px;
+}
+
+.vo-stat-icon {
+  width: 22px;
+  /* height: 22px; */
+  object-fit: contain;
+  /* filter: brightness(0) invert(1); */
+  opacity: 0.92;
+}
+
+.vo-stat-value {
+  font-size: clamp(0.95rem, 2vw, 1.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+  margin: 0;
+}
+
+.vo-stat-label {
+  font-size: clamp(0.62rem, 1vw, 0.82rem);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #ddd;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+/* Large Desktop ≥ 1400px */
+@media (min-width: 1400px) {
+  .vo-section   { padding: 100px 40px; }
+  .vo-stats     { gap: 8px 64px; padding: 24px 40px 30px; }
+  .vo-stat-icon { width: 36px; height: 36px; }
+}
+
+/* Desktop < 1200px */
+@media (max-width: 1199px) {
+  .vo-stats { gap: 8px 36px; }
+}
+
+/* Tablet Landscape ≤ 992px */
+@media (max-width: 992px) {
+  .vo-section     { padding: 64px 18px; }
+  .vo-description { margin-bottom: 36px; }
+  .vo-stats       { gap: 8px 28px; padding: 16px 20px 20px; }
+  .vo-stat-icon   { width: 28px; height: 28px; }
+}
+
+/* Tablet Portrait ≤ 768px */
+@media (max-width: 768px) {
+  .vo-section     { padding: 52px 16px; }
+  .vo-description { margin-bottom: 28px; }
+
+  /* 2 × 2 grid */
+  .vo-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px 12px;
+    padding: 14px 16px 18px;
+    align-items: start;
+  }
+
+  .vo-stat-item { min-width: unset; }
+  .vo-stat-icon { width: 26px; height: 26px; }
+}
+
+/* Mobile Large ≤ 600px */
+@media (max-width: 600px) {
+  .vo-section { padding: 44px 12px; }
+
+  .vo-stats {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    padding: 12px 12px 16px;
+  }
+
+  .vo-stat-icon { width: 24px; height: 24px; }
+}
+
+/* Mobile ≤ 480px */
+@media (max-width: 480px) {
+  .vo-section     { padding: 36px 10px; }
+  .vo-description { font-size: 0.82rem; margin-bottom: 22px; }
+
+  .vo-stats {
+    grid-template-columns: repeat(4, 1fr);
+    /* gap: 6px; */
+    padding: 10px 10px 14px;
+  }
+
+  .vo-stat-icon { width: 22px; height: 22px; }
+  .vo-stat-item { gap: 2px; }
+}
+
+/* Small Mobile ≤ 360px */
+@media (max-width: 360px) {
+  .vo-section   { padding: 28px 8px; }
+  .vo-subtitle  { font-size: 0.68rem; letter-spacing: 1px; }
+  .vo-description {
+    font-size: 0.78rem;
+    margin-bottom: 18px;
+  }
+
+  .vo-stats {
+    gap: 4px;    
+    width: 50%;
+    padding: 8px 8px 12px;
+  }
+
+  .vo-stat-icon { width: 20px; height: 20px; }
+}

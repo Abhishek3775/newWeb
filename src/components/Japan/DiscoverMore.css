@@ -1,0 +1,124 @@
+/* ================= WRAPPER ================= */
+
+.dm-wrapper {
+  background: #f5f4ef;
+  padding: 100px 20px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ================= CONTAINER ================= */
+
+.dm-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================= HEADING ================= */
+
+.dm-heading {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  color: #C09551;
+  margin-bottom: 60px;
+  letter-spacing: 2px;
+}
+
+/* ================= GRID ================= */
+
+.dm-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* ================= CARD ================= */
+
+.dm-card {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* IMAGE */
+
+.dm-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.6s ease;
+}
+
+/* OVERLAY */
+
+.dm-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.75) 0%,
+    rgba(0,0,0,0.4) 40%,
+    rgba(0,0,0,0.1) 70%,
+    rgba(0,0,0,0) 100%
+  );
+  color: #ffffff;
+}
+
+.dm-tag {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #C09551;
+  margin-bottom: 10px;
+}
+
+.dm-overlay h3 {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+/* HOVER EFFECT */
+
+.dm-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+  .dm-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dm-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dm-card {
+    height: 420px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dm-wrapper {
+    padding: 60px 15px;
+  }
+
+  .dm-heading {
+    font-size: 24px;
+  }
+
+  .dm-card {
+    height: 350px;
+  }
+
+  .dm-overlay h3 {
+    font-size: 18px;
+  }
+}

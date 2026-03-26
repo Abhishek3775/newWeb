@@ -1,0 +1,133 @@
+/* =====================================
+   GUEST STORIES SECTION
+   Accent Color: #C09551
+===================================== */
+
+.gs-section {
+  background: #f5f4ef;
+  padding: 100px 20px;
+  text-align: center;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.gs-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* Subtitle */
+.gs-subtitle {
+  color: #C09551;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Title */
+.gs-title {
+  font-size: 38px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  color: #131313;
+}
+
+/* Quote Icon */
+.gs-quote-icon {
+  font-size: 60px;
+  color: #C09551;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+
+/* Quote Text */
+.gs-quote {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+/* Author */
+.gs-author h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #131313;
+}
+
+.gs-author p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.gs-author span {
+  font-size: 14px;
+  color: #C09551;
+}
+
+/* Controls */
+.gs-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.gs-btn {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ccc;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+.gs-btn:hover {
+  background: #C09551;
+  color: #fff;
+  border-color: #C09551;
+}
+
+.gs-indicator {
+  width: 30px;
+  height: 4px;
+  background: #C09551;
+  border-radius: 10px;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+  .gs-section {
+    padding: 70px 15px;
+  }
+
+  .gs-title {
+    font-size: 28px;
+  }
+
+  .gs-quote {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gs-title {
+    font-size: 24px;
+  }
+
+  .gs-quote {
+    font-size: 14px;
+  }
+
+  .gs-btn {
+    width: 30px;
+    height: 30px;
+  }
+}

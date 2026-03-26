@@ -1,0 +1,134 @@
+/* EVERYTHING STRICTLY INSIDE THIS ID */
+
+#elite-promise-root {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 120px 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Prevent Global CSS Interference */
+#elite-promise-root * {
+  box-sizing: border-box;
+}
+
+/* Background */
+#elite-promise-root .elite-promise-bg-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+#elite-promise-root .elite-promise-bg-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay */
+#elite-promise-root .elite-promise-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 2;
+}
+
+/* Inner Content */
+#elite-promise-root .elite-promise-inner {
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Header */
+#elite-promise-root .elite-promise-small {
+  color: #C09551;
+  font-size: 21px;
+  letter-spacing: 2px;
+}
+
+#elite-promise-root .elite-promise-title {
+  font-size: 44px;
+  font-weight: 300;
+  margin: 15px 0;
+}
+
+#elite-promise-root .elite-promise-sub {
+  font-size: 22px;
+  color: #C09551;
+  margin-bottom: 20px;
+  /* background-color: red; */
+  text-align: center;
+}
+
+#elite-promise-root .elite-promise-text {
+  /* max-width: 800px; */
+  margin: 0 auto 60px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #dddddd;
+  text-align: center;
+}
+
+/* Grid */
+#elite-promise-root .elite-promise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* Card */
+#elite-promise-root .elite-promise-card {
+  background: #f5f4ef;
+  padding: 45px 35px;
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+#elite-promise-root .elite-promise-card:hover {
+  transform: translateY(-5px);
+}
+
+#elite-promise-root .elite-promise-number {
+  font-size: 42px;
+  color: #C09551;
+  margin-bottom: 15px;
+}
+
+#elite-promise-root .elite-promise-card h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+#elite-promise-root .elite-promise-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  #elite-promise-root .elite-promise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  #elite-promise-root .elite-promise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #elite-promise-root .elite-promise-card {
+    text-align: center;
+  }
+
+  #elite-promise-root .elite-promise-title {
+    font-size: 28px;
+  }
+}

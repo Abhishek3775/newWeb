@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ============================================================
+   HERO — background image HAMESHA, content upar
+   ============================================================ */
+.adriatic-hero {
+  width: 100%;
+  min-height: 100vh;
+  background: url('../../assets2/Itinerary/Home/img.png') no-repeat center center / cover;
+  background-attachment: scroll;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.adriatic-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.52);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px 5%;
+  /* overflow-y scroll agar content lamba ho */
+  overflow-y: auto;
+}
+
+.adriatic-content {
+  max-width: 600px;
+  width: 100%;
+  z-index: 2;
+  padding: 20px 0;
+}
+
+.adriatic-subtitle {
+  color: #d4a556;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.adriatic-title {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 700;
+  margin: 0 0 0.3rem 0;
+  line-height: 1.15;
+  color: #fff;
+  word-break: break-word;
+}
+
+.adriatic-location {
+  color: #d4a556;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-weight: 500;
+  margin: 0.5rem 0 1rem 0;
+  line-height: 1.3;
+}
+
+.adriatic-description {
+  color: #dcdcdc;
+  font-size: clamp(0.8rem, 1.3vw, 0.95rem);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+/* Rating */
+.adriatic-rating {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.adriatic-rating .star-icon {
+  color: #f7c531;
+  font-size: 0.88rem;
+}
+
+/* Info */
+.adriatic-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.adriatic-info .info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.adriatic-info .info-icon {
+  font-size: 1.2rem;
+  color: #d4a556;
+  flex-shrink: 0;
+}
+
+.adriatic-info .info-item h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1;
+}
+
+.adriatic-info .info-item p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+/* Button */
+.adriatic-btn {
+  background: #d4a556;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s ease;
+}
+
+.adriatic-btn:hover { background: #b48d40; }
+
+/* ============================================================
+   RESPONSIVE — background image HAMESHA rahega
+   ============================================================ */
+
+/* Tablet Landscape */
+@media (max-width: 1024px) {
+  .adriatic-title    { font-size: 2.5rem; }
+  .adriatic-location { font-size: 1.2rem; }
+  .adriatic-overlay  { padding: 60px 4%; }
+}
+
+/* Tablet (≤ 768px) */
+@media (max-width: 768px) {
+  .adriatic-hero    { min-height: 100vh; }
+  .adriatic-overlay { padding: 80px 20px 40px; align-items: flex-start; }
+  .adriatic-content { max-width: 100%; }
+
+  .adriatic-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .adriatic-btn { width: 100%; text-align: center; }
+}
+
+/* Mobile (≤ 600px) */
+@media (max-width: 600px) {
+  .adriatic-hero    { min-height: 100svh; }
+  .adriatic-overlay { padding: 70px 18px 36px; }
+  .adriatic-info    { gap: 0.75rem; }
+}
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .adriatic-overlay     { padding: 65px 16px 32px; }
+  .adriatic-subtitle    { font-size: 0.72rem; }
+  .adriatic-title       { font-size: 2rem; }
+  .adriatic-location    { font-size: 1rem; }
+  .adriatic-description { font-size: 0.88rem; }
+  .adriatic-info        { gap: 0.7rem; margin-bottom: 1.2rem; }
+  .adriatic-info .info-item h3 { font-size: 1rem; }
+  .adriatic-info .info-item p  { font-size: 0.74rem; }
+  .adriatic-btn         { font-size: 0.92rem; padding: 0.78rem 1rem; }
+}
+
+/* Mobile (≤ 400px) */
+@media (max-width: 400px) {
+  .adriatic-overlay     { padding: 60px 14px 28px; }
+  .adriatic-description { font-size: 0.83rem; line-height: 1.55; margin-bottom: 0.85rem; }
+  .adriatic-rating      { font-size: 0.8rem; margin-bottom: 1rem; }
+  .adriatic-info        { gap: 0.6rem; margin-bottom: 1.1rem; }
+  .adriatic-info .info-icon    { font-size: 1rem; }
+  .adriatic-info .info-item h3 { font-size: 0.96rem; }
+  .adriatic-info .info-item p  { font-size: 0.72rem; }
+  .adriatic-btn         { font-size: 0.88rem; }
+}
+
+/* Mobile (≤ 360px) */
+@media (max-width: 360px) {
+  .adriatic-overlay     { padding: 55px 12px 24px; }
+  .adriatic-subtitle    { font-size: 0.66rem; letter-spacing: 0.8px; margin-bottom: 0.3rem; }
+  .adriatic-title       { font-size: 1.75rem; }
+  .adriatic-location    { font-size: 0.95rem; }
+  .adriatic-description { font-size: 0.8rem; margin-bottom: 0.8rem; }
+  .adriatic-rating      { font-size: 0.76rem; margin-bottom: 0.85rem; }
+  .adriatic-info        { gap: 0.55rem; margin-bottom: 1rem; }
+  .adriatic-info .info-icon    { font-size: 0.95rem; }
+  .adriatic-info .info-item h3 { font-size: 0.9rem; }
+  .adriatic-info .info-item p  { font-size: 0.7rem; }
+  .adriatic-btn         { font-size: 0.84rem; padding: 0.72rem; }
+}
+
+/* MINIMUM — 320px */
+@media (max-width: 320px) {
+  .adriatic-overlay     { padding: 50px 10px 20px; }
+  .adriatic-subtitle    { font-size: 0.62rem; letter-spacing: 0.5px; margin-bottom: 0.25rem; }
+  .adriatic-title       { font-size: 1.55rem; }
+  .adriatic-location    { font-size: 0.88rem; }
+  .adriatic-description { font-size: 0.75rem; line-height: 1.5; margin-bottom: 0.7rem; }
+  .adriatic-rating      { font-size: 0.72rem; gap: 0.2rem; margin-bottom: 0.75rem; }
+  .adriatic-rating .star-icon  { font-size: 0.7rem; }
+  .adriatic-info        { gap: 0.45rem; margin-bottom: 0.9rem; }
+  .adriatic-info .info-item    { gap: 0.3rem; }
+  .adriatic-info .info-icon    { font-size: 0.88rem; }
+  .adriatic-info .info-item h3 { font-size: 0.84rem; }
+  .adriatic-info .info-item p  { font-size: 0.66rem; }
+  .adriatic-btn         { font-size: 0.78rem; padding: 0.65rem; border-radius: 3px; }
+}

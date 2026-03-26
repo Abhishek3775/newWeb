@@ -1,0 +1,170 @@
+/* ================= SECTION ================= */
+
+.wtv-section {
+  background: #f5f4ef;
+  padding: 120px 0;
+}
+
+.wtv-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* ================= HEADER ================= */
+
+.wtv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 80px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.wtv-left {
+  max-width: 650px;
+}
+
+.wtv-subtitle {
+  color: #C09551;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.wtv-left h2 {
+  font-size: 42px;
+  font-weight: 300;
+  margin: 15px 0 20px;
+}
+
+.wtv-left p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+}
+
+.wtv-right {
+  border: 1px solid #C09551;
+  padding: 25px 40px;
+  display: flex;
+  gap: 60px;
+  background: #f5f4ef;
+}
+
+.wtv-label{
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #C09551;
+}
+
+.wtv-right span {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ================= SLIDER ================= */
+
+.wtv-slider-wrapper {
+  position: relative;
+}
+
+.wtv-card {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+.wtv-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wtv-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), transparent 60%);
+  color: white;
+}
+
+.wtv-temp {
+  color: #C09551;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.wtv-months {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.wtv-overlay h3 {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+/* ================= NAV ================= */
+
+.wtv-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 55px;
+  height: 55px;
+  background: white;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.3s ease;
+}
+
+.wtv-nav:hover {
+  background: #C09551;
+  color: white;
+  border-color: #C09551;
+}
+
+.wtv-nav.left {
+  left: -70px;
+}
+
+.wtv-nav.right {
+  right: -70px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .wtv-nav.left { left: -40px; }
+  .wtv-nav.right { right: -40px; }
+}
+
+@media (max-width: 992px) {
+  .wtv-header {
+    flex-direction: column;
+  }
+
+  .wtv-card {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wtv-card {
+    height: 450px;
+  }
+
+  .wtv-nav {
+    display: none;
+  }
+}

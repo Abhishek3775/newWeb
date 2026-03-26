@@ -1,0 +1,140 @@
+/* SECTION */
+.reserve-section {
+  width: 100%;
+  padding: 100px 20px;
+  background: #F5F4EF;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* CONTAINER */
+.reserve-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* SUBTITLE */
+.reserve-subtitle {
+  color: #C09551;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* TITLE */
+.reserve-title {
+  font-size: 44px;
+  font-weight: 300;
+  color: #131313;
+  margin-bottom: 25px;
+}
+
+/* DESCRIPTION */
+.reserve-description {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* NOTE */
+.reserve-note {
+  font-size: 14px;
+  color: #131313;
+  margin-bottom: 40px;
+}
+
+/* CONTACT ROW */
+.reserve-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 14px;
+  color: #131313;
+}
+
+.icon-box {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #d8d3cb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #131313;
+}
+
+.divider {
+  width: 1px;
+  height: 40px;
+  background: #d8d3cb;
+}
+
+/* BUTTON */
+.reserve-btn {
+  background: #C09551;
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.reserve-btn:hover {
+  background: #a67d3f;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .reserve-title {
+    font-size: 36px;
+  }
+
+  .reserve-description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reserve-section {
+    padding: 80px 20px;
+  }
+
+  .reserve-title {
+    font-size: 30px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .reserve-contact {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reserve-title {
+    font-size: 24px;
+  }
+
+  .reserve-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}

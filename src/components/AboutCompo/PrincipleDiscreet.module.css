@@ -1,0 +1,158 @@
+.principleSection {
+  background-color: #F5F4EF;
+  padding: 100px 5%;
+}
+
+.principleContainer {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  align-items: stretch;
+}
+
+/* LEFT IMAGE */
+.principleImageWrapper {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.principleImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Subtle luxury overlay */
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* RIGHT CONTENT */
+.principleContent {
+  flex: 1;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.iconBox {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #C09551;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.iconBox img {
+  width: 28px;
+}
+
+.principleLabel {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #C09551;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.principleTitle {
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  color: #1A1A1A;
+}
+
+.principleBadge {
+  background-color: #C09551;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  cursor: default;
+  width: 300px;
+}
+
+.principleDescription {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Bottom Decorative Line */
+.bottomDecor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bottomDecor span {
+  width: 40px;
+  height: 1px;
+  background-color: #C09551;
+}
+
+.smallDiamond {
+  width: 6px;
+  height: 6px;
+  background-color: #C09551;
+  transform: rotate(45deg);
+}
+
+/* ========================== */
+/* RESPONSIVE */
+/* ========================== */
+
+@media (max-width: 1024px) {
+  .principleTitle {
+    font-size: 32px;
+  }
+
+  .principleContent {
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .principleContainer {
+    flex-direction: column;
+  }
+
+  .principleImageWrapper {
+    height: 350px;
+  }
+
+  .principleContent {
+    padding: 50px 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .bottomDecor {
+    justify-content: center;
+  }
+
+  .principleTitle {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .principleTitle {
+    font-size: 22px;
+  }
+
+  .principleBadge {
+    font-size: 11px;
+    padding: 8px 16px;
+  }
+}

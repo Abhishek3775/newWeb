@@ -1,0 +1,205 @@
+/* ================= SECTION ================= */
+
+.so-section {
+  background: #F5F4EF;
+  padding: 100px 20px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.so-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================= HEADING ================= */
+
+.so-heading {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.so-subtitle {
+  color: #C09551;
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.so-heading h2 {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.so-description {
+  font-size: 14px;
+  color: #666;
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+/* ================= WRAPPER ================= */
+
+.so-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+  background: #ffffff;
+  padding: 40px;
+}
+
+/* ================= IMAGE ================= */
+
+.so-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.so-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* PRICE BADGE */
+
+.so-price-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #C09551;
+  color: white;
+  padding: 12px 18px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* ================= CONTENT ================= */
+
+.so-tag {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #C09551;
+  margin-bottom: 10px;
+}
+
+.so-title {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.so-text {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+/* META */
+
+.so-meta {
+  display: flex;
+  gap: 20px;
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+/* INCLUDES */
+
+.so-includes-title {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.so-includes-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 20px;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.so-include-item {
+  line-height: 1.6;
+}
+
+/* BUTTONS */
+
+.so-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.so-btn-outline {
+  padding: 12px 28px;
+  border: 1px solid #C09551;
+  background: transparent;
+  color: #C09551;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.3s ease;
+}
+
+.so-btn-outline:hover {
+  background: #C09551;
+  color: #fff;
+}
+
+.so-btn-primary {
+  padding: 12px 28px;
+  border: none;
+  background: #C09551;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.3s ease;
+}
+
+.so-btn-primary:hover {
+  background: #a77c3f;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .so-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .so-image {
+    height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .so-section {
+    padding: 70px 20px;
+  }
+
+  .so-heading h2 {
+    font-size: 28px;
+  }
+
+  .so-includes-list {
+    grid-template-columns: 1fr;
+  }
+
+  .so-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .so-btn-outline,
+  .so-btn-primary {
+    width: 100%;
+  }
+}

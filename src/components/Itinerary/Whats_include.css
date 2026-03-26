@@ -1,0 +1,136 @@
+.voyage-included-section {
+  background-color: #fff;
+  padding: 80px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.voyage-included-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* ===== LEFT IMAGE ===== */
+.voyage-included-image {
+  position: relative;
+  flex: 1;
+  min-width: 320px;
+}
+
+.voyage-included-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+}
+
+.voyage-image-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  text-align: left;
+}
+
+.voyage-featured-text {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.voyage-image-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* ===== RIGHT CONTENT ===== */
+.voyage-included-content {
+  flex: 1;
+  min-width: 320px;
+}
+
+.voyage-included-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.voyage-included-description {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.voyage-included-list {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.voyage-included-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.voyage-list-icon {
+  color: #c89c5d;
+  font-size: 16px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 992px) {
+  .voyage-included-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .voyage-image-overlay {
+    bottom: 15px;
+    left: 15px;
+  }
+
+  .voyage-included-title {
+    font-size: 1.6rem;
+  }
+
+  .voyage-included-description {
+    font-size: 0.95rem;
+  }
+
+  .voyage-included-list li {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .voyage-included-list li {
+    justify-content: flex-start;  /* center se flex-start */
+  }
+}
+
+@media (max-width: 576px) {
+  .voyage-included-section {
+    padding: 60px 15px;
+  }
+
+  .voyage-included-title {
+    font-size: 1.4rem;
+  }
+
+  .voyage-included-description {
+    font-size: 0.9rem;
+  }
+}

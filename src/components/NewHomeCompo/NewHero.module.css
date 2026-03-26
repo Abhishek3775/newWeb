@@ -1,0 +1,207 @@
+/* ============================================
+   NewHero.module.css — Responsive Hero Section
+   ============================================ */
+
+/* ---------- Section Container ---------- */
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  /* Height is driven by the image on desktop (see .background below) */
+}
+
+/* ---------- Background Image ---------- */
+.background {
+  /* On desktop: flow naturally so the full image height is visible */
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;        /* <-- lets the image define the section height */
+  object-fit: contain;
+  object-position: center center;
+}
+
+/* ---------- Dark Gradient Overlay ---------- */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.28) 50%,
+    rgba(0, 0, 0, 0.10) 100%
+  );
+  z-index: 1;
+}
+
+/* ---------- Inner Layout ---------- */
+.inner {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  padding: 24px 28px;
+  box-sizing: border-box;
+}
+
+/* ---------- Text Content ---------- */
+.content h2 {
+  margin: 0;
+  font-size: clamp(1rem, 2.4vw, 1.4rem);
+  font-weight: 400;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- Logo ---------- */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.4));
+}
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* ---------- Large Desktop (≥ 1280px) ---------- */
+@media (min-width: 1280px) {
+  /* Image is already position:relative and height:auto — no height override needed */
+  .inner {
+    padding: 32px 40px;
+  }
+
+  .logo img {
+    width: 88px;
+  }
+}
+
+/* ---------- Tablet Landscape (768px – 1279px) ---------- */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .hero {
+    height: 280px;
+  }
+
+  .background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .inner {
+    padding: 22px 28px;
+  }
+
+  .logo img {
+    width: 64px;
+  }
+}
+
+/* ---------- Tablet Portrait (480px – 767px) ---------- */
+@media (min-width: 480px) and (max-width: 767px) {
+  .hero {
+    height: 380px;
+  }
+
+  .background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+
+  .inner {
+    padding: 20px 20px;
+  }
+
+  .content h2 {
+    font-size: 1.05rem;
+  }
+
+  .logo img {
+    width: 58px;
+  }
+}
+
+/* ---------- Mobile (≤ 479px) ---------- */
+@media (max-width: 479px) {
+  .hero {
+    height: 300px;
+  }
+
+  .background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+  }
+
+  .overlay {
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.78) 0%,
+      rgba(0, 0, 0, 0.30) 55%,
+      rgba(0, 0, 0, 0.08) 100%
+    );
+  }
+
+  .inner {
+    padding: 16px 16px;
+    align-items: flex-end;
+  }
+
+  .content h2 {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    letter-spacing: 0.015em;
+  }
+
+  .logo img {
+    width: 48px;
+  }
+}
+
+/* ---------- Very Small Screens (≤ 360px) ---------- */
+@media (max-width: 360px) {
+  .hero {
+    height: 260px;
+  }
+
+  .background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+  }
+
+  .content h2 {
+    font-size: 0.8rem;
+  }
+
+  .logo img {
+    width: 40px;
+  }
+}

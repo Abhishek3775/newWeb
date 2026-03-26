@@ -1,0 +1,204 @@
+.evoSection {
+  background-color: #F5F4EF;
+  padding: 90px 5%;
+}
+
+.evoContainer {
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+/* ========================= */
+/* LEFT SIDE */
+/* ========================= */
+
+.evoContent {
+  flex: 1;
+  max-width: 600px;
+}
+
+.evoTopRow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.evoSubtitle {
+  font-size: 21px;
+  letter-spacing: 2px;
+  color: #C09551;
+  white-space: nowrap;
+}
+
+.evoLine {
+  flex: 1;
+  height: 1px;
+  background-color: #C09551;
+}
+
+.evoTitle {
+  font-size: 38px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  color: #1A1A1A;
+  letter-spacing: 1px;
+}
+
+.evoDescription {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* ========================= */
+/* RIGHT SIDE */
+/* ========================= */
+
+.evoImageWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.evoImage {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.5s ease;
+}
+
+.evoImage:hover {
+  transform: scale(1.03);
+}
+
+/* ========================= */
+/* RESPONSIVE — TABLET */
+/* ========================= */
+
+@media (max-width: 1024px) {
+  .evoContainer {
+    gap: 50px;
+  }
+
+  .evoTitle {
+    font-size: 30px;
+  }
+}
+
+/* ========================= */
+/* RESPONSIVE — MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .evoSection {
+    padding: 60px 5%;
+  }
+
+  .evoContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .evoContent {
+    max-width: 100%;
+    order: 1;
+  }
+
+  .evoImageWrapper {
+    justify-content: center;
+    width: 100%;
+    order: 2;
+  }
+
+  .evoImage {
+    width: 90%;
+    max-width: 500px;
+  }
+
+  .evoTopRow {
+    justify-content: center;
+  }
+
+  .evoLine {
+    display: none;
+  }
+
+  .evoTitle {
+    font-size: 24px;
+  }
+}
+
+/* ========================= */
+/* RESPONSIVE — PHONE */
+/* ========================= */
+
+@media (max-width: 480px) {
+  .evoSection {
+    padding: 40px 4%;
+  }
+
+  .evoContainer {
+    gap: 22px;
+  }
+
+  .evoImage {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 3px;
+  }
+
+  .evoTopRow {
+    margin-bottom: 14px;
+    gap: 12px;
+  }
+
+  .evoSubtitle {
+    font-size: 17px;
+    letter-spacing: 1.8px;
+  }
+
+  .evoTitle {
+    font-size: 20px;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+  }
+
+  .evoDescription {
+    font-size: 14px;
+    line-height: 1.75;
+    color: #666;
+  }
+}
+
+/* ========================= */
+/* RESPONSIVE — SMALL PHONE */
+/* ========================= */
+
+@media (max-width: 360px) {
+  .evoSection {
+    padding: 35px 4%;
+  }
+
+  .evoSubtitle {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+  }
+
+  .evoTitle {
+    font-size: 18px;
+  }
+
+  .evoDescription {
+    font-size: 13px;
+  }
+}

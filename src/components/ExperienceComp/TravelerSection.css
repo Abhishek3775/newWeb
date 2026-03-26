@@ -1,0 +1,185 @@
+.pj-section {
+  padding: clamp(60px, 8vw, 90px) 6%;
+  background: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ================= HEADER ================= */
+
+.pj-header {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+  margin-bottom: clamp(40px, 6vw, 60px);
+}
+
+.pj-subtitle {
+  color: #c79b52;
+  font-weight: 600;
+  font-size: 21px;
+  text-align: center;
+  font-size: clamp(14px, 2vw, 18px);
+  letter-spacing: 1px;
+}
+
+.pj-title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin: 15px 0;
+}
+
+.pj-desc {
+  color: #666;
+  font-size: clamp(13px, 2vw, 15px);
+  text-align: center;
+}
+
+/* ================= GRID ================= */
+
+.pj-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 25px;
+}
+
+/* Remove fixed height */
+.pj-left,
+.pj-right .pj-card,
+.pj-wide {
+  min-height: 280px;
+}
+
+.pj-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.pj-wide {
+  grid-column: span 2;
+}
+
+/* ================= CARD ================= */
+
+.pj-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.pj-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.pj-card:hover img {
+  transform: scale(1.08);
+}
+.pj-badge{
+  background: #ffffff56;
+  border-radius: 50%;
+  padding: 3px;
+}
+.pj-badge.y{
+  background: #c79b52;
+}
+
+/* ================= OVERLAY ================= */
+
+.pj-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.85) 0%,
+    rgba(0,0,0,0.5) 50%,
+    rgba(0,0,0,0.2) 100%
+  );
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  padding: clamp(15px, 3vw, 25px);
+}
+
+/* ================= TEXT ================= */
+
+.pj-content h3 {
+  font-size: clamp(16px, 2.5vw, 22px);
+  margin: 10px 0;
+}
+
+.pj-content h4 {
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+.pj-content p {
+  font-size: clamp(12px, 1.8vw, 14px);
+  color: #ddd;
+  margin-bottom: 12px;
+}
+
+.pj-label {
+  font-size: 11px;
+  color: #c79b52;
+  letter-spacing: 1px;
+}
+
+.pj-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.pj-tags span {
+  background: rgba(221, 159, 58, 0.529);
+  color: #fff;
+  font-size: 10px;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+
+.pj-bottom {
+  font-size: 10px;
+  color: #bbb;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .pj-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pj-right {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .pj-right {
+    grid-template-columns: 1fr;
+  }
+
+  .pj-wide {
+    grid-column: span 1;
+  }
+
+  .pj-card {
+    min-height: 260px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .pj-card {
+    min-height: 230px;
+  }
+
+  .pj-overlay {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,218 @@
+/* ExclusiveMemberBenefits.module.css */
+
+/* ─── Base Styles ─── */
+
+.benefitsSection {
+  background: #fff url('../../assets/linepatter1.png') center/cover no-repeat;
+  padding: 80px 40px;
+  text-align: center;
+  color: #222;
+}
+
+.header {
+  margin-bottom: 50px;
+}
+
+.subtitle {
+  color: #C09551;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.description {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ─── Grid ─── */
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  justify-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* ─── Card ─── */
+
+.benefitCard {
+  background: #F5F4EF;
+  padding: 40px 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.benefitCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  font-size: 1.8rem;
+  color: #C09551;
+}
+
+.benefitCard h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.benefitCard p {
+  font-size: 0.95rem;
+  text-align: center;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ─── Large Desktop (1440px+) ─── */
+@media (min-width: 1440px) {
+  .benefitsSection {
+    padding: 100px 60px;
+  }
+  .title {
+    font-size: 2.6rem;
+  }
+  .description {
+    font-size: 1.1rem;
+  }
+  .benefitCard {
+    padding: 50px 30px;
+  }
+  .benefitCard h3 {
+    font-size: 1.3rem;
+  }
+  .benefitCard p {
+    font-size: 1rem;
+  }
+}
+
+/* ─── Tablet Landscape (769px – 1024px) — 2×2 grid ─── */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .benefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .title {
+    font-size: 1.9rem;
+  }
+  .benefitCard {
+    margin-top: 20px;
+    padding: 35px 20px;
+  }
+}
+
+/* ─── Tablet Portrait (481px – 768px) — 2×2 grid ─── */
+@media (max-width: 768px) {
+  .benefitsSection {
+    padding: 60px 24px;
+  }
+  .header {
+    margin-bottom: 30px;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+  .benefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .benefitCard {
+    margin-top: 16px;
+    padding: 30px 18px;
+  }
+  .benefitCard h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* ─── Mobile (up to 480px) — 1 column ─── */
+@media (max-width: 480px) {
+  .benefitsSection {
+    padding: 50px 16px;
+  }
+  .header {
+    margin-bottom: 20px;
+  }
+  .subtitle {
+    font-size: 0.78rem;
+    letter-spacing: 1.5px;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .description {
+    font-size: 0.88rem;
+  }
+  .header {
+    margin-bottom: 10px;
+  }
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .benefitCard {
+    width: 100%;
+    margin-top: 14px;
+    padding: 28px 20px;
+  }
+  .icon {
+    width: 52px;
+    height: 52px;
+    font-size: 1.5rem;
+  }
+  .benefitCard h3 {
+    font-size: 1.05rem;
+  }
+  .benefitCard p {
+    font-size: 0.88rem;
+  }
+}
+
+/* ─── Small Phones (up to 360px) ─── */
+@media (max-width: 360px) {
+  .title {
+    font-size: 1.35rem;
+  }
+  .description {
+    font-size: 0.82rem;
+  }
+  .benefitCard {
+    padding: 22px 14px;
+  }
+  .icon {
+    width: 46px;
+    height: 46px;
+    font-size: 1.3rem;
+  }
+  .benefitCard h3 {
+    font-size: 0.95rem;
+  }
+  .benefitCard p {
+    font-size: 0.82rem;
+  }
+}

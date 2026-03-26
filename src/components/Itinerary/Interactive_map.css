@@ -1,0 +1,54 @@
+/* ===== INTERACTIVE MAP SECTION ===== */
+.interactive-map-section {
+  background: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.interactive-map-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.interactive-map-title {
+  color: #c89c5d;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 1.5px;
+  font-size: 1,5rem;
+  margin-bottom: 30px;
+}
+
+/* ===== MAP BOX ===== */
+.interactive-map-box {
+  background: #F5F4EF;
+  /* border: 1px solid #e0d8c8; */
+  /* border-radius: 6px; */
+  padding: 10px;
+  display: inline-block;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.interactive-map-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  object-fit: cover;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .interactive-map-section {
+    padding: 60px 15px;
+  }
+
+  .interactive-map-title {
+    font-size: 0.95rem;
+  }
+
+  .interactive-map-box {
+    padding: 6px;
+  }
+}

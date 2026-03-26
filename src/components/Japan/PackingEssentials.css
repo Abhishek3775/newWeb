@@ -1,0 +1,153 @@
+.packing-section {
+  background: #fff;
+  padding: 80px 20px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.packing-container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.sub-heading {
+  color: #C09551;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.main-heading {
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  color: #2b2b2b;
+}
+
+/* ===== TABS ===== */
+
+.season-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.season-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 25px;
+  border: none;
+  background: #e5e5e5;
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.season-btn img {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0);
+}
+
+.season-btn.active {
+  background: #C09551;
+  color: white;
+}
+
+.season-btn.active img {
+  filter: brightness(0) invert(1);
+}
+
+/* ===== PACKING BOX ===== */
+
+.packing-box {
+  background: #F5F4EE;
+  padding: 50px 40px;
+  margin-top: 40px;
+}
+
+.packing-box h3 {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 35px;
+  text-align: center;
+  color: #2b2b2b;
+}
+
+/* ===== ITEMS GRID ===== */
+
+.packing-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 60px;
+  text-align: left;
+}
+
+/* ===== SINGLE ITEM ===== */
+
+.packing-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.packing-item p {
+  margin: 0;
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* ===== CHECK ICON ===== */
+
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 36px;
+  }
+
+  .packing-items {
+    grid-template-columns: 1fr;
+  }
+
+  .packing-box {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+    font-size: 28px;
+  }
+
+  .season-btn {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+
+  .packing-box h3 {
+    font-size: 22px;
+  }
+
+  .packing-item p {
+    font-size: 14px;
+  }
+}

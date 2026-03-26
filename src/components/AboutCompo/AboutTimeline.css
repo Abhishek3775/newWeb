@@ -1,0 +1,157 @@
+.abt-section {
+  padding: 80px 20px;
+}
+
+.abt-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 80px;
+}
+
+/* LEFT */
+.abt-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.abt-top {
+  display: flex;
+  gap: 10px;
+}
+
+.topLine {
+  width: 100px;
+  height: 1px;
+  margin-top: 10px;
+  background-color: #C09551;
+}
+
+.abt-small-heading {
+  font-size: 21px;
+  letter-spacing: 2px;
+  color: #C09551;
+  margin-bottom: 10px;
+}
+
+.abt-big-year {
+  font-size: 120px;
+  font-weight: 300;
+  color: #C09551;
+  margin-bottom: 30px;
+}
+
+.abt-timeline-list {
+  list-style: none;
+  padding-left: 0;
+  border-left: 2px solid #e0d8cc;
+}
+
+.abt-timeline-list li {
+  padding-left: 20px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.abt-timeline-list li::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background: #C09551;
+  border-radius: 50%;
+}
+
+.abt-year {
+  font-weight: 600;
+  color: #C09551;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* RIGHT */
+.abt-right {
+  flex: 2;
+}
+
+.abt-main-heading {
+  font-size: 40px;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.abt-highlight {
+  color: #C09551;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.abt-paragraph {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.abt-quote {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.abt-quote-line {
+  width: 3px;
+  height: 40px;
+  background: #C09551;
+  margin-right: 15px;
+}
+
+.abt-quote p {
+  font-style: italic;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .abt-container {
+    gap: 40px;
+  }
+
+  .abt-big-year {
+    font-size: 90px;
+  }
+
+  .abt-main-heading {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .abt-container {
+    flex-direction: column;
+  }
+
+  .abt-big-year {
+    font-size: 70px;
+  }
+
+  .abt-main-heading {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .abt-big-year {
+    font-size: 55px;
+  }
+
+  .abt-main-heading {
+    font-size: 22px;
+  }
+
+  .abt-paragraph {
+    font-size: 14px;
+  }
+}

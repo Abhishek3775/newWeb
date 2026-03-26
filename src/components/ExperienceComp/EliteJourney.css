@@ -1,0 +1,195 @@
+/* ============================================================
+   ELITE JOURNEY — pixel-match + fully responsive
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap');
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+/* ── SECTION ── */
+.elite-journey-section {
+  background-color: #ffffff;          /* pure white — matches screenshot */
+  padding: clamp(60px, 8vw, 110px) clamp(16px, 5%, 60px);
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: #222;
+}
+
+.elite-journey-container {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+/* ── HEADER ── */
+.elite-journey-subtitle {
+  color: #c89c5d;
+  font-weight: 600;
+  font-size: clamp(19px, 1.2vw, 13px);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 14px;
+}
+
+.elite-journey-title {
+  font-size: clamp(30px, 5vw, 54px);
+  font-weight: 400;
+  /* font-family: "Playfair Display", "Georgia", serif;  serif — matches screenshot */
+  margin: 0 0 20px;
+  color: #1a1a1a;
+  line-height: 1.15;
+}
+
+.elite-journey-desc {
+  font-size: clamp(13px, 1.4vw, 15px);
+  color: #666;
+  line-height: 1.75;
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 44px;
+}
+
+/* ── CONTACT ROW ── */
+.b-j-contact-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.b-j-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+.b-j-icon {
+  font-size: 16px;
+  color: #444;
+  border: 1px solid black;
+  padding: 6px;
+}
+
+.divider {
+  width: 1px;
+  height: 22px;
+  background: #c9c9c9;
+}
+
+/* Each contact box — square border, no radius */
+.elite-journey-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #d4cfc7;
+  padding: 12px 22px;
+  border-radius: 0;                   /* sharp corners — matches screenshot */
+  font-size: clamp(12px, 1.3vw, 14px);
+  color: #333;
+  background: #fff;
+  transition: background 0.25s;
+  white-space: nowrap;
+}
+
+.elite-journey-contact-item:hover {
+  background-color: #f8f5f0;
+}
+
+.elite-journey-icon {
+  color: #c89c5d;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+
+/* Vertical pipe divider between the two boxes */
+.elite-journey-divider {
+  width: 1px;
+  height: 46px;                       /* full height of contact items */
+  background-color: #d4cfc7;
+  flex-shrink: 0;
+}
+
+/* ── BUTTON ── */
+.elite-journey-btn {
+  background-color: #c89c5d;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: clamp(12px, 1.3vw, 13px);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0;                   /* square — matches screenshot */
+  padding: 15px clamp(40px, 8vw, 80px);
+  cursor: pointer;
+  transition: background 0.25s, opacity 0.25s;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.elite-journey-btn:hover {
+  background-color: #b1844d;
+}
+
+/* ============================================================
+   TABLET (≤ 768px) — contact stays inline if it fits,
+   else wraps cleanly
+   ============================================================ */
+@media (max-width: 768px) {
+  .elite-journey-title {
+    font-size: clamp(26px, 6vw, 38px);
+  }
+
+  .elite-journey-contact {
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  /* On wrap, divider hides — each item stands alone */
+  .elite-journey-divider {
+    display: none;
+  }
+
+  .elite-journey-contact-item {
+    flex: 0 1 auto;
+  }
+}
+
+/* ============================================================
+   MOBILE (≤ 480px) — stack everything
+   ============================================================ */
+@media (max-width: 480px) {
+  .elite-journey-contact {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .elite-journey-contact-item {
+    justify-content: center;
+  }
+
+  .elite-journey-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .elite-journey-contact-item,
+  .elite-journey-btn {
+    transition: none;
+  }
+}

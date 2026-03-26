@@ -1,0 +1,152 @@
+/* ================= HERO SECTION ================= */
+
+.heroSection {
+  position: relative;
+  height: 85vh;
+  min-height: 700px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: end;
+  padding: 0 100px 30px;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* ================= DARK OVERLAY ================= */
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+/* ================= CONTENT ================= */
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  /* background-color: red; */
+  padding: 20px;
+}
+
+.heroSubtitle {
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: #C09551;
+  margin-bottom: 28px;
+  font-weight: 500;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.line {
+  height: 4px;
+  width: 100px;
+  background-color: #C09551;
+}
+
+.heroContent h1 {
+  font-size: 78px;
+  font-weight: 300;
+  line-height: 1.05;
+  margin-bottom: 28px;
+}
+
+.heroDesc {
+  font-size: 14px;
+  opacity: 0.85;
+  text-align: left;
+}
+
+/* ================= RIGHT ICONS ================= */
+
+.heroIcons {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 2;
+}
+
+.heroIcons img {
+  width: 42px;
+  height: 42px;
+  opacity: 0.85;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.heroIcons img:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .heroContent h1 {
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 992px) {
+  .heroSection {
+    padding: 0 60px;
+  }
+
+  .heroContent h1 {
+    font-size: 48px;
+  }
+
+  .heroIcons {
+    right: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    height: 85vh;
+    padding: 0 30px;
+  }
+
+  .heroContent h1 {
+    font-size: 36px;
+  }
+
+  .heroDesc {
+    font-size: 14px;
+  }
+
+  .heroIcons img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    height: 75vh;
+  }
+
+  .heroContent h1 {
+    font-size: 28px;
+  }
+
+  .heroIcons {
+    display: none;
+  }
+}

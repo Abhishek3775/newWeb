@@ -1,0 +1,488 @@
+/* ============================================================
+   EGC RECOMMENDATIONS — FULLY RESPONSIVE (Mobile Fixed)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   WRAPPER
+   ============================================================ */
+.egc-recom-wrapper {
+  background: #f3efe9;
+  padding: clamp(40px, 8vw, 100px) clamp(16px, 6%, 80px);
+  font-family: "Poppins", sans-serif;
+}
+
+.egc-recom-wrapper-inner {
+  max-width: 1400px;
+  margin: auto;
+  width: 100%;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.egc-recom-header {
+  max-width: 600px;
+  margin-bottom: clamp(20px, 4vw, 40px);
+}
+
+.egc-recom-small {
+  color: #b88a44;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: clamp(21px, 1.1vw, 13px);
+  text-transform: uppercase;
+}
+
+.egc-recom-header h2 {
+  font-size: clamp(22px, 4vw, 44px);
+  margin: 10px 0;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.egc-recom-header p {
+  font-size: clamp(12px, 1.4vw, 14px);
+  color: #777;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   TABS — single scrollable row, NEVER wrap
+   ============================================================ */
+.egc-recom-tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-bottom: clamp(20px, 4vw, 40px);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+
+.egc-recom-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.egc-recom-tab-btn {
+  padding: clamp(6px, 1vw, 8px) clamp(12px, 1.5vw, 18px);
+  font-size: clamp(10px, 1.1vw, 13px);
+  font-family: "Poppins", sans-serif;
+  border: none;
+  background: #e6e2db;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-height: 38px;
+}
+
+.egc-recom-tab-btn:hover {
+  background: #d4cfc8;
+}
+
+.egc-recom-active {
+  background: #C09551;
+  color: #fff;
+}
+
+/* ============================================================
+   GRID
+   ============================================================ */
+.egc-recom-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: clamp(16px, 3vw, 35px);
+  align-items: start;
+}
+
+/* ============================================================
+   FEATURE CARD — image + overlay both inside the box
+   ============================================================ */
+.egc-recom-feature {
+  position: relative;
+  height: clamp(320px, 50vw, 520px);
+  overflow: hidden;
+  display: block;
+}
+
+/* Image fills the box absolutely */
+.egc-recom-feature img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+  z-index: 0;
+}
+
+.egc-recom-feature:hover img {
+  transform: scale(1.03);
+}
+
+/* Overlay sits on top of image, inside the same box */
+.egc-recom-overlay {
+  position: absolute;
+  inset: 0;
+  padding: clamp(16px, 4vw, 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.88),
+    rgba(0, 0, 0, 0.4),
+    transparent
+  );
+  color: #fff;
+  z-index: 1;
+}
+
+.egc-recom-badge {
+  background: #C09551;
+  position: absolute;
+  top: clamp(14px, 2vw, 25px);
+  left: clamp(14px, 2vw, 25px);
+  padding: 5px 12px;
+  font-size: clamp(10px, 1.1vw, 12px);
+  width: fit-content;
+  z-index: 2;
+}
+
+.egc-recom-type {
+  position: absolute;
+  top: clamp(14px, 2vw, 25px);
+  right: clamp(14px, 2vw, 25px);
+  background: rgba(255, 255, 255, 0.18);
+  padding: 6px 14px;
+  font-size: clamp(10px, 1.1vw, 12px);
+  backdrop-filter: blur(4px);
+  letter-spacing: 1px;
+  z-index: 2;
+}
+
+.egc-recom-overlay .egc-recom-location {
+  color: #b88a44;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.egc-recom-overlay h3 {
+  font-size: clamp(18px, 3vw, 30px);
+  font-weight: 400;
+  margin: 8px 0 6px;
+  line-height: 1.25;
+}
+
+.egc-recom-overlay > p {
+  font-size: clamp(12px, 1.4vw, 14px);
+  color: #ddd;
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   NOTE BOX
+   ============================================================ */
+.egc-recom-note {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: clamp(10px, 1.5vw, 15px);
+  margin-bottom: clamp(14px, 2vw, 22px);
+}
+
+.egc-recom-note span {
+  color: #b88a44;
+  font-size: clamp(10px, 1.1vw, 12px);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.egc-recom-note p {
+  font-size: clamp(11px, 1.2vw, 13px);
+  margin-top: 5px;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+/* ============================================================
+   BOTTOM BAR
+   ============================================================ */
+.egc-recom-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.egc-recom-bottom span {
+  font-size: clamp(12px, 1.3vw, 14px);
+}
+
+.egc-recom-bottom button {
+  background: #b88a44;
+  border: none;
+  padding: clamp(8px, 1.2vw, 10px) clamp(16px, 2vw, 22px);
+  color: white;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(12px, 1.2vw, 14px);
+  transition: opacity 0.25s;
+  min-height: 42px;
+}
+
+.egc-recom-bottom button:hover {
+  opacity: 0.85;
+}
+
+/* ============================================================
+   RIGHT LIST
+   ============================================================ */
+.egc-recom-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 1.5vw, 15px);
+}
+
+.egc-recom-list-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: clamp(10px, 1.5vw, 15px);
+  background: #ece8e2;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s;
+  outline: none;
+}
+
+.egc-recom-list-card:focus-visible {
+  outline: 2px solid #b88a44;
+  outline-offset: 2px;
+}
+
+.egc-recom-list-card:hover {
+  background: #e5e0d9;
+  border-color: #d4a96a;
+}
+
+.egc-recom-list-card--active {
+  border-color: #b88a44 !important;
+  background: #f3efe9 !important;
+}
+
+.egc-recom-list-card img {
+  width: clamp(70px, 9vw, 90px);
+  height: clamp(62px, 7vw, 78px);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.egc-recom-location {
+  font-size: 11px;
+  color: #b88a44;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.egc-recom-list-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.egc-recom-list-content h4 {
+  font-size: clamp(13px, 1.4vw, 15px);
+  font-weight: 500;
+  margin: 4px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.egc-recom-list-content p {
+  font-size: clamp(11px, 1.2vw, 13px);
+  color: #666;
+  line-height: 1.4;
+}
+
+.egc-recom-stars {
+  margin-left: auto;
+  color: #b88a44;
+  font-size: clamp(11px, 1.2vw, 13px);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   TABLET (≤ 1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
+  .egc-recom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .egc-recom-feature {
+    height: clamp(260px, 55vw, 440px);
+  }
+
+  .egc-recom-tabs {
+    justify-content: flex-start;
+  }
+
+  .egc-recom-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 14px;
+  }
+
+  .egc-recom-list-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .egc-recom-list-card img {
+    width: 100%;
+    height: 150px;
+  }
+
+  .egc-recom-stars {
+    margin-left: 0;
+  }
+}
+
+/* ============================================================
+   MOBILE (≤ 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  .egc-recom-tabs {
+    justify-content: flex-start;
+  }
+
+  /* Taller card so all overlay content fits comfortably */
+  .egc-recom-feature {
+    height: clamp(360px, 75vw, 460px);
+  }
+
+  .egc-recom-overlay {
+    padding: 16px;
+  }
+
+  .egc-recom-overlay h3 {
+    font-size: 18px;
+    margin: 6px 0 4px;
+  }
+
+  .egc-recom-overlay > p {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .egc-recom-note {
+    padding: 10px;
+    margin-bottom: 12px;
+  }
+
+  .egc-recom-note p {
+    font-size: 12px;
+  }
+
+  .egc-recom-list {
+    grid-template-columns: 1fr;
+  }
+
+  .egc-recom-list-card {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .egc-recom-list-card img {
+    width: clamp(68px, 22vw, 88px);
+    height: clamp(60px, 18vw, 76px);
+  }
+
+  .egc-recom-stars {
+    margin-left: auto;
+  }
+
+  .egc-recom-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .egc-recom-bottom button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   SMALL MOBILE (≤ 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  .egc-recom-feature {
+    height: clamp(380px, 90vw, 480px);
+  }
+
+  .egc-recom-list-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .egc-recom-list-card img {
+    width: 100%;
+    height: 150px;
+  }
+
+  .egc-recom-stars {
+    margin-left: 0;
+  }
+}
+
+/* ============================================================
+   EXTRA SMALL (≤ 360px)
+   ============================================================ */
+@media (max-width: 360px) {
+  .egc-recom-feature {
+    height: 400px;
+  }
+
+  .egc-recom-tab-btn {
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+
+  .egc-recom-overlay h3 {
+    font-size: 15px;
+  }
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .egc-recom-feature img,
+  .egc-recom-tab-btn,
+  .egc-recom-list-card,
+  .egc-recom-bottom button {
+    transition: none;
+  }
+
+  .egc-recom-feature:hover img {
+    transform: none;
+  }
+}

@@ -1,121 +1,107 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Contact from './pages/Contact';
+import Blog from './pages/Blog';
+import BlogSingle from './pages/BlogSingle';
+import './App.css';
+// import Home from './pages/Home';
+import SouthAfrica from './pages/South Africa/SouthAfrica';
+import RahinoDetails from './pages/RahinoDetails';
+import JapanHome from './pages/Japan/Japan';
+import JapanGuide from './pages/Japan/JapanGuide';
+import SumoExperience from './pages/Japan/SumoExperience';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
+import Services from './pages/serviice/Services';
+import ExpenditionCruising from './pages/ServiceExpendition/ExpenditionCruising';
+import ImperialOdysseyHome from './pages/Japan-Quarter/ImperialOdysseyHome';
+import PrivateAviation from './pages/ServicePrivantAviation/PrivateAviation';
+import Itinerary from './pages/Itinerary/Itinerary';
+import IndividualItenary from './pages/IndividualItenary/IndividualItenary';
+import About from './pages/About/About';
+
+import Experience from './pages/Experience/Experience';
+
+import Calender from './pages/Calender/Calender';
+import MarchCalender from './pages/Calender/MarchCalender';
+import Accommodation from './pages/Accommodation/Accommodation';
+import NewHome from './pages/NewHome/NewHome';
+// import Accomodation from './pages/gaurav-accomodation/Accomodation';
+
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <Router>
+      <div className="App">
+        <Header />
 
-      <div className="ticks"></div>
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+        <main>
+          <ScrollToTop />
+          <Routes>
+            {/* <Route path="/" element={<Home />} /> */}
+            <Route path="/" element={<NewHome/>} />
+            {/* <Route path="/" element={<Contact />} /> */}
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/blog/:slug" element={<BlogSingle />} />
+            <Route path="/blog" element={<Blog />} />
+            {/* Add more routes as needed */}
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+            {/* routes for the south africa home */}
+            <Route path="/south-africa" element={<SouthAfrica />} />
+            <Route path="/south-africa/rhino-tracking" element={<RahinoDetails />} />
+            <Route path="/japan" element={<JapanHome />} />
+            <Route path="/japan-guide" element={<JapanGuide />} />
+            <Route path="/sumo-guide" element={<SumoExperience />} />
+
+            {/* routes for the  services */}
+            <Route path="/services" element={<Services/>} />
+            <Route path="/private-aviation" element={<PrivateAviation/>} />
+            <Route path="/cruises" element={<ExpenditionCruising/>} />
+
+            {/* routes for the  imperial-odyssey */}
+            <Route path="/imperial-odyssey" element={<ImperialOdysseyHome/>} />
+
+            {/* routes for the  itinerary */}
+            <Route path="/itinerary" element={<Itinerary/>} />
+            <Route path="/itinerary/:id" element={<IndividualItenary/>} />
+
+            {/* routes for the  about */}
+            <Route path="/about" element={<About/>} />
+
+            {/* routes for the  about */}
+            <Route path="/experiences" element={<Experience/>} />
+
+
+            <Route path="/calender" element={<Calender/>} />
+            <Route path="/calender/march" element={<MarchCalender/>} />
+            {/* <Route path="/accommodation" element={<Accomodation/>} /> */}
+            <Route path="/accommodation" element={<Accommodation/>} />
+
+
+          </Routes>
+        </main>
+
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,242 @@
+/* ==========================================
+   RESERVE MODAL - FINAL CLEAN VERSION
+   Accent Color: #C09551
+========================================== */
+
+.rm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* ===== MODAL CONTAINER ===== */
+
+.rm-modal {
+  position: relative;
+  background: #ffffff;
+  width: 100%;
+  max-width: 1150px;
+
+  max-height: 90vh;           /* Height control */
+  overflow-y: auto;           /* Scroll inside */
+
+  animation: rmFadeIn 0.3s ease;
+}
+
+@keyframes rmFadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ===== CLOSE BUTTON ===== */
+
+.rm-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+
+  width: 42px;
+  height: 42px;
+
+  background: #ffffff;
+  color: #131313;
+
+  border-radius: 50%;
+  border: none;
+
+  font-size: 22px;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+  cursor: pointer;
+  z-index: 10000;
+  transition: 0.3s ease;
+}
+
+.rm-close:hover {
+  background: #C09551;
+  color: #ffffff;
+}
+
+/* ===== CONTENT GRID ===== */
+
+.rm-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* ===== LEFT IMAGE ===== */
+
+.rm-image {
+  height: 100%;
+}
+
+.rm-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== RIGHT FORM ===== */
+
+.rm-form {
+  background: #f5f4ef;
+  padding: 40px 50px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.rm-title {
+  font-size: 34px;
+  margin-bottom: 25px;
+  color: #131313;
+}
+
+.rm-section-heading {
+  font-size: 14px;
+  margin: 20px 0 10px;
+  color: #131313;
+  letter-spacing: 1px;
+}
+
+/* ===== GRID INPUTS ===== */
+
+.rm-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.rm-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* ===== INPUT STYLING ===== */
+
+.rm-form input,
+.rm-form select,
+.rm-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  background: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.rm-form input:focus,
+.rm-form select:focus,
+.rm-form textarea:focus {
+  border-color: #C09551;
+}
+
+/* ===== TEXTAREA ===== */
+
+.rm-form textarea {
+  resize: none;
+  margin-bottom: 20px;
+}
+
+/* ===== CHECKBOX ===== */
+
+.rm-checkbox {
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #444;
+}
+
+.rm-checkbox input {
+  margin-right: 8px;
+  accent-color: #C09551;
+}
+
+/* ===== SUBMIT BUTTON ===== */
+
+.rm-submit {
+  margin-top: 20px;
+  padding: 14px;
+  width: 100%;
+  background: #C09551;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.rm-submit:hover {
+  background: #a97f42;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .rm-content {
+    grid-template-columns: 1fr;
+  }
+
+  .rm-image {
+    height: 350px;
+  }
+
+  .rm-form {
+    padding: 35px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .rm-title {
+    font-size: 26px;
+  }
+
+  .rm-grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .rm-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .rm-form {
+    padding: 30px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+  .rm-form {
+    padding: 20px;
+  }
+
+  .rm-title {
+    font-size: 22px;
+  }
+
+  .rm-close {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+}
