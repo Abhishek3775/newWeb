@@ -1,0 +1,362 @@
+.section {
+  background: #f8f8f8;
+  padding: 70px 0 78px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 70px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: 50px;
+}
+
+/* =========================
+   IMAGE SIDE
+========================= */
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #ddd;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 1.22 / 1;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.04) 0%,
+    rgba(0, 0, 0, 0.08) 42%,
+    rgba(0, 0, 0, 0.42) 100%
+  );
+}
+
+.imageContent {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  color: #fff;
+}
+
+.imageLabel {
+  font-size: 11px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 6px;
+  opacity: 0.95;
+}
+
+.imageTitle {
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* =========================
+   CONTENT SIDE
+========================= */
+.content {
+  padding-top: 6px;
+}
+
+.heading {
+  font-size: 33px;
+  line-height: 1.15;
+  font-weight: 300;
+  color: #222;
+  margin: 0;
+}
+
+.description {
+  margin-top: 22px;
+  max-width: 500px;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 34px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #666;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.checkIcon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* =========================
+   LARGE DESKTOP
+========================= */
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1400px;
+    padding: 0 90px;
+  }
+
+  .heading {
+    font-size: 38px;
+  }
+
+  .description {
+    font-size: 16px;
+    max-width: 540px;
+  }
+
+  .listItem {
+    font-size: 16px;
+  }
+}
+
+/* =========================
+   LAPTOP
+========================= */
+@media (max-width: 1199px) {
+  .container {
+    padding: 0 48px;
+  }
+
+  .grid {
+    gap: 42px;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 14.5px;
+    max-width: 460px;
+  }
+
+  .listItem {
+    font-size: 14.5px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 991px) {
+  .section {
+    padding: 60px 0 70px;
+  }
+
+  .container {
+    padding: 0 32px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .imageWrapper {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .content {
+    max-width: 720px;
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+
+  .description {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .list {
+    margin-top: 28px;
+    gap: 14px;
+  }
+
+  .listItem {
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   MOBILE LARGE
+========================= */
+@media (max-width: 767px) {
+  .section {
+    padding: 52px 0 60px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .grid {
+    gap: 28px;
+  }
+
+  .imageWrapper {
+    border-radius: 0;
+  }
+
+  .image {
+    aspect-ratio: 1.08 / 1;
+  }
+
+  .imageContent {
+    left: 14px;
+    bottom: 14px;
+  }
+
+  .imageLabel {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+
+  .imageTitle {
+    font-size: 17px;
+  }
+
+  .heading {
+    font-size: 26px;
+  }
+
+  .description {
+    margin-top: 18px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .list {
+    margin-top: 24px;
+    gap: 13px;
+  }
+
+  .listItem {
+    gap: 10px;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .checkIcon {
+    width: 17px;
+    height: 17px;
+    margin-top: 1px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+  .section {
+    padding: 46px 0 54px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .image {
+    aspect-ratio: 1 / 1;
+  }
+
+  .imageContent {
+    left: 12px;
+    bottom: 12px;
+  }
+
+  .imageLabel {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+  }
+
+  .imageTitle {
+    font-size: 16px;
+  }
+
+  .heading {
+    font-size: 23px;
+  }
+
+  .description {
+    font-size: 12px;
+    line-height: 1.75;
+  }
+
+  .list {
+    margin-top: 22px;
+    gap: 12px;
+  }
+
+  .listItem {
+    font-size: 12.5px;
+    gap: 9px;
+  }
+
+  .checkIcon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* =========================
+   EXTRA SMALL MOBILE
+========================= */
+@media (max-width: 360px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .heading {
+    font-size: 21px;
+  }
+
+  .description {
+    font-size: 11.5px;
+  }
+
+  .listItem {
+    font-size: 12px;
+  }
+
+  .imageTitle {
+    font-size: 15px;
+  }
+}

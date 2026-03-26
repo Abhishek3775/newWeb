@@ -1,0 +1,394 @@
+.section {
+  background: #f5f3ef;
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+/* =========================
+   LEFT MAP
+========================= */
+.mapWrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #ddd;
+}
+
+.mapImage {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  min-height: 780px;
+}
+
+/* =========================
+   RIGHT PANEL
+========================= */
+.rightPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Accordion Item */
+.accordionItem {
+  background: #fff;
+  border: 1px solid #e3d4bc;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.activeItem {
+  border-color: #c09551;
+}
+
+/* Header */
+.accordionHeader {
+  width: 100%;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 14px 12px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1;
+}
+
+.dayBadge {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  background: #c09551;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.headerText h3 {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.35;
+  font-weight: 400;
+  color: #333;
+}
+
+.locationRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 5px;
+}
+
+.locationIcon {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+  opacity: 0.85;
+}
+
+.locationRow span {
+  font-size: 11px;
+  color: #7a7a7a;
+  line-height: 1.3;
+}
+
+.arrow {
+  font-size: 16px;
+  color: #9a9a9a;
+  line-height: 1;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* Content */
+.accordionContent {
+  padding: 0 14px 14px 14px;
+}
+
+.contentImageWrapper {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.contentImage {
+  width: 100%;
+  height: 165px;
+  object-fit: cover;
+  display: block;
+}
+
+.contentDescription {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.55;
+  margin: 0 0 14px;
+}
+
+.highlightsBlock h4 {
+  font-size: 12px;
+  color: #333;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.highlightsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e3d4bc;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 11px;
+  color: #666;
+  line-height: 1.45;
+}
+
+.chevron {
+  color: #c09551;
+  font-size: 12px;
+  line-height: 1;
+  margin-top: 1px;
+}
+
+.mealRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.mealIcon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.mealRow span {
+  font-size: 11px;
+  color: #666;
+}
+.contentImageWrapper {
+  cursor: pointer;
+}
+
+/* =========================
+   LAPTOP
+========================= */
+@media (max-width: 1199px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .mapImage {
+    min-height: 740px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 991px) {
+  .section {
+    padding: 40px 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .mapWrapper {
+    max-width: 100%;
+  }
+
+  .mapImage {
+    min-height: auto;
+    height: auto;
+    aspect-ratio: 1 / 1.15;
+  }
+
+  .rightPanel {
+    gap: 12px;
+  }
+}
+
+/* =========================
+   MOBILE LARGE
+========================= */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 18px;
+  }
+
+  .section {
+    padding: 32px 0 42px;
+  }
+
+  .grid {
+    gap: 22px;
+  }
+
+  .mapImage {
+    aspect-ratio: 1 / 1.18;
+  }
+
+  .accordionHeader {
+    padding: 12px 12px 11px;
+    gap: 10px;
+  }
+
+  .headerLeft {
+    gap: 10px;
+  }
+
+  .dayBadge {
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+    font-size: 13px;
+  }
+
+  .headerText h3 {
+    font-size: 14px;
+  }
+
+  .locationRow span {
+    font-size: 10px;
+  }
+
+  .accordionContent {
+    padding: 0 12px 12px 12px;
+  }
+
+  .contentImage {
+    height: 150px;
+  }
+
+  .contentDescription {
+    font-size: 11.5px;
+  }
+
+  .highlightsGrid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .highlightItem {
+    font-size: 10.8px;
+  }
+
+  .mealRow span {
+    font-size: 10.8px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .mapImage {
+    aspect-ratio: 1 / 1.22;
+  }
+
+  .accordionHeader {
+    padding: 11px 10px 10px;
+  }
+
+  .dayBadge {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    font-size: 12px;
+  }
+
+  .headerText h3 {
+    font-size: 13px;
+  }
+
+  .locationRow {
+    gap: 5px;
+    margin-top: 4px;
+  }
+
+  .locationIcon {
+    width: 11px;
+    height: 11px;
+  }
+
+  .locationRow span {
+    font-size: 9.5px;
+  }
+
+  .arrow {
+    font-size: 14px;
+  }
+
+  .accordionContent {
+    padding: 0 10px 10px 10px;
+  }
+
+  .contentImage {
+    height: 135px;
+    margin-bottom: 10px;
+  }
+
+  .contentDescription {
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+
+  .highlightsBlock h4 {
+    font-size: 11px;
+  }
+
+  .highlightItem {
+    font-size: 10px;
+  }
+
+  .mealIcon {
+    width: 13px;
+    height: 13px;
+  }
+
+  .mealRow span {
+    font-size: 10px;
+  }
+}

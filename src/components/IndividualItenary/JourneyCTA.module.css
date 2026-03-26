@@ -1,0 +1,353 @@
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 396px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+}
+
+.bgImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.18) 0%,
+    rgba(0, 0, 0, 0.26) 38%,
+    rgba(0, 0, 0, 0.42) 100%
+  );
+  z-index: 2;
+}
+
+.container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  padding: 36px 0 40px;
+}
+
+/* =========================
+   TOP TEXT
+========================= */
+.subHeading {
+  color: #c09551;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 36px;
+  line-height: 1.18;
+  font-weight: 300;
+  margin: 0;
+  color: #ffffff;
+}
+
+.description {
+  margin: 26px auto 0;
+  max-width: 760px;
+  font-size: 17px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 300;
+}
+
+/* =========================
+   CONTACT STRIP
+========================= */
+.contactBar {
+  margin: 34px auto 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+.iconBox {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.iconBox img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.divider {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.buttonRow {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  min-width: 240px;
+  height: 48px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 1px solid #c09551;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+.goldIcon {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) saturate(100%) invert(63%) sepia(32%) saturate(512%) hue-rotate(358deg) brightness(90%) contrast(85%);
+}
+
+.whiteIcon {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.ctaButton img {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+}
+
+.primaryButton {
+  background: #c09551;
+  color: #fff;
+}
+
+.primaryButton:hover {
+  background: #ad8346;
+}
+
+.secondaryButton {
+  background: transparent;
+  color: #c09551;
+}
+
+.secondaryButton:hover {
+  background: rgba(192, 149, 81, 0.12);
+}
+
+.arrow {
+  margin-left: 8px;
+  font-size: 15px;
+  line-height: 1;
+}
+
+/* =========================
+   LARGE DESKTOP
+========================= */
+@media (min-width: 1440px) {
+  .section {
+    min-height: 430px;
+  }
+
+  .heading {
+    font-size: 38px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+}
+
+/* =========================
+   LAPTOP
+========================= */
+@media (max-width: 1199px) {
+  .heading {
+    font-size: 34px;
+  }
+
+  .description {
+    font-size: 16px;
+    max-width: 700px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 991px) {
+  .section {
+    min-height: 430px;
+  }
+
+  .content {
+    padding: 48px 0;
+  }
+
+  .subHeading {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  .heading {
+    font-size: 31px;
+  }
+
+  .description {
+    font-size: 15px;
+    max-width: 620px;
+    line-height: 1.55;
+    margin-top: 20px;
+  }
+
+  .contactBar {
+    margin-top: 28px;
+    gap: 16px;
+  }
+
+  .contactItem {
+    font-size: 12px;
+  }
+
+  .ctaButton {
+    min-width: 220px;
+    height: 46px;
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   MOBILE CONTACT FIX
+========================= */
+@media (max-width: 767px) {
+  .contactBar {
+    width: 100%;
+    max-width: 320px;
+    margin: 24px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .contactItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    font-size: 13px;
+    text-align: left;
+    word-break: break-word;
+  }
+
+  .iconBox {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+  }
+
+  .iconBox img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.45);
+  }
+}
+
+@media (max-width: 480px) {
+  .contactBar {
+    max-width: 290px;
+    gap: 10px;
+  }
+
+  .contactItem {
+    font-size: 12px;
+    gap: 10px;
+  }
+
+  .iconBox {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+  }
+
+  .iconBox img {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .contactBar {
+    max-width: 100%;
+  }
+
+  .contactItem {
+    font-size: 11px;
+  }
+
+  .iconBox {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+  }
+}

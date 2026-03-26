@@ -1,0 +1,369 @@
+.section {
+  background: #f5f4ef;
+  padding: 70px 0 80px;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* =========================
+   TABS
+========================= */
+.tabsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.tabButton {
+  min-width: 160px;
+  height: 44px;
+  border: 1px solid #c09551;
+  background: transparent;
+  color: #c09551;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.tabButton:first-child {
+  border-right: none;
+}
+
+.activeTab {
+  background: #c09551;
+  color: #fff;
+}
+
+/* =========================
+   ACCOMMODATIONS
+========================= */
+.accommodationGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.roomCard {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  cursor: pointer;
+}
+
+.roomImageWrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.roomImage {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 1.2 / 0.9;
+}
+
+.roomSize {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #fff;
+  color: #222;
+  font-size: 12px;
+  padding: 6px 10px;
+  line-height: 1;
+}
+
+.roomContent {
+  padding: 22px 16px 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.roomTitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: #2a2a2a;
+  margin: 0 0 14px;
+}
+
+.featureList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.featureList li {
+  position: relative;
+  padding-left: 12px;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.45;
+}
+
+.featureList li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  background: #c09551;
+  border-radius: 50%;
+}
+
+.roomFooter {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #d8b98b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  font-size: 14px;
+  color: #2d2d2d;
+}
+
+.viewBtn {
+  background: transparent;
+  border: none;
+  color: #c09551;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* =========================
+   AMENITIES
+========================= */
+.amenitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.amenityCard {
+  border: 1px solid #d8b98b;
+  background: transparent;
+  text-align: center;
+  padding: 42px 22px;
+}
+
+.iconCircle {
+  width: 56px;
+  height: 56px;
+  border: 1px solid #c09551;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 22px;
+}
+
+.amenityIcon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.amenityTitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: #2a2a2a;
+  margin: 0 0 14px;
+}
+
+.amenityDesc {
+  font-size: 11px;
+  color: #666;
+  line-height: 1.6;
+  max-width: 240px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* =========================
+   LAPTOP
+========================= */
+@media (max-width: 1199px) {
+  .accommodationGrid {
+    gap: 18px;
+  }
+
+  .amenitiesGrid {
+    gap: 16px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 991px) {
+  .section {
+    padding: 58px 0 68px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .accommodationGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .amenitiesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tabsWrapper {
+    margin-bottom: 38px;
+  }
+}
+
+/* =========================
+   MOBILE LARGE
+========================= */
+@media (max-width: 767px) {
+  .section {
+    padding: 48px 0 56px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .tabsWrapper {
+    margin-bottom: 30px;
+  }
+
+  .tabButton {
+    min-width: 140px;
+    height: 42px;
+    font-size: 13px;
+  }
+
+  .accommodationGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .amenitiesGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .roomContent {
+    padding: 18px 14px 10px;
+  }
+
+  .roomTitle {
+    font-size: 17px;
+  }
+
+  .featureList li {
+    font-size: 12.5px;
+  }
+
+  .price {
+    font-size: 13px;
+  }
+
+  .viewBtn {
+    font-size: 12px;
+  }
+
+  .amenityCard {
+    padding: 34px 18px;
+  }
+
+  .amenityTitle {
+    font-size: 17px;
+  }
+
+  .amenityDesc {
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .tabsWrapper {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tabButton {
+    min-width: 130px;
+    width: auto;
+    flex: 1;
+  }
+
+  .tabButton:first-child {
+    border-right: 1px solid #c09551;
+  }
+
+  .roomSize {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+
+  .roomTitle {
+    font-size: 16px;
+  }
+
+  .featureList {
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+
+  .featureList li {
+    font-size: 12px;
+  }
+
+  .roomFooter {
+    padding-top: 12px;
+  }
+
+  .price {
+    font-size: 12px;
+  }
+
+  .viewBtn {
+    font-size: 11px;
+  }
+
+  .iconCircle {
+    width: 52px;
+    height: 52px;
+  }
+
+  .amenityIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .amenityTitle {
+    font-size: 16px;
+  }
+
+  .amenityDesc {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,283 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(2px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.modalBox {
+  position: relative;
+  width: 100%;
+  max-width: 1180px;
+  background: #f5f4ef;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  z-index: 20;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  line-height: 1;
+  color: #555;
+  cursor: pointer;
+}
+
+.swiperWrapper {
+  width: 100%;
+}
+
+.slideContent {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  min-height: 560px;
+}
+
+/* LEFT */
+.imageSection {
+  position: relative;
+  background: #ddd;
+  overflow: hidden;
+}
+
+.modalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* RIGHT */
+.infoSection {
+  padding: 54px 42px 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #3a3a3a;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0 0 12px;
+  color: #3a3a3a;
+}
+
+.locationRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.locationRow img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.locationRow span {
+  font-size: 12px;
+  color: #c09551;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.infoSection p {
+  font-size: 15px;
+  line-height: 1.95;
+  color: #666;
+  margin: 0 0 24px;
+}
+
+/* NAV BUTTONS */
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 30;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: #ffffff;
+  color: #6d6d6d;
+  font-size: 24px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+}
+
+.prevBtn {
+  left: 12px;
+}
+
+.nextBtn {
+  left: calc(58% - 18px);
+}
+
+/* =========================
+   LAPTOP
+========================= */
+@media (max-width: 1199px) {
+  .slideContent {
+    grid-template-columns: 1.25fr 1fr;
+    min-height: 520px;
+  }
+
+  .infoSection {
+    padding: 44px 30px 34px;
+  }
+
+  .nextBtn {
+    left: calc(56% - 18px);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 991px) {
+  .modalOverlay {
+    padding: 18px;
+  }
+
+  .slideContent {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .imageSection {
+    height: 360px;
+  }
+
+  .infoSection {
+    padding: 32px 24px 28px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .infoSection p {
+    font-size: 14px;
+    line-height: 1.85;
+    margin-bottom: 18px;
+  }
+
+  .prevBtn {
+    left: 10px;
+    top: 180px;
+    transform: none;
+  }
+
+  .nextBtn {
+    right: 10px;
+    left: auto;
+    top: 180px;
+    transform: none;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 767px) {
+  .modalOverlay {
+    padding: 10px;
+  }
+
+  .modalBox {
+    max-height: 95vh;
+    overflow-y: auto;
+  }
+
+  .imageSection {
+    height: 250px;
+  }
+
+  .infoSection {
+    padding: 24px 18px 20px;
+  }
+
+  .title {
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .locationRow {
+    margin-bottom: 18px;
+  }
+
+  .locationRow span {
+    font-size: 11px;
+  }
+
+  .infoSection p {
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .closeBtn {
+    top: 10px;
+    right: 12px;
+    font-size: 24px;
+  }
+
+  .navBtn {
+    width: 32px;
+    height: 32px;
+    font-size: 22px;
+  }
+
+  .prevBtn {
+    left: 8px;
+    top: 125px;
+  }
+
+  .nextBtn {
+    right: 8px;
+    top: 125px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+  .imageSection {
+    height: 220px;
+  }
+
+  .infoSection {
+    padding: 20px 16px 18px;
+  }
+
+  .title {
+    font-size: 17px;
+  }
+
+  .infoSection p {
+    font-size: 12px;
+    line-height: 1.75;
+  }
+
+  .prevBtn,
+  .nextBtn {
+    top: 110px;
+  }
+}
