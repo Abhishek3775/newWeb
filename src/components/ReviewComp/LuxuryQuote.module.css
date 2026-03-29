@@ -1,0 +1,134 @@
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 280px;
+  background: linear-gradient(90deg, #0f1115 0%, #1a1d22 50%, #2a2d31 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.03) 0%, transparent 55%),
+    linear-gradient(to right, rgba(0, 0, 0, 0.35), rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.35));
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 920px;
+  text-align: center;
+}
+
+.quote {
+  margin: 0 auto 34px;
+  max-width: 760px;
+  font-size: 24px;
+  line-height: 1.7;
+  font-style: italic;
+  font-weight: 400;
+  color: #f2f2f2;
+  /* font-family: Georgia, "Times New Roman", serif; */
+}
+
+.authorWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #c09551;
+  box-shadow: 0 0 0 4px rgba(192, 149, 81, 0.15);
+}
+
+.authorInfo {
+  text-align: left;
+}
+
+.name {
+  margin: 0 0 4px;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #ffffff;
+  /* font-family: Arial, sans-serif; */
+}
+
+.role {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #c09551;
+  font-weight: 500;
+  /* font-family: Arial, sans-serif; */
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .section {
+    min-height: 240px;
+    padding: 50px 18px;
+  }
+
+  .quote {
+    font-size: 20px;
+    line-height: 1.65;
+    margin-bottom: 28px;
+  }
+
+  .avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  .name {
+    font-size: 15px;
+  }
+
+  .role {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    min-height: 220px;
+    padding: 42px 14px;
+  }
+
+  .quote {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .authorWrap {
+    gap: 12px;
+  }
+
+  .avatar {
+    width: 44px;
+    height: 44px;
+  }
+
+  .name {
+    font-size: 14px;
+  }
+
+  .role {
+    font-size: 10px;
+  }
+}

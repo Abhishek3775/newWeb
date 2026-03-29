@@ -1,0 +1,136 @@
+/* =========================
+   IMPERIAL HERO SECTION
+   ========================= */
+
+.impHero {
+  width: 100%;
+  height: 90vh;
+  min-height: 550px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.impOverlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.1) ,
+    rgba(0, 0, 0, 0.5) 50%
+  ); */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4%;
+  box-sizing: border-box;
+}
+
+.impContent {
+  position: relative;
+  z-index: 2;
+  top: 25px;
+  max-width: 700px;
+}
+
+.impSubtitle {
+  color: #C09551;
+  font-size: clamp(14px, 1.5vw, 18px);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.impTitle {
+  font-size: clamp(32px, 6vw, 72px);
+  font-weight: 400;
+  white-space: nowrap;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+.impLocations {
+  font-size: clamp(14px, 1.6vw, 18px);
+  color: #ddd;
+  margin-bottom: 25px;
+}
+
+.impDetails {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  font-size: clamp(13px, 1.4vw, 16px);
+  color: #f1f1f1;
+  margin-bottom: 30px;
+}
+
+.impPricing {
+  font-size: clamp(13px, 1.4vw, 16px);
+  color: #eee;
+  margin-top: 80px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 12px 20px;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.impPricing span {
+  color: #C09551;
+  font-weight: 600;
+}
+
+.impBtn {
+  background-color: #C09551;
+  color: #fff;
+  font-size: clamp(13px, 1.3vw, 15px);
+  padding: 14px 32px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+  border-radius: 2px;
+  font-weight: 500;
+  position: absolute;
+  right: 50px;
+  bottom: 130px;
+}
+
+.impBtn:hover {
+  background-color: #C09551;
+  color: #111;
+}
+
+@media (max-width: 1024px) {
+  .impOverlay { padding: 0 3%; }
+}
+
+@media (max-width: 768px) {
+  .impHero { height: auto; min-height: 100svh; justify-content: center; text-align: center; }
+  .impOverlay {
+    flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; padding: 40px 6% 100px;
+    background: linear-gradient(to top, rgba(0,0,0,0.75) 50%, rgba(0,0,0,0.35) 100%);
+  }
+  .impContent { max-width: 90%; padding: 0; }
+  .impDetails { justify-content: center; gap: 15px; }
+  .impPricing { margin-top: 40px; }
+  .impBtn { position: static; margin-top: 40px; width: fit-content; }
+}
+
+@media (max-width: 480px) {
+  .impContent { padding: 20px 5%; }
+  .impTitle { font-size: clamp(28px, 7vw, 48px); }
+  .impSubtitle { text-align: center;}
+  .impBtn { width: 100%; margin-top: 30px; padding: 14px 0; }
+  .impDetails { flex-direction: column; gap: 10px; }
+}

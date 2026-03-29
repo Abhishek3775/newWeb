@@ -1,0 +1,555 @@
+.container {
+  width: 100%;
+  background: #f3f1ec;
+  padding: 34px 0 48px;
+}
+
+.maxWidth {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+
+.headerLeft {
+  flex: 1;
+}
+
+.label {
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  color: #c09551;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.15;
+  font-weight: 400;
+  color: #1f1f1f;
+  font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+.toggleButtons {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.viewBtn {
+  min-width: 86px;
+  height: 28px;
+  border: none;
+  background: #ffffff;
+  color: #666;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  transition: all 0.25s ease;
+}
+
+.viewBtn.active {
+  background: #c09551;
+  color: #ffffff;
+}
+
+/* ================= QUICK VIEW ================= */
+
+.quickViewContainer {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 34px;
+  align-items: start;
+}
+
+.daysList {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* 🔥 SINGLE CONTINUOUS LINE */
+.daysList::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 62px;
+  width: 1px;
+  background: #c9a56a;
+}
+
+.dayItem {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 16px;
+  padding: 16px 0;
+  position: relative;
+}
+
+.dayNumber {
+  position: relative;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 400;
+  color: #c09551;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  white-space: nowrap;
+  padding-right: 18px;
+  padding-top: 1px;
+}
+
+/* gold dot only */
+.dayNumber::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: -3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c09551;
+  z-index: 2;
+}
+
+.dayContent {
+  position: relative;
+  padding-left: 0;
+}
+
+.dayCity {
+  margin: 0 0 6px;
+  font-size: 17px;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  color: #c09551;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+}
+
+.dayTitle {
+  margin: 0 0 7px;
+  font-size: 15px;
+  line-height: 1.25;
+  font-weight: 400;
+  color: #2a2a2a;
+  font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+.dayLocation {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  line-height: 1.2;
+  color: #666;
+  font-family: Arial, sans-serif;
+}
+
+.mapContainer {
+  width: 100%;
+  max-width: 610px;
+  justify-self: end;
+  border: 1px solid #ddcfbd;
+  background: #f8f5f0;
+  overflow: hidden;
+}
+
+.mapImage {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ================= DETAILED VIEW ================= */
+
+.detailedViewContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.detailedDay {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  align-items: start;
+  position: relative;
+}
+
+.dayCol {
+  position: relative;
+  padding-top: 16px;
+  padding-right: 26px;
+  min-height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bigDay {
+  font-size: 18px;
+  line-height: 1;
+  color: #c09551;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.dayCol::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background: #c9a56a;
+}
+
+.dayCol::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  right: -3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c09551;
+  z-index: 2;
+}
+
+.contentCol {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  margin-top: 10px;
+  align-items: stretch;
+  min-height: 255px;
+  column-gap: 24px;
+  padding-bottom: 18px;
+}
+
+.textPanel {
+  padding: 0 0 22px 18px;
+  border-left: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.cityBadge {
+  margin: 0 0 6px;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  color: #c09551;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+}
+
+.detailedTitle {
+  margin: 0 0 6px;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #2a2a2a;
+  font-family: "Arial Narrow", Arial, sans-serif;
+}
+
+.subtitle {
+  margin: 0 0 14px;
+  font-size: 12px;
+  line-height: 1.3;
+  color: #c09551;
+  font-family: Arial, sans-serif;
+}
+
+.description {
+  margin: 0 0 18px;
+  font-size: 11px;
+  line-height: 1.8;
+  color: #555;
+  font-family: Arial, sans-serif;
+  max-width: 96%;
+}
+
+.highlightsLabel {
+  margin: 0 0 10px;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: #1f1f1f;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+}
+
+.highlightsList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.highlightsList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #666;
+  font-family: Arial, sans-serif;
+}
+
+.highlightsList li span {
+  flex: 1;
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #d8d0c3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footerItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  line-height: 1.2;
+  color: #777;
+  font-family: Arial, sans-serif;
+}
+
+.imagePanel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.detailedImage {
+  width: 100%;
+  height: 100%;
+  min-height: 255px;
+  object-fit: cover;
+  display: block;
+}
+
+.textRight .contentCol {
+  grid-template-columns: 320px 1fr;
+}
+
+.textRight .textPanel {
+  order: 2;
+  padding: 0 18px 22px 0;
+  border-right: none;
+}
+
+.textRight .imagePanel {
+  order: 1;
+}
+
+.detailedDay:last-child .dayCol::after {
+  display: none;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .quickViewContainer {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .mapContainer {
+    max-width: 100%;
+    justify-self: stretch;
+  }
+
+  .contentCol,
+  .textRight .contentCol {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+
+  .textPanel,
+  .textRight .textPanel {
+    order: 1;
+    padding: 0 0 18px 18px;
+  }
+
+  .imagePanel {
+    order: 2;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 28px 0 38px;
+  }
+
+  .maxWidth {
+    padding: 0 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 22px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .toggleButtons {
+    margin-top: 0;
+  }
+
+  .quickViewContainer {
+    gap: 20px;
+  }
+
+  .daysList::before {
+    display: none;
+  }
+
+  .dayItem {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 12px 0;
+  }
+
+  .dayNumber {
+    padding-right: 0;
+    font-size: 14px;
+  }
+
+  .dayNumber::before {
+    display: none;
+  }
+
+  .dayTitle {
+    font-size: 14px;
+  }
+
+  .detailedDay {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+
+  .dayCol {
+    padding-top: 0;
+    padding-right: 0;
+    justify-content: flex-start;
+  }
+
+  .dayCol::after,
+  .dayCol::before {
+    display: none;
+  }
+
+  .bigDay {
+    font-size: 24px;
+  }
+
+  .contentCol {
+    min-height: auto;
+  }
+
+  .textPanel,
+  .textRight .textPanel {
+    padding: 0;
+  }
+
+  .detailedTitle {
+    font-size: 17px;
+  }
+
+  .description {
+    font-size: 11px;
+  }
+
+  .detailedImage {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .maxWidth {
+    padding: 0 12px;
+  }
+
+  .label {
+    font-size: 12px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .viewBtn {
+    min-width: 80px;
+    height: 28px;
+    font-size: 9px;
+  }
+
+  .quickViewContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .dayNumber {
+    font-size: 13px;
+  }
+
+  .dayTitle {
+    font-size: 13px;
+  }
+
+  .dayLocation,
+  .footerItem,
+  .highlightsList li,
+  .description {
+    font-size: 10px;
+  }
+
+  .bigDay {
+    font-size: 20px;
+  }
+
+  .detailedTitle {
+    font-size: 16px;
+  }
+
+  .subtitle {
+    font-size: 11px;
+  }
+
+  .detailedImage {
+    min-height: 200px;
+  }
+}

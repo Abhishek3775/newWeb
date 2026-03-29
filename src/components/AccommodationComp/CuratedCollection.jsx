@@ -5,9 +5,19 @@ import img2 from "../../assets2/Accommodation/2.png";
 import img3 from "../../assets2/Accommodation/3.png";
 import img4 from "../../assets2/Accommodation/4.png";
 import img5 from "../../assets2/Accommodation/5.png";
-import { FiSearch, FiHeart, FiChevronDown, FiX, FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import { FaMapMarkerAlt, FaPhone } from "react-icons/fa";
-import { LuShield } from "react-icons/lu";
+import {
+  FiSearch,
+  FiHeart,
+  FiChevronDown,
+  FiX,
+  FiChevronLeft,
+  FiChevronRight,
+  FiMinus,
+  FiPlus,
+  FiCalendar,
+} from "react-icons/fi";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { LuShield, LuUsers, LuBedDouble } from "react-icons/lu";
 
 const hotelsData = [
   {
@@ -109,17 +119,39 @@ const CuratedCollection = () => {
   const [wishlist, setWishlist] = useState([]);
   const [selectedHotel, setSelectedHotel] = useState(null);
   const [modalImgIndex, setModalImgIndex] = useState(0);
+  const [showEnquiryForm, setShowEnquiryForm] = useState(false);
+
+const [enquiryForm, setEnquiryForm] = useState({
+  checkIn: "",
+  checkOut: "",
+  adults: 1,
+  children: [],
+  rooms: 1,
+  requests: "",
+});
 
   useEffect(() => {
-    const handleKey = (e) => { if (e.key === "Escape") setSelectedHotel(null); };
-    window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
-  }, []);
+  const handleKey = (e) => {
+    if (e.key === "Escape") {
+      if (showEnquiryForm) {
+        setShowEnquiryForm(false);
+      } else {
+        setSelectedHotel(null);
+      }
+    }
+  };
 
-  useEffect(() => {
-    document.body.style.overflow = selectedHotel ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
-  }, [selectedHotel]);
+  window.addEventListener("keydown", handleKey);
+  return () => window.removeEventListener("keydown", handleKey);
+}, [showEnquiryForm]);
+
+useEffect(() => {
+  document.body.style.overflow =
+    selectedHotel || showEnquiryForm ? "hidden" : "";
+  return () => {
+    document.body.style.overflow = "";
+  };
+}, [selectedHotel, showEnquiryForm]);
 
   const handleFilter = (key, value) => {
     setFilters((prev) => ({ ...prev, [key]: value.startsWith("All") ? "" : value }));
@@ -139,6 +171,49 @@ const CuratedCollection = () => {
 
   const getLabel = (key, options) => (filters[key] ? filters[key] : options[0]);
   const modalImages = selectedHotel ? [selectedHotel.image, selectedHotel.image, selectedHotel.image] : [];
+
+  const updateForm = (key, value) => {
+  setEnquiryForm((prev) => ({ ...prev, [key]: value }));
+};
+
+const changeCount = (key, delta, min = 1) => {
+  setEnquiryForm((prev) => ({
+    ...prev,
+    [key]: Math.max(min, prev[key] + delta),
+  }));
+};
+
+const addChild = () => {
+  setEnquiryForm((prev) => ({
+    ...prev,
+    children: [...prev.children, "1 year"],
+  }));
+};
+
+const removeChild = (index) => {
+  setEnquiryForm((prev) => ({
+    ...prev,
+    children: prev.children.filter((_, i) => i !== index),
+  }));
+};
+
+const updateChildAge = (index, value) => {
+  setEnquiryForm((prev) => ({
+    ...prev,
+    children: prev.children.map((age, i) => (i === index ? value : age)),
+  }));
+};
+
+const handleSubmitEnquiry = (e) => {
+  e.preventDefault();
+  console.log("Enquiry Submitted:", {
+    hotel: selectedHotel?.name,
+    ...enquiryForm,
+  });
+
+  alert("Enquiry submitted successfully!");
+  setShowEnquiryForm(false);
+};
 
   const filterConfig = [
     { key: "country", label: "COUNTRY", options: countryOptions },
@@ -257,54 +332,249 @@ const CuratedCollection = () => {
 
       {/* ── Modal ── */}
       {selectedHotel && (
-        <div className={styles.modalOverlay} onClick={() => setSelectedHotel(null)}>
-          <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-            <button className={styles.modalClose} onClick={() => setSelectedHotel(null)}><FiX /></button>
-            <div className={styles.modalBody}>
-              <div className={styles.modalImageSection}>
-                <span className={styles.modalBadge}>{selectedHotel.grade}</span>
-                <img src={modalImages[modalImgIndex]} alt={selectedHotel.name} className={styles.modalMainImage} />
-                <button className={`${styles.sliderBtn} ${styles.sliderLeft}`} onClick={() => setModalImgIndex((modalImgIndex - 1 + modalImages.length) % modalImages.length)}>
-                  <FiChevronLeft />
-                </button>
-                <button className={`${styles.sliderBtn} ${styles.sliderRight}`} onClick={() => setModalImgIndex((modalImgIndex + 1) % modalImages.length)}>
-                  <FiChevronRight />
-                </button>
-                <div className={styles.sliderDots}>
-                  {modalImages.map((_, i) => (
-                    <span key={i} className={`${styles.dot} ${i === modalImgIndex ? styles.dotActive : ""}`} onClick={() => setModalImgIndex(i)} />
-                  ))}
-                </div>
-              </div>
-              <div className={styles.modalContent}>
-                <span className={styles.modalLocation}><FaMapMarkerAlt className={styles.pinIcon} /> {selectedHotel.location}</span>
-                <h2 className={styles.modalTitle}>{selectedHotel.name}</h2>
-                <div className={styles.modalRating}>{"★".repeat(selectedHotel.stars)} <span>{selectedHotel.stars}-Star Luxury</span></div>
-                <p className={styles.modalDesc}>{selectedHotel.longDescription}</p>
-                <div className={styles.modalHighlights}>
-                  {selectedHotel.highlights.map((h) => (
-                    <span key={h} className={styles.highlightTag}>{h}</span>
-                  ))}
-                </div>
-                <div className={styles.modalBenefit}>
-                  <LuShield className={styles.benefitIcon} />
-                  <div>
-                    <span className={styles.benefitLabel}>EXCLUSIVE MEMBER BENEFIT</span>
-                    <p>{selectedHotel.benefit}</p>
-                  </div>
-                </div>
-                <div className={styles.expertBox}>
-                  <div className={styles.expertLeft}>
-                    <FaPhone className={styles.expertIcon} />
-                    <div>
-                      <p className={styles.expertTitle}>SPEAK TO AN EXPERT</p>
-                      <p className={styles.expertSub}>Contact us to speak to Subashish Dutta, an APA curator to book your retreat</p>
-                    </div>
-                  </div>
-                  <button className={styles.enquireBtn}>ENQUIRE →</button>
-                </div>
+  <div className={styles.modalOverlay} onClick={() => setSelectedHotel(null)}>
+    <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
+      <button
+        className={styles.modalClose}
+        onClick={() => setSelectedHotel(null)}
+      >
+        <FiX />
+      </button>
+
+      <div className={styles.modalInner}>
+        {/* LEFT */}
+        <div className={styles.modalImageWrap}>
+          <p className={styles.modalTopLabel}>HOTELS IN JAPAN</p>
+
+          <div className={styles.modalImageBox}>
+            <img
+              src={modalImages[modalImgIndex]}
+              alt={selectedHotel.name}
+              className={styles.modalMainImage}
+            />
+
+            <button
+              className={`${styles.sliderBtn} ${styles.sliderLeft}`}
+              onClick={() =>
+                setModalImgIndex(
+                  (modalImgIndex - 1 + modalImages.length) % modalImages.length
+                )
+              }
+            >
+              <FiChevronLeft />
+            </button>
+
+            <button
+              className={`${styles.sliderBtn} ${styles.sliderRight}`}
+              onClick={() =>
+                setModalImgIndex((modalImgIndex + 1) % modalImages.length)
+              }
+            >
+              <FiChevronRight />
+            </button>
+          </div>
+        </div>
+
+        {/* RIGHT */}
+        <div className={styles.modalContent}>
+          <h2 className={styles.modalTitle}>{selectedHotel.name}</h2>
+
+          <span className={styles.modalLocation}>
+            <FaMapMarkerAlt className={styles.pinIcon} /> {selectedHotel.location}
+          </span>
+
+          <p className={styles.modalDesc}>{selectedHotel.longDescription}</p>
+
+          <div className={styles.expertBox}>
+            <div className={styles.expertLeft}>
+              <div className={styles.expertLogo}>EG</div>
+              <div>
+                <p className={styles.expertTitle}>SPEAK TO AN EXPERT</p>
+                <p className={styles.expertSub}>
+                  Contact us, an Elite Global Concierge in your Journey.
+                </p>
               </div>
             </div>
+
+            <button
+              className={styles.bookBtn}
+              onClick={() => setShowEnquiryForm(true)}
+            >
+              BOOK
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
+      {/* ── Enquiry Form Modal ── */}
+      {showEnquiryForm && (
+        <div
+          className={styles.enquiryOverlay}
+          onClick={() => setShowEnquiryForm(false)}
+        >
+          <div
+            className={styles.enquiryModal}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className={styles.enquiryClose}
+              onClick={() => setShowEnquiryForm(false)}
+            >
+              <FiX />
+            </button>
+
+            <div className={styles.enquiryHeader}>
+              <p className={styles.enquirySmall}>Private Concierge</p>
+              <h2 className={styles.enquiryTitle}>Accommodation Enquiry</h2>
+              <p className={styles.enquirySub}>
+                Curated exclusively for our distinguished guests
+              </p>
+            </div>
+
+            <form
+              className={styles.enquiryForm}
+              onSubmit={handleSubmitEnquiry}
+            >
+              {/* Dates */}
+              <div className={styles.formRow}>
+                <div className={styles.formGroup}>
+                  <label>CHECK-IN</label>
+                  <div className={styles.inputWrap}>
+                    <FiCalendar className={styles.inputIcon} />
+                    <input
+                      type="date"
+                      value={enquiryForm.checkIn}
+                      onChange={(e) => updateForm("checkIn", e.target.value)}
+                    />
+                  </div>
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label>CHECK-OUT</label>
+                  <div className={styles.inputWrap}>
+                    <FiCalendar className={styles.inputIcon} />
+                    <input
+                      type="date"
+                      value={enquiryForm.checkOut}
+                      onChange={(e) => updateForm("checkOut", e.target.value)}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Guests */}
+              <div className={styles.formSection}>
+                <div className={styles.sectionLabel}>
+                  <LuUsers /> GUESTS
+                </div>
+
+                <div className={styles.counterRow}>
+                  <span>Adults</span>
+                  <div className={styles.counter}>
+                    <button
+                      type="button"
+                      onClick={() => changeCount("adults", -1, 1)}
+                    >
+                      <FiMinus />
+                    </button>
+                    <span>{enquiryForm.adults}</span>
+                    <button
+                      type="button"
+                      onClick={() => changeCount("adults", 1, 1)}
+                    >
+                      <FiPlus />
+                    </button>
+                  </div>
+                </div>
+
+                <div className={styles.childrenBlock}>
+                  <div className={styles.childrenTop}>
+                    <span>Children</span>
+                    <button
+                      type="button"
+                      className={styles.addChildBtn}
+                      onClick={addChild}
+                    >
+                      + ADD CHILD
+                    </button>
+                  </div>
+
+                  {enquiryForm.children.map((child, index) => (
+                    <div key={index} className={styles.childRow}>
+                      <label>Age</label>
+                      <select
+                        value={child}
+                        onChange={(e) =>
+                          updateChildAge(index, e.target.value)
+                        }
+                      >
+                        {Array.from({ length: 17 }, (_, i) => (
+                          <option key={i + 1} value={`${i + 1} year`}>
+                            {i + 1} year{i + 1 > 1 ? "s" : ""}
+                          </option>
+                        ))}
+                      </select>
+
+                      <button
+                        type="button"
+                        className={styles.removeChildBtn}
+                        onClick={() => removeChild(index)}
+                      >
+                        <FiX />
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Accommodation */}
+              <div className={styles.formSection}>
+                <div className={styles.sectionLabel}>
+                  <LuBedDouble /> ACCOMMODATION
+                </div>
+
+                <div className={styles.counterRow}>
+                  <span>Rooms / Suites</span>
+                  <div className={styles.counter}>
+                    <button
+                      type="button"
+                      onClick={() => changeCount("rooms", -1, 1)}
+                    >
+                      <FiMinus />
+                    </button>
+                    <span>{enquiryForm.rooms}</span>
+                    <button
+                      type="button"
+                      onClick={() => changeCount("rooms", 1, 1)}
+                    >
+                      <FiPlus />
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Requests */}
+              <div className={styles.formSection}>
+                <div className={styles.sectionLabel}>SPECIAL REQUESTS</div>
+                <textarea
+                  className={styles.textarea}
+                  placeholder="Airport transfers, dietary requirements, celebration arrangements ..."
+                  value={enquiryForm.requests}
+                  onChange={(e) => updateForm("requests", e.target.value)}
+                />
+              </div>
+
+              <button type="submit" className={styles.submitBtn}>
+                SUBMIT ENQUIRY
+              </button>
+
+              <p className={styles.formFooter}>
+                Our team responds within 24 hours
+              </p>
+            </form>
           </div>
         </div>
       )}

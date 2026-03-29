@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./GuideSection.module.css";
-import bgImage from "../../assets/linepatter1.png";
+import bgImage from "../../assets2/Accommodation/12.png";
 
 const GuideSection = () => {
   return (
@@ -17,10 +17,10 @@ const GuideSection = () => {
           <span>Create Your Perfect Journey</span>
         </h2>
 
-        <p className={styles.subText}>
+        {/* <p className={styles.subText}>
           Share your travel dreams with our expert curators and receive a
           bespoke itinerary tailored to your every desire.
-        </p>
+        </p> */}
 
         <div className={styles.buttons}>
           <button className={styles.primaryBtn}>

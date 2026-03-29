@@ -13,7 +13,7 @@ function Calender() {
     <>
     {<CalenderHero/>}
     {<ChooseMonth/>}
-    {<LuxuryBenefits/>}
+    {/* {<LuxuryBenefits/>} */}
     {<WordsFromTravelers/>}
     {<ReadyForAdventure/>}
     {<StayInspired/>}

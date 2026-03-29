@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import styles from "./Private.module.css"; // ✅ CSS Module import
-import jetImage1 from "../../assets2/Services/aviation/3.jpg";
-import jetImage2 from "../../assets2/Services/aviation/4.jpg";
-import jetImage3 from "../../assets2/Services/aviation/5.jpg";
+import jetImage1 from "../../assets2/Services/aviation/3.png";
+import jetImage2 from "../../assets2/Services/aviation/4.png";
+import jetImage3 from "../../assets2/Services/aviation/5.png";
 import inFlight_1 from "../../assets2/Services/aviation/In-Flight Amenities/1.png";
 import inFlight_2 from "../../assets2/Services/aviation/In-Flight Amenities/2.png";
 import inFlight_3 from "../../assets2/Services/aviation/In-Flight Amenities/3.png";
 import inFlight_4 from "../../assets2/Services/aviation/In-Flight Amenities/4.png";
-import egcImg from "../../assets2/Services/aviation/6.jpg";
+import egcImg from "../../assets2/Services/aviation/6.png";
+import bgImage from "../../assets2/Services/aviation/7.png";
 import journeysImg_1 from "../../assets2/Services/aviation/Jet Expeditions/1.png";
 import journeysImg_2 from "../../assets2/Services/aviation/Jet Expeditions/2.png";
 import journeysImg_3 from "../../assets2/Services/aviation/Jet Expeditions/3.png";
@@ -392,7 +393,7 @@ export default function PrivateAviation() {
       </section>
 
       {/* ===== CLIENT EXPERIENCES ===== */}
-      <section className={styles.reviewsSection}>
+      {/* <section className={styles.reviewsSection}>
         <div className={styles.reviewsContainer}>
           <p className={styles.reviewsSubtitle}>CLIENT EXPERIENCES</p>
           <h2 className={styles.reviewsTitle}>Guest Reviews</h2>
@@ -430,7 +431,7 @@ export default function PrivateAviation() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ===== FAQ SECTION ===== */}
       <section className={styles.srvFaqSection}>
@@ -461,7 +462,12 @@ export default function PrivateAviation() {
       </section>
 
       {/* ===== READY TO TAKE OFF ===== */}
-      <section className={styles.ctaSection}>
+      <section className={styles.ctaSection} style={{
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}>
         <div className={styles.ctaContainer}>
           <h2 className={styles.ctaTitle}>Ready to Take Off?</h2>
           <p className={styles.ctaText}>
@@ -477,7 +483,7 @@ export default function PrivateAviation() {
       </section>
 
       {/* ===== NEWSLETTER ===== */}
-      <section className={styles.newsletterSection}>
+      {/* <section className={styles.newsletterSection}>
         <div className={styles.newsletterContainer}>
           <div className={styles.newsletterLeft}>
             <h2>Stay Inspired</h2>
@@ -491,7 +497,7 @@ export default function PrivateAviation() {
             <button>SUBSCRIBE</button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ===== LOGOS ROW ===== */}
       <BrandStrip />

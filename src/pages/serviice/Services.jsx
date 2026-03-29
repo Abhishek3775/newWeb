@@ -6,6 +6,8 @@ import { FiClock } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
+import bgImage from "../../assets2/Services/11.jpeg"
+
 
 import { useNavigate } from "react-router-dom";
 import BrandStrip from "../../components/BrandStrip/BrandStrip";
@@ -48,21 +50,20 @@ export default function Services() {
           <div className={`${styles.sgImage} ${styles.page1}`} />
           <div className={styles.sgContent}>
             <h5 className={styles.serviceSubtitle}>EXCLUSIVE SERVICE</h5>
-            <h2 className={styles.serviceTitle}>Private Client Services</h2>
+            <h2 className={styles.serviceTitle}>Ultra Luxury Cruises</h2>
             <p className={styles.serviceDesc}>
-              Bespoke solutions for our most discerning clientele.
+              Voyage aboard the world's most exclusive vessels.
               <br /><br />
-              Experience the pinnacle of personalized service with our Private Client division.
-              From exclusive access to sold-out events to securing rare collectibles, our dedicated
-              team anticipates your needs before you even express them.
+              Discover remote destinations and iconic ports aboard the world's most prestigious
+              cruise lines. From expedition vessels exploring Antarctica to six-star ships.
             </p>
             <ul className={styles.serviceList}>
-              <li>24/7 dedicated lifestyle manager</li>
-              <li>Exclusive access to private events</li>
-              <li>Luxury property sourcing</li>
-              <li>Fine art and collectibles acquisition</li>
+              <li>Suite & penthouse reservations</li>
+              <li>Shore excursion planning</li>
+              <li>Private dining arrangements</li>
+              <li>Pre & post cruise experiences</li>
             </ul>
-            <button className={styles.viewBtn}>VIEW ALL →</button>
+            <button onClick={() => navigate('/expendition')} className={styles.viewBtn}>VIEW ALL →</button>
           </div>
         </div>
 
@@ -71,21 +72,20 @@ export default function Services() {
           <div className={`${styles.sgImage} ${styles.page2}`} />
           <div className={styles.sgContent}>
             <h5 className={styles.serviceSubtitle}>EXCLUSIVE SERVICE</h5>
-            <h2 className={styles.serviceTitle}>Private Aviation</h2>
+            <h2 className={styles.serviceTitle}>First & Business Class Flights</h2>
             <p className={styles.serviceDesc}>
-              Seamless travel aboard the world's finest aircraft.
+              Premium commercial travel, expertly curated.
               <br /><br />
-              Transcend conventional travel with our private aviation services. Whether chartering a
-              light jet for a quick business trip or a long-range aircraft for intercontinental journeys,
-              we ensure every flight is an experience in refined luxury.
+              When commercial aviation suits your itinerary, travel in the comfort you deserve.
+              Our specialists secure the finest first and business class seats on leading carriers.
             </p>
             <ul className={styles.serviceList}>
-              <li>Access to 7,000+ aircraft worldwide</li>
-              <li>Custom-configured interiors</li>
-              <li>Empty leg flight opportunities</li>
-              <li>Global concierge coordination</li>
+              <li>Best fare guarantees</li>
+              <li>Lounge access worldwide</li>
+              <li>Priority boarding & security</li>
+              <li>Seamless rebooking services</li>
             </ul>
-            <button onClick={() => navigate('/private-aviation')} className={styles.viewBtn}>VIEW ALL →</button>
+            <button className={styles.viewBtn}>VIEW ALL →</button>
           </div>
         </div>
 
@@ -117,48 +117,28 @@ export default function Services() {
           <div className={`${styles.sgImage} ${styles.page4}`} />
           <div className={styles.sgContent}>
             <h5 className={styles.serviceSubtitle}>EXCLUSIVE SERVICE</h5>
-            <h2 className={styles.serviceTitle}>First & Business Class Flights</h2>
+            <h2 className={styles.serviceTitle}>Private Aviation</h2>
             <p className={styles.serviceDesc}>
-              Premium commercial travel, expertly curated.
+              Seamless travel aboard the world's finest aircraft.
               <br /><br />
-              When commercial aviation suits your itinerary, travel in the comfort you deserve.
-              Our specialists secure the finest first and business class seats on leading carriers.
+              Transcend conventional travel with our private aviation services. Whether chartering a
+              light jet for a quick business trip or a long-range aircraft for intercontinental journeys,
+              we ensure every flight is an experience in refined luxury.
             </p>
             <ul className={styles.serviceList}>
-              <li>Best fare guarantees</li>
-              <li>Lounge access worldwide</li>
-              <li>Priority boarding & security</li>
-              <li>Seamless rebooking services</li>
+              <li>Access to 7,000+ aircraft worldwide</li>
+              <li>Custom-configured interiors</li>
+              <li>Empty leg flight opportunities</li>
+              <li>Global concierge coordination</li>
             </ul>
-            <button className={styles.viewBtn}>VIEW ALL →</button>
+            <button onClick={() => navigate('/private-aviation')} className={styles.viewBtn}>VIEW ALL →</button>
           </div>
         </div>
 
-        {/* ── PAIR 5: image LEFT ── */}
+
+        {/* ── PAIR 5: image RIGHT ── */}
         <div className={`${styles.sp} ${styles.spImgLeft}`}>
           <div className={`${styles.sgImage} ${styles.page5}`} />
-          <div className={styles.sgContent}>
-            <h5 className={styles.serviceSubtitle}>EXCLUSIVE SERVICE</h5>
-            <h2 className={styles.serviceTitle}>Ultra Luxury Cruises</h2>
-            <p className={styles.serviceDesc}>
-              Voyage aboard the world's most exclusive vessels.
-              <br /><br />
-              Discover remote destinations and iconic ports aboard the world's most prestigious
-              cruise lines. From expedition vessels exploring Antarctica to six-star ships.
-            </p>
-            <ul className={styles.serviceList}>
-              <li>Suite & penthouse reservations</li>
-              <li>Shore excursion planning</li>
-              <li>Private dining arrangements</li>
-              <li>Pre & post cruise experiences</li>
-            </ul>
-            <button onClick={() => navigate('/expendition')} className={styles.viewBtn}>VIEW ALL →</button>
-          </div>
-        </div>
-
-        {/* ── PAIR 6: image RIGHT ── */}
-        <div className={`${styles.sp} ${styles.spImgRight}`}>
-          <div className={`${styles.sgImage} ${styles.page6}`} />
           <div className={styles.sgContent}>
             <h5 className={styles.serviceSubtitle}>EXCLUSIVE SERVICE</h5>
             <h2 className={styles.serviceTitle}>Rewards & Incentives</h2>
@@ -178,9 +158,9 @@ export default function Services() {
           </div>
         </div>
 
-        {/* ── PAIR 7: image LEFT ── */}
-        <div className={`${styles.sp} ${styles.spImgLeft}`}>
-          <div className={`${styles.sgImage} ${styles.page7}`} />
+        {/* ── PAIR 6: image LEFT ── */}
+        <div className={`${styles.sp} ${styles.spImgRight}`}>
+          <div className={`${styles.sgImage} ${styles.page6}`} />
           <div className={styles.sgContent}>
             <h5 className={styles.serviceSubtitle}>EXCLUSIVE SERVICE</h5>
             <h2 className={styles.serviceTitle}>C-Level Travel Management</h2>
@@ -200,9 +180,9 @@ export default function Services() {
           </div>
         </div>
 
-        {/* ── PAIR 8: image RIGHT ── */}
-        <div className={`${styles.sp} ${styles.spImgRight}`}>
-          <div className={`${styles.sgImage} ${styles.page8}`} />
+        {/* ── PAIR 7: image RIGHT ── */}
+        <div className={`${styles.sp} ${styles.spImgLeft}`}>
+          <div className={`${styles.sgImage} ${styles.page7}`} />
           <div className={styles.sgContent}>
             <h5 className={styles.serviceSubtitle}>EXCLUSIVE SERVICE</h5>
             <h2 className={styles.serviceTitle}>Conference & Events</h2>
@@ -222,9 +202,53 @@ export default function Services() {
           </div>
         </div>
 
+        {/* ── PAIR 8: image LEFT ── */}
+        <div className={`${styles.sp} ${styles.spImgRight}`}>
+          <div className={`${styles.sgImage} ${styles.page8}`} />
+          <div className={styles.sgContent}>
+            <h5 className={styles.serviceSubtitle}>EXCLUSIVE SERVICE</h5>
+            <h2 className={styles.serviceTitle}>Jet Expeditions</h2>
+            <p className={styles.serviceDesc}>
+              Where Every Journey Becomes a Signature Experience
+              <br /><br />
+              Jet Expeditions is crafted for those who expect more than travel - they expect precision, privacy, and perfection. Designed for an elite clientele, our bespoke aviation experiences go beyond transportation, transforming each journey into a seamless extension of your lifestyle.
+            </p>
+            <ul className={styles.serviceList}>
+              <li>Tailored Private Jet Charters</li>
+              <li>Global Access, Limitless Reach</li>
+              <li>Discreet VIP Handling</li>
+              <li>Onboard Personalization</li>
+            </ul>
+            <button className={styles.viewBtn}>VIEW ALL →</button>
+          </div>
+        </div>
+
         {/* ── PAIR 9: image LEFT ── */}
         <div className={`${styles.sp} ${styles.spImgLeft}`}>
           <div className={`${styles.sgImage} ${styles.page9}`} />
+          <div className={styles.sgContent}>
+            <h5 className={styles.serviceSubtitle}>EXCLUSIVE SERVICE</h5>
+            <h2 className={styles.serviceTitle}>Private Client Services</h2>
+            <p className={styles.serviceDesc}>
+              Bespoke solutions for our most discerning clientele.
+              <br /><br />
+              Experience the pinnacle of personalized service with our Private Client division.
+              From exclusive access to sold-out events to securing rare collectibles, our dedicated
+              team anticipates your needs before you even express them.
+            </p>
+            <ul className={styles.serviceList}>
+              <li>24/7 dedicated lifestyle manager</li>
+              <li>Exclusive access to private events</li>
+              <li>Luxury property sourcing</li>
+              <li>Fine art and collectibles acquisition</li>
+            </ul>
+            <button className={styles.viewBtn}>VIEW ALL →</button>
+          </div>
+        </div>
+
+        {/* ── PAIR 10: image LEFT ── */}
+        <div className={`${styles.sp} ${styles.spImgRight}`}>
+          <div className={`${styles.sgImage} ${styles.page10}`} />
           <div className={styles.sgContent}>
             <h5 className={styles.serviceSubtitle}>EXCLUSIVE SERVICE</h5>
             <h2 className={styles.serviceTitle}>Personal Assistant</h2>
@@ -286,34 +310,50 @@ export default function Services() {
       </section>
 
       {/* ===== JOURNEY ===== */}
-      <section className={styles.journeySection}>
-        <h5 className={styles.journeySubtitle}>YOUR JOURNEY AWAITS</h5>
-        <h2 className={styles.journeyTitle}>Begin Your Journey</h2>
-        <p className={styles.journeyText}>
-          Every extraordinary journey begins with a conversation. Our specialists await to craft
-          your bespoke itinerary, tailored to your every desire.
-        </p>
-        {/* Contact Row */}
-        <div className="journey-contact">
-            <div className="contact-item">
-              <div className="icon-box">
-                <FaPhoneAlt />
-              </div>
-              <span>+44 2074269888</span>
-            </div>
-  
-            <div className="divider"></div>
-  
-            <div className="contact-item">
-              <div className="icon-box">
-                <FaEnvelope />
-              </div>
-              <span>southafrica@eliteconcierge.com</span>
-            </div>
+<section
+  className={styles.journeySection}
+  style={{
+    backgroundImage: `url(${bgImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+  <div className={styles.journeyOverlay}></div>
+
+  <div className={styles.journeyContent}>
+    <h5 className={styles.journeySubtitle}>YOUR JOURNEY AWAITS</h5>
+    <h2 className={styles.journeyTitle}>Begin Your Journey</h2>
+    <p className={styles.journeyText}>
+      Every extraordinary journey begins with a conversation. Our Japan
+      specialists await to craft your bespoke itinerary, tailored to your every desire.
+    </p>
+
+    {/* Contact Row */}
+    <div className={styles.journeyContact}>
+      <div className={styles.contactItem}>
+        <div className={styles.iconBox}>
+          <FaPhoneAlt />
         </div>
-        <button className={styles.journeyBtn}>BEGIN YOUR JOURNEY →</button>
+        <span>+442074269888</span>
+      </div>
+
+      <div className={styles.divider}></div>
+
+      <div className={styles.contactItem}>
+        <div className={styles.iconBox}>
+          <FaEnvelope />
+        </div>
+        <span>southafrica@eliteconcierge.com</span>
+      </div>
+    </div>
+
+    <button className={styles.journeyBtn}>
+      BEGIN YOUR JOURNEY <span>→</span>
+    </button>
+  </div>
+</section>
         <BrandStrip />
-      </section>
 
     </div>
   );

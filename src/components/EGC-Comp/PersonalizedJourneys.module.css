@@ -1,0 +1,361 @@
+/* ============================================================
+   PersonalizedJourneys.module.css
+   ============================================================ */
+
+.section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+  /* font-family: "Georgia", "Times New Roman", serif; */
+  box-sizing: border-box;
+}
+
+/* ---- Header ---- */
+.header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.eyebrow {
+  /* font-family: "Arial", sans-serif; */
+  font-size: 17px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: #C09551;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+.heading {
+  font-size: clamp(28px, 5vw, 46px);
+  font-weight: 400;
+  color: #1a1a1a;
+  margin: 0 0 14px;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+}
+
+.subtext {
+  /* font-family: "Arial", sans-serif; */
+  font-size: clamp(13px, 1.5vw, 15px);
+  text-align: center;
+  color: #555;
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ---- Grid Wrapper ---- */
+.gridWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  /* ✅ Space for arrows */
+  padding: 0 48px;
+}
+
+/* ---- Main Grid ---- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  width: 100%;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Animations */
+.enterVisible {
+  animation: fadeSlideIn 0.35s ease forwards;
+}
+
+.exitLeft {
+  animation: fadeSlideOutLeft 0.35s ease forwards;
+  pointer-events: none;
+}
+
+.exitRight {
+  animation: fadeSlideOutRight 0.35s ease forwards;
+  pointer-events: none;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeSlideOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+}
+
+@keyframes fadeSlideOutRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+}
+
+/* ---- Columns ---- */
+.rightCol {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 8px;
+}
+
+.topRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+/* ---- Cards ---- */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .cardImg {
+  transform: scale(1.04);
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(0, 0, 0, 0.25) 50%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  pointer-events: none;
+}
+
+.cardContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 22px 22px;
+  color: #fff;
+  z-index: 2;
+}
+
+/* ---- Sizes ---- */
+.cardLarge {
+  height: 540px;
+}
+
+.cardSmall {
+  height: 260px;
+}
+
+.cardBottomRight {
+  height: 100% !important;
+  min-height: 268px;
+}
+
+.cardContentSmall {
+  padding: 14px 16px 18px;
+}
+
+/* ---- Icons ---- */
+.iconCircle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  font-size: 16px;
+  margin-bottom: 10px;
+  backdrop-filter: blur(4px);
+}
+
+.iconCircleSmall {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  font-size: 14px;
+  margin-bottom: 8px;
+  backdrop-filter: blur(4px);
+}
+
+.iconGold {
+  background: #C09551;
+}
+
+/* ---- Text ---- */
+.cardTag,
+.cardTagSmall {
+  /* font-family: "Arial", sans-serif; */
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #C09551;
+}
+
+.cardTag {
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin: 0 0 6px;
+}
+
+.cardTagSmall {
+  font-size: 9px;
+  letter-spacing: 1.8px;
+  margin: 0 0 4px;
+}
+
+.cardTitle {
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 400;
+  margin: 0 0 8px;
+  color: #fff;
+}
+
+.cardTitleSmall {
+  font-size: clamp(16px, 2vw, 20px);
+  margin: 0;
+  color: #fff;
+}
+
+.cardDesc {
+  /* font-family: "Arial", sans-serif; */
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 12px;
+}
+
+/* ---- Badges ---- */
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.badge {
+  font-size: 10px;
+  padding: 4px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 2px;
+}
+
+/* ---- Arrow Buttons ---- */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+
+  border: 1px solid #0a0909;
+  /* background: #fff; */
+  font-size: 22px;
+  color: #444;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18); */
+  transition: all 0.25s ease;
+}
+
+.arrow:hover {
+  transform: translateY(-50%) scale(1.02);
+  /* box-shadow: 0 8px 26px rgba(0, 0, 0, 0.25); */
+}
+
+.arrowLeft {
+  left: 0px;
+}
+
+.arrowRight {
+  right: 0px;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .gridWrapper {
+    padding: 0 36px;
+  }
+
+  .cardLarge {
+    height: 440px;
+  }
+
+  .cardSmall {
+    height: 210px;
+  }
+}
+
+@media (max-width: 640px) {
+  .gridWrapper {
+    padding: 0 24px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardLarge {
+    height: 360px;
+  }
+
+  .cardSmall {
+    height: 180px;
+  }
+
+  .arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .arrowLeft {
+    left: 4px;
+  }
+
+  .arrowRight {
+    right: 4px;
+  }
+}

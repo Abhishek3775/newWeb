@@ -31,10 +31,10 @@ function About() {
     {/* {<PrincipleDiscreet/>} */}
     {/* {<PrincipleRelentless/>} */}
     {/* {<PrincipleIntuitive/>} */}
+    {<ValuesSection/>}
     {<AboutJourneySection/>}
     {/* {<AboutServicesShowcase/>} */}
     {/* {<TeamSection/>} */}
-    {<ValuesSection/>}
     {<JourneyCTA/>}
     {<BrandStrip/>}
     </>

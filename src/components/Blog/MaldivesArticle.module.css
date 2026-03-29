@@ -1,0 +1,759 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #F5F4EF;
+  /* font-family: 'Georgia', serif; */
+  color: #333;
+}
+
+.page {
+  max-width: 100%;
+  margin: 0 auto;
+  background-color: #F5F4EF;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* ============================================
+   HEADER STYLES
+   ============================================ */
+
+.header {
+  border-bottom: 1px solid #ddd;
+  padding: 30px 40px;
+  background-color: #F5F4EF;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.authorInfo {
+  display: flex;
+  gap: 50px;
+  flex: 1;
+}
+
+.authorInfo > div {
+  flex: 0 0 auto;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.author,
+.date,
+.category {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin: 5px 0 0 0;
+}
+
+.category {
+  color: #C09551;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: 1px solid #999;
+  background-color: transparent;
+  color: #333;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn:first-child {
+  background-color: #C09551;
+  color: #fff;
+  border-color: #b39d84;
+}
+
+.btn:first-child:hover {
+  background-color: #C09551;
+  border-color: #C09551;
+}
+
+/* ============================================
+   CONTENT STYLES
+   ============================================ */
+
+.content {
+  padding: 50px 40px;
+  line-height: 1.8;
+}
+
+.introduction {
+  margin-bottom: 30px;
+}
+
+.dropCapP {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+}
+
+.dropCap {
+  font-size: 72px;
+  font-weight: bold;
+  float: left;
+  line-height: 60px;
+  padding-right: 8px;
+  padding-top: 3px;
+  color: #C09551;
+  /* font-family: 'Georgia', serif; */
+}
+
+.bodyText {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.mainTitle {
+  font-size: 42px;
+  font-weight: 300;
+  color: #333;
+  margin: 50px 0 30px 0;
+  /* font-family: 'Georgia', serif; */
+  letter-spacing: 0.5px;
+}
+
+.sectionTitle {
+  font-size: 36px;
+  font-weight: 300;
+  color: #333;
+  margin: 50px 0 30px 0;
+  /* font-family: 'Georgia', serif; */
+  letter-spacing: 0.5px;
+}
+
+/* ============================================
+   IMAGE STYLES
+   ============================================ */
+
+.imageContainer {
+  margin: 50px 0;
+}
+
+.mainImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.imageCaption {
+  font-size: 13px;
+  color: #666;
+  text-align: center;
+  margin: 0;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin: 50px 0;
+}
+
+.gridItem {
+  width: 100%;
+}
+
+.gridImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* ============================================
+   QUOTE STYLES
+   ============================================ */
+
+.quoteContainer {
+  margin: 60px 0;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.quote {
+  font-size: 20px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.8;
+  font-style: italic;
+  margin: 0 0 20px 0;
+  /* font-family: 'Georgia', serif; */
+}
+
+.quoteAttribution {
+  font-size: 12px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ============================================
+   RECOMMENDATIONS STYLES
+   ============================================ */
+
+.recommendationsList {
+  margin: 50px 0;
+}
+
+.recommendation {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+
+.recommendNumber {
+  font-size: 18px;
+  font-weight: 600;
+  color: #C09551;
+  flex-shrink: 0;
+  width: 40px;
+}
+
+.recommendContent {
+  flex: 1;
+}
+
+.recommendTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 10px 0;
+  /* font-family: Arial, sans-serif; */
+}
+
+.recommendText {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+  margin: 0;
+}
+
+/* ============================================
+   CONCLUSION & TAGS
+   ============================================ */
+
+.conclusion {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #333;
+  margin: 50px 0 40px 0;
+  text-align: justify;
+  font-style: italic;
+}
+
+.tagContainer {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 60px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.tagLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 12px;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  color: #333;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  border-color: #fff;
+  background-color: #C09551;
+}
+
+/* ============================================
+   AUTHOR BOX STYLES
+   ============================================ */
+
+.authorBox {
+  border: 1px solid #ddd;
+  padding: 40px;
+  background-color: #F5F4EF;
+  margin: 50px 0;
+}
+
+.authorBoxContent {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+.authorAvatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #C09551 0%, #C09551 100%);
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.authorAvatarName {
+    /* text-align: center; */
+    font-size: 22px;
+}
+
+.authorDetails {
+  flex: 1;
+}
+
+.authorBoxTitle {
+  font-size: 11px;
+  font-weight: 600;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 8px 0;
+}
+
+.authorBoxName {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 12px 0;
+}
+
+.authorBio {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #666;
+  margin: 0;
+}
+
+/* ============================================
+   NAVIGATION STYLES
+   ============================================ */
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  background-color: #F5F4EF;
+  border-top: 1px solid #ddd;
+  max-width: 100%;
+  margin: 0 auto;
+  position: sticky;
+  bottom: 0;
+}
+
+.navBtn {
+  padding: 8px 20px;
+  border: 1px solid #999;
+  background-color: transparent;
+  color: #333;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.navBtn:hover:not(:disabled) {
+  background-color: #333;
+  color: #fff;
+}
+
+.navBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pageIndicator {
+  font-size: 13px;
+  color: #666;
+  font-weight: 500;
+}
+
+.currentPage,
+.totalPages {
+  font-weight: 700;
+  color: #333;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  .page {
+    padding: 0;
+  }
+
+  .header {
+    padding: 25px 25px;
+  }
+
+  .headerContent {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .authorInfo {
+    gap: 30px;
+    flex-direction: column;
+  }
+
+  .authorInfo > div {
+    flex: 1;
+  }
+
+  .actions {
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+
+  .content {
+    padding: 35px 25px;
+  }
+
+  .mainTitle,
+  .sectionTitle {
+    font-size: 28px;
+    margin: 40px 0 25px 0;
+  }
+
+  .bodyText {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .dropCapP {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .imageGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .quote {
+    font-size: 18px;
+  }
+
+  .recommendation {
+    gap: 20px;
+  }
+
+  .recommendNumber {
+    width: 30px;
+    font-size: 16px;
+  }
+
+  .recommendTitle {
+    font-size: 15px;
+  }
+
+  .recommendText {
+    font-size: 13px;
+  }
+
+  .authorBoxContent {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .authorAvatar {
+    width: 50px;
+    height: 50px;
+  }
+
+  .authorBoxName {
+    font-size: 16px;
+  }
+
+  .authorBio {
+    font-size: 12px;
+  }
+
+  .navigation {
+    padding: 20px 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .pageIndicator {
+    width: 100%;
+    text-align: center;
+    order: 3;
+  }
+
+  .navBtn {
+    font-size: 11px;
+    padding: 6px 16px;
+    flex: 1;
+  }
+
+  .navBtn:first-of-type {
+    order: 1;
+  }
+
+  .navBtn:last-of-type {
+    order: 2;
+  }
+
+  .tagContainer {
+    gap: 10px;
+  }
+
+  .tag {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .container {
+    font-size: 14px;
+  }
+
+  .page {
+    min-height: auto;
+  }
+
+  .header {
+    padding: 20px 16px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .headerContent {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .authorInfo {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .label {
+    font-size: 10px;
+  }
+
+  .author,
+  .date,
+  .category {
+    font-size: 13px;
+  }
+
+  .actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 9px;
+  }
+
+  .content {
+    padding: 25px 16px;
+  }
+
+  .mainTitle,
+  .sectionTitle {
+    font-size: 22px;
+    margin: 30px 0 20px 0;
+  }
+
+  .bodyText {
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .dropCap {
+    font-size: 56px;
+    line-height: 45px;
+    padding-right: 5px;
+  }
+
+  .dropCapP {
+    font-size: 13px;
+  }
+
+  .imageContainer {
+    margin: 30px 0;
+  }
+
+  .imageCaption {
+    font-size: 12px;
+  }
+
+  .quote {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .quoteContainer {
+    padding: 30px 0;
+    margin: 40px 0;
+  }
+
+  .recommendation {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .recommendNumber {
+    width: auto;
+  }
+
+  .recommendTitle {
+    font-size: 14px;
+  }
+
+  .recommendText {
+    font-size: 12px;
+  }
+
+  .conclusion {
+    font-size: 13px;
+    margin: 35px 0 30px 0;
+  }
+
+  .tagContainer {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .tag {
+    font-size: 10px;
+  }
+
+  .authorBox {
+    padding: 25px;
+    margin: 40px 0;
+  }
+
+  .authorBoxContent {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .authorAvatar {
+    width: 45px;
+    height: 45px;
+  }
+
+  .authorBoxTitle {
+    font-size: 10px;
+  }
+
+  .authorBoxName {
+    font-size: 15px;
+  }
+
+  .authorBio {
+    font-size: 11px;
+  }
+
+  .navigation {
+    padding: 15px 16px;
+    gap: 10px;
+  }
+
+  .navBtn {
+    font-size: 9px;
+    padding: 6px 10px;
+    flex: 1;
+    min-height: 36px;
+  }
+
+  .pageIndicator {
+    font-size: 12px;
+    width: 100%;
+    order: 3;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .navigation,
+  .actions {
+    display: none;
+  }
+
+  .container {
+    background-color: white;
+  }
+
+  .page {
+    max-width: 100%;
+    background-color: white;
+    page-break-after: always;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
