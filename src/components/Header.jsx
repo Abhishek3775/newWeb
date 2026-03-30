@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaSearch, FaUser, FaBars, FaTimes } from "react-icons/fa";
+import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import "./Header.css";
+import hamburger from "../assets/hamburger.png";
+import user from "../assets/user.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
-  const isLightPage = [
-    "/about","/","/egc-signature","/reviews"
-  ].includes(location.pathname);
+  const isLightPage = ["/about", "/", "/egc-signature", "/reviews"].includes(
+    location.pathname
+  );
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -38,7 +40,9 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`main-header ${scrolled || isLightPage ? "scrolled" : ""}`}>
+    <header
+      className={`main-header ${scrolled || isLightPage ? "scrolled" : ""}`}
+    >
       <div className="header-container">
         {/* Logo */}
         <Link to="/" className="logo">
@@ -53,8 +57,13 @@ const Header = () => {
 
         {/* Navigation */}
         <nav className={`main-nav ${menuOpen ? "active" : ""}`}>
+          {/* Search inside nav (desktop like screenshot) */}
+          <button className="icon-btn nav-search-btn" aria-label="Search">
+            <FaSearch className="icon-image" />
+          </button>
+
           <Link to="/about" className={`nav-link ${isActive("/about")}`}>
-            ABOUT
+            ABOUT US
           </Link>
 
           {/* Services Dropdown */}
@@ -74,13 +83,6 @@ const Header = () => {
               </Link>
             </div>
           </div>
-
-          <Link
-            to="/calender"
-            className={`nav-link ${isActive("/calender")}`}
-          >
-            CALENDER
-          </Link>
 
           {/* Destinations Dropdown */}
           <div className="nav-item dropdown">
@@ -109,34 +111,54 @@ const Header = () => {
           >
             EXPERIENCES
           </Link>
+
           <Link
             to="/accommodation"
             className={`nav-link ${isActive("/accommodation")}`}
           >
             ACCOMMODATION
           </Link>
+
           <Link to="/reviews" className={`nav-link ${isActive("/reviews")}`}>
             REVIEWS
           </Link>
+
           <Link to="/contact" className={`nav-link ${isActive("/contact")}`}>
             CONTACT
           </Link>
-          <Link to="/blog" className={`nav-link ${isActive("/blog")}`}>
-            BLOG
-          </Link>
+
+          {/* Hamburger Dropdown (Desktop) */}
+          <div className="nav-item dropdown hamburger-dropdown desktop-only">
+            <button className="icon-btn hamburger-hover-btn" aria-label="Menu">
+              <img
+                src={hamburger}
+                alt="hamburger menu"
+                className="icon-image"
+              />
+            </button>
+
+            <div className="dropdown-menu hamburger-menu">
+              <Link to="/calender" className="dropdown-link">
+                CALENDER
+              </Link>
+              <Link to="/blog" className="dropdown-link">
+                BLOG
+              </Link>
+            </div>
+          </div>
         </nav>
 
-        {/* Right Side Icons */}
+        {/* Right Side */}
         <div className="header-actions">
-          <button className="icon-btn" aria-label="Search">
-            <FaSearch />
+          <button className="icon-btn user-btn" aria-label="User">
+            <img src={user} alt="User" className="icon-image" />
           </button>
-          <button className="icon-btn" aria-label="User">
-            <FaUser />
-          </button>
+
           <Link to="/contact" className="enquire-btn">
             Enquire Now
           </Link>
+
+          {/* Mobile Toggle */}
           <button
             className="menu-toggle"
             onClick={toggleMenu}
