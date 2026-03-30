@@ -1,9 +1,9 @@
 import React from "react";
-import "./EliteJourney.css";
+import  "./Elitejourney.css";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
-import bgimg from "../../assets2/Experience/PERSONALIZED JOURNEYS/12.jpg";
+import bgimg from "../../assets2/Experience/PERSONALIZED JOURNEYS/13.jpg";
 
-const EliteJourney = () => {
+const Elitejourney = () => {
   return (
     <section
       className="elite-journey-section"
@@ -51,4 +51,4 @@ const EliteJourney = () => {
   );
 };
 
-export default EliteJourney;
+export default Elitejourney;

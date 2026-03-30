@@ -1,0 +1,335 @@
+/* ==========================================
+   SECTION
+========================================== */
+
+.curatedExpSection {
+  width: 100%;
+  background: #f5f4ef;
+  padding: 40px 20px 60px;
+}
+
+.curatedExpContainer {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.curatedExpHeader {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.curatedExpSmallTitle {
+  color: #c09551;
+  font-size: 17px;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.curatedExpTitle {
+  font-size: 42px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.curatedExpSubtitle {
+  font-size: 14px;
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ==========================================
+   TOP GRID
+========================================== */
+
+.topGrid {
+  display: grid;
+  grid-template-columns: 0.6fr 0.6fr 1fr;
+  grid-template-rows: 335px 255px;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+/* ==========================================
+   BOTTOM GRID (ALTERNATE)
+========================================== */
+
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 1fr 0.6fr 0.6fr;
+  grid-template-rows: 335px 255px;
+  gap: 14px;
+}
+
+/* ==========================================
+   CARD BASE
+========================================== */
+
+.expCard {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 2px;
+}
+
+.expOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.38) 42%,
+    rgba(0, 0, 0, 0.08) 100%
+  );
+}
+
+.expContent {
+  position: absolute;
+  bottom: 14px;
+  left: 16px;
+  right: 16px;
+  color: #fff;
+  z-index: 2;
+}
+
+.expMeta {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.expMeta svg {
+  font-size: 13px;
+  color: #d7b277;
+}
+
+.expCategory {
+  font-size: 10px;
+  font-weight: 700;
+  color: #c09551;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.expTitle {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.expDesc {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.95);
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.expTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.expTags span {
+  font-size: 10px;
+  background: #c09551;
+  color: #fff;
+  padding: 5px 8px;
+  line-height: 1;
+}
+
+.expCount {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0;
+}
+
+/* ==========================================
+   TOP GRID POSITIONING
+========================================== */
+
+.card1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.card2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.card3 {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+}
+
+.card4 {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
+/* ==========================================
+   BOTTOM GRID POSITIONING (ALTERNATE)
+========================================== */
+
+.card5 {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.card6 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.card7 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.card8 {
+  grid-column: 2 / span 2;
+  grid-row: 2;
+}
+
+/* ==========================================
+   BIG CARD TUNING
+========================================== */
+
+.card3 .expTitle,
+.card5 .expTitle,
+.card8 .expTitle {
+  font-size: 19px;
+}
+
+.card3 .expDesc,
+.card5 .expDesc,
+.card8 .expDesc {
+  -webkit-line-clamp: 3;
+}
+
+.card5 .expDesc {
+  max-width: 88%;
+}
+
+.card8 .expDesc {
+  max-width: 88%;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 992px) {
+  .curatedExpContainer {
+    max-width: 100%;
+  }
+
+  .curatedExpTitle {
+    font-size: 36px;
+  }
+
+  .topGrid,
+  .bottomGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5,
+  .card6,
+  .card7,
+  .card8 {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    min-height: 280px;
+  }
+
+  .card3,
+  .card5 {
+    min-height: 360px;
+  }
+
+  .card4,
+  .card8 {
+    min-height: 300px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 640px) {
+  .curatedExpSection {
+    padding: 32px 16px 44px;
+  }
+
+  .curatedExpHeader {
+    margin-bottom: 24px;
+  }
+
+  .curatedExpSmallTitle {
+    font-size: 12px;
+  }
+
+  .curatedExpTitle {
+    font-size: 30px;
+  }
+
+  .curatedExpSubtitle {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .topGrid,
+  .bottomGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .expCard {
+    min-height: 280px !important;
+  }
+
+  .expTitle {
+    font-size: 22px;
+  }
+
+  .expDesc {
+    font-size: 13px;
+    -webkit-line-clamp: 3;
+  }
+
+  .expTags span {
+    font-size: 10px;
+  }
+
+  .expCount {
+    font-size: 11px;
+  }
+}

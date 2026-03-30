@@ -7,13 +7,15 @@ import EliteDifference from '../../components/ExperienceComp/EliteDifference'
 import EliteStories from '../../components/ExperienceComp/EliteStories'
 import EliteJourney from '../../components/ExperienceComp/EliteJourney'
 import BrandStrip from '../../components/BrandStrip/BrandStrip'
+import TailoredExperiences from '../../components/ExperienceComp/TailoredExperiences'
 
 const Experience = () => {
   return (
     <>
     {<Experiencehero/>}
     {<TravelerSection/>}
-    {<EGCRecommendations/>}
+    {/* {<EGCRecommendations/>} */}
+    {<TailoredExperiences/>}
     {<SeasonalInspiration/>}
     {<EliteDifference/>}
     {<EliteStories/>}

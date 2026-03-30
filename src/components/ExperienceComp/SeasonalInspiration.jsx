@@ -127,19 +127,18 @@ export default function SeasonalInspiration() {
 
         {/* ── MONTH TABS ── */}
         <div className="si-tabs-wrap">
-          <div className="si-tabs">
-            {months.map((m, i) => (
-              <button
-                key={m.name}
-                className={`si-tab${activeIdx === i ? " si-tab--active" : ""}`}
-                onClick={() => setActiveIdx(i)}
-              >
-                <span className="si-tab-icon">{m.icon}</span>
-                <span className="si-tab-name">{m.name}</span>
-              </button>
-            ))}
-          </div>
-        </div>
+  <div className="si-tabs">
+    {months.map((m, i) => (
+      <button
+        key={m.name}
+        className={`si-tab${activeIdx === i ? " si-tab--active" : ""}`}
+        onClick={() => setActiveIdx(i)}
+      >
+        {m.name}
+      </button>
+    ))}
+  </div>
+</div>
 
         {/* ── CONTENT ── */}
         <div className="si-body">

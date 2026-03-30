@@ -6,10 +6,12 @@ import { LuClock3 } from "react-icons/lu";
 import { LuAward } from "react-icons/lu";
 import { LuUser } from "react-icons/lu";
 import { LuSparkles } from "react-icons/lu";
+import bgimg from "../../assets/linepatter1.png";
+
 
 const EliteDifference = () => {
   return (
-    <section className="elite-diff-section">
+    <section className="elite-diff-section" style={{background:`url(${bgimg})`, backgroundSize:"container"}}>
       <div className="elite-diff-container">
         {/* Header */}
         <div className="elite-diff-header">
