@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./ReviewFAQ.module.css";
 import { Plus, Minus } from "lucide-react";
 
+
 const faqs = [
   {
     question: "How do you verify reviews?",

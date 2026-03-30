@@ -38,6 +38,7 @@ import JetExpeditions from './pages/Service Jet Expeditions/JetExpeditions';
 // import Accomodation from './pages/gaurav-accomodation/Accomodation';
 import Destionation from './pages/Destionation/NewDestionation';
 import DiscoverAsia from './pages/DiscoverAsia/DiscoverAsia';
+import NewContact from './pages/NewContact';
 
 
 
@@ -66,7 +67,8 @@ function App() {
             {/* <Route path="/" element={<Home />} /> */}
             <Route path="/" element={<NewHome/>} />
             {/* <Route path="/" element={<Contact />} /> */}
-            <Route path="/contact" element={<Contact />} />
+            {/* <Route path="/contact" element={<Contact />} /> */}
+            <Route path="/contact" element={<NewContact/>} />
             <Route path="/blog/:slug" element={<BlogSingle />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/individualblog" element={<IndividualBlog />} />
