@@ -119,7 +119,7 @@ const EnquirySection = () => {
             </div>
 
             <div className={styles.emailLine}>
-              <img src={mailSmallIcon} alt="mail" />
+              <img src={mailSmallIcon} alt="mail" className={styles.blackIcon} />
               <p>whiteglove@eliteglobalconcierge.com</p>
             </div>
 
@@ -336,6 +336,7 @@ const EnquirySection = () => {
               <span>SUBMIT ENQUIRY</span>
               <img src={sendIcon} alt="send" />
             </button>
+            <p className={styles.para}>By submitting this form, you agree to our privacy policy. Your information will be handled <br /> with the utmost discretion.</p>
           </form>
         </div>
       </div>
