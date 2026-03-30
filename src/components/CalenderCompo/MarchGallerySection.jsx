@@ -592,7 +592,7 @@ const MarchGallerySection = () => {
 
 
 
-    <section className="sse-wrapper">
+    {/* <section className="sse-wrapper">
       <div className="sse-container">
 
         <p className="sse-subtitle">EXCLUSIVE ACCESS</p>
@@ -662,7 +662,7 @@ const MarchGallerySection = () => {
 
         </div>
       </div>
-    </section>
+    </section> */}
 
 
 

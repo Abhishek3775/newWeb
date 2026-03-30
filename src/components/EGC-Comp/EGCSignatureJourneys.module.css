@@ -1,0 +1,670 @@
+/* EGCSignatureJourneys.module.css */
+
+:root {
+  --primary-gold: #C09551;
+  --vibrant-magenta: #FF1493;
+  --vibrant-pink: #E91E63;
+  --bg-light: #f5f2ed;
+  --text-dark: #1a1a1a;
+  --overlay-dark: rgba(0, 0, 0, 0.65);
+  --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --transition-duration: 0.5s;
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 40px;
+  --spacing-xl: 60px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ============================================ */
+/* MAIN SECTION */
+/* ============================================ */
+
+.section {
+  background: var(--bg-light);
+  padding: var(--spacing-md) var(--spacing-sm);
+  padding-top: var(--spacing-xl);
+  min-height: 100vh;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ============================================ */
+/* HEADER */
+/* ============================================ */
+
+.headerContainer {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.topText {
+  color: var(--primary-gold);
+  font-size: clamp(14px, 3vw, 17px);
+  text-align: center;
+  letter-spacing: 3px;
+  margin: 0 0 var(--spacing-sm) 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.heading {
+  font-size: clamp(24px, 5vw, 42px);
+  margin: 0;
+  color: var(--text-dark);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ============================================ */
+/* SLIDER WRAPPER */
+/* ============================================ */
+
+.sliderWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  width: 100%;
+  margin: 0 auto var(--spacing-lg);
+}
+
+/* ============================================ */
+/* NAVIGATION BUTTONS */
+/* ============================================ */
+
+.navBtn {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--text-dark);
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  color: var(--text-dark);
+  font-size: 24px;
+  font-weight: 300;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.navBtn:hover {
+  background: var(--text-dark);
+  color: white;
+  transform: scale(1.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+}
+
+.navBtn:active {
+  transform: scale(0.96);
+}
+
+/* ============================================ */
+/* SLIDER VIEWPORT & TRACK */
+/* ============================================ */
+
+.sliderViewport {
+  overflow: hidden;
+  width: 100%;
+  max-width: 1400px;
+  border-radius: 6px;
+  padding: 0 8px;
+}
+
+.cardTrack {
+  display: flex;
+  transition: transform var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+  gap: 16px;
+}
+
+/* ============================================ */
+/* CARD */
+/* ============================================ */
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 320px;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.06);
+}
+
+/* ============================================ */
+/* NIGHTS BADGE */
+/* ============================================ */
+
+.nights {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: white;
+  padding: 6px 12px;
+  font-size: clamp(10px, 2.5vw, 12px);
+  font-weight: 600;
+  z-index: 3;
+  border-radius: 3px;
+  letter-spacing: 1.2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  color: var(--text-dark);
+}
+
+/* ============================================ */
+/* VIBRANT CIRCULAR BADGE */
+/* ============================================ */
+
+.badge {
+  position: absolute;
+  bottom: 24px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--vibrant-magenta) 0%, var(--vibrant-pink) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  z-index: 4;
+  box-shadow: 0 6px 20px rgba(255, 20, 147, 0.4);
+  animation: badgePulse 3s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 6px 20px rgba(255, 20, 147, 0.4);
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 8px 28px rgba(255, 20, 147, 0.6);
+  }
+}
+
+/* ============================================ */
+/* OVERLAY & CONTENT */
+/* ============================================ */
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3) 30%, transparent);
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .overlay {
+  opacity: 0.95;
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: clamp(16px, 5vw, 24px);
+  color: white;
+  text-align: left;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 70%;
+}
+
+.cardLeble {
+  display: flex;
+  gap: 5px;
+  font-size: clamp(10px, 2.5vw, 12px);
+  opacity: 0.85;
+  margin: 0 0 6px 0;
+  color: #C09551;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.cardTrack {
+  display: flex;
+  gap: 16px;
+}
+
+.card {
+  margin-right: 0;
+}
+
+
+.title {
+  margin: 0 0 8px 0;
+  font-size: clamp(16px, 4vw, 26px);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.price {
+  font-size: clamp(10px, 2.5vw, 12px);
+  opacity: 0.9;
+  margin: 4px 0 0 0;
+  font-weight: 400;
+}
+
+/* ============================================ */
+/* INDICATORS (DOTS) */
+/* ============================================ */
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: var(--spacing-md) 0;
+  flex-wrap: wrap;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--text-dark);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  padding: 0;
+}
+
+.dot.active {
+  background: var(--text-dark);
+  transform: scale(1.3);
+}
+
+.dot:hover {
+  border-color: var(--primary-gold);
+  background: var(--primary-gold);
+  transform: scale(1.2);
+}
+
+/* ============================================ */
+/* RESPONSIVE: TABLET (768px to 1023px) */
+/* ============================================ */
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .section {
+    padding: var(--spacing-md) var(--spacing-lg);
+    padding-top: var(--spacing-xl);
+  }
+
+  .card {
+    min-height: 380px;
+  }
+
+  .imageContainer {
+    min-height: 380px;
+  }
+
+  .sliderWrapper {
+    gap: var(--spacing-md);
+  }
+
+  .navBtn {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* ============================================ */
+/* RESPONSIVE: LARGE DESKTOP (1024px+) */
+/* ============================================ */
+
+@media (min-width: 1024px) {
+  .section {
+    padding: var(--spacing-lg) var(--spacing-xl);
+    padding-top: var(--spacing-xl);
+  }
+
+  .card {
+    min-height: 420px;
+  }
+
+  .imageContainer {
+    min-height: 420px;
+  }
+
+  .sliderWrapper {
+    gap: var(--spacing-lg);
+  }
+}
+
+/* ============================================ */
+/* RESPONSIVE: MOBILE (up to 639px) */
+/* ============================================ */
+
+@media (max-width: 639px) {
+  .section {
+    min-height: auto;
+    padding-top: var(--spacing-lg);
+  }
+
+  .headerContainer {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .sliderWrapper {
+    gap: var(--spacing-md);
+  }
+
+  .navBtn {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+
+  .card {
+    min-height: 300px;
+    border-radius: 8px;
+  }
+
+  .imageContainer {
+    min-height: 300px;
+  }
+
+  .nights {
+    top: 12px;
+    left: 12px;
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  .badge {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    bottom: 20px;
+    right: 16px;
+  }
+
+  .content {
+    padding: var(--spacing-sm);
+  }
+
+  .title {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .overlay {
+    height: 65%;
+  }
+
+  .content {
+    height: 65%;
+  }
+}
+
+@media (max-width: 639px) {
+  .sliderViewport {
+    padding: 0;
+  }
+
+  .cardTrack {
+    gap: 12px;
+  }
+
+  .card {
+    flex: 0 0 100% !important; /* ✅ FULL WIDTH */
+  }
+}
+/* ============================================ */
+/* RESPONSIVE: SMALL MOBILE (up to 480px) */
+/* ============================================ */
+
+@media (max-width: 480px) {
+  .section {
+    padding: var(--spacing-md) var(--spacing-xs); margin-top: 60px;
+  }
+
+  .sliderWrapper {
+    gap: var(--spacing-md);
+  }
+
+  .navBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .topText {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .card {
+    min-height: 280px;
+  }
+
+  .imageContainer {
+    min-height: 280px;
+  }
+
+  .nights {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
+  .badge {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .indicators {
+    gap: 8px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* ============================================ */
+/* RESPONSIVE: EXTRA SMALL (up to 380px) */
+/* ============================================ */
+
+@media (max-width: 380px) {
+  .section {
+    padding: var(--spacing-md) var(--spacing-xs);
+  }
+
+  .sliderWrapper {
+    gap: 12px;
+  }
+
+  .navBtn {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    min-height: 38px;
+    font-size: 16px;
+    border-width: 1.5px;
+  }
+
+  .heading {
+    font-size: 20px;
+  }
+
+  .topText {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .card {
+    min-height: 260px;
+  }
+
+  .imageContainer {
+    min-height: 260px;
+  }
+
+  .nights {
+    font-size: 9px;
+    padding: 3px 6px;
+    top: 10px;
+    left: 10px;
+  }
+
+  .badge {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    bottom: 16px;
+    right: 12px;
+  }
+
+  .content {
+    padding: 12px;
+  }
+
+  .title {
+    font-size: 15px;
+  }
+
+  .price {
+    font-size: 10px;
+  }
+
+  .location {
+    font-size: 10px;
+  }
+
+  .indicators {
+    gap: 6px;
+    padding: var(--spacing-sm) 0;
+  }
+
+  .dot {
+    width: 7px;
+    height: 7px;
+  }
+}
+
+/* ============================================ */
+/* LANDSCAPE MODE */
+/* ============================================ */
+
+@media (max-height: 600px) and (orientation: landscape) {
+  .section {
+    min-height: auto;
+    padding: var(--spacing-sm);
+  }
+
+  .card {
+    min-height: 280px;
+  }
+
+  .imageContainer {
+    min-height: 280px;
+  }
+
+  .heading {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .indicators {
+    padding: 8px 0;
+  }
+}
+
+/* ============================================ */
+/* ACCESSIBILITY */
+/* ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .cardTrack,
+  .navBtn,
+  .dot,
+  .card,
+  .card img,
+  .overlay,
+  .badge {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .navBtn {
+    min-width: 48px;
+    min-height: 48px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .badge {
+    width: 58px;
+    height: 58px;
+    font-size: 26px;
+  }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2) {
+  .card,
+  .navBtn {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}

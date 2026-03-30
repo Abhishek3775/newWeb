@@ -157,15 +157,16 @@
   background-repeat: no-repeat;
 }
 
-.page1  { background-image: url("../../assets2/Services/2.png");  }
-.page2  { background-image: url("../../assets2/Services/3.jpg");  }
-.page3  { background-image: url("../../assets2/Services/4.jpg");  }
-.page4  { background-image: url("../../assets2/Services/5.jpg");  }
-.page5  { background-image: url("../../assets2/Services/6.jpg");  }
-.page6  { background-image: url("../../assets2/Services/7.jpg");  }
-.page7  { background-image: url("../../assets2/Services/8.jpg");  }
-.page8  { background-image: url("../../assets2/Services/9.jpg");  }
-.page9  { background-image: url("../../assets2/Services/10.jpg"); }
+.page1  { background-image: url("../../assets2/Services/1.png");  }
+.page2  { background-image: url("../../assets2/Services/2.png");  }
+.page3  { background-image: url("../../assets2/Services/3.jpg");  }
+.page4  { background-image: url("../../assets2/Services/4.png");  }
+.page5  { background-image: url("../../assets2/Services/5.png");  }
+.page6  { background-image: url("../../assets2/Services/6.png");  }
+.page7  { background-image: url("../../assets2/Services/7.png");  }
+.page8  { background-image: url("../../assets2/Services/8.png");  }
+.page9  { background-image: url("../../assets2/Services/9.png");  }
+.page10  { background-image: url("../../assets2/Services/10.png"); }
 
 /* ── Content cell ───────────────────────────────────── */
 .sgContent {
@@ -312,109 +313,294 @@
 }
 .author { font-size: 14px; color: #222; line-height: 1.6; text-align: center; }
 
-/* =====================================================
-   JOURNEY
-   ===================================================== */
+/* =========================
+   JOURNEY SECTION
+========================= */
+
 .journeySection {
-  background: #fff;
+  position: relative;
+  width: 100%;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 40px 20px;
+}
+
+.journeyOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.38);
+  z-index: 1;
+}
+
+.journeyContent {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  width: 100%;
   text-align: center;
-  padding: 60px 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .journeySubtitle {
-  color: #C09551;
-  letter-spacing: 2px;
-  font-size: 21px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 600;
+  color: #c89645;
+  letter-spacing: 0.6px;
+  margin: 0 0 18px;
   text-transform: uppercase;
-  margin-bottom: 12px;
 }
+
 .journeyTitle {
-  font-size: 40px;
-  color: #111;
-  font-weight: 700;
-  margin-bottom: 18px;
-  line-height: 1.2;
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #ffffff;
+  margin: 0 0 26px;
 }
+
 .journeyText {
-  color: #444;
-  font-size: 15px;
-  max-width: 580px;
-  margin: 0 auto 48px;
-  line-height: 1.75;
+  max-width: 760px;
+  font-size: 17px;
+  text-align: center;
+  font-weight: 300;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0 0 42px;
 }
-/* ================= CONTACT ================= */
 
-.journey-contact {
+/* =========================
+   CONTACT ROW
+========================= */
+
+.journeyContact {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 40px;
-  margin-bottom: 50px;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 34px;
   flex-wrap: wrap;
-  /* background-color: red; */
 }
 
-.contact-item {
+.contactItem {
   display: flex;
   align-items: center;
-  gap: 15px;
-  color: #131313;
-  font-size: 15px;
-  /* width: 300px;;
-  background-color: blue; */
+  gap: 14px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 300;
 }
 
-.icon-box {
-  width: 48px;
-  height: 48px;
-  border: 1px solid #d8d3cb;
+.contactItem span {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 15px;
+}
+
+.iconBox {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
-  color: #131313;
-  transition: 0.3s ease;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.03);
+  flex-shrink: 0;
 }
 
-.icon-box svg {
+.iconBox svg {
   font-size: 16px;
-}
-
-.icon-box:hover {
-  border-color: #C09551;
-  color: #C09551;
 }
 
 .divider {
   width: 1px;
-  height: 45px;
-  background: #d8d3cb;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.35);
 }
-.journeyBtn {
-  background: #C09551;
-  color: #fff;
-  border: none;
-  padding: 13px 36px;
-  border-radius: 3px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  margin-bottom: 60px;
-  transition: background 0.25s;
-}
-.journeyBtn:hover { background: #C09551; color: #111; }
 
-.partners {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 48px;
-  padding-bottom: 60px;
+/* =========================
+   BUTTON
+========================= */
+
+.journeyBtn {
+  min-width: 290px;
+  height: 54px;
+  border: none;
+  background: #c89645;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  padding: 0 26px;
 }
-.partners img {
-  width: 80px;
-  opacity: 0.85;
-  filter: grayscale(100%) brightness(30%);
+
+.journeyBtn span {
+  margin-left: 14px;
+  font-size: 16px;
+}
+
+.journeyBtn:hover {
+  background: #b8863d;
+}
+
+/* =========================
+   LAPTOP
+========================= */
+@media (max-width: 1200px) {
+  .journeyTitle {
+    font-size: 56px;
+  }
+
+  .journeyText {
+    font-size: 16px;
+    max-width: 700px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 992px) {
+  .journeySection {
+    min-height: 560px;
+  }
+
+  .journeyTitle {
+    font-size: 48px;
+  }
+
+  .journeySubtitle {
+    font-size: 17px;
+  }
+
+  .journeyText {
+    font-size: 15px;
+    margin-bottom: 34px;
+  }
+
+  .journeyContact {
+    gap: 22px;
+    margin-bottom: 28px;
+  }
+
+  .contactItem span {
+    font-size: 14px;
+  }
+
+  .iconBox {
+    width: 42px;
+    height: 42px;
+  }
+
+  .journeyBtn {
+    min-width: 270px;
+    height: 50px;
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .journeySection {
+    min-height: 620px;
+    padding: 60px 18px;
+  }
+
+  .journeyTitle {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .journeySubtitle {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  .journeyText {
+    font-size: 15px;
+    line-height: 1.65;
+    margin-bottom: 30px;
+  }
+
+  .journeyContact {
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .contactItem {
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .contactItem span {
+    font-size: 14px;
+    word-break: break-word;
+  }
+
+  .journeyBtn {
+    min-width: 240px;
+    width: auto;
+    padding: 0 24px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+  .journeySection {
+    min-height: 600px;
+    padding: 55px 14px;
+  }
+
+  .journeyTitle {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .journeySubtitle {
+    font-size: 14px;
+  }
+
+  .journeyText {
+    font-size: 14px;
+    margin-bottom: 26px;
+  }
+
+  .iconBox {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contactItem {
+    gap: 12px;
+  }
+
+  .contactItem span {
+    font-size: 13px;
+  }
+
+  .journeyBtn {
+    width: 100%;
+    max-width: 280px;
+    min-width: unset;
+    font-size: 13px;
+    height: 48px;
+  }
 }
 
 /* =====================================================

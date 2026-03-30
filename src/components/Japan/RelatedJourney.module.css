@@ -1,0 +1,75 @@
+/* ============================
+   RELATED JOURNEYS SECTION
+   ============================ */
+
+.rjSection {
+  padding: clamp(50px, 7vw, 90px) clamp(5%, 5vw, 70px);
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.rjLabel {
+  font-size: 17px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #C09551;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.rjHeading {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 400;
+  margin-bottom: 60px;
+  color: #1c1c1c;
+}
+
+.rjGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.rjCard { position: relative; overflow: hidden; cursor: pointer; }
+
+.rjImage {
+  width: 100%;
+  height: clamp(300px, 40vw, 520px);
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.rjCard:hover .rjImage { transform: scale(1.06); }
+
+.rjCard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 10%, rgba(0,0,0,0.45) 45%, rgba(0,0,0,0) 75%);
+  z-index: 1;
+}
+
+.rjOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  color: #fff;
+  z-index: 2;
+  padding: 20px;
+}
+
+.rjDuration { font-size: 12px; letter-spacing: 1px; opacity: 0.85; color: #C09551; }
+.rjTitle { font-size: clamp(16px, 1.8vw, 22px); font-weight: 400; margin: 8px 0; }
+.rjPrice { font-size: 14px; opacity: 0.9; }
+
+@media (max-width: 1024px) {
+  .rjGrid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .rjGrid { grid-template-columns: 1fr; }
+  .rjImage { height: 350px; }
+  .rjHeading { margin-bottom: 35px; }
+}

@@ -11,6 +11,7 @@ import img6 from "../assets/img7a.png";
 import img7 from "../assets/img8a.png";
 import img8 from "../assets/img9a.png";
 import img9 from "../assets/img10a.png";
+import { useNavigate} from "react-router-dom";
 // import img10 from "../assets/img11a.png";
 // import img11 from "../assets/img12a.png";
 // import img12 from "../assets/img13a.png";
@@ -134,6 +135,8 @@ export default function BlogPage() {
   },
 ];
 
+const navigate = useNavigate();
+
   return (
   <>
     {/*  Hero Section  */}
@@ -184,7 +187,7 @@ export default function BlogPage() {
         {filters.map((f) => (
           <button
             key={f}
-            onClick={() => setActive(f)}
+            onClick={() => {setActive(f); } }
             className={`${styles.journalFilterBtn} ${
               active === f ? styles.journalActive : ""
             }`}
@@ -196,7 +199,7 @@ export default function BlogPage() {
     </div>
 
     {/* Grid */}
-    <div className={styles.journalGrid}>
+    <div className={styles.journalGrid} onClick={()=> navigate("/individualBlog")}>
       {filteredData.map((item) => (
         <div
           key={item.id}
@@ -256,7 +259,7 @@ export default function BlogPage() {
           at the world's finest restaurants - all without a single other guest in sight.
         </p>
 
-        <button className={styles.saharaBtn}>
+        <button className={styles.saharaBtn} onClick={()=> navigate("/individualBlog")}>
           CONTINUE READING →
         </button>
       </div>
@@ -306,7 +309,7 @@ export default function BlogPage() {
 
                 <p className={styles.editorsDesc}>{item.desc}</p>
 
-                <div className={styles.editorsActions}>
+                <div className={styles.editorsActions} onClick={()=> navigate("/individualBlog")}>
                   <span>READ MORE →</span>
                   <span>EXPLORE →</span>
                 </div>

@@ -29,6 +29,12 @@ import Calender from './pages/Calender/Calender';
 import MarchCalender from './pages/Calender/MarchCalender';
 import Accommodation from './pages/Accommodation/Accommodation';
 import NewHome from './pages/NewHome/NewHome';
+import ImperialOdyssey from './pages/Japan-Quarter/ImperialOdyssey';
+import IndividualBlog from './pages/IndividualBlog/individualblog';
+import EGCSignature from './pages/EGC/EGCSignature';
+import Luxury from './pages/EGC/Luxury';
+import ReviewsPage from './pages/Reviews/ReviewsPage';
+import JetExpeditions from './pages/Service Jet Expeditions/JetExpeditions';
 // import Accomodation from './pages/gaurav-accomodation/Accomodation';
 import Destionation from './pages/Destionation/NewDestionation';
 import DiscoverAsia from './pages/DiscoverAsia/DiscoverAsia';
@@ -63,6 +69,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog/:slug" element={<BlogSingle />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/individualblog" element={<IndividualBlog />} />
             {/* Add more routes as needed */}
 
             {/* routes for the south africa home */}
@@ -80,9 +87,11 @@ function App() {
             <Route path="/services" element={<Services/>} />
             <Route path="/private-aviation" element={<PrivateAviation/>} />
             <Route path="/cruises" element={<ExpenditionCruising/>} />
+            <Route path="/jet-expendation" element={<JetExpeditions/>} />
 
             {/* routes for the  imperial-odyssey */}
-            <Route path="/imperial-odyssey" element={<ImperialOdysseyHome/>} />
+            {/* <Route path="/imperial-odyssey" element={<ImperialOdysseyHome/>} /> */}
+            <Route path="/imperial-odyssey" element={<ImperialOdyssey/>} />
 
             {/* routes for the  itinerary */}
             <Route path="/itinerary" element={<Itinerary/>} />
@@ -97,10 +106,15 @@ function App() {
 
             <Route path="/calender" element={<Calender/>} />
             <Route path="/calender/march" element={<MarchCalender/>} />
+
             {/* <Route path="/accommodation" element={<Accomodation/>} /> */}
             <Route path="/accommodation" element={<Accommodation/>} />
 
+            <Route path="/egc-signature" element={<EGCSignature/>} />
+            <Route path="/luxury-group-holiday" element={<Luxury/>} />
 
+            <Route path="/reviews" element={<ReviewsPage/>} />
+            
           </Routes>
         </main>
 

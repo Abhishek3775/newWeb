@@ -27,6 +27,8 @@ import whyicon5 from "../../assets2/Services/aviation/cruising/icon/5.png"
 import whyicon6 from "../../assets2/Services/aviation/cruising/icon/6.png"
 import whyicon7 from "../../assets2/Services/aviation/cruising/icon/7.png"
 import whyicon8 from "../../assets2/Services/aviation/cruising/icon/8.png"
+import bgImage from "../../assets2/Services/aviation/cruising/2.jpg"
+
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -264,7 +266,7 @@ const ExpenditionCruising = () => {
       </section>
 
       {/* ===== SIGNATURE MOMENTS SECTION ===== */}
-      <section className={styles.ecSignatureSection}>
+      {/* <section className={styles.ecSignatureSection}>
         <span className={styles.ecSmallTitle}>THE EXPERIENCE</span><br />
         <h2 className={styles.ecSmallSubtitle}>Signature Moments</h2>
         <p className={styles.ecSmallDocs}>
@@ -322,7 +324,7 @@ const ExpenditionCruising = () => {
             <img src={page3img4} alt="Signature" />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ===== ALL VOYAGES SECTION ===== */}
       <section className={styles.ecVoyagesSection}>
@@ -414,37 +416,53 @@ const ExpenditionCruising = () => {
       </section>
 
       {/* ===== JOURNEY SECTION ===== */}
-      <section className={styles.ecExpJourneySection}>
-        <div className={styles.ecExpJourneyContainer}>
-          <span className={styles.ecExpJourneySmall}>YOUR JOURNEY AWAITS</span>
-          <h2>Begin Your Journey</h2>
-          <p className={styles.ecExpJourneyDesc}>
-            Every extraordinary journey begins with a conversation. Our Japan
-            specialists await to craft your bespoke itinerary, tailored to your every desire.
-          </p>
-          {/* Contact Row */}
-                  <div className="journey-contact">
-                      <div className="contact-item">
-                        <div className="icon-box">
-                          <FaPhoneAlt />
-                        </div>
-                        <span>+44 2074269888</span>
-                      </div>
-            
-                      <div className="divider"></div>
-            
-                      <div className="contact-item">
-                        <div className="icon-box">
-                          <FaEnvelope />
-                        </div>
-                        <span>southafrica@eliteconcierge.com</span>
-                      </div>
-                  </div>
-          <button className={styles.ecExpJourneyBtn}>BEGIN YOUR JOURNEY →</button>
-        </div>
-        <BrandStrip/>
-      </section>
+<section
+  className={styles.ecExpJourneySection}
+  style={{
+    backgroundImage: `url(${bgImage})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+  {/* Overlay */}
+  <div className={styles.ecExpJourneyOverlay}></div>
 
+  <div className={styles.ecExpJourneyContainer}>
+    <span className={styles.ecExpJourneySmall}>YOUR JOURNEY AWAITS</span>
+
+    <h2 className={styles.ecExpJourneyTitle}>Begin Your Journey</h2>
+
+    <p className={styles.ecExpJourneyDesc}>
+      Every extraordinary journey begins with a conversation. Our Japan
+      specialists await to craft your bespoke itinerary, tailored to your every desire.
+    </p>
+
+    {/* Contact Row */}
+    <div className={styles.ecExpJourneyContact}>
+      <div className={styles.ecExpContactItem}>
+        <div className={styles.ecExpIconBox}>
+          <FaPhoneAlt />
+        </div>
+        <span>+442074269888</span>
+      </div>
+
+      <div className={styles.ecExpDivider}></div>
+
+      <div className={styles.ecExpContactItem}>
+        <div className={styles.ecExpIconBox}>
+          <FaEnvelope />
+        </div>
+        <span>southafrica@eliteconcierge.com</span>
+      </div>
+    </div>
+
+    <button className={styles.ecExpJourneyBtn}>
+      BEGIN YOUR JOURNEY <span>→</span>
+    </button>
+  </div>
+</section>
+        <BrandStrip/>
     </div>
   )
 }

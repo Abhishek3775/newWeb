@@ -1,0 +1,161 @@
+.escapeSection {
+  position: relative;
+  width: 100%;
+  min-height: 435px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.34);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  text-align: center;
+  padding: 20px;
+}
+
+.heading {
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #ffffff;
+  margin: 0 0 26px;
+  letter-spacing: 0.2px;
+}
+
+.description {
+  font-size: 17px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 300;
+  margin: 0 auto 28px;
+  max-width: 700px;
+}
+
+.enquireBtn {
+  border: none;
+  background: #c89a54;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.6px;
+  padding: 16px 36px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  min-width: 152px;
+}
+
+.enquireBtn:hover {
+  background: #b88944;
+}
+
+/* =========================
+   LARGE TABLET
+========================= */
+@media (max-width: 1024px) {
+  .escapeSection {
+    min-height: 310px;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 16px;
+    max-width: 650px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 768px) {
+  .escapeSection {
+    min-height: 290px;
+    background-position: center;
+  }
+
+  .content {
+    max-width: 90%;
+    padding: 20px 16px;
+  }
+
+  .heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .enquireBtn {
+    font-size: 13px;
+    padding: 14px 30px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 480px) {
+  .escapeSection {
+    min-height: 320px;
+  }
+
+  .content {
+    max-width: 95%;
+    padding: 18px 14px;
+  }
+
+  .heading {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 22px;
+  }
+
+  .enquireBtn {
+    font-size: 12px;
+    padding: 13px 26px;
+    min-width: 140px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 360px) {
+  .heading {
+    font-size: 22px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .enquireBtn {
+    width: 100%;
+    max-width: 220px;
+  }
+}

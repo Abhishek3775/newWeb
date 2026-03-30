@@ -1,0 +1,153 @@
+.section {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Dark overlay for readability */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* Content */
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+/* Eyebrow */
+.eyebrow {
+  /* font-family: Arial, sans-serif; */
+  font-size: 17px;
+  letter-spacing: 2.5px;
+  text-align: center;
+  font-weight: 700;
+  color: #C09551;
+  margin-bottom: 12px;
+}
+
+/* Heading */
+.heading {
+  /* font-family: "Georgia", serif; */
+  font-size: clamp(28px, 5vw, 48px);
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+/* Subtext */
+.subtext {
+  /* font-family: Arial, sans-serif; */
+  font-size: clamp(14px, 1.5vw, 16px);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* Buttons container */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+/* Primary Button */
+.primaryBtn {
+  background: #c9a84c;
+  color: #fff;
+  border: none;
+  padding: 14px 26px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.primaryBtn:hover {
+  background: #b8963f;
+}
+
+/* Secondary Button */
+.secondaryBtn {
+  background: transparent;
+  color: #C09551;
+  border: 1px solid #C09551;
+  padding: 14px 26px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.secondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Note text */
+.note {
+  font-size: 12px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+  .section {
+    height: 460px;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .subtext {
+    font-size: 14px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    height: 420px;
+  }
+
+  .heading {
+    font-size: 26px;
+  }
+
+  .subtext {
+    font-size: 13px;
+  }
+}

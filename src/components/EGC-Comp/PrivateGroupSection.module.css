@@ -1,0 +1,104 @@
+.section {
+  width: 100%;
+  padding: 80px 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* Content wrapper */
+.container {
+  max-width: 900px;
+}
+
+/* Eyebrow */
+.eyebrow {
+  /* font-family: Arial, sans-serif; */
+  font-size: 17px;
+  letter-spacing: 2.5px;
+  text-align: center;
+  color: #c09551;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+/* Heading */
+.heading {
+  /* font-family: "Georgia", serif; */
+  font-size: clamp(28px, 4.5vw, 44px);
+  font-weight: 400;
+  color: #222;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+/* Paragraph */
+.description {
+  /* font-family: Arial, sans-serif; */
+  font-size: clamp(14px, 1.4vw, 16px);
+  color: #555;
+  text-align: center;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+/* Button */
+.cta {
+  margin-top: 28px;
+  background: #c09551;
+  color: #fff;
+  border: none;
+
+  padding: 14px 32px;
+  font-size: 12px;
+  letter-spacing: 1.8px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta:hover {
+  background: #a87e3f;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 16px;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 50px 14px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .cta {
+    padding: 12px 24px;
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,347 @@
+.section {
+  width: 100%;
+  background: #e9e7e2;
+  padding: 28px 20px 14px;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.heading {
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #222;
+  margin: 0 0 10px;
+  font-family: "Arial", sans-serif;
+}
+
+.heading span {
+  color: #c89a54;
+  font-weight: 300;
+}
+
+.subheading {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* =========================
+   SLIDER WRAPPER
+========================= */
+.sliderWrapper {
+  position: relative;
+}
+
+/* =========================
+   ARROWS
+========================= */
+.arrowBtn {
+  position: absolute;
+  top: 43%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #9d9d9d;
+  background: #f4f2ee;
+  color: #4b4b4b;
+  font-size: 28px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  z-index: 5;
+}
+
+.arrowBtn:hover {
+  background: #ffffff;
+  border-color: #777;
+}
+
+.leftArrow {
+  left: -22px;
+}
+
+.rightArrow {
+  right: -22px;
+}
+
+/* =========================
+   GRID
+========================= */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardImage {
+  position: relative;
+  height: 480px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* dark bottom overlay */
+.cardImage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.62) 0%,
+    rgba(0, 0, 0, 0.18) 30%,
+    rgba(0, 0, 0, 0.03) 55%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* badge */
+.nightsBadge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #f5f1eb;
+  color: #4a4a4a;
+  font-size: 13px;
+  padding: 6px 12px;
+  z-index: 2;
+  font-weight: 300;
+}
+
+/* overlay text */
+.overlayContent {
+  position: absolute;
+  bottom: 18px;
+  left: 16px;
+  right: 16px;
+  z-index: 2;
+  color: #fff;
+  text-align: left;
+}
+
+.overlayContent h3 {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.overlayContent p {
+  font-size: 13px;
+  line-height: 1.35;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 95%;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 18px;
+  flex-wrap: wrap;
+}
+
+.cardFooter p {
+  font-size: 16px;
+  color: #4a4a4a;
+  margin: 0;
+  font-weight: 300;
+}
+
+.cardFooter p span {
+  font-weight: 700;
+  color: #222;
+}
+
+.exploreBtn {
+  border: none;
+  background: transparent;
+  color: #c89a54;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.exploreBtn:hover {
+  opacity: 0.8;
+}
+
+.exploreBtn span {
+  font-size: 16px;
+}
+
+/* =========================
+   LARGE TABLET
+========================= */
+@media (max-width: 1100px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .leftArrow {
+    left: -10px;
+  }
+
+  .rightArrow {
+    right: -10px;
+  }
+
+  .cardImage {
+    height: 430px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 992px) {
+  .heading {
+    font-size: 32px;
+  }
+
+  .subheading {
+    font-size: 15px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .cardImage {
+    height: 420px;
+  }
+
+  .arrowBtn {
+    display: none;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 640px) {
+  .section {
+    padding: 36px 16px 18px;
+  }
+
+  .header {
+    margin-bottom: 22px;
+  }
+
+  .heading {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .subheading {
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 95%;
+    margin: 0 auto;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .cardImage {
+    height: 440px;
+  }
+
+  .overlayContent h3 {
+    font-size: 20px;
+  }
+
+  .overlayContent p {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .cardFooter {
+    padding-top: 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .cardFooter p {
+    font-size: 15px;
+  }
+
+  .exploreBtn {
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 420px) {
+  .heading {
+    font-size: 24px;
+  }
+
+  .cardImage {
+    height: 390px;
+  }
+
+  .nightsBadge {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .overlayContent {
+    left: 14px;
+    right: 14px;
+    bottom: 16px;
+  }
+
+  .overlayContent h3 {
+    font-size: 18px;
+  }
+
+  .overlayContent p {
+    font-size: 13px;
+  }
+}

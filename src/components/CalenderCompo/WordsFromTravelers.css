@@ -3,8 +3,8 @@
 ====================================== */
 
 .wft-section {
-  padding: 80px 20px;
-  background: #ffffff;
+  padding: 60px 20px 70px;
+  background: #e8e6e2; /* exact soft gray-beige background */
 }
 
 .wft-container {
@@ -14,23 +14,55 @@
 }
 
 .wft-heading {
-  font-size: 40px;
+  font-size: 28px;
   font-weight: 300;
-  margin-bottom: 50px;
+  line-height: 1.2;
+  color: #2a2a2a;
+  margin-bottom: 32px;
+  letter-spacing: 0.2px;
 }
 
 .wft-heading span {
-  color: #C09551;
+  color: #c49a57;
+  font-weight: 300;
 }
 
-/* Grid Layout */
+/* ======================================
+   VIDEO PLACEHOLDER BOX
+====================================== */
+
+.wft-video-box {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  height: 350px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.wft-video-box p {
+  font-size: 22px;
+  font-weight: 300;
+  color: #2f2f2f;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ======================================
+   OLD CODE COMMENTED / NOT USED
+====================================== */
+
+/*
 .wft-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-/* Card */
 .wft-card {
   border: 1px solid #f5f4ef;
   padding: 30px;
@@ -44,14 +76,12 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* Stars */
 .wft-stars {
   color: #C09551;
   font-size: 16px;
   margin-bottom: 15px;
 }
 
-/* Review Text */
 .wft-review {
   font-size: 14px;
   color: #555;
@@ -59,7 +89,6 @@
   margin-bottom: 20px;
 }
 
-/* Author */
 .wft-author {
   margin-top: 15px;
 }
@@ -75,29 +104,70 @@
   font-size: 13px;
   color: #C09551;
 }
+*/
 
-/* ==========================
+/* ======================================
    RESPONSIVE
-========================== */
+====================================== */
+
+/* Large Tablet */
+@media (max-width: 992px) {
+  .wft-section {
+    padding: 55px 18px 60px;
+  }
+
+  .wft-heading {
+    font-size: 26px;
+    margin-bottom: 28px;
+  }
+
+  .wft-video-box {
+    height: 300px;
+  }
+
+  .wft-video-box p {
+    font-size: 20px;
+  }
+}
 
 /* Tablet */
-@media (max-width: 992px) {
-  .wft-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 768px) {
+  .wft-section {
+    padding: 50px 16px 55px;
+  }
+
+  .wft-heading {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .wft-video-box {
+    height: 250px;
+  }
+
+  .wft-video-box p {
+    font-size: 18px;
   }
 }
 
 /* Mobile */
-@media (max-width: 600px) {
-  .wft-grid {
-    grid-template-columns: 1fr;
+@media (max-width: 480px) {
+  .wft-section {
+    padding: 40px 14px 45px;
   }
 
   .wft-heading {
-    font-size: 28px;
+    font-size: 22px;
+    margin-bottom: 20px;
   }
 
-  .wft-card {
-    padding: 20px;
+  .wft-video-box {
+    height: 200px;
+    padding: 16px;
+  }
+
+  .wft-video-box p {
+    font-size: 16px;
+    line-height: 1.5;
   }
 }

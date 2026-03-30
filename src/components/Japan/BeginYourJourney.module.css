@@ -1,0 +1,332 @@
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  width: 100%;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+/* ============================================
+   TEXT STYLES
+   ============================================ */
+
+.textGroup {
+  margin-bottom: 40px;
+  animation: fadeInDown 0.8s ease;
+}
+
+.stayLabel {
+  font-size: 17px;
+  font-weight: 400;
+  color: #C09551;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 15px 0;
+}
+
+.mainTitle {
+  font-size: 56px;
+  font-weight: 300;
+  color: #ffffff;
+  margin: 0 0 25px 0;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.description {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.7;
+  margin: 0;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+/* ============================================
+   FORM STYLES
+   ============================================ */
+
+.form {
+  animation: fadeInUp 0.8s ease 0.6s both;
+}
+
+.inputWrapper {
+  display: flex;
+  gap: 0;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.input {
+  flex: 1;
+  padding: 14px 20px;
+  border: none;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #333;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input::placeholder {
+  color: #999;
+}
+
+.input:focus {
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(192, 149, 81, 0.2);
+}
+
+.submitBtn {
+  padding: 14px 32px;
+  background-color: #C09551;
+  color: #ffffff;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background-color: #a87f3f;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.submitBtn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.submitBtn:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.successMessage {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  margin-top: 15px;
+  animation: slideUp 0.4s ease;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  .container {
+    min-height: 350px;
+    background-attachment: scroll;
+  }
+
+  .content {
+    padding: 50px 30px;
+  }
+
+  .mainTitle {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .inputWrapper {
+    flex-direction: column;
+  }
+
+  .input {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+
+  .submitBtn {
+    padding: 12px 24px;
+    font-size: 11px;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .container {
+    min-height: 320px;
+    padding: 0;
+  }
+
+  .content {
+    padding: 40px 20px;
+  }
+
+  .stayLabel {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+  }
+
+  .mainTitle {
+    font-size: 28px;
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+
+  .description {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .textGroup {
+    margin-bottom: 30px;
+  }
+
+  .inputWrapper {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .input {
+    padding: 12px 14px;
+    font-size: 13px;
+    text-align: left;
+  }
+
+  .submitBtn {
+    padding: 12px 16px;
+    font-size: 10px;
+    letter-spacing: 0.8px;
+  }
+
+  .successMessage {
+    font-size: 12px;
+    margin-top: 12px;
+  }
+}
+
+/* Extra Small Mobile (320px and below) */
+@media (max-width: 320px) {
+  .content {
+    padding: 35px 15px;
+  }
+
+  .mainTitle {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .input {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .submitBtn {
+    padding: 10px 12px;
+    font-size: 9px;
+  }
+}
+
+/* ============================================
+   DARK MODE SUPPORT
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  .input {
+    background-color: #ffffff;
+    color: #333;
+  }
+
+  .input::placeholder {
+    color: #999;
+  }
+
+  .input:focus {
+    background-color: #ffffff;
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  .container {
+    background-image: none !important;
+    min-height: auto;
+  }
+
+  .form {
+    display: none;
+  }
+}

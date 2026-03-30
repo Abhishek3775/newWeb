@@ -1,0 +1,1293 @@
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.jetHeroSection {
+  position: relative;
+  width: 100%;
+  min-height: 860px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 55px;
+  overflow: hidden;
+}
+
+.jetOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.38);
+  z-index: 1;
+}
+
+.jetContent {
+  position: relative;
+  z-index: 2;
+  max-width: 560px;
+  color: #ffffff;
+  margin-top: 60px;
+}
+
+.jetSubtitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #c09551;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.jetTitle {
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 1.05;
+  margin: 0 0 18px;
+  color: #ffffff;
+}
+
+.jetDescription {
+  font-size: 18px;
+  line-height: 1.45;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 520px;
+  margin-bottom: 30px;
+}
+
+.jetButtons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  min-width: 145px;
+  height: 46px;
+  padding: 0 24px;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.primaryBtn {
+  background: #c09551;
+  color: #ffffff;
+  border: none;
+}
+
+.primaryBtn:hover {
+  background: #b8873d;
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: #c09551;
+  border: 1px solid rgba(201, 150, 69, 0.65);
+}
+
+.secondaryBtn:hover {
+  background: rgba(201, 150, 69, 0.08);
+}
+
+/* ==========================================
+   STATS BAR
+========================================== */
+
+.statsBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 26px 40px;
+  z-index: 2;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statItem h3 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  color: #c09551;
+  font-weight: 700;
+}
+
+.statItem p {
+  margin: 0;
+  font-size: 12px;
+  text-align: center;
+  color: #2c2c2c;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+}
+
+/* ==========================================
+   MODAL
+========================================== */
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.62);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 999;
+}
+
+.modalBox {
+  width: 100%;
+  max-width: 680px;
+  background: #f5f4ef;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid #ddd6cb;
+}
+
+.modalTitleWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.modalPlaneIcon {
+  color: #c09551;
+  font-size: 18px;
+}
+
+.modalHeader h2 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  margin: 0;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modalDesc {
+  padding: 18px 20px 8px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #555;
+  margin: 0;
+}
+
+.modalForm {
+  padding: 8px 20px 20px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.formGroup label {
+  font-size: 12px;
+  color: #c09551;
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+  height: 42px;
+  border: 1px solid #cfc8bc;
+  background: #ffffff;
+  padding: 0 12px;
+  font-size: 13px;
+  color: #333;
+  outline: none;
+}
+
+.formGroup textarea {
+  height: 92px;
+  resize: none;
+  padding: 12px;
+}
+
+.phoneWrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.countryCode {
+  max-width: 110px;
+}
+
+.sendBtn {
+  width: 100%;
+  height: 44px;
+  background: #c99645;
+  border: none;
+  color: #ffffff;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: all 0.25s ease;
+}
+
+.sendBtn:hover {
+  background: #b8873d;
+}
+
+/* ==========================================
+   CURATED EXPEDITIONS
+========================================== */
+
+.curatedSection {
+  width: 100%;
+  background: #f5f4ef;
+  padding: 32px 20px 52px;
+}
+
+.curatedContainer {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.curatedHeader {
+  margin-bottom: 24px;
+}
+
+.curatedSmallTitle {
+  color: #c09551;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.curatedMainTitle {
+  font-size: 56px;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #1f1f1f;
+  margin: 0 0 14px;
+}
+
+.curatedDescription {
+  font-size: 15px;
+  color: #4f4f4f;
+  line-height: 1.6;
+  max-width: 760px;
+  margin: 0;
+}
+
+.curatedGrid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-rows: 260px 420px 420px;
+  gap: 14px;
+}
+
+.curatedCard {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  min-height: 220px;
+}
+
+.curatedCardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.66) 0%,
+    rgba(0, 0, 0, 0.22) 42%,
+    rgba(0, 0, 0, 0.02) 100%
+  );
+  z-index: 1;
+}
+
+.curatedCardContent {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  z-index: 2;
+  color: #ffffff;
+}
+
+.curatedCardContentHeader {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.curatedCardContentIcon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.curatedCardMeta {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 0 12px;
+}
+
+.curatedCardContent h3 {
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  color: #ffffff;
+}
+
+.curatedCardDesc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.curatedCardLink {
+  margin-top: 14px;
+  background: transparent;
+  border: none;
+  color: #c09551;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+  letter-spacing: 0.4px;
+}
+
+.featuredBadge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  background: #c09551;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px 14px;
+  text-transform: uppercase;
+}
+
+.largeCard {
+  grid-row: 1 / span 2;
+  grid-column: 1 / 2;
+}
+
+.smallTopCard {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.smallMidCard {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.bottomLeftCard {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.bottomRightCard {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.curatedFooter {
+  display: flex;
+  justify-content: center;
+  margin-top: 34px;
+}
+
+.viewAllBtn {
+  min-width: 200px;
+  height: 42px;
+  background: #c09551;
+  color: #ffffff;
+  border: none;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  padding: 0 26px;
+}
+
+/* ==========================================
+   SIGNATURE EXPERIENCES
+========================================== */
+
+.signatureSection {
+  width: 100%;
+  background: #efede8;
+  padding: 34px 20px 54px;
+}
+
+.signatureContainer {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.signatureHeader {
+  margin-bottom: 26px;
+}
+
+.smallTitle {
+  color: #c99645;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
+
+.SEmainTitle {
+  font-size: 58px;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #1f1f1f;
+  margin: 0 0 14px;
+}
+
+.subtitle {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4e4e4e;
+  max-width: 860px;
+  margin: 0;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.signatureCard {
+  background: #f4f2ee;
+  overflow: hidden;
+}
+
+.signatureCardImage {
+  position: relative;
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.iconCircle {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 150, 69, 0.8);
+  color: #c99645;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 15, 15, 0.18);
+  backdrop-filter: blur(1px);
+  font-size: 18px;
+}
+
+.signatureCardContent {
+  padding: 18px 18px 20px;
+}
+
+.signatureCardContent h3 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #2a2a2a;
+  margin: 0 0 12px;
+}
+
+.signatureCardContent p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #505050;
+  margin: 0;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1100px) {
+  .curatedMainTitle {
+    font-size: 48px;
+  }
+
+  .curatedGrid {
+    grid-template-rows: 170px 290px 290px;
+  }
+
+  .curatedCardContent h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .jetHeroSection {
+    min-height: 760px;
+    padding: 0 35px;
+  }
+
+  .jetTitle {
+    font-size: 54px;
+  }
+
+  .jetDescription {
+    font-size: 16px;
+  }
+
+  .statsBar {
+    padding: 22px 24px;
+  }
+
+  .mainTitle {
+    font-size: 46px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .signatureCardImage {
+    height: 240px;
+  }
+}
+
+@media (max-width: 900px) {
+  .curatedMainTitle {
+    font-size: 40px;
+  }
+
+  .curatedGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .largeCard,
+  .smallTopCard,
+  .smallMidCard,
+  .bottomLeftCard,
+  .bottomRightCard {
+    grid-column: auto;
+    grid-row: auto;
+    min-height: 380px;
+  }
+
+  .smallTopCard {
+    min-height: 260px;
+  }
+
+  .curatedCardContent h3 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .jetHeroSection {
+    min-height: 860px;
+    padding: 80px 20px 0;
+    align-items: flex-start;
+  }
+
+  .jetContent {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+
+  .jetSubtitle {
+    font-size: 13px;
+  }
+
+  .jetTitle {
+    font-size: 42px;
+  }
+
+  .jetDescription {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  .jetButtons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .statsBar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 10px;
+    padding: 22px 18px;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .curatedSection,
+  .signatureSection {
+    padding: 28px 16px 42px;
+  }
+
+  .curatedHeader,
+  .signatureHeader {
+    margin-bottom: 20px;
+  }
+
+  .curatedSmallTitle,
+  .smallTitle {
+    font-size: 14px;
+  }
+
+  .curatedMainTitle,
+  .mainTitle {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .curatedDescription,
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .largeCard,
+  .smallTopCard,
+  .smallMidCard,
+  .bottomLeftCard,
+  .bottomRightCard {
+    min-height: 320px;
+  }
+
+  .curatedCardContent {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .curatedCardMeta {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .curatedCardContent h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .curatedCardDesc {
+    font-size: 13px;
+  }
+
+  .featuredBadge {
+    top: 14px;
+    left: 14px;
+    font-size: 11px;
+    padding: 7px 12px;
+  }
+
+  .viewAllBtn {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .signatureCardImage {
+    height: 250px;
+  }
+
+  .iconCircle {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
+
+  .signatureCardContent {
+    padding: 16px 16px 18px;
+  }
+
+  .signatureCardContent h3 {
+    font-size: 20px;
+  }
+
+  .signatureCardContent p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .jetHeroSection {
+    min-height: 920px;
+    padding: 70px 16px 0;
+  }
+
+  .jetTitle {
+    font-size: 34px;
+    line-height: 1.15;
+  }
+
+  .jetDescription {
+    font-size: 14px;
+  }
+
+  .statsBar {
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 12px;
+  }
+
+  .statItem h3 {
+    font-size: 18px;
+  }
+
+  .statItem p {
+    font-size: 11px;
+  }
+
+  .modalBox {
+    max-width: 100%;
+  }
+
+  .modalHeader {
+    padding: 16px;
+  }
+
+  .modalDesc,
+  .modalForm {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .phoneWrapper {
+    flex-direction: column;
+  }
+
+  .countryCode {
+    max-width: 100%;
+  }
+}
+
+/* =========================
+  Aircraft SECTION
+========================= */
+/* ==========================================
+   AIRCRAFT SECTION (PIXEL PERFECT)
+========================================== */
+
+.aircraftLuxurySection {
+  width: 100%;
+  background: #f5f4ef;
+  padding: 60px 20px 70px;
+}
+
+.aircraftLuxuryContainer {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 50px;
+  align-items: center;
+}
+
+/* IMAGE */
+
+.aircraftImageWrapper {
+  position: relative;
+}
+
+.aircraftImageWrapper img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+}
+
+/* ARROWS */
+
+.aircraftLeftBtn,
+.aircraftRightBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+  background: #f5f4ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.aircraftLeftBtn {
+  left: -45px;
+}
+
+.aircraftRightBtn {
+  right: -45px;
+}
+
+/* BADGE */
+
+.aircraftBadge {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  background: #c09551;
+  color: #fff;
+  padding: 16px 22px;
+}
+
+.aircraftBadge h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.aircraftBadge p {
+  margin: 5px 0 0;
+  font-size: 13px;
+}
+
+/* CONTENT */
+
+.aircraftSmallTitle {
+  color: #c09551;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.aircraftTitle {
+  font-size: 34px;
+  font-weight: 300;
+  margin-bottom: 18px;
+}
+
+.aircraftDesc {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* FEATURES */
+
+.aircraftFeaturesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 20px;
+}
+
+.aircraftFeatureItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.aircraftIconBox {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #c09551;
+  color: #c09551;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.aircraftFeatureText h4 {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.aircraftFeatureText p {
+  font-size: 13px;
+  color: #555;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .aircraftLuxuryContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .aircraftImageWrapper img {
+    height: 320px;
+  }
+
+  .aircraftLeftBtn {
+    left: 10px;
+  }
+
+  .aircraftRightBtn {
+    right: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .aircraftFeaturesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .aircraftTitle {
+    font-size: 28px;
+  }
+}
+
+
+/* ==========================================
+   OurPhilosophy SECTION
+========================================== */
+
+.philosophySection {
+  width: 100%;
+  background: #ffffff;
+  padding: 36px 20px 34px;
+}
+
+.philosophyContainer {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.85fr;
+  gap: 58px;
+  align-items: start;
+}
+
+/* ==========================================
+   LEFT CONTENT
+========================================== */
+
+.philosophyLeft {
+  max-width: 690px;
+}
+
+.philosophySmallTitle {
+  margin: 0 0 14px;
+  color: #c09551;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.philosophyTitle {
+  margin: 0 0 18px;
+  font-size: 48px;
+  line-height: 1.05;
+  font-weight: 300;
+  color: #2a2a2a;
+}
+
+.philosophyText {
+  margin: 0 0 18px;
+  font-size: 15px;
+  line-height: 1.42;
+  color: #4d4d4d;
+  max-width: 690px;
+}
+
+/* ==========================================
+   RIGHT QUOTE CARD
+========================================== */
+
+.philosophyRight {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.quoteCard {
+  width: 100%;
+  max-width: 430px;
+  background: #efede8;
+  padding: 28px 24px 24px;
+}
+
+.quoteIcon {
+  color: #d4b07a;
+  font-size: 44px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.quoteText {
+  margin: 0 0 26px;
+  font-size: 26px;
+  line-height: 1.42;
+  font-weight: 300;
+  color: #4a4a4a;
+  max-width: 360px;
+}
+
+.quoteLine {
+  width: 34px;
+  height: 1px;
+  background: #c09551;
+  margin-bottom: 16px;
+}
+
+.quoteAuthorBlock h4 {
+  margin: 0 0 5px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #3a3a3a;
+}
+
+.quoteAuthorBlock p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #5a5a5a;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+@media (max-width: 992px) {
+  .philosophyContainer {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .philosophyLeft {
+    max-width: 100%;
+  }
+
+  .philosophyTitle {
+    font-size: 46px;
+  }
+
+  .philosophyRight {
+    justify-content: flex-start;
+  }
+
+  .quoteCard {
+    max-width: 100%;
+  }
+
+  .quoteText {
+    max-width: 100%;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+@media (max-width: 640px) {
+  .philosophySection {
+    padding: 28px 16px 34px;
+  }
+
+  .philosophyContainer {
+    gap: 26px;
+  }
+
+  .philosophySmallTitle {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .philosophyTitle {
+    font-size: 34px;
+    margin-bottom: 16px;
+    line-height: 1.12;
+  }
+
+  .philosophyText {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .quoteCard {
+    padding: 22px 18px 20px;
+  }
+
+  .quoteIcon {
+    font-size: 38px;
+    margin-bottom: 6px;
+  }
+
+  .quoteText {
+    font-size: 22px;
+    line-height: 1.45;
+    margin-bottom: 22px;
+  }
+
+  .quoteAuthorBlock h4 {
+    font-size: 14px;
+  }
+
+  .quoteAuthorBlock p {
+    font-size: 12px;
+  }
+}
+
+/* ==========================================
+   CTA SECTION
+========================================== */
+
+.ctaSection {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* DARK OVERLAY */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* CONTENT */
+
+.ctaContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #ffffff;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+/* SMALL TITLE */
+
+.smallTitle {
+  color: #c09551;
+  font-size: 17px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+/* MAIN TITLE */
+
+.mainTitle {
+  font-size: 42px;
+  font-weight: 300;
+  /* line-height: 1.2; */
+  margin-bottom: 14px;
+  color: #fff;
+}
+
+/* SUB TEXT */
+
+.subText {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+/* BUTTON */
+
+.ctaBtn {
+  background: #c09551;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.ctaBtn:hover {
+  background: #b8873d;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 992px) {
+  .ctaSection {
+    height: 300px;
+  }
+
+  .mainTitle {
+    font-size: 36px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+  .ctaSection {
+    height: 280px;
+  }
+
+  .mainTitle {
+    font-size: 26px;
+  }
+
+  .subText {
+    font-size: 14px;
+  }
+
+  .ctaBtn {
+    padding: 10px 22px;
+  }
+}

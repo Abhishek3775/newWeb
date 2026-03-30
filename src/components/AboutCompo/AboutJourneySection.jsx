@@ -31,15 +31,21 @@ const features = [
 
 const AboutJourneySection = () => {
   return (
-    <section className={styles.journeySection}>
+    <section
+      className={styles.journeySection}
+      style={{
+        "--bg-image":
+          'url("https://images.pexels.com/photos/20406205/pexels-photo-20406205.jpeg")',
+      }}
+    >
       <div className={styles.journeyContainer}>
-
         {/* LEFT CONTENT */}
         <div className={styles.leftContent}>
           <div className={styles.top}>
-            <div className="topLine"></div>
-          <p className={styles.smallLabel}>OUR JOURNEY</p>
+            <div className={styles.topLine}></div>
+            <p className={styles.smallLabel}>OUR JOURNEY</p>
           </div>
+
           <h2 className={styles.mainHeading}>
             WHY ELITE GLOBAL CONCIERGE?
           </h2>
@@ -62,15 +68,16 @@ const AboutJourneySection = () => {
         <div className={styles.gridWrapper}>
           {features.map((item, index) => (
             <div className={styles.card} key={index}>
-          
-                <img src={item.icon} alt={item.title} style={{height:'40px',width:'40px'}}/>
-          
+              <img
+                src={item.icon}
+                alt={item.title}
+                style={{ height: "40px", width: "40px" }}
+              />
               <h4 className={styles.cardTitle}>{item.title}</h4>
               <p className={styles.cardText}>{item.text}</p>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

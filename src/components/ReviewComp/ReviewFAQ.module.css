@@ -1,0 +1,132 @@
+.section {
+  width: 100%;
+  background: #ffffff;
+  padding: 70px 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.heading {
+  margin: 0 0 10px;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #1f1f1f;
+  /* font-family: "Arial Narrow", Arial, sans-serif; */
+}
+
+.subtext {
+  margin: 0 0 40px;
+  font-size: 14px;
+  text-align: center;
+  color: #9a9a9a;
+  font-weight: 600;
+  /* font-family: Arial, sans-serif; */
+}
+
+/* ================= FAQ ================= */
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.faqItem {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.faqHeader {
+  width: 100%;
+  padding: 18px 0;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3a3a3a;
+  cursor: pointer;
+  /* font-family: Arial, sans-serif; */
+}
+
+.faqHeader span {
+  max-width: 90%;
+}
+
+.faqContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.faqContent p {
+  margin: 0 0 16px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #7a7a7a;
+  font-weight: 500;
+  /* font-family: Arial, sans-serif; */
+}
+
+/* OPEN STATE */
+.open {
+  max-height: 200px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .section {
+    padding: 56px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .heading {
+    font-size: 26px;
+  }
+
+  .subtext {
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+
+  .faqHeader {
+    font-size: 13px;
+    padding: 16px 0;
+  }
+
+  .faqContent p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 48px 0;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .heading {
+    font-size: 22px;
+  }
+
+  .faqHeader {
+    font-size: 12px;
+  }
+}

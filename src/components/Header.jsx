@@ -9,7 +9,7 @@ const Header = () => {
   const location = useLocation();
 
   const isLightPage = [
-    "/about",
+    "/about","/","/egc-signature","/reviews"
   ].includes(location.pathname);
 
   const toggleMenu = () => {
