@@ -1430,7 +1430,7 @@
 .freshLatest {
   font-size: 17px;
   letter-spacing: 2px;
-  color: #c7a25d;
+  color: #C09551;
 }
 
 .freshTitle {
@@ -1440,7 +1440,7 @@
 
 .freshViewAll {
   font-size: 12px;
-  color: #c7a25d;
+  color: #C09551;
   cursor: pointer;
 }
 
@@ -1471,7 +1471,7 @@
 
 .freshMeta {
   font-size: 12px;
-  color: #c7a25d;
+  color: #C09551;
 }
 
 .freshHeading {
@@ -1486,7 +1486,7 @@
 
 .freshLink {
   font-size: 12px;
-  color: #c7a25d;
+  color: #C09551;
 }
 
 /* Divider */
@@ -1502,7 +1502,7 @@
 }
 
 .freshLoadBtn {
-  background: #c7a25d;
+  background: #C09551;
   color: white;
   border: none;
   padding: 12px 28px;
@@ -1554,8 +1554,9 @@
 /* Tag */
 .inspiredTag {
   font-size: 17px;
+  text-align: center;
   letter-spacing: 2px;
-  color: #d4af6a;
+  color: #C09551;
   margin-bottom: 10px;
 }
 
@@ -1569,6 +1570,7 @@
 /* Description */
 .inspiredDesc {
   font-size: 14px;
+  text-align: center;
   line-height: 1.6;
   margin-bottom: 25px;
   color: #f0f0f0;
@@ -1585,6 +1587,8 @@
 .inspiredInput {
   padding: 7px 7px;
   width: 260px;
+  background-color: #fff;
+  color: #222;
   border: none;
   outline: none;
   font-size: 14px;
@@ -1592,7 +1596,7 @@
 
 /* Button */
 .inspiredButton {
-  background: #c7a25d;
+  background: #C09551;
   color: #fff;
   border: none;
   padding: 12px 22px;

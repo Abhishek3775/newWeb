@@ -1,0 +1,374 @@
+.section {
+  width: 100%;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.smallTitle {
+  font-size: 17px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #c09551;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 400;
+  color: #1e1e1e;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  min-height: 340px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 30px;
+}
+
+.fullWidth {
+  grid-column: span 2;
+  min-height: 380px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 10%,
+    rgba(0, 0, 0, 0.2) 55%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+  color: #fff;
+}
+
+.content h3 {
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+
+.content p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 22px;
+  max-width: 90%;
+}
+
+.planBtn {
+  background: transparent;
+  border: none;
+  color: #c09551;
+  font-size: 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+.planBtn:hover {
+  color: #fff;
+  transform: translateX(4px);
+}
+
+/* =========================
+   POPUP MODAL
+========================= */
+.popupOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.popupBox {
+  width: 100%;
+  max-width: 580px;
+  background: #f7f4ef;
+  padding: 35px 28px 30px;
+  position: relative;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+  animation: popupFade 0.3s ease;
+}
+
+@keyframes popupFade {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  color: #888;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.closeBtn:hover {
+  color: #000;
+}
+
+.popupTitle {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 400;
+  color: #2a2a2a;
+  margin-bottom: 30px;
+  line-height: 1.3;
+}
+
+/* Form */
+.form {
+  width: 100%;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup label {
+  font-size: 11px;
+  color: #c09551;
+  font-weight: 600;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.inputGroup input,
+.inputGroup textarea,
+.countryCode {
+  width: 100%;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  font-family: inherit;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus,
+.countryCode:focus {
+  border-color: #b68d40;
+}
+
+.inputGroup textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+.phoneWrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.countryCode {
+  width: 110px;
+  cursor: pointer;
+}
+
+.submitBtn {
+  width: 100%;
+  background: #c09551;
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 8px;
+}
+
+.submitBtn:hover {
+  background: #9c7634;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .content h3 {
+    font-size: 26px;
+  }
+
+  .card {
+    min-height: 300px;
+  }
+
+  .fullWidth {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 16px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fullWidth {
+    grid-column: span 1;
+  }
+
+  .card,
+  .fullWidth {
+    min-height: 300px;
+    padding: 24px;
+  }
+
+  .content h3 {
+    font-size: 24px;
+  }
+
+  .content p {
+    max-width: 100%;
+    font-size: 13px;
+  }
+
+  .popupBox {
+    padding: 30px 20px 24px;
+  }
+
+  .popupTitle {
+    font-size: 26px;
+    margin-bottom: 24px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+
+  .phoneWrapper {
+    flex-direction: column;
+  }
+
+  .countryCode {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .smallTitle {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .card,
+  .fullWidth {
+    min-height: 280px;
+    padding: 20px;
+  }
+
+  .content h3 {
+    font-size: 21px;
+  }
+
+  .content p {
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+
+  .planBtn {
+    font-size: 12px;
+  }
+
+  .popupBox {
+    max-width: 100%;
+    padding: 26px 16px 20px;
+  }
+
+  .popupTitle {
+    font-size: 22px;
+  }
+
+  .inputGroup input,
+  .inputGroup textarea,
+  .countryCode {
+    padding: 11px 12px;
+    font-size: 13px;
+  }
+
+  .submitBtn {
+    padding: 13px 16px;
+    font-size: 12px;
+  }
+}

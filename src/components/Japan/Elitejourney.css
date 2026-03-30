@@ -75,6 +75,7 @@
 .elite-journey-desc {
   max-width: 760px;
   margin: 0 auto 48px;
+  text-align: center;
   font-size: 14px;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.92);

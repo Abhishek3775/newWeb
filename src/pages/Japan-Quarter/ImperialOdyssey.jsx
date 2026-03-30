@@ -6,6 +6,7 @@ import Accommodation from '../../components/Japan/Accommodation'
 import Faq from '../../components/Japan/Faq'
 import RelatedJourney from '../../components/Japan/RelatedJourney'
 import JourneySection from '../../components/Japan/JourenySection'
+import Elitejourney from '../../components/Japan/Elitejourney'
 
 const ImperialOdyssey = () => {
   return (
@@ -16,6 +17,7 @@ const ImperialOdyssey = () => {
     {<Accommodation/>}
     {<Faq/>}
     {<RelatedJourney/>}
+    {<Elitejourney/>}
     {/* {<JourneySection/>} */}
     </>
   )
