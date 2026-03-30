@@ -13,6 +13,7 @@ import clockIcon from "../assets/clock.png";
 import mailSmallIcon from "../assets/msg.png";
 import flagUs from "../assets/flagUs.png";
 import EnquirySection from '../components/Contact/EnquirySection';
+import TestimonialSection from '../components/Contact/TestimonialSection';
 
 function NewContact() {
   return (
@@ -27,6 +28,7 @@ function NewContact() {
 
 
 {<EnquirySection/>}
+{<TestimonialSection/>}
     </>
   )
 }

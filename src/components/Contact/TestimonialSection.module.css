@@ -1,0 +1,106 @@
+.testimonialSection {
+  position: relative;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Dark overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* Content */
+.content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  max-width: 900px;
+  padding: 20px;
+  z-index: 2;
+}
+
+/* Helicopter */
+.helicopter {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+/* Heading */
+.headingWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.headingWrapper h4 {
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #d4a24c;
+}
+
+.line {
+  width: 60px;
+  height: 1px;
+  background: #d4a24c;
+}
+
+/* Quote */
+.quote {
+  font-size: 28px;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Author */
+.author {
+  color: #d4a24c;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* Bottom small line (slider indicator) */
+.sliderDot {
+  width: 30px;
+  height: 3px;
+  background: #d4a24c;
+  margin: 20px auto 0;
+  border-radius: 2px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .quote {
+    font-size: 20px;
+  }
+
+  .helicopter {
+    width: 45px;
+  }
+
+  .line {
+    width: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote {
+    font-size: 16px;
+  }
+
+  .headingWrapper h4 {
+    font-size: 12px;
+  }
+}
