@@ -85,7 +85,7 @@ const Header = () => {
           {/* Destinations Dropdown */}
           <div className="nav-item dropdown">
             <Link
-              // to="/destinations"
+              to="/destinations"
               className={`nav-link ${isActive("/destinations")}`}
             >
               DESTINATIONS

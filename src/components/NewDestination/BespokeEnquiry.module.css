@@ -1,0 +1,418 @@
+/* =========================
+   EXACT LUXURY ENQUIRY STYLE
+========================= */
+
+.bespokeSection {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 42px 0;
+  font-family: "Inter", sans-serif;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.68) 0%,
+      rgba(0, 0, 0, 0.45) 38%,
+      rgba(0, 0, 0, 0.58) 100%
+    );
+  z-index: 1;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1325px;
+  margin: 0 auto;
+  padding: 0 34px;
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  align-items: start;
+  gap: 48px;
+}
+
+/* ================= LEFT ================= */
+
+.left {
+  padding-top: 18px;
+  max-width: 620px;
+  color: #fff;
+}
+
+.smallTitle {
+  margin: 0 0 14px;
+  color: #b78d47;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.heading {
+  margin: 0 0 18px;
+  color: #f7f7f3;
+  font-size: 49px;
+  line-height: 1.08;
+  font-weight: 300;
+  letter-spacing: -0.3px;
+  max-width: 530px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.desc {
+  margin: 0 0 24px;
+  max-width: 560px;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 12.5px;
+  line-height: 1.78;
+  font-weight: 400;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.list li {
+  position: relative;
+  padding-left: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 12.5px;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+.list li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #b78d47;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.contactRow {
+  margin-top: 108px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* align-items: flex-start; */
+  gap: 10px;
+  min-width: 160px;
+}
+
+.contactItem img {
+  width: 15px;
+  height: 15px;
+  object-fit: contain;
+  margin-top: 2px;
+  opacity: 0.92;
+}
+
+.contactItem span {
+  display: block;
+  margin-bottom: 4px;
+color: rgba(255, 255, 255, 0.86);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.contactItem p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 11.8px;
+  line-height: 1.45;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* ================= RIGHT ================= */
+
+.right {
+  width: 100%;
+  padding-top: 0;
+}
+
+.form {
+  width: 100%;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 11px;
+}
+
+.field label {
+  margin-bottom: 6px;
+  color: #b78d47;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.15px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.94);
+  color: #222;
+  border-radius: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  height: 33px;
+}
+
+.field textarea {
+  min-height: 118px;
+  height: auto;
+  resize: none;
+  padding-top: 10px;
+  line-height: 1.55;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 11.5px;
+}
+
+.field select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.submitBtn {
+  margin-top: 2px;
+  width: 100%;
+  height: 38px;
+  border: none;
+  outline: none;
+  background: #b78d47;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.45px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: 0.25s ease;
+}
+
+.submitBtn:hover {
+  background: #c49851;
+}
+
+.submitBtn span {
+  font-size: 12px;
+  line-height: 1;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+  .wrapper {
+    max-width: 1180px;
+    gap: 38px;
+  }
+
+  .heading {
+    font-size: 44px;
+  }
+
+  .contactRow {
+    margin-top: 78px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .bespokeSection {
+    min-height: auto;
+    padding: 60px 0;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding: 0 28px;
+  }
+
+  .left {
+    max-width: 100%;
+    padding-top: 0;
+  }
+
+  .heading {
+    max-width: 100%;
+    font-size: 42px;
+  }
+
+  .desc {
+    max-width: 100%;
+  }
+
+  .contactRow {
+    margin-top: 42px;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bespokeSection {
+    padding: 48px 0;
+    background-position: center;
+  }
+
+  .overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.72) 0%,
+        rgba(0, 0, 0, 0.55) 48%,
+        rgba(0, 0, 0, 0.68) 100%
+      );
+  }
+
+  .wrapper {
+    padding: 0 20px;
+    gap: 36px;
+  }
+
+  .smallTitle {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .heading {
+    font-size: 34px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .desc {
+    font-size: 12.5px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+  }
+
+  .list {
+    gap: 10px;
+  }
+
+  .list li {
+    font-size: 12.5px;
+  }
+
+  .contactRow {
+    margin-top: 32px;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .contactItem {
+    min-width: 100%;
+  }
+
+  .row2 {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .field {
+    margin-bottom: 12px;
+  }
+
+  .field input,
+  .field select,
+  .field textarea {
+    height: 42px;
+    font-size: 13px;
+    padding: 12px 13px;
+  }
+
+  .field textarea {
+    min-height: 128px;
+    height: auto;
+  }
+
+  .submitBtn {
+    height: 44px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 0 16px;
+  }
+
+  .heading {
+    font-size: 29px;
+  }
+
+  .desc {
+    font-size: 12px;
+  }
+
+  .field label {
+    font-size: 9px;
+  }
+
+  .field input,
+  .field select,
+  .field textarea {
+    font-size: 12px;
+  }
+}
+
+/* .goldIcon {
+  filter: invert(62%) sepia(28%) saturate(500%) hue-rotate(5deg) brightness(95%) contrast(90%);
+} */

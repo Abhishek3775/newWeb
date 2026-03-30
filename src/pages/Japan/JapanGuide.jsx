@@ -1,6 +1,6 @@
 import React from 'react'
-import HeroJapan from '../../components/Japan/HeroJapan'
-import SeasonsIntro from '../../components/Japan/SeasonsIntro'
+// import HeroJapan from '../../components/Japan/HeroJapan'
+// import SeasonsIntro from '../../components/Japan/SeasonsIntro'
 import FourSeasonsSlider from '../../components/Japan/FourSeasonsSlider'
 import MonthlyGuide from '../../components/Japan/MonthlyGuide'
 import ClimateRegion from '../../components/Japan/ClimateRegion'
@@ -10,19 +10,23 @@ import PackingEssentials from '../../components/Japan/PackingEssentials'
 import CommonFaq from '../../components/Japan/CommonFaq'
 import PlanJourney from '../../components/Japan/PlanJourney'
 import BrandStrip from '../../components/BrandStrip/BrandStrip'
+import SeasonHeroSection from '../../components/Japan/SeasonHeroSection'
+import NewPackingEssentials from '../../components/Japan/NewPackingEssentials'
 
 
 function JapanGuide() {
   return (
     <>
-    {<HeroJapan/>}
-    {<SeasonsIntro/>}
-    {<FourSeasonsSlider/>}
+    {/* {<HeroJapan/>} */}
+    {<SeasonHeroSection/>}
     {<MonthlyGuide/>}
+    {<FourSeasonsSlider/>}
+    {/* {<SeasonsIntro/>} */}
     {<ClimateRegion/>}
     {<PlanActivities/>}
     {<SeasonalSignature/>}
-    {<PackingEssentials/>}
+    {<NewPackingEssentials/>}
+    {/* {<PackingEssentials/>} */}
     {<CommonFaq/>}
     {<PlanJourney/>}
     {<BrandStrip/>}

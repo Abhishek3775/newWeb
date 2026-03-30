@@ -1,0 +1,403 @@
+/* =========================
+   TOP EXPERIENCES - EXACT STYLE
+========================= */
+
+.section {
+  width: 100%;
+  background: #f3f1ec;
+  padding: 12px 0 28px;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 1365px;
+  margin: 0 auto;
+  padding: 0 43px;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.headingWrap {
+  text-align: center;
+  margin-bottom: 13px;
+}
+
+.subTitle {
+  margin: 0 0 8px;
+  color: #c2944a;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.95px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.heading {
+  margin: 0 0 10px;
+  color: #202020;
+  font-size: 54px;
+  font-weight: 300;
+  line-height: 1.02;
+  letter-spacing: -0.55px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.description {
+  margin: 0 auto;
+  max-width: 520px;
+  color: #666666;
+  font-size: 11.5px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 580px;
+  overflow: hidden;
+  background: #d8d8d8;
+  cursor: pointer;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.03);
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.72) 0%,
+      rgba(0, 0, 0, 0.38) 34%,
+      rgba(0, 0, 0, 0.18) 60%,
+      rgba(0, 0, 0, 0.14) 100%
+    );
+}
+
+/* =========================
+   BADGE
+========================= */
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 3;
+  background: #ffffff;
+  color: #b78d47;
+  font-size: 7.8px;
+  font-weight: 500;
+  letter-spacing: 0.55px;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 5px 9px 4px;
+  min-width: 43px;
+  text-align: center;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.cardContent {
+  position: absolute;
+  left: 11px;
+  right: 11px;
+  bottom: 10px;
+  z-index: 3;
+  color: #ffffff;
+}
+
+.location {
+  margin: 0 0 3px;
+  color: #b88d47;
+  font-size: 8.5px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.cardContent h3 {
+  margin: 0 0 4px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.desc {
+  margin: 0 0 7px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 9.5px;
+  font-weight: 400;
+  line-height: 1.45;
+  max-width: 92%;
+}
+
+.learnBtn {
+  border: none;
+  background: transparent;
+  color: #b88d47;
+  font-size: 9.8px;
+  font-weight: 500;
+  letter-spacing: 0.45px;
+  text-transform: uppercase;
+  padding: 0;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.buttonWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.viewMoreBtn {
+  min-width: 160px;
+  height: 31px;
+  border: none;
+  outline: none;
+  background: #b88d47;
+  color: #ffffff;
+  font-size: 9.8px;
+  font-weight: 500;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.viewMoreBtn:hover {
+  background: #c4964f;
+}
+
+/* =========================
+   LAPTOP
+========================= */
+@media (max-width: 1280px) {
+  .container {
+    padding: 0 32px;
+  }
+
+  .heading {
+    font-size: 48px;
+  }
+
+  .card {
+    height: 210px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 992px) {
+  .section {
+    padding: 22px 0 36px;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+
+  .headingWrap {
+    margin-bottom: 18px;
+  }
+
+  .heading {
+    font-size: 42px;
+  }
+
+  .description {
+    max-width: 620px;
+    font-size: 12px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .card {
+    height: 290px;
+  }
+
+  .badge {
+    font-size: 8.5px;
+    padding: 6px 10px 5px;
+  }
+
+  .location {
+    font-size: 9px;
+  }
+
+  .cardContent h3 {
+    font-size: 20px;
+  }
+
+  .desc {
+    font-size: 10.5px;
+  }
+
+  .learnBtn {
+    font-size: 10.5px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .section {
+    padding: 28px 0 38px;
+  }
+
+  .container {
+    padding: 0 18px;
+  }
+
+  .headingWrap {
+    margin-bottom: 20px;
+  }
+
+  .subTitle {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+
+  .heading {
+    font-size: 34px;
+    line-height: 1.08;
+  }
+
+  .description {
+    font-size: 12px;
+    line-height: 1.55;
+    max-width: 95%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .card {
+    height: 450px;
+  }
+
+  .badge {
+    top: 12px;
+    left: 12px;
+    font-size: 8px;
+    padding: 6px 10px 5px;
+  }
+
+  .cardContent {
+    left: 13px;
+    right: 13px;
+    bottom: 13px;
+  }
+
+  .location {
+    font-size: 9px;
+    margin-bottom: 4px;
+  }
+
+  .cardContent h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+  }
+
+  .desc {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+
+  .learnBtn {
+    font-size: 11px;
+  }
+
+  .buttonWrap {
+    margin-top: 18px;
+  }
+
+  .viewMoreBtn {
+    min-width: 170px;
+    height: 38px;
+    font-size: 11px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 14px;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 11px;
+  }
+
+  .card {
+    height: 450px;
+  }
+
+  .cardContent h3 {
+    font-size: 20px;
+  }
+
+  .desc {
+    font-size: 10px;
+    max-width: 100%;
+  }
+
+  .viewMoreBtn {
+    width: 100%;
+    max-width: 220px;
+  }
+}

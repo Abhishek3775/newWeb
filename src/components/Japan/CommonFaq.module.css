@@ -1,14 +1,10 @@
 .faqSection {
   position: relative;
   background-color: #fbf8f0;
-  font-family: "Poppins", sans-serif;
   color: #222;
   padding: 80px 20px;
-  overflow: hidden; /* ensures pseudo-element stays inside */
-  background-image: url("../../assets/linePattern2.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  overflow: hidden;
+  isolation: isolate;
 }
 
 /* background image layer */
@@ -27,6 +23,19 @@
   background-position: center;
   opacity: 0.1; /* 👈 change this value (0.1–0.5) for desired lightness */
   z-index: 0;
+}
+
+.faqSection::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../../assets/linePattern2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.28;
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* keeps all content above the background */

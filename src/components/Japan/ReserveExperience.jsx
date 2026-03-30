@@ -1,6 +1,7 @@
 import React from "react";
 import "./ReserveExperience.css";
 import { FiPhone, FiMail } from "react-icons/fi";
+import BgImage from "../../assets/sumo-journey.png"
 
 const ReserveExperience = () => {
   return (

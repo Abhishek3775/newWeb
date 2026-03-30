@@ -1,0 +1,61 @@
+.so-main {
+  background: #F5F4EF;
+  padding: 100px 20px;
+}
+
+.so-container {
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* Heading */
+.so-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.so-heading p {
+  color: #C09551;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.so-heading h2 {
+  font-size: 38px;
+  font-weight: 400;
+}
+
+/* Slider */
+.so-sliderWrap {
+  position: relative;
+}
+
+/* Arrows */
+.so-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: #fff;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.prev {
+  left: -20px;
+}
+
+.next {
+  right: -20px;
+}
+
+/* IMPORTANT: remove extra padding from child sections */
+.so-swiper .so-section,
+.so-swiper .gtv-section,
+.so-swiper .psd-section {
+  padding: 0 !important;
+  background: transparent !important;
+}

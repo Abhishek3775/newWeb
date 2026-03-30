@@ -1,0 +1,452 @@
+.section {
+  width: 100%;
+  background: #efede8;
+  padding: 28px 70px 28px;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* =========================
+   TOP TEXT
+========================= */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 18px;
+}
+
+.headingBlock {
+  flex: 1;
+}
+
+.kicker {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #be8a3d;
+  letter-spacing: 0.8px;
+  margin-bottom: 10px;
+}
+
+.headingBlock h2 {
+  margin: 0;
+  font-size: 54px;
+  line-height: 1.05;
+  font-weight: 300;
+  color: #1f1f1f;
+  letter-spacing: -0.8px;
+}
+
+.descriptionBlock {
+  max-width: 420px;
+  padding-top: 12px;
+}
+
+.descriptionBlock p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #5e5b56;
+  text-align: right;
+}
+
+/* =========================
+   WRAPPER + ARROWS
+========================= */
+.wrapper {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(35, 35, 35, 0.25);
+  background: rgba(255, 255, 255, 0.85);
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  z-index: 10;
+}
+
+.arrow:hover {
+  background: #fff;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.arrow svg {
+  font-size: 20px;
+}
+
+.leftArrow {
+  left: -52px;
+}
+
+.rightArrow {
+  right: -52px;
+}
+
+/* =========================
+   GRID
+========================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* =========================
+   CARD
+========================= */
+.card {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  aspect-ratio: 1.55 / 1;
+  min-height: 170px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.04);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.38) 38%,
+    rgba(0, 0, 0, 0.12) 66%,
+    rgba(0, 0, 0, 0.02) 100%
+  );
+  z-index: 1;
+}
+
+.cardContent {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  padding: 14px 16px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.destinationTag {
+  align-self: flex-end;
+  border: 1px solid rgba(196, 144, 60, 0.95);
+  color: rgba(224, 193, 118, 0.98);
+  font-size: 10px;
+  letter-spacing: 0.8px;
+  padding: 5px 10px 4px;
+  text-transform: uppercase;
+  line-height: 1;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.bottomContent {
+  max-width: 90%;
+}
+
+.bottomContent h3 {
+  margin: 0 0 7px;
+  font-size: 20px;
+  line-height: 1.08;
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 0.1px;
+}
+
+.region {
+  margin: 0 0 8px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.78);
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+}
+
+.desc {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.42;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 95%;
+}
+
+/* =========================
+   MINI TAG BOX (Arctic card)
+========================= */
+.miniTagBox {
+  margin-top: 10px;
+  width: fit-content;
+  background: rgba(58, 58, 58, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(3px);
+}
+
+.miniTagBox span {
+  display: block;
+  font-size: 10px;
+  line-height: 1.1;
+  color: rgba(255, 255, 255, 0.88);
+  padding: 4px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  white-space: nowrap;
+}
+
+.miniTagBox span:last-child {
+  border-bottom: none;
+}
+
+/* =========================
+   LARGE DESKTOP
+========================= */
+@media (max-width: 1400px) {
+  .section {
+    padding: 28px 56px;
+  }
+
+  .headingBlock h2 {
+    font-size: 46px;
+  }
+
+  .descriptionBlock {
+    max-width: 380px;
+  }
+}
+
+/* =========================
+   LAPTOP
+========================= */
+@media (max-width: 1200px) {
+  .section {
+    padding: 26px 40px;
+  }
+
+  .topBar {
+    margin-bottom: 16px;
+  }
+
+  .headingBlock h2 {
+    font-size: 42px;
+  }
+
+  .descriptionBlock p {
+    font-size: 13px;
+  }
+
+  .grid {
+    gap: 14px;
+  }
+
+  .leftArrow {
+    left: -36px;
+  }
+
+  .rightArrow {
+    right: -36px;
+  }
+
+  .card {
+    min-height: 160px;
+  }
+
+  .bottomContent h3 {
+    font-size: 18px;
+  }
+
+  .desc {
+    font-size: 11px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 992px) {
+  .section {
+    padding: 24px 24px;
+  }
+
+  .topBar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .headingBlock h2 {
+    font-size: 38px;
+  }
+
+  .descriptionBlock {
+    max-width: 100%;
+    padding-top: 0;
+  }
+
+  .descriptionBlock p {
+    text-align: left;
+    max-width: 700px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .card {
+    aspect-ratio: 1.5 / 1;
+    min-height: 220px;
+  }
+
+  .bottomContent h3 {
+    font-size: 22px;
+  }
+
+  .region {
+    font-size: 11px;
+  }
+
+  .desc {
+    font-size: 12px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 640px) {
+  .section {
+    padding: 20px 14px 24px;
+  }
+
+  .kicker {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .headingBlock h2 {
+    font-size: 30px;
+    line-height: 1.08;
+  }
+
+  .descriptionBlock p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card {
+    aspect-ratio: 1.25 / 1;
+    min-height: 240px;
+  }
+
+  .cardContent {
+    padding: 14px;
+  }
+
+  .destinationTag {
+    font-size: 9px;
+    padding: 5px 8px 4px;
+  }
+
+  .bottomContent {
+    max-width: 100%;
+  }
+
+  .bottomContent h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  .region {
+    font-size: 10px;
+  }
+
+  .desc {
+    font-size: 13px;
+    line-height: 1.45;
+    max-width: 100%;
+  }
+
+  .miniTagBox {
+    margin-top: 10px;
+    max-width: 100%;
+  }
+
+  .miniTagBox span {
+    font-size: 10px;
+    white-space: normal;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 420px) {
+  .section {
+    padding: 18px 12px 22px;
+  }
+
+  .headingBlock h2 {
+    font-size: 26px;
+  }
+
+  .descriptionBlock p {
+    font-size: 12px;
+  }
+
+  .card {
+    aspect-ratio: 1.15 / 1;
+    min-height: 220px;
+  }
+
+  .cardContent {
+    padding: 12px;
+  }
+
+  .destinationTag {
+    font-size: 8px;
+    padding: 4px 7px 3px;
+  }
+
+  .bottomContent h3 {
+    font-size: 22px;
+  }
+
+  .region {
+    font-size: 9px;
+  }
+
+  .desc {
+    font-size: 12px;
+  }
+
+  .miniTagBox span {
+    font-size: 9px;
+    padding: 4px 7px;
+  }
+}

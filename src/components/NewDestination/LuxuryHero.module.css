@@ -1,0 +1,375 @@
+.heroSection {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.32);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading {
+  color: #ffffff;
+  font-weight: 300;
+  font-size: clamp(2.2rem, 5vw, 4.7rem);
+  line-height: 1.12;
+  letter-spacing: 0.5px;
+  margin: 0;
+  text-align: center;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.2);
+}
+
+.subText {
+  margin-top: 22px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(0.88rem, 1.2vw, 1rem);
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 760px;
+  text-align: center;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.18);
+}
+
+.searchBox {
+  margin-top: 28px;
+  width: 100%;
+  max-width: 320px;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.searchIcon {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.72);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.input::placeholder {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+/* ------------------ Large Desktop ------------------ */
+@media (min-width: 1440px) {
+  .heroSection {
+    padding: 60px 40px;
+  }
+
+  .heading {
+    font-size: 5rem;
+    line-height: 1.08;
+  }
+
+  .subText {
+    margin-top: 24px;
+    font-size: 1.02rem;
+  }
+
+  .searchBox {
+    margin-top: 30px;
+    max-width: 330px;
+    height: 36px;
+  }
+}
+
+/* ------------------ Laptop ------------------ */
+@media (max-width: 1200px) {
+  .heading {
+    font-size: clamp(2.3rem, 5vw, 4.2rem);
+  }
+
+  .subText {
+    max-width: 680px;
+  }
+}
+
+/* ------------------ Tablet ------------------ */
+@media (max-width: 992px) {
+  .heroSection {
+    min-height: 90vh;
+    padding: 50px 24px;
+  }
+
+  .heading {
+    font-size: clamp(2rem, 6vw, 3.6rem);
+    line-height: 1.15;
+  }
+
+  .subText {
+    margin-top: 18px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 620px;
+  }
+
+  .searchBox {
+    margin-top: 24px;
+    max-width: 300px;
+    height: 36px;
+  }
+
+  .input {
+    font-size: 12px;
+  }
+}
+
+/* ------------------ Mobile Large ------------------ */
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: 85vh;
+    padding: 40px 20px;
+    background-position: center center;
+  }
+
+  .heading {
+    font-size: clamp(1.9rem, 8vw, 3rem);
+    line-height: 1.18;
+    letter-spacing: 0.3px;
+  }
+
+  .subText {
+    margin-top: 16px;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    max-width: 95%;
+  }
+
+  .desktopBreak {
+    display: none;
+  }
+
+  .searchBox {
+    margin-top: 22px;
+    max-width: 280px;
+    height: 38px;
+    padding: 0 12px;
+  }
+
+  .searchIcon {
+    font-size: 14px;
+    margin-right: 8px;
+  }
+
+  .input {
+    font-size: 12px;
+  }
+}
+
+/* ------------------ Mobile Small ------------------ */
+@media (max-width: 480px) {
+  .heroSection {
+    min-height: 78vh;
+    padding: 30px 16px;
+  }
+
+  .heading {
+    font-size: clamp(1.8rem, 9vw, 2.6rem);
+    line-height: 1.2;
+  }
+
+  .subText {
+    margin-top: 14px;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+
+  .searchBox {
+    margin-top: 20px;
+    max-width: 250px;
+    height: 36px;
+    padding: 0 10px;
+  }
+
+  .searchIcon {
+    font-size: 13px;
+  }
+
+  .input {
+    font-size: 11px;
+  }
+}
+
+/* ------------------ Extra Small Devices ------------------ */
+@media (max-width: 360px) {
+  .heading {
+    font-size: 1.65rem;
+  }
+
+  .subText {
+    font-size: 0.78rem;
+  }
+
+  .searchBox {
+    max-width: 220px;
+    height: 34px;
+  }
+
+  .input {
+    font-size: 10.5px;
+  }
+}
+
+/* luxury hero stats section  */
+
+.statsSection {
+  width: 100%;
+  background: #ffffff;
+  padding: 22px 20px 18px;
+  border-top: 1px solid rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 20px;
+}
+
+.statItem {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.number {
+  margin: 0;
+  color: #c89a52;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.4px;
+}
+
+.label {
+  margin: 5px 0 0;
+  color: #111111;
+  font-size: 0.52rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+/* -------- Laptop -------- */
+@media (max-width: 1200px) {
+  .container {
+    gap: 16px;
+  }
+
+  .number {
+    font-size: 1.45rem;
+  }
+
+  .label {
+    font-size: 0.5rem;
+    letter-spacing: 1.3px;
+  }
+}
+
+/* -------- Tablet -------- */
+@media (max-width: 992px) {
+  .statsSection {
+    padding: 20px 18px 16px;
+  }
+
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 22px;
+    column-gap: 10px;
+  }
+
+  .number {
+    font-size: 1.4rem;
+  }
+
+  .label {
+    font-size: 0.54rem;
+    letter-spacing: 1.4px;
+  }
+}
+
+/* -------- Mobile -------- */
+@media (max-width: 576px) {
+  .statsSection {
+    padding: 18px 14px 16px;
+  }
+
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+    column-gap: 8px;
+  }
+
+  .number {
+    font-size: 1.25rem;
+  }
+
+  .label {
+    font-size: 0.5rem;
+    letter-spacing: 1.1px;
+    line-height: 1.5;
+  }
+}
+
+/* -------- Small Mobile -------- */
+@media (max-width: 380px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .number {
+    font-size: 1.2rem;
+  }
+
+  .label {
+    font-size: 0.5rem;
+  }
+}

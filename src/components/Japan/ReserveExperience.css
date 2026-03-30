@@ -1,10 +1,19 @@
 /* ================= WRAPPER ================= */
-
+/* 
+    style={{
+        backgroundImage: `url(${BgImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }} */
 .re-wrapper {
   background: #F5F4EF;
   padding: 120px 20px;
   text-align: center;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-image: url('../../assets/sumo-journey.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* ================= CONTAINER ================= */
@@ -21,25 +30,26 @@
   letter-spacing: 3px;
   color: #C09551;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .re-title {
   font-size: 48px;
   font-weight: 400;
   margin-bottom: 25px;
-  color: #222;
+  color: #d4d4d4;
 }
 
 .re-description {
   font-size: 15px;
   line-height: 1.8;
-  color: #666;
+ color: #d4d4d4;
   margin-bottom: 25px;
 }
 
 .re-note {
   font-size: 14px;
-  color: #777;
+ color: #d4d4d4;
   margin-bottom: 40px;
 }
 
@@ -59,7 +69,7 @@
   align-items: center;
   gap: 12px;
   font-size: 14px;
-  color: #444;
+  color: #d4d4d4;
 }
 
 .re-icon {

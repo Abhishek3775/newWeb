@@ -16,6 +16,19 @@
   overflow: hidden;
 }
 
+
+/* link button  */
+.heroLink{
+color: #C09551;
+font-size: 30px;
+text-decoration: underline #C09551;
+text-underline-offset: 8px;
+}
+
+.heroLink:hover {
+  cursor: pointer;
+color: #ffcb78;
+}
 /* ================= DARK OVERLAY ================= */
 
 .heroOverlay {

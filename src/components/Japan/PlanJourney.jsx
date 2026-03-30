@@ -1,12 +1,12 @@
 import React from "react";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import styles from "./PlanJourney.module.css";
+import bgImage from "../../assets/guide-journey.png";
 
 const PlanJourney = () => {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} style={{ backgroundImage: `url(${bgImage})` }}>
       <div className={styles.container}>
-
         <p className={styles.subtitle}>READY TO PLAN?</p>
 
         <h2 className={styles.title}>Let Us Craft Your Perfect Journey</h2>
@@ -24,7 +24,7 @@ const PlanJourney = () => {
 
           <div className={styles.contactItem}>
             <div className={styles.iconBox}>
-              <FaPhoneAlt />
+              <FaPhoneAlt color="#fff"/>
             </div>
 
             <span>+442074269888</span>
@@ -33,7 +33,7 @@ const PlanJourney = () => {
 
           <div className={styles.contactItem}>
             <div className={styles.iconBox}>
-              <FaEnvelope />
+              <FaEnvelope color="#fff"/>
             </div>
             <span>japan@eliteconcierge.com</span>
           </div>

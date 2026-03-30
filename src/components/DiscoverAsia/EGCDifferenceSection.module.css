@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap");
+
+.section {
+  --bg: #f7f6f2;
+  --text: #2c2a27;
+  --muted: #5e5a55;
+  --gold: #b88c3c;
+  --line: rgba(184, 140, 60, 0.22);
+
+  position: relative;
+  width: 100%;
+  background: var(--bg);
+  overflow: hidden;
+  padding: clamp(48px, 7vw, 90px) 20px;
+  isolation: isolate;
+}
+
+/* Background contour pattern */
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--difference-pattern);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  opacity: 0.20;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.kicker {
+  margin: 0 0 12px;
+  color: var(--gold);
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.heading {
+  margin: 0 0 clamp(28px, 4vw, 42px);
+  color: var(--text);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(40px, 5vw, 62px);
+  font-weight: 400;
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
+.listWrapper {
+  border-top: 1px solid var(--line);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(320px, 1.1fr) minmax(0, 2.2fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 70px);
+  padding: clamp(26px, 3.4vw, 36px) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+}
+
+.number {
+  color: var(--gold);
+  font-family: "Inter", sans-serif;
+  font-size: clamp(15px, 1vw, 17px);
+  font-weight: 500;
+  line-height: 1;
+  flex-shrink: 0;
+  min-width: 28px;
+}
+
+.iconWrap {
+  width: clamp(34px, 2.5vw, 42px);
+  height: clamp(34px, 2.5vw, 42px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.title {
+  margin: 0;
+  color: var(--text);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(28px, 2.3vw, 42px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.right {
+  min-width: 0;
+}
+
+.desc {
+  margin: 0;
+  color: var(--muted);
+  font-family: "Inter", sans-serif;
+  font-size: clamp(15px, 1.05vw, 18px);
+  font-weight: 400;
+  line-height: 1.45;
+  max-width: 780px;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 992px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 26px 0;
+  }
+
+  .right {
+    padding-left: 58px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  .section {
+    padding: 42px 16px 52px;
+  }
+
+  .heading {
+    font-size: clamp(34px, 8vw, 46px);
+    margin-bottom: 26px;
+  }
+
+  .row {
+    gap: 14px;
+    padding: 22px 0;
+  }
+
+  .left {
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .number {
+    font-size: 14px;
+    min-width: 24px;
+    padding-top: 8px;
+  }
+
+  .iconWrap {
+    width: 28px;
+    height: 28px;
+    margin-top: 3px;
+  }
+
+  .title {
+    font-size: clamp(26px, 7vw, 34px);
+    line-height: 1.08;
+  }
+
+  .right {
+    padding-left: 38px;
+  }
+
+  .desc {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+}
+
+/* ---------- Small Mobile ---------- */
+@media (max-width: 420px) {
+  .left {
+    display: grid;
+    grid-template-columns: 22px 26px 1fr;
+    align-items: start;
+    gap: 12px;
+  }
+
+  .number {
+    padding-top: 6px;
+  }
+
+  .iconWrap {
+    width: 24px;
+    height: 24px;
+    margin-top: 5px;
+  }
+
+  .right {
+    padding-left: 0;
+  }
+
+  .desc {
+    padding-left: 0;
+  }
+}
+
+/* second componen css  */
+
+
+
+.section1 {
+  width: 100%;
+  background-color: #f5f4ef;
+  padding: clamp(30px, 8vw, 60px) 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container1 {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Quote Text */
+.quote1 {
+  margin: 0;
+  color: #2b2926;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  text-align: center;
+  /* background-color: red; */
+}
+
+/* Gold Divider Line */
+.divider1 {
+  width: 50px;
+  height: 1px;
+  background-color: #b6985c;
+  margin: clamp(18px, 2vw, 24px) auto;
+}
+
+/* Author */
+.author1 {
+  margin: 0;
+  color: #6b6864;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+
+}
+
+/* -------- Tablet -------- */
+@media (max-width: 768px) {
+  .quote1 {
+    font-size: clamp(22px, 4vw, 32px);
+  }
+
+  .divider1 {
+    margin: 18px auto;
+  }
+}
+
+/* -------- Mobile -------- */
+@media (max-width: 480px) {
+  .section1 {
+    padding: 50px 16px;
+  }
+
+  .quote1 {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .author1 {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+  }
+}

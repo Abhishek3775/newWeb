@@ -18,7 +18,11 @@ const regions = [
     best: "February (snow), July-August (summer escape)",
     winter: "-8°C to 0°C",
     summer: "18°C to 26°C",
-    highlights: ["Powder snow skiing", "Lavender fields (summer)", "Seafood cuisine"],
+    highlights: [
+      "Powder snow skiing",
+      "Lavender fields (summer)",
+      "Seafood cuisine",
+    ],
   },
   {
     name: "Tokyo & Kanto",
@@ -27,7 +31,11 @@ const regions = [
     best: "March-May, October-November",
     winter: "2°C to 10°C",
     summer: "25°C to 33°C",
-    highlights: ["Cherry blossoms", "Urban exploration", "Day trips to Mt. Fuji"],
+    highlights: [
+      "Cherry blossoms",
+      "Urban exploration",
+      "Day trips to Mt. Fuji",
+    ],
   },
   {
     name: "Kyoto & Kansai",
@@ -45,7 +53,11 @@ const regions = [
     best: "January-February, July-September",
     winter: "-10°C to 3°C",
     summer: "15°C to 25°C",
-    highlights: ["World-class skiing", "Alpine scenery", "Traditional villages"],
+    highlights: [
+      "World-class skiing",
+      "Alpine scenery",
+      "Traditional villages",
+    ],
   },
   {
     name: "Okinawa",
@@ -65,11 +77,11 @@ const ClimateRegion = () => {
   return (
     <section className="cr-wrapper">
       <div className="cr-container">
-
         <p className="cr-subtitle">REGIONAL WEATHER</p>
         <h2 className="cr-title">Climate by Region</h2>
         <p className="cr-desc">
-          Japan stretches across diverse climate zones. Understanding regional variations helps you plan the perfect itinerary.
+          Japan stretches across diverse climate zones. Understanding regional
+          variations helps you plan the perfect itinerary.
         </p>
 
         {/* Tabs */}
@@ -86,7 +98,7 @@ const ClimateRegion = () => {
         </div>
 
         {/* Content */}
-        <div className="cr-content">
+        <div className={`cr-content ${active % 2 !== 0 ? "reverse" : ""}`}>
           <div className="cr-image">
             <img src={region.image} alt={region.name} />
           </div>
@@ -124,10 +136,8 @@ const ClimateRegion = () => {
                 ))}
               </div>
             </div>
-
           </div>
         </div>
-
       </div>
     </section>
   );

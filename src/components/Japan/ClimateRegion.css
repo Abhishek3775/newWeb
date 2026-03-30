@@ -1,6 +1,6 @@
 .cr-wrapper {
   background: #F5F4EF;
-  padding: 100px 20px;
+  /* padding: 100px 20px; */
   font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -153,4 +153,13 @@
   .cr-box-row {
     grid-template-columns: 1fr;
   }
+}
+
+
+.cr-content.reverse .cr-image {
+  order: 2;
+}
+
+.cr-content.reverse .cr-info {
+  order: 1;
 }

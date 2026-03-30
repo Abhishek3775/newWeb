@@ -5,6 +5,7 @@
   padding: 140px 20px;
   text-align: center;
   box-sizing: border-box;
+  background-size: cover;
 }
 
 /* ================= CONTAINER ================= */
@@ -40,7 +41,7 @@
 
 .journey-description {
   font-size: 16px;
-  color: #555;
+  color: #e0e0e0;
   max-width: 680px;
   margin: 0 auto 55px auto;
   line-height: 1.9;

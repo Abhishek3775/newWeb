@@ -45,7 +45,7 @@ const SeasonsIntro = () => {
       </div>
 
       {/* BOTTOM CONTENT */}
-      <div className={styles.content}>
+      {/* <div className={styles.content}>
         <h4 className={styles.subtitle}>UNDERSTANDING JAPAN'S SEASONS</h4>
 
         <h2 className={styles.mainTitle}>
@@ -64,7 +64,7 @@ const SeasonsIntro = () => {
         <p className={styles.quote}>
           “The best time to visit Japan depends not on when, but on what moves your soul.”
         </p>
-      </div>
+      </div> */}
 
     </section>
   );

@@ -1,0 +1,196 @@
+.wrapper {
+  width: 100%;
+  background: #fdfdfd;
+  padding: 70px 0 0;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.top {
+  text-align: center;
+  padding: 0 20px 28px;
+}
+
+.subtitle {
+  margin: 0 0 10px;
+  color: #c09551;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  color: #1f1f1f;
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  min-height: 370px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.38);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 95px 34px 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardTitle {
+  margin: 0 0 36px;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 28px;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.icon {
+  width: 13px;
+  height: 13px;
+  object-fit: contain;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 42px;
+  }
+
+  .card {
+    min-height: 320px;
+  }
+
+  .content {
+    padding: 70px 26px 28px;
+  }
+
+  .cardTitle {
+    font-size: 20px;
+    margin-bottom: 28px;
+  }
+
+  .list {
+    gap: 12px 18px;
+  }
+
+  .listItem {
+    font-size: 13px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .wrapper {
+    padding-top: 55px;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    letter-spacing: 1.8px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 310px;
+  }
+
+  .content {
+    padding: 60px 22px 24px;
+  }
+
+  .cardTitle {
+    font-size: 19px;
+    margin-bottom: 24px;
+  }
+
+  .list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .listItem {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .icon {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* ---------- Small Mobile ---------- */
+@media (max-width: 480px) {
+  .top {
+    padding: 0 16px 24px;
+  }
+
+  .title {
+    font-size: 29px;
+  }
+
+  .card {
+    min-height: 290px;
+  }
+
+  .content {
+    padding: 52px 18px 20px;
+  }
+
+  .cardTitle {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+
+  .listItem {
+    font-size: 12.5px;
+  }
+}

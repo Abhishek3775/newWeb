@@ -1,7 +1,6 @@
 .planSection {
   position: relative;
   background-color: #fff;
-  font-family: "Poppins", sans-serif;
   color: #222;
   padding: 100px 20px;
   text-align: center;
@@ -13,15 +12,15 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("../../assets2/Services/background.png");
+  background-image: url("../../assets/guide-journey.png");
   background-repeat: no-repeat;
   background-size: cover;
   left: -1000px;
   top: 0px;
   background-position: center;
-  transform: rotate(180deg) scale(1); /* ✅ Rotate image 90° clockwise */
+  transform: rotate(180deg) scale(1); 
   transform-origin: center center;
-  opacity: 0.07; /* control brightness */
+  opacity: 0.07; 
   z-index: 0;
 }
 
@@ -36,7 +35,6 @@
   /* background: #F5F4EF; */
   text-align: center;
   box-sizing: border-box;
-  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 /* CONTAINER */
@@ -51,13 +49,14 @@
   font-weight: 600;
   letter-spacing: 0.5px;
   margin-bottom: 10px;
-  font-size: clamp(12px, 1vw, 14px);
+  font-size: 20px;
 }
 
 .title {
   font-size: clamp(28px, 2.5vw, 42px);
   font-weight: 500;
   margin-bottom: 20px;
+  
 }
 
 .description {
@@ -66,6 +65,7 @@
   max-width: 650px;
   margin: 0 auto 40px;
   line-height: 1.8;
+  font-weight: 200;
 }
 
 .contactRow {
@@ -90,7 +90,7 @@
 .title {
   font-size: 44px;
   font-weight: 300;
-  color: #131313;
+  color: #f5f4ef;
   margin-bottom: 25px;
 }
 
@@ -98,7 +98,7 @@
 .description {
   font-size: 14px;
   line-height: 1.8;
-  color: #555;
+  color: #f5f4ef;
   margin-bottom: 15px;
   text-align: center;
 
@@ -107,10 +107,17 @@
 /* NOTE */
 .note {
   font-size: 14px;
-  color: #131313;
+  color: #f5f4ef;
   margin-bottom: 40px;
   text-align: center;
+  font-weight: 200;
 
+}
+
+.goldIcon {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) saturate(100%) invert(63%) sepia(32%) saturate(512%) hue-rotate(358deg) brightness(90%) contrast(85%);
 }
 
 /* CONTACT ROW */
@@ -130,7 +137,8 @@
   align-items: center;
   gap: 10px;
   font-size: 15px;
-  color: #333;
+  color: #f5f4ef;
+
   width: 250px;
   /* background-color: red; */
 }

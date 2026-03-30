@@ -111,7 +111,7 @@ const BestOfJapan = () => {
   return (
     <section className="showcase-section">
       <div className="showcase-container">
-        <h1 className="main-title">The Best Of South Africa</h1>
+        <h1 className="main-title">The Best Of Japan</h1>
 
         {/* TABS */}
         <div className="tabs">

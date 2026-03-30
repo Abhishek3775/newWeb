@@ -7,18 +7,30 @@ import JapanSignatureJourneys from '../../components/Japan/JapanSignatureJourney
 import SeeDoJapan from '../../components/Japan/SeeDoJapan'
 import BestOfJapan from '../../components/Japan/BestOfJapan'
 import EGCJapan from '../../components/Japan/EGCJapan'
+import HeroJapan from '../../components/Japan/HeroJapan'
+import SeasonsIntro from '../../components/Japan/SeasonsIntro'
+import TravelInfoSection from '../../components/Japan/TravelInfoSection'
+import StoriesGuidesSection from '../../components/Japan/StoriesGuidesSection'
+import JapanJourneyBegin from '../../components/Japan/JapanJourneyBegin'
+import BrandStrip from '../../components/BrandStrip/BrandStrip'
 
 function JapanHome() {
   return (
  <>
  {<JapanHero/>}
  {<JapanDiscovery/>}
- {<WhenToVisitJapan/>}
- {<Hanami/>}
+ {<HeroJapan/>}
+ {<SeasonsIntro/>}
  {<JapanSignatureJourneys/>}
  {<SeeDoJapan/>}
+ {/* {<WhenToVisitJapan/>} */}
+ {/* {<Hanami/>} */}
  {<BestOfJapan/>}
  {<EGCJapan/>}
+ {<TravelInfoSection/>}
+ {<StoriesGuidesSection/>}
+ {<JapanJourneyBegin/>}
+ {<BrandStrip/>}
  </>
   )
 }

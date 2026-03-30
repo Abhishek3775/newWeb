@@ -1,102 +1,166 @@
-.mmg-wrapper {
-  background: #ffffff;
-  padding: 100px 20px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+.monthlyGuideSection {
+  width: 100%;
+  background: #f6f5f1;
+  padding: 60px 20px 18px;
+  overflow: hidden;
+}
+
+.monthlyGuideContainer {
+  max-width: 1280px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.mmg-container {
-  max-width: 1200px;
-  margin: auto;
-}
-
-.mmg-subtitle {
-  color: #C09551;
-  font-size: 21px;
-  text-align: center;
-  letter-spacing: 3px;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.mmg-title {
-  font-size: 40px;
-  font-weight: 400;
-  margin-bottom: 60px;
-}
-
-/* GRID */
-.mmg-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 25px;
-}
-
-/* CARD */
-.mmg-card {
-  background: #F5F4EF;
-  border: 1px solid #e6d3b6;
-  padding: 18px 10px;
-  transition: 0.3s ease;
-}
-
-.mmg-card h4 {
-  font-size: 14px;
-  margin-bottom: 8px;
-  font-weight: 500;
-}
-
-.mmg-stars {
-  margin-bottom: 8px;
-}
-
-.mmg-star {
+/* ---------- Top Text ---------- */
+.monthlyGuideSubtitle {
+  margin: 0 0 8px;
+  color: #c09551;
+  font-family: "Inter", sans-serif;
   font-size: 12px;
-  color: #d6c3a2;
-  margin: 0 1px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
 }
 
-.mmg-star.filled {
-  color: #C09551;
+.monthlyGuideTitle {
+  margin: 0 0 22px;
+  color: #1f1f1f;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 1;
 }
 
-.mmg-temp {
+/* ---------- Slider Layout ---------- */
+.monthlyGuideSliderWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.monthlyGuideSwiper {
+  width: calc(100% - 110px);
+}
+
+/* ---------- Cards (IMPORTANT PART) ---------- */
+.monthlyGuideCard {
+  background: #f2f0ea;
+  border: 1px solid #d4b483;
+  height: 74px;              /* exact tight height */
+  width: 150px;
+  padding: 6px 6px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+/* subtle luxury hover */
+/* .monthlyGuideCard:hover {
+  transform: translateY(-1px);
+} */
+
+/* ---------- Card Text ---------- */
+.monthName {
+  margin: 0 0 3px;
+  color: #222;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;           /* tighter */
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* ---------- Stars ---------- */
+.monthStars {
+  display: flex;
+  gap: 0;
+  margin-bottom: 3px;
+  height: 11px;
+  align-items: center;
+  justify-content: center;
+}
+
+.star {
+  font-size: 12px;
+  color: #d9d2c6;
+  line-height: 1;
+}
+
+.star.filled {
+  color: #c09551;
+}
+
+/* ---------- Temperature ---------- */
+.monthTemp {
+  margin: 0;
+  color: #5c5853;
+  font-family: "Inter", sans-serif;
   font-size: 13px;
-  text-align: center;
-  color: #555;
-  text-align: center;
+  line-height: 1;
 }
 
-/* HOVER EFFECT */
-.mmg-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+/* ---------- Arrows ---------- */
+.mgArrow {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  border: 1px solid #cfcfcf;
+  background: #f6f5f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s ease;
 }
 
-/* RESPONSIVE */
+.mgArrow svg {
+  font-size: 14px;
+}
 
-@media (max-width: 1100px) {
-  .mmg-grid {
-    grid-template-columns: repeat(4, 1fr);
+.mgArrow:hover {
+  border-color: #c09551;
+  color: #c09551;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .monthlyGuideTitle {
+    font-size: 44px;
+  }
+
+  .monthlyGuideSwiper {
+    width: calc(100% - 90px);
   }
 }
 
 @media (max-width: 768px) {
-  .mmg-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .monthlyGuideTitle {
+    font-size: 36px;
   }
 
-  .mmg-title {
-    font-size: 32px;
+  .monthlyGuideCard {
+    height: 52px;
   }
 }
 
 @media (max-width: 480px) {
-  .mmg-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .monthlyGuideTitle {
+    font-size: 30px;
   }
 
-  .mmg-title {
-    font-size: 26px;
+  .monthlyGuideCard {
+    height: 50px;
+  }
+
+  .monthName,
+  .monthTemp {
+    font-size: 8px;
   }
 }

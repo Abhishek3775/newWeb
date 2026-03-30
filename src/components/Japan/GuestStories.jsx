@@ -32,12 +32,12 @@ const GuestStories = () => {
   return (
     <section className="gs-wrapper">
       <div className="gs-container">
-        <p className="gs-subtitle">GUEST STORIES</p>
+        {/* <p className="gs-subtitle">GUEST STORIES</p>
         <h2 className="gs-title">Words of Wonder</h2>
 
         <div className="gs-quote-icon">
           <img src={quoteIcon} alt="quotes" />
-        </div>
+        </div> */}
 
         <p className="gs-text">{testimonials[index].text}</p>
 
@@ -48,6 +48,8 @@ const GuestStories = () => {
             style={{
               fontSize: "14px",
               color: "#C09551",
+              textAlign: "center",
+
             }}
           >
             {testimonials[index].experience}

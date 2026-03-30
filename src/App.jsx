@@ -30,6 +30,8 @@ import MarchCalender from './pages/Calender/MarchCalender';
 import Accommodation from './pages/Accommodation/Accommodation';
 import NewHome from './pages/NewHome/NewHome';
 // import Accomodation from './pages/gaurav-accomodation/Accomodation';
+import Destionation from './pages/Destionation/NewDestionation';
+import DiscoverAsia from './pages/DiscoverAsia/DiscoverAsia';
 
 
 
@@ -64,11 +66,15 @@ function App() {
             {/* Add more routes as needed */}
 
             {/* routes for the south africa home */}
+            <Route path="/destinations" element={<Destionation />} /> {/*this is new */}
             <Route path="/south-africa" element={<SouthAfrica />} />
             <Route path="/south-africa/rhino-tracking" element={<RahinoDetails />} />
             <Route path="/japan" element={<JapanHome />} />
             <Route path="/japan-guide" element={<JapanGuide />} />
             <Route path="/sumo-guide" element={<SumoExperience />} />
+            <Route path="/discover-asia" element={<DiscoverAsia />} /> {/*this is new */}
+
+        
 
             {/* routes for the  services */}
             <Route path="/services" element={<Services/>} />
@@ -80,7 +86,7 @@ function App() {
 
             {/* routes for the  itinerary */}
             <Route path="/itinerary" element={<Itinerary/>} />
-            <Route path="/itinerary/:id" element={<IndividualItenary/>} />
+            <Route path="/itinerary/:id" element={<IndividualItenary/>} />  {/*this is new*/}
 
             {/* routes for the  about */}
             <Route path="/about" element={<About/>} />

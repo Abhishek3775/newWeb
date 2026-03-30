@@ -1,6 +1,7 @@
 import React from "react";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import "./JourneySection.css";
+import bg from "../../assets/south-journey.png"
 
 
 
@@ -8,7 +9,7 @@ const JourneySection = () => {
   return (
     <section
       className="journey-section"
-      // style={{ backgroundImage: `url(${pattern})` }}
+      style={{ backgroundImage: `url(${bg})` }}
     >
       <div className="journey-container">
         

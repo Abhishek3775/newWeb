@@ -23,12 +23,12 @@ const SumoOffering = () => {
 
         {/* Section Heading */}
         <div className="so-heading">
-          <p className="so-subtitle">OUR OFFERINGS</p>
-          <h2>Choose Your Experience</h2>
-          <p className="so-description">
+          {/* <p className="so-subtitle">OUR OFFERINGS</p> */}
+          {/* <h2>Choose Your Experience</h2> */}
+          {/* <p className="so-description">
             Each experience is crafted to provide unparalleled access to the world of sumo,
             respecting traditions while offering moments of genuine connection.
-          </p>
+          </p> */}
         </div>
 
         {/* Main Content */}

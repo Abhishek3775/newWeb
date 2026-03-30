@@ -1,13 +1,16 @@
 import React from "react";
 import styles from "./HeroJapan.module.css";
 
+
 import heroImg from "../../assets/HeroImg.webp";
 import icon1 from "../../assets/icon1.png";
 import icon2 from "../../assets/icon2.png";
 import icon3 from "../../assets/icon3.png";
 import icon4 from "../../assets/icon4.png";
+import { useNavigate } from "react-router-dom";
 
 const HeroJapan = () => {
+  const navigate = useNavigate();
   return (
     <section
       className={styles.heroSection}
@@ -28,15 +31,18 @@ const HeroJapan = () => {
         <p className={styles.heroDesc}>
           Discover the Perfect Moment for Your Japanese Odyssey
         </p>
+        <span className={styles.heroLink} onClick={()=>{
+          navigate('/japan-guide')
+        }}>YOUR SEASONAL GUIDE</span>
       </div>
 
       {/* Right Side Icons */}
-      <div className={styles.heroIcons}>
+      {/* <div className={styles.heroIcons}>
         <img src={icon1} alt="icon1" />
         <img src={icon2} alt="icon2" />
         <img src={icon3} alt="icon3" />
         <img src={icon4} alt="icon4" />
-      </div>
+      </div> */}
     </section>
   );
 };
