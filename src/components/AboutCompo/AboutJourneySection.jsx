@@ -5,6 +5,7 @@ import icon1 from "../../assets/about-globe.png";
 import icon2 from "../../assets/about-clock.png";
 import icon3 from "../../assets/about-shield1.png";
 import icon4 from "../../assets/about-st.png";
+import aboutImg from "../../assets/new-about1.png";
 
 const features = [
   {
@@ -31,13 +32,15 @@ const features = [
 
 const AboutJourneySection = () => {
   return (
-    <section
-      className={styles.journeySection}
-      style={{
-        "--bg-image":
-          'url("https://images.pexels.com/photos/20406205/pexels-photo-20406205.jpeg")',
-      }}
-    >
+<section
+  className={styles.journeySection}
+  style={{
+    "background-image": `url(${aboutImg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat" 
+  }}
+>
       <div className={styles.journeyContainer}>
         {/* LEFT CONTENT */}
         <div className={styles.leftContent}>
