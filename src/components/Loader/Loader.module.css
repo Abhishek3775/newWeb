@@ -1,0 +1,61 @@
+.loaderBg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  overflow: hidden;
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity 1.1s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, visibility;
+}
+
+.fadeOut {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.logoWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.eliteLogo {
+  width: 130px;
+  height: auto;
+  object-fit: contain;
+  will-change: transform;
+  animation: logoPulse 2.8s ease-in-out infinite alternate;
+}
+
+@keyframes logoPulse {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.6);
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .eliteLogo {
+    width: 110px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .eliteLogo {
+    width: 90px;
+  }
+}
