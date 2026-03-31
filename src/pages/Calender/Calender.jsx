@@ -16,7 +16,7 @@ function Calender() {
     {/* {<LuxuryBenefits/>} */}
     {<WordsFromTravelers/>}
     {<ReadyForAdventure/>}
-    {<StayInspired/>}
+    {/* {<StayInspired/>} */}
     {<BrandStrip/>}
     </>
   )

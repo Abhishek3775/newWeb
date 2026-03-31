@@ -1,9 +1,10 @@
 import React from "react";
 import "./AboutTimeline.css";
+import Bgimg from '../../assets/linepatter1.png'
 
 const AboutTimeline = () => {
   return (
-    <section className="abt-section">
+    <section className="abt-section" style={{backgroundImage:`url("${Bgimg}")`, backgroundSize:"cover"}}>
       <div className="abt-container">
         
         {/* LEFT */}

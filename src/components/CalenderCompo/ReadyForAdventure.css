@@ -13,13 +13,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 /* Dark Overlay */
 .rfa-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.28);
 }
 
 /* Content */
@@ -27,47 +28,73 @@
   position: relative;
   z-index: 2;
   max-width: 900px;
+  width: 100%;
   color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Title */
 .rfa-title {
   font-size: 42px;
   font-weight: 300;
+  font-family: "abel";
   margin-bottom: 20px;
+  line-height: 1.2;
+  color: #ffffff;
 }
 
 /* Description */
 .rfa-description {
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.8;
   margin-bottom: 35px;
-  opacity: 0.9;
+  font-weight: 300;
+  opacity: 0.95;
   text-align: center;
-  letter-spacing: 2px;
+  letter-spacing: 0.5px;
+  max-width: 760px;
 }
 
 /* Buttons Container */
 .rfa-buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 18px;
   flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Common Button Style */
+.rfa-btn-primary,
+.rfa-btn-outline {
+  min-width: 240px;
+  height: 44px;
+  padding: 0 32px;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 /* Primary Button */
 .rfa-btn-primary {
   background-color: #C09551;
   color: #ffffff;
-  padding: 12px 30px;
   border: none;
-  cursor: pointer;
-  font-size: 14px;
-  transition: all 0.3s ease;
 }
 
 .rfa-btn-primary:hover {
   background-color: #a8793f;
+  transform: translateY(-1px);
 }
 
 /* Outline Button */
@@ -75,49 +102,115 @@
   background: transparent;
   border: 1px solid #C09551;
   color: #C09551;
-  padding: 12px 30px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: all 0.3s ease;
 }
 
 .rfa-btn-outline:hover {
   background: #C09551;
   color: #ffffff;
+  transform: translateY(-1px);
 }
 
 /* ==========================
    RESPONSIVE
 ========================== */
 
-/* Tablet */
+/* Large Tablet */
 @media (max-width: 992px) {
+  .rfa-section-wrapper {
+    padding: 90px 20px;
+  }
+
   .rfa-title {
     font-size: 34px;
+  }
+
+  .rfa-description {
+    font-size: 15px;
+    max-width: 680px;
+  }
+
+  .rfa-btn-primary,
+  .rfa-btn-outline {
+    min-width: 220px;
+    height: 52px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .rfa-section-wrapper {
+    padding: 80px 20px;
+  }
+
+  .rfa-title {
+    font-size: 30px;
+  }
+
+  .rfa-description {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+
+  .rfa-buttons {
+    gap: 14px;
+  }
+
+  .rfa-btn-primary,
+  .rfa-btn-outline {
+    min-width: 210px;
+    height: 50px;
+    font-size: 13px;
   }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
   .rfa-section-wrapper {
-    padding: 80px 20px;
+    padding: 70px 18px;
   }
 
   .rfa-title {
     font-size: 26px;
+    margin-bottom: 16px;
   }
 
   .rfa-description {
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 26px;
   }
 
   .rfa-buttons {
     flex-direction: column;
-    gap: 15px;
+    gap: 14px;
+    align-items: center;
   }
 
   .rfa-btn-primary,
   .rfa-btn-outline {
     width: 100%;
+    max-width: 300px;
+    min-width: unset;
+    height: 50px;
+    padding: 0 20px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .rfa-title {
+    font-size: 23px;
+  }
+
+  .rfa-description {
+    font-size: 12.5px;
+  }
+
+  .rfa-btn-primary,
+  .rfa-btn-outline {
+    max-width: 100%;
+    font-size: 13px;
+    height: 48px;
   }
 }

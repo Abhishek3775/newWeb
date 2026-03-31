@@ -46,7 +46,7 @@
 
 /* Subtitle */
 .wtm-subtitle {
-  font-size: 14px;
+  font-size: 17px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #C09551;
@@ -57,6 +57,7 @@
 .wtm-title {
   font-size: 72px;
   font-weight: 300;
+  font-family: "abel";
   margin-bottom: 20px;
   line-height: 1.1;
 }

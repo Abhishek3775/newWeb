@@ -25,7 +25,7 @@
   font-weight: 300;
   color: #222;
   margin: 0 0 10px;
-  font-family: "Arial", sans-serif;
+  font-family: "abel", sans-serif;
 }
 
 .heading span {
@@ -150,6 +150,7 @@
 .overlayContent h3 {
   font-size: 16px;
   font-weight: 300;
+  font-family: "abel";
   margin: 0 0 8px;
   line-height: 1.4;
 }

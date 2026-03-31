@@ -14,7 +14,7 @@
 
 /* ================= LEFT PANEL ================= */
 .leftPanel {
-  background: #efede6;
+  background: #f5f4ef;
   padding: 34px 26px;
   border-right: 1px solid #e4ded3;
   min-width: 400px;
@@ -167,7 +167,7 @@
 
 /* ================= RIGHT PANEL ================= */
 .rightPanel {
-  background: #f7f6f3;
+  background: #ffffff;
   padding: 28px 48px 60px;
 }
 

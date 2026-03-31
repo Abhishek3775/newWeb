@@ -48,6 +48,7 @@
 
 .leftContent {
   flex: 1;
+  margin-top: 20px;
 }
 
 .top {
@@ -65,20 +66,22 @@
 .mainHeading {
   font-size: 40px;
   font-weight: 500;
+  font-family: "abel";
   margin-bottom: 20px;
   color: #1A1A1A;
 }
 
 .subHeading {
   color: #C09551;
-  font-size: 16px;
+  font-size: 17px;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 
 .description {
   font-size: 16px;
   line-height: 1.8;
-  color: #555;
+  color: #131313;
   margin-bottom: 40px;
   max-width: 520px;
 }
@@ -95,6 +98,7 @@
 .gridWrapper {
   flex: 1;
   display: grid;
+  margin-top: -10px;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
@@ -103,7 +107,8 @@
   
  background-color: #F5F4EF;
   padding: 35px;
-  border: 1px solid #e0dcd2;
+  padding-left: 20px;
+  border: 1px solid #C09551;
   transition: all 0.3s ease;
 }
 
@@ -135,6 +140,7 @@
 .cardText {
   font-size: 14px;
   color: #555;
+  text-align: start;
   line-height: 1.6;
 }
 

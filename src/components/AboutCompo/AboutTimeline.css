@@ -6,6 +6,7 @@
   max-width: 1200px;
   margin: auto;
   display: flex;
+  margin-top: 50px;
   gap: 80px;
 }
 
@@ -50,16 +51,18 @@
 .abt-timeline-list li {
   padding-left: 20px;
   margin-bottom: 25px;
+  margin-left: 30px;
+
   position: relative;
 }
 
 .abt-timeline-list li::before {
   content: "";
   position: absolute;
-  left: -7px;
-  top: 5px;
-  width: 12px;
-  height: 12px;
+  left: 4px;
+  top: 8px;
+  width: 5px;
+  height: 5px;
   background: #C09551;
   border-radius: 50%;
 }
@@ -77,15 +80,16 @@
 }
 
 .abt-main-heading {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: 400;
+  font-family: "abel";
   color: #1a1a1a;
   margin-bottom: 15px;
 }
 
 .abt-highlight {
   color: #C09551;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 
@@ -98,7 +102,7 @@
 .abt-quote {
   display: flex;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 120px;
 }
 
 .abt-quote-line {

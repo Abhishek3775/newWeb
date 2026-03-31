@@ -9,7 +9,7 @@ const GuideSection = () => {
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className={styles.content}>
-        <span className={styles.smallTitle}>LET US GUIDE YOU</span>
+        {/* <span className={styles.smallTitle}>LET US GUIDE YOU</span> */}
 
         <h2 className={styles.heading}>
           Can't Decide? Let Our Curators

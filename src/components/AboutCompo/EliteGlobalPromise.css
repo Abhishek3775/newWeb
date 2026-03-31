@@ -31,7 +31,7 @@
 #elite-promise-root .elite-promise-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.35);
   z-index: 2;
 }
 
@@ -41,6 +41,7 @@
   z-index: 3;
   max-width: 1200px;
   margin: auto;
+  margin-top: -50px;
   text-align: center;
   color: #ffffff;
 }
@@ -54,6 +55,7 @@
 
 #elite-promise-root .elite-promise-title {
   font-size: 44px;
+  font-family: "abel";
   font-weight: 300;
   margin: 15px 0;
 }
@@ -61,6 +63,7 @@
 #elite-promise-root .elite-promise-sub {
   font-size: 22px;
   color: #C09551;
+  font-weight: 300;
   margin-bottom: 20px;
   /* background-color: red; */
   text-align: center;

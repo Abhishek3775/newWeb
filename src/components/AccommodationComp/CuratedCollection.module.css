@@ -33,13 +33,14 @@ html {
 
 .heading {
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 500;
+  font-family: "abel";
   margin: 0 0 12px;
   color: #1a1a1a;
 }
 
 .subText {
-  color: #888;
+  color: #131313;
   font-size: 14px;
   margin: 0 auto 24px;
   max-width: 560px;
@@ -58,26 +59,27 @@ html {
 
 .searchIcon {
   position: absolute;
-  left: 12px;
-  color: #aaa;
+  right: 12px;
+  color: #555;
   font-size: 15px;
   pointer-events: none;
 }
 
 .searchBox input {
   width: 100%;
-  padding: 11px 15px 11px 38px;
-  border: 1px solid #f5f4ef;
+  padding: 11px 15px 11px 28px;
+  border: 1px solid #131313;
+  letter-spacing: 5px;
+  font-weight: 200;
   border-radius: 4px;
   font-size: 14px;
   background: #ffffff;
   outline: none;
   transition: border-color 0.2s;
-  color: #555;
 }
 
 .searchBox input::placeholder {
-  color: #bbb;
+  color: #555;
 }
 
 .searchBox input:focus {
@@ -320,7 +322,8 @@ html {
 
 .hotelName {
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 400;
+  font-family: "abel";
   color: #1a1a1a;
   margin: 0;
   line-height: 1.2;
@@ -331,18 +334,27 @@ html {
   font-size: 14px;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.starIcon {
+  color: #c09551;
+  font-size: 13px;
 }
 
 .rating span {
-  color: #888;
+  color: #131313;
+  font-weight: 300;
   font-size: 13px;
+  margin-left: 6px;
 }
 
 .description {
   font-size: 13.5px;
-  color: #666;
+  color: #131313;
   line-height: 1.7;
+  font-weight: 300;
   margin: 0;
 }
 
@@ -353,16 +365,17 @@ html {
 }
 
 .tags span {
-  background: #f1ede6;
+  background: #f5f4ef;
   padding: 5px 11px;
   font-size: 12px;
-  border-radius: 4px;
-  color: #555;
+  color: #131313;
 }
 
 .benefit {
   display: flex;
   align-items: flex-start;
+  max-width: 500px;
+  width: 100%;
   gap: 10px;
   background: #f5f4ef;
   border-left: 3px solid #c09551;
@@ -371,10 +384,10 @@ html {
 }
 
 .benefitIcon {
-  color: #c09551;
-  font-size: 18px;
+  height: 33px;
+  width: 33px;
+  padding: 5px;
   flex-shrink: 0;
-  margin-top: 2px;
 }
 
 .benefitLabel {
@@ -388,7 +401,7 @@ html {
 
 .benefit p {
   font-size: 12.5px;
-  color: #666;
+  color: #131313;
   margin: 0;
   line-height: 1.5;
 }
@@ -404,23 +417,23 @@ html {
 
 .from {
   font-size: 11px;
-  color: #aaa;
+  color: #131313;
   display: block;
   letter-spacing: 1px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .price {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 500;
   color: #1a1a1a;
   margin: 2px 0 0;
 }
 
 .price span {
   font-size: 13px;
-  font-weight: 400;
-  color: #999;
+  font-weight: 300;
+  color: #131313;
 }
 
 .btn {
@@ -438,54 +451,6 @@ html {
 
 .btn:hover {
   background: #ad8448;
-}
-
-/* ───────────────── SPOTLIGHT CARD ───────────────── */
-.spotlightCard {
-  display: flex;
-  background: #fff;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
-  margin-bottom: 24px;
-  text-align: left;
-  width: 100%;
-}
-
-.spotlightImageWrapper {
-  position: relative;
-  flex: 0 0 48%;
-  min-height: 420px;
-  overflow: hidden;
-}
-
-.spotlightImageWrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-.spotlightCard:hover .spotlightImageWrapper img {
-  transform: scale(1.03);
-}
-
-.spotlightContent {
-  flex: 1;
-  padding: 40px 36px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  justify-content: center;
-}
-
-.spotlightTitle {
-  font-size: 28px;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin: 0;
-  line-height: 1.2;
 }
 
 /* ───────────────── MODAL ───────────────── */
@@ -623,7 +588,7 @@ html {
   line-height: 1.08;
   font-weight: 400;
   color: #222;
-  font-family: "Arial Narrow", Arial, sans-serif;
+  font-family: "abel";
 }
 
 .modalLocation {
@@ -668,14 +633,15 @@ html {
   width: 52px;
   height: 52px;
   min-width: 52px;
-  border: 1px solid #d9c7a6;
-  color: #c09551;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
-  font-weight: 700;
-  background: #fff;
+}
+
+.expertLogo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .expertTitle {
@@ -722,17 +688,20 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 18px;
+  padding: 24px;
   overflow-y: auto;
+  backdrop-filter: blur(2px);
 }
 
 .enquiryModal {
   width: 100%;
-  max-width: 560px;
-  background: #f4f2ed;
+  max-width: 760px;
+  max-height: 92vh;
+  background: #f5f4ef;
   position: relative;
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
   border: 1px solid #e6ddd0;
+  overflow: hidden;
   animation: enquiryIn 0.25s ease;
 }
 
@@ -749,53 +718,63 @@ html {
 
 .enquiryClose {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 14px;
+  right: 16px;
   width: 34px;
   height: 34px;
   border: none;
   background: transparent;
   color: #555;
-  font-size: 20px;
+  font-size: 28px;
   cursor: pointer;
+  z-index: 5;
+}
+
+.enquiryClose:hover {
+  color: #000;
 }
 
 .enquiryHeader {
   text-align: center;
-  padding: 34px 26px 12px;
+  padding: 38px 40px 18px;
   border-bottom: 1px solid #e2d8c9;
+  background: #f5f4ef;
 }
 
 .enquirySmall {
-  margin: 0 0 8px;
+  margin: 0 0 10px;
   color: #c09551;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
 }
 
 .enquiryTitle {
-  margin: 0 0 8px;
+  margin: 0 0 10px;
   font-size: 28px;
   font-weight: 400;
   color: #1f1f1f;
-  font-family: "Arial Narrow", Arial, sans-serif;
+  font-family: "Abel", sans-serif;
 }
 
 .enquirySub {
   margin: 0;
-  font-size: 14px;
+  font-size: 15px;
   color: #666;
 }
 
 .enquiryForm {
-  padding: 22px 20px 18px;
+  padding: 26px 22px 22px;
+  max-height: calc(92vh - 140px);
+  overflow-y: auto;
+  scrollbar-width: thin;
 }
 
+/* Top Date Row */
 .formRow {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  padding-bottom: 18px;
+  gap: 18px;
+  padding-bottom: 20px;
   border-bottom: 1px solid #e2d8c9;
 }
 
@@ -803,8 +782,9 @@ html {
   display: block;
   font-size: 13px;
   color: #c09551;
-  margin-bottom: 8px;
-  font-weight: 500;
+  margin-bottom: 10px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
 }
 
 .inputWrap {
@@ -813,27 +793,38 @@ html {
 
 .inputIcon {
   position: absolute;
-  left: 12px;
+  left: 14px;
   top: 50%;
   transform: translateY(-50%);
   color: #c09551;
-  font-size: 15px;
+  font-size: 16px;
+  pointer-events: none;
 }
 
 .inputWrap input {
   width: 100%;
-  height: 44px;
-  border: 1px solid #bdb5aa;
+  height: 48px;
+  border: 1px solid #cfc5b8;
   background: #fff;
-  padding: 0 12px 0 36px;
-  font-size: 14px;
+  padding: 0 14px 0 42px;
+  font-size: 15px;
   color: #333;
   outline: none;
   font-family: inherit;
 }
 
+.inputWrap input:focus {
+  border-color: #c09551;
+}
+
+.dateInput::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Sections */
 .formSection {
-  padding: 18px 0;
+  padding: 22px 0;
   border-bottom: 1px solid #e2d8c9;
 }
 
@@ -843,32 +834,34 @@ html {
   gap: 8px;
   color: #c09551;
   font-size: 13px;
-  font-weight: 500;
-  margin-bottom: 14px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
 }
 
+/* Counter rows */
 .counterRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 14px;
-  gap: 14px;
+  margin-bottom: 18px;
+  gap: 16px;
 }
 
 .counterRow span {
-  font-size: 15px;
+  font-size: 16px;
   color: #2c2c2c;
 }
 
 .counter {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
 }
 
 .counter button {
-  width: 22px;
-  height: 22px;
+  width: 28px;
+  height: 28px;
   border: 1px solid #bfb7ab;
   border-radius: 50%;
   background: #fff;
@@ -878,6 +871,7 @@ html {
   justify-content: center;
   cursor: pointer;
   transition: 0.2s ease;
+  font-size: 14px;
 }
 
 .counter button:hover {
@@ -886,12 +880,13 @@ html {
 }
 
 .counter span {
-  min-width: 18px;
+  min-width: 20px;
   text-align: center;
-  font-size: 15px;
+  font-size: 18px;
   color: #333;
 }
 
+/* Children */
 .childrenBlock {
   margin-top: 4px;
 }
@@ -900,11 +895,11 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .childrenTop span {
-  font-size: 15px;
+  font-size: 16px;
   color: #2c2c2c;
 }
 
@@ -914,37 +909,41 @@ html {
   color: #c09551;
   font-size: 14px;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .childRow {
   display: grid;
-  grid-template-columns: 34px 1fr 28px;
+  grid-template-columns: 60px 1fr 30px;
   align-items: center;
   gap: 10px;
   margin-top: 10px;
 }
 
 .childRow label {
-  font-size: 13px;
+  font-size: 14px;
   color: #666;
 }
 
 .childRow select {
   width: 100%;
-  height: 34px;
-  border: 1px solid #bdb5aa;
+  height: 38px;
+  border: 1px solid #cfc5b8;
   background: #fff;
   padding: 0 10px;
-  font-size: 13px;
+  font-size: 14px;
   color: #333;
   outline: none;
   font-family: inherit;
 }
 
+.childRow select:focus {
+  border-color: #c09551;
+}
+
 .removeChildBtn {
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   border: none;
   background: transparent;
   color: #8f8f8f;
@@ -952,29 +951,36 @@ html {
   font-size: 16px;
 }
 
+/* Textarea */
 .textarea {
   width: 100%;
-  min-height: 84px;
-  border: 1px solid #bdb5aa;
+  min-height: 94px;
+  border: 1px solid #cfc5b8;
   background: #fff;
-  padding: 12px 14px;
-  font-size: 14px;
+  padding: 14px 16px;
+  font-size: 15px;
   color: #333;
   resize: none;
   outline: none;
   font-family: inherit;
+  line-height: 1.6;
 }
 
+.textarea:focus {
+  border-color: #c09551;
+}
+
+/* Submit */
 .submitBtn {
   width: 100%;
-  height: 48px;
+  height: 54px;
   border: none;
   background: #c09551;
   color: #fff;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  margin-top: 18px;
+  margin-top: 22px;
   transition: 0.2s ease;
 }
 
@@ -983,9 +989,9 @@ html {
 }
 
 .formFooter {
-  margin: 10px 0 0;
+  margin: 14px 0 0;
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   color: #8d8d8d;
 }
 
@@ -1024,17 +1030,6 @@ html {
     width: 100%;
   }
 
-  .spotlightCard {
-    flex-direction: column;
-  }
-
-  .spotlightImageWrapper {
-    flex: none;
-    height: 280px;
-    min-height: unset;
-    width: 100%;
-  }
-
   .cardContent {
     padding: 24px 22px;
   }
@@ -1065,7 +1060,6 @@ html {
 }
 
 @media (max-width: 768px) {
-  /* Filters scroll */
   .filtersStrip {
     overflow-x: auto;
   }
@@ -1080,7 +1074,6 @@ html {
     min-width: 140px;
   }
 
-  /* Card improvements */
   .cardContent {
     padding: 20px 16px;
   }
@@ -1098,7 +1091,6 @@ html {
     gap: 10px;
   }
 
-  /* Modal */
   .modalOverlay {
     padding: 50px 12px 20px;
   }
@@ -1165,30 +1157,19 @@ html {
     font-size: 14px;
   }
 
-  /* Enquiry bottom sheet */
   .enquiryOverlay {
     align-items: flex-end;
     padding: 0;
   }
 
   .enquiryModal {
-    width: 100%;
     max-width: 100%;
-    border-radius: 16px 16px 0 0;
-    animation: slideUp 0.3s ease;
-  }
-
-  @keyframes slideUp {
-    from {
-      transform: translateY(100%);
-    }
-    to {
-      transform: translateY(0);
-    }
+    max-height: 94vh;
+    border-radius: 18px 18px 0 0;
   }
 
   .enquiryHeader {
-    padding: 28px 18px 12px;
+    padding: 30px 18px 14px;
   }
 
   .enquiryTitle {
@@ -1200,9 +1181,8 @@ html {
   }
 
   .enquiryForm {
-    padding: 18px 16px 16px;
-    max-height: 70vh;
-    overflow-y: auto;
+    padding: 18px 16px 18px;
+    max-height: calc(94vh - 130px);
   }
 
   .formRow {
@@ -1211,7 +1191,6 @@ html {
   }
 
   .counterRow {
-    flex-direction: row;
     align-items: center;
   }
 
@@ -1222,6 +1201,15 @@ html {
 
   .removeChildBtn {
     justify-self: end;
+  }
+
+  .submitBtn {
+    height: 50px;
+    font-size: 15px;
+  }
+
+  .formFooter {
+    font-size: 12px;
   }
 }
 
@@ -1250,10 +1238,6 @@ html {
     height: 230px;
   }
 
-  .spotlightImageWrapper {
-    height: 230px;
-  }
-
   .cardContent {
     padding: 18px 16px;
     gap: 10px;
@@ -1261,10 +1245,6 @@ html {
 
   .hotelName {
     font-size: 19px;
-  }
-
-  .spotlightTitle {
-    font-size: 21px;
   }
 
   .description {
@@ -1302,7 +1282,6 @@ html {
     width: 46px;
     height: 46px;
     min-width: 46px;
-    font-size: 13px;
   }
 
   .enquiryTitle {
@@ -1311,12 +1290,13 @@ html {
 
   .counterRow span,
   .childrenTop span {
-    font-size: 14px;
+    font-size: 15px;
   }
 
-  .submitBtn {
-    height: 46px;
-    font-size: 13px;
+  .inputWrap input,
+  .childRow select,
+  .textarea {
+    font-size: 14px;
   }
 }
 

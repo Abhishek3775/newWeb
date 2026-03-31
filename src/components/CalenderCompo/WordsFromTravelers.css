@@ -4,7 +4,7 @@
 
 .wft-section {
   padding: 60px 20px 70px;
-  background: #e8e6e2; /* exact soft gray-beige background */
+  background: #F5F4EF; /* exact soft gray-beige background */
 }
 
 .wft-container {
@@ -14,9 +14,10 @@
 }
 
 .wft-heading {
-  font-size: 28px;
+  font-size: 38px;
   font-weight: 300;
   line-height: 1.2;
+  font-family: "abel";
   color: #2a2a2a;
   margin-bottom: 32px;
   letter-spacing: 0.2px;
@@ -45,9 +46,10 @@
 }
 
 .wft-video-box p {
-  font-size: 22px;
+  font-size: 42px;
   font-weight: 300;
   color: #2f2f2f;
+  font-family: "abel";
   margin: 0;
   line-height: 1.4;
 }

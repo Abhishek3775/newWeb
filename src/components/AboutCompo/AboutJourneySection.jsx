@@ -46,7 +46,7 @@ const AboutJourneySection = () => {
         <div className={styles.leftContent}>
           <div className={styles.top}>
             <div className={styles.topLine}></div>
-            <p className={styles.smallLabel}>OUR JOURNEY</p>
+            {/* <p className={styles.smallLabel}>OUR JOURNEY</p> */}
           </div>
 
           <h2 className={styles.mainHeading}>

@@ -42,7 +42,9 @@ const MonthVerticalGrid = () => {
               loading="lazy"
             />
             <div className="mvg-overlay"></div>
-            <h3 className="mvg-month-name">{item.name}</h3>
+            <div className="mvg-text-wrap">
+              <h3 className="mvg-month-name">{item.name}</h3>
+            </div>
           </div>
         ))}
       </div>

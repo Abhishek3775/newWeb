@@ -6,7 +6,11 @@ import { FiClock } from "react-icons/fi";
 import { FaStar } from "react-icons/fa";
 import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
-import bgImage from "../../assets2/Services/11.jpeg"
+import bgImage from "../../assets2/Services/11.png"
+import icon1 from "../../assets2/Services/icon1.png"
+import icon2 from "../../assets2/Services/icon2.png"
+import Bgimg from '../../assets/linepatter1.png'
+
 
 
 import { useNavigate } from "react-router-dom";
@@ -28,14 +32,16 @@ export default function Services() {
             From private aviation to bespoke travel management, we deliver unparalleled luxury
             services tailored to discerning individuals and corporations seeking excellence in every detail.
           </p>
-          <button className={styles.heroBtn}>EXPLORE</button>
-          <div className={styles.sArrow}>⌄</div>
+          <div className={styles.heroExploreWrap}>
+            <button className={styles.heroBtn}>EXPLORE</button>
+            <div className={styles.sArrow}>⌄</div>
+          </div>
         </div>
       </section>
 
       {/* ===== NINE PILLARS ===== */}
       <section className={styles.pillarsSection}>
-        <h2>Nine Pillars of Exceptional Service</h2>
+        <h2>Ten Pillars of Exceptional Service</h2>
         <p>
           Each service is meticulously crafted to exceed expectations, delivered with the discretion
           and attention to detail that defines true luxury.
@@ -279,7 +285,7 @@ export default function Services() {
           <div><h3>24/7</h3><p>GLOBAL SUPPORT</p></div>
           <div><h3>100%</h3><p>SATISFACTION RATE</p></div>
         </div>
-        <div className={styles.statsIcons}>
+        <div className={styles.statsIcons} style={{backgroundImage:`url("${Bgimg}")`, backgroundSize:"cover"}}>
           <div className={styles.iconCard}>
             <div className={styles.icon}><CiGlobe size={22} /></div>
             <h4>Global Reach</h4>
@@ -333,7 +339,7 @@ export default function Services() {
     <div className={styles.journeyContact}>
       <div className={styles.contactItem}>
         <div className={styles.iconBox}>
-          <FaPhoneAlt />
+          <img src={icon1} alt="phone-icon" />
         </div>
         <span>+442074269888</span>
       </div>
@@ -342,7 +348,8 @@ export default function Services() {
 
       <div className={styles.contactItem}>
         <div className={styles.iconBox}>
-          <FaEnvelope />
+          <img src={icon2} alt="mail-icon" className="icon-2"/>
+
         </div>
         <span>southafrica@eliteconcierge.com</span>
       </div>

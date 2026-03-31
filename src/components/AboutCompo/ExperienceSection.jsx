@@ -1,9 +1,11 @@
 import React from "react";
 import "./ExperienceSection.css";
+import Bgimg from '../../assets/linepatter1.png'
+
 
 const ExperienceSection = () => {
   return (
-    <section className="exp-sec-wrapper">
+    <section className="exp-sec-wrapper" style={{backgroundImage:`url("${Bgimg}")`, backgroundSize:"cover"}}>
       <div className="exp-sec-container">
 
         {/* LEFT CONTENT */}

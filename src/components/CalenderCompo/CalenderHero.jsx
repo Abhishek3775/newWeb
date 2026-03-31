@@ -32,8 +32,7 @@ const CalenderHero = () => {
         </h1>
 
         <p className="chx-hero-description">
-          Our expertly curated travel calendar reveals the world's most
-          extraordinary destinations, perfectly <br /> timed for each month of the year.
+          Our expertly curated travel calendar reveals the world's most extraordinary destinations, perfectly timed for each month of the year.
         </p>
 
       </div>

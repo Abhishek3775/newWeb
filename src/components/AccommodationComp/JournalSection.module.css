@@ -29,6 +29,7 @@
 .heading {
   font-size: 34px;
   margin-top: 8px;
+  font-family: "abel";
   font-weight: 500;
 }
 
@@ -86,13 +87,15 @@
   font-size: 18px;
   margin: 10px 0;
   font-weight: 500;
+  font-family: "abel";
   color: #222;
 }
 
 .content p {
   font-size: 14px;
-  color: #666;
+  color: #131313;
   line-height: 1.6;
+  font-weight: 300;
 }
 
 /* ================= Responsive ================= */

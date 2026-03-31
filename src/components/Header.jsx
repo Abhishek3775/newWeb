@@ -81,6 +81,9 @@ const Header = () => {
               <Link to="/cruises" className="dropdown-link">
                 Cruises
               </Link>
+              <Link to="/jet-expendations" className="dropdown-link">
+                Jet Expeditions
+              </Link>
             </div>
           </div>
 

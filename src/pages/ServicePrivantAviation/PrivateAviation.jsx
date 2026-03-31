@@ -12,7 +12,18 @@ import bgImage from "../../assets2/Services/aviation/7.png";
 import journeysImg_1 from "../../assets2/Services/aviation/Jet Expeditions/1.png";
 import journeysImg_2 from "../../assets2/Services/aviation/Jet Expeditions/2.png";
 import journeysImg_3 from "../../assets2/Services/aviation/Jet Expeditions/3.png";
+import tickIcon from "../../assets/correct.png";
 import BrandStrip from "../../components/BrandStrip/BrandStrip";
+import Bgimg from '../../assets/linepatter1.png'
+import icon1 from '../../assets/plane.png'
+import icon2 from '../../assets/envolope.png'
+import icon3 from '../../assets/setting.png'
+import icon4 from '../../assets/globe.png'
+import icon5 from '../../assets/time2.png'
+import icon6 from '../../assets/car.png'
+
+
+
 import { LuShield } from "react-icons/lu";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { FaPlaneDeparture, FaCreditCard, FaCog, FaGlobe, FaClock, FaCar } from "react-icons/fa";
@@ -80,19 +91,26 @@ export default function PrivateAviation() {
   return (
     <div className={styles.aviationPage}>
       {/* ===== HERO SECTION ===== */}
-      <section className={styles.aviationHero}>
-        <div className={styles.aviationOverlay}>
-          <h5 className={styles.aviationSubtitle}>ELEVATE YOUR JOURNEY</h5>
-          <h1 className={styles.aviationTitle}>Private Aviation</h1>
-          <p className={styles.aviationDesc}>
-            Experience the pinnacle of luxury travel with our bespoke <br /> private aviation services.
-            From exclusive jet charters <br /> to seamless global mobility, we redefine what it means to fly.
-          </p>
-          <button className={styles.quoteBtn}>REQUEST A QUOTE</button>
-          <p className={styles.discover}>DISCOVER</p>
-          <div className={styles.downArrow}>⌄</div>
-        </div>
-      </section>
+        <section className={styles.aviationHero}>
+  <div className={styles.aviationOverlay}>
+    <h5 className={styles.aviationSubtitle}>ELEVATE YOUR JOURNEY</h5>
+    <h1 className={styles.aviationTitle}>Private Aviation</h1>
+
+    <p className={styles.aviationDesc}>
+      Experience the pinnacle of luxury travel with our bespoke
+      private aviation services. From <br />exclusive jet charters
+      to seamless global mobility, we redefine what it means to fly.
+    </p>
+
+    <button className={styles.quoteBtn}>REQUEST A QUOTE</button>
+  </div>
+
+  {/* Bottom Discover */}
+  <div className={styles.discoverWrap}>
+    <p className={styles.discover}>DISCOVER</p>
+    <div className={styles.downArrow}>⌄</div>
+  </div>
+        </section>
 
       {/* ===== STATS SECTION ===== */}
       <section className={styles.aviationStats}>
@@ -116,27 +134,48 @@ export default function PrivateAviation() {
 
       {/* ===== REDEFINING PRIVATE AIR TRAVEL SECTION ===== */}
       <section className={styles.redefineSection}>
-        <div className={styles.redefineContent}>
-          <h5 className={styles.redefineSubtitle}>YOUR SKY, YOUR RULES</h5>
-          <h2 className={styles.redefineTitle}>Redefining Private Air <br /> Travel</h2>
-          <p className={styles.redefineDesc}>
-            At Aurelia, we believe that the journey should be as <br /> extraordinary as the destination.
-            Our private aviation division <br /> offers unparalleled access to the world's finest <br /> aircraft,
-            combined with the personalized service that <br /> defines luxury travel.
-          </p>
-          <p className={styles.redefineDesc}>
-            Whether you're planning a business trip, a family holiday, or a <br /> globe-spanning expedition,
-            our aviation specialists craft bespoke <br /> solutions tailored to your exact requirements.
-          </p>
-          <ul className={styles.redefineList}>
-            <li>No commercial queues or layovers</li>
-            <li>Depart on your schedule</li>
-            <li>Access to 5,000+ airports worldwide</li>
-            <li>Customized in-flight experience</li>
-          </ul>
-        </div>
-        <div className={styles.redefineImage}></div>
-      </section>
+  {/* LEFT CONTENT */}
+  <div className={styles.redefineContent}>
+    <h5 className={styles.redefineSubtitle}>YOUR SKY, YOUR RULES</h5>
+
+    <h2 className={styles.redefineTitle}>
+      Redefining Private Air <br />
+      Travel
+    </h2>
+
+    <p className={styles.redefineDesc}>
+      At Aurelia, we believe that the journey should be as extraordinary as
+      the destination. Our private aviation division offers unparalleled
+      access to the world's finest aircraft, combined with the personalized
+      service that defines luxury travel.
+    </p>
+
+    <p className={styles.redefineDesc}>
+      Whether you're planning a business trip, a family holiday, or a
+      globe-spanning expedition, our aviation specialists craft bespoke
+      solutions tailored to your exact requirements.
+    </p>
+
+    <ul className={styles.redefineList}>
+      <li><img src={tickIcon} alt="" /> No commercial queues or layovers</li>
+      <li><img src={tickIcon} alt="" /> Depart on your schedule</li>
+      <li><img src={tickIcon} alt="" /> Access to 5,000+ airports worldwide</li>
+      <li><img src={tickIcon} alt="" /> Customized in-flight experience</li>
+    </ul>
+  </div>
+
+  {/* RIGHT IMAGE */}
+  <div className={styles.redefineImageWrap}>
+    <div className={styles.redefineImage}></div>
+
+    <div className={styles.trustedBox}>
+      <p className={styles.trustedTitle}>Trusted by Elite Travelers</p>
+      <p className={styles.trustedText}>
+        15+ years of excellence in luxury aviation services worldwide.
+      </p>
+    </div>
+  </div>
+</section>
 
       {/* ===== THE FLEET SECTION ===== */}
       <section className={styles.fleetSection}>
@@ -195,7 +234,7 @@ export default function PrivateAviation() {
     {activeJet.features.map((col, i) => (
       <ul key={i}>
         {col.map((item, j) => (
-          <li key={j}>{item}</li>
+          <li key={j}><img src={tickIcon} alt="" />{item}</li>
         ))}
       </ul>
     ))}
@@ -206,14 +245,19 @@ export default function PrivateAviation() {
       </section>
 
       {/* ===== Aviation Services ===== */}
-      <section className={styles.servicesSection}>
+      <section className={styles.servicesSection} style={{
+          backgroundImage: `url(${Bgimg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}>
       <div className={styles.container}>
         <h4 className={styles.subtitle}>HOW WE SERVE YOU</h4>
         <h2 className={styles.title}>Aviation Services</h2>
         <div className={styles.grid}>
           {services.map((service, index) => (
             <div className={styles.card} key={index}>
-              <div className={styles.icon}>{service.icon}</div>
+              <div className={styles.icon}><img src={service.icon} alt="" /></div>
               <h3 className={styles.cardTitle}>{service.title}</h3>
               <p className={styles.cardText}>{service.description}</p>
             </div>
@@ -435,8 +479,8 @@ export default function PrivateAviation() {
 
       {/* ===== FAQ SECTION ===== */}
       <section className={styles.srvFaqSection}>
-        <h5 className={styles.srvFaqSubtitle}>QUESTIONS</h5>
-        <h2 className={styles.srvFaqTitle}>Frequently Asked</h2>
+        {/* <h5 className={styles.srvFaqSubtitle}>QUESTIONS</h5> */}
+        <h2 className={styles.srvFaqTitle}>Frequently Asked Questions</h2>
 
         <div className={styles.srvFaqContainer}>
           {faqs.map((faq, index) => (
@@ -541,37 +585,37 @@ const faqs = [
 
 const services = [
     {
-      icon: <FaPlaneDeparture />,
+      icon: icon1,
       title: "On-Demand Charter",
       description:
         "Book your private flight within hours. Our 24/7 concierge team ensures seamless arrangements to any destination.",
     },
     {
-      icon: <FaCreditCard />,
+      icon: icon2,
       title: "Jet Card Membership",
       description:
         "Purchase flight hours in advance with guaranteed availability, fixed rates, and priority booking privileges.",
     },
     {
-      icon: <FaCog />,
+      icon: icon3,
       title: "Aircraft Management",
       description:
         "Full-service management for jet owners including maintenance, crew, and charter revenue optimization.",
     },
     {
-      icon: <FaGlobe />,
+      icon: icon4,
       title: "Group Jet Expeditions",
       description:
         "Curated luxury expeditions aboard custom-configured aircraft with expert-led excursions worldwide.",
     },
     {
-      icon: <FaClock />,
+      icon: icon5,
       title: "Empty Leg Flights",
       description:
         "Access exclusive last-minute availability at reduced rates on repositioning flights.",
     },
     {
-      icon: <FaCar />,
+      icon: icon6,
       title: "Ground Transportation",
       description:
         "Seamless door-to-door service with luxury vehicles, helicopter transfers, and yacht connections.",

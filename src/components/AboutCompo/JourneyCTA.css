@@ -12,7 +12,7 @@
 .journey-sec-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .journey-sec-content {
@@ -26,6 +26,7 @@
 .journey-sec-title {
   font-size: 48px;
   font-weight: 300;
+  font-family: "abel";
   letter-spacing: 2px;
   margin-bottom: 20px;
 }
@@ -33,8 +34,9 @@
 /* Description */
 .journey-sec-description {
   font-size: 16px;
+  font-family: "inter";
   line-height: 1.7;
-  color: #f0f0f0;
+  color: #F5F4EF;
   margin-bottom: 35px;
 }
 
@@ -45,6 +47,7 @@
   border: none;
   color: #fff;
   font-size: 13px;
+  font-family: "inter";
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s ease;

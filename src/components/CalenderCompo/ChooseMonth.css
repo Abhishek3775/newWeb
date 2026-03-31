@@ -4,7 +4,7 @@
 
 .cym-section {
   padding: 80px 20px;
-  background: #f5f5f5;
+  background: #ffffff;
 }
 
 .cym-container {
@@ -16,6 +16,7 @@
 .cym-heading {
   font-size: 42px;
   font-weight: 300;
+  font-family: "abel";
   margin-bottom: 10px;
 }
 
@@ -25,7 +26,7 @@
 
 .cym-subheading {
   font-size: 14px;
-  color: #555;
+  color: #131313;
   margin-bottom: 50px;
   text-align: center;
 }
@@ -55,7 +56,7 @@
 .cym-card-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .cym-card-content {
@@ -69,6 +70,7 @@
 .cym-card-content h3 {
   font-size: 22px;
   margin-bottom: 5px;
+  font-family: "abel";
 }
 
 .cym-card-sub {
@@ -82,6 +84,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  font-weight: 200;
   font-size: 12px;
   opacity: 0.95;
 }

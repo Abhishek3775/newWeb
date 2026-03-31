@@ -18,14 +18,15 @@
 }
 
 /* =====================================================
-   HERO
-   ===================================================== */
+   HERO (PIXEL MATCH STYLE)
+===================================================== */
+
 .servicesHeroSection {
   background-image: url("../../assets2/Services/image 1.jpg");
   background-size: cover;
   background-position: center;
-  height: 90vh;
-  min-height: 500px;
+  height: 100vh;
+  min-height: 550px;
   position: relative;
   color: #fff;
   display: flex;
@@ -33,71 +34,139 @@
   justify-content: center;
 }
 
+/* Overlay */
 .servicesHeroOverlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.52);
+  background: rgba(0, 0, 0, 0.55);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 40px 24px;
+  justify-content: center;
   text-align: center;
+  padding: 40px 20px;
 }
 
+/* Subtitle */
 .servicesHeroSubtitle {
   color: #C09551;
-  font-size: 14px;
-  letter-spacing: 3px;
-  margin-bottom: 14px;
-  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 2.5px;
+  margin-bottom: 18px;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
+/* Main Title */
 .servicesHeroTitle {
   font-size: 72px;
-  font-weight: 700;
+  font-family: "Abel", sans-serif;
+  font-weight: 300;
   line-height: 1.1;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+  color: #ffffff;
 }
 
+/* Tagline */
 .servicesHeroTagline {
   color: #C09551;
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  font-weight: 400;
 }
 
+/* Description */
 .servicesHeroDesc {
-  font-size: 16px;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.88);
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
   max-width: 620px;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
+/* Explore + Arrow Wrapper */
+.heroExploreWrap {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button */
 .heroBtn {
   background: transparent;
   color: #fff;
-  border: 1px solid rgba(255,255,255,0.6);
-  padding: 10px 28px;
-  border-radius: 2px;
-  cursor: pointer;
+  border: none;
   font-size: 13px;
-  letter-spacing: 2px;
-  transition: 0.3s;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0;
+  padding: 0;
 }
-.heroBtn:hover { background: rgba(255,255,255,0.15); }
 
+.heroBtn:hover {
+  color: #C09551;
+}
+
+/* Arrow */
 .sArrow {
-  margin-top: 24px;
-  font-size: 24px;
+  margin-top: -2px;
+  font-size: 22px;
   color: rgba(255,255,255,0.7);
   animation: bounce 1.6s infinite;
+  line-height: 1;
 }
 
+/* Animation */
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(6px); }
+  50% { transform: translateY(6px); }
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 992px) {
+  .servicesHeroTitle {
+    font-size: 54px;
+  }
+
+  .servicesHeroDesc {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .servicesHeroTitle {
+    font-size: 38px;
+  }
+
+  .servicesHeroTagline {
+    font-size: 16px;
+  }
+
+  .servicesHeroDesc {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .heroBtn {
+    font-size: 11px;
+  }
+
+  .sArrow {
+    font-size: 18px;
+  }
+
+  .heroExploreWrap {
+    bottom: 22px;
+  }
 }
 
 /* =====================================================
@@ -109,15 +178,17 @@
   padding: 72px 24px;
 }
 .pillarsSection h2 {
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 60px;
+  font-weight: 400;
   color: #111;
+  font-family: "abel";
   margin-bottom: 16px;
 }
 .pillarsSection p {
-  color: #555;
-  font-size: 15px;
-  max-width: 660px;
+  color: #131313;
+  font-size: 20px;
+  max-width: 700px;
+  font-weight: 200;
   text-align: center;
   margin: 0 auto;
   line-height: 1.75;
@@ -193,14 +264,15 @@
 
 .serviceTitle {
   font-size: 32px;
-  font-weight: 700;
-  color: #111;
+  font-weight: 400;
+  font-family: "abel";
+  color: #131313;
   margin-bottom: 16px;
   line-height: 1.2;
 }
 
 .serviceDesc {
-  color: #444;
+  color: #131313;
   font-size: 14.5px;
   line-height: 1.75;
   margin-bottom: 22px;
@@ -209,13 +281,15 @@
 .serviceList {
   list-style: none;
   font-size: 14px;
-  color: #222;
+  color: #131313;
   line-height: 2;
+  /* padding-left: 9px; */
   margin-bottom: 28px;
 }
 
 .serviceList li::before {
   content: "• ";
+  padding-right: 8px;
   color: #C09551;
   font-weight: bold;
 }
@@ -292,12 +366,13 @@
 }
 
 .iconCard { width: 260px; text-align: center; }
-.iconCard h4 { font-size: 17px; font-weight: 600; color: #111; margin-bottom: 10px; }
-.iconCard p  { font-size: 14px; color: #555; line-height: 1.65; }
+.iconCard h4 { font-size: 22px; font-weight: 400; color: #131313; margin-bottom: 10px; font-family: "abel";}
+.iconCard p  { font-size: 14px; color: #131313; line-height: 1.65; }
 
 .testimonial {
   background: #f5f4ef;
-  padding: 56px 24px;
+  padding: 16px 24px;
+  height: 30vh;
   border-radius: 8px;
   /* text-align: center; */
 }
@@ -320,7 +395,7 @@
 .journeySection {
   position: relative;
   width: 100%;
-  min-height: 620px;
+  min-height: 520px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -331,7 +406,7 @@
 .journeyOverlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.38);
+  background: rgba(0, 0, 0, 0.28);
   z-index: 1;
 }
 
@@ -347,7 +422,7 @@
 }
 
 .journeySubtitle {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
   color: #c89645;
   letter-spacing: 0.6px;
@@ -360,6 +435,7 @@
   font-weight: 300;
   line-height: 1.1;
   color: #ffffff;
+  font-family: "abel";
   margin: 0 0 26px;
 }
 
@@ -400,6 +476,10 @@
   font-size: 15px;
 }
 
+/* =========================
+   ICON BOX FIX
+========================= */
+
 .iconBox {
   width: 44px;
   height: 44px;
@@ -407,13 +487,38 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
   background: rgba(255, 255, 255, 0.03);
   flex-shrink: 0;
+  padding: 0;
+  line-height: 0;
 }
 
+/* For image icons */
+.iconBox img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Optional: if you ever use react-icons too */
 .iconBox svg {
-  font-size: 16px;
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+.iconBox img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  display: block;
+  transform: translateY(-1px);
+}
+
+.icon-2 {
+  margin-bottom: 4px;
+  height: 20px;
+  width: 20px;
 }
 
 .divider {

@@ -253,7 +253,7 @@ function App() {
               <Route path="/services"                    element={<Services />} />
               <Route path="/private-aviation"            element={<PrivateAviation />} />
               <Route path="/cruises"                     element={<ExpenditionCruising />} />
-              <Route path="/jet-expendation"             element={<JetExpeditions />} />
+              <Route path="/jet-expendations"             element={<JetExpeditions />} />
 
               <Route path="/imperial-odyssey"            element={<ImperialOdyssey />} />
 

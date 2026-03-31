@@ -11,11 +11,9 @@ import Maldives from "../../assets/img18.jpg";
 import costaRicaImg from "../../assets/CostaRica.jpg";
 
 import japanImg from "../../assets/japanMain.jpg";
-import thermometerIcon from "../../assets/thermo.png";
-import locationIcon from "../../assets/locate.png";
+import thermometerIcon from "../../assets/thermo2.png";
+import locationIcon from "../../assets/location.png";
 import correctIcon from "../../assets/correct.png";
-
-
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -23,12 +21,10 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 import "swiper/css";
 import "swiper/css/navigation";
-// import "./SeasonalSignature.css";
 
 import springImg from "../../assets/spring11.jpg";
 import summerImg from "../../assets/summer22.jpg";
 import autumnImg from "../../assets/autumn11.jpg";
-
 
 const destinationsData = [
   {
@@ -36,7 +32,7 @@ const destinationsData = [
     tag: "SAKURA SEASON IN BLOOM",
     title: "Japan",
     description:
-      "March marks the beginning of Japan's iconic cherry blossom season. Witness the ethereal beauty of sakura blooms painting cities and countryside in delicate shades of pink.",
+      "March marks the beginning of Japan's iconic cherry blossom season. Witness the ethereal beauty of sakura blooms painting cities and countryside in delicate shades of pink. From Tokyo's historic gardens to Kyoto's ancient temples, experience a cultural journey like no other.",
     temperature: "12–18°C",
     meta: "Cherry blossoms, culture, cuisine",
     image: japanImg,
@@ -63,24 +59,22 @@ const destinationsData = [
       "Luxury eco-lodge stays",
     ],
   },
-
   {
-  id: 7,
-  tag: "CRYSTAL CLEAR WATERS",
-  title: "Maldives",
-  description:
-    "March brings the tail end of the dry season to the Maldives, with pristine conditions for snorkeling and diving. Overwater villas offer front-row seats to spectacular sunsets and the underwater world below.",
-  temperature: "28–31°C",
-  meta: "Beaches, diving, romance",
-  image: Maldives,
-  highlights: [
-    "Overwater villa with private pool",
-    "Snorkeling with manta rays",
-    "Sunset dolphin cruise",
-    "World-class spa treatments",
-  ],
-}
-
+    id: 7,
+    tag: "CRYSTAL CLEAR WATERS",
+    title: "Maldives",
+    description:
+      "March brings the tail end of the dry season to the Maldives, with pristine conditions for snorkeling and diving. Overwater villas offer front-row seats to spectacular sunsets and the underwater world below.",
+    temperature: "28–31°C",
+    meta: "Beaches, diving, romance",
+    image: Maldives,
+    highlights: [
+      "Overwater villa with private pool",
+      "Snorkeling with manta rays",
+      "Sunset dolphin cruise",
+      "World-class spa treatments",
+    ],
+  },
 ];
 
 const destinations = [
@@ -198,250 +192,64 @@ const experiences = [
     price: "From £25,000 per couple",
     image: autumnImg,
   },
-
 ];
 
-
 const MarchGallerySection = () => {
-      const prevRef = useRef(null);
+  const prevRef = useRef(null);
   const nextRef = useRef(null);
-  // 👇 only first index
+
   const firstDestination = destinationsData[0];
   const secondDestination = destinationsData[1];
   const thirdDestination = destinationsData[2];
 
   return (
     <>
-   
-    <section className="luxdest-section">
-        {/* first wala div  */}
-      <div className="luxdest-container">
-        <div className="luxdest-card">
-          {/* IMAGE */}
-          <div className="luxdest-image-wrapper">
-            <img
-              src={firstDestination.image}
-              alt={firstDestination.title}
-              className="luxdest-image"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-
-          {/* CONTENT */}
-          <div className="luxdest-content">
-            <p className="luxdest-tag">{firstDestination.tag}</p>
-            <h2 className="luxdest-title">
-              {firstDestination.title}
-            </h2>
-
-            <p className="luxdest-description">
-              {firstDestination.description}
-            </p>
-
-            {/* META */}
-            <div className="luxdest-meta">
-              <div className="luxdest-meta-item">
-                <img
-                  src={thermometerIcon}
-                  alt="temperature"
-                  className="luxdest-icon"
-                />
-                <span>{firstDestination.temperature}</span>
-              </div>
-
-              <div className="luxdest-meta-item">
-                <img
-                  src={locationIcon}
-                  alt="location"
-                  className="luxdest-icon"
-                />
-                <span>{firstDestination.meta}</span>
-              </div>
-            </div>
-
-            {/* HIGHLIGHTS */}
-            <div className="luxdest-highlights">
-              <h4>HIGHLIGHTS</h4>
-              <ul className="luxdest-list">
-                {firstDestination.highlights.map((point, index) => (
-                  <li key={index}> <img src={correctIcon} alt="" className="correct-icon" /> {point}</li>
-                ))}
-              </ul>
-            </div>
-
-            <button className="luxdest-btn">
-              PLAN YOUR TRIP →
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-            {/* two destinations */}
-    <section className="dual-section">
-      <div className="dual-container">
-        {destinations.slice(0,2).map((item) => (
-          <div className="dual-card" key={item.id}>
-            {/* IMAGE */}
-            <div className="dual-image-wrapper">
+      {/* FIRST FEATURED DESTINATION */}
+      <section className="luxdest-section">
+        <div className="luxdest-container">
+          <div className="luxdest-card">
+            <div className="luxdest-image-wrapper">
               <img
-                src={item.image}
-                alt={item.title}
-                className="dual-image"
+                src={firstDestination.image}
+                alt={firstDestination.title}
+                className="luxdest-image"
                 loading="lazy"
                 decoding="async"
               />
             </div>
 
-            {/* CONTENT */}
-            <div className="dual-content">
-              <p className="dual-tag">{item.tag}</p>
-              <h2 className="dual-title">{item.title}</h2>
+            <div className="luxdest-content">
+              <p className="luxdest-tag">{firstDestination.tag}</p>
+              <h2 className="luxdest-title">{firstDestination.title}</h2>
 
-              <p className="dual-description">
-                {item.description}
+              <p className="luxdest-description">
+                {firstDestination.description}
               </p>
 
-              {/* META */}
-              <div className="dual-meta">
-                <div className="dual-meta-item">
-                  <img src={thermometerIcon} alt=""  className="luxdest-icon" />
-                  <span>{item.temperature}</span>
-                </div>
-                <div className="dual-meta-item">
-                  <img src={locationIcon} alt="" className="luxdest-icon" />
-                  <span>{item.meta}</span>
-                </div>
-              </div>
-
-              {/* HIGHLIGHTS */}
-              <div className="luxdest-highlights">
-                <h4>HIGHLIGHTS</h4>
-                <ul  className="luxdest-list">
-                  {item.highlights.map((point, index) => (
-                    <li key={index}>
-                      <img src={correctIcon} alt="" className="correct-icon" />
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <button className="dual-btn">
-                PLAN YOUR TRIP →
-              </button>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
-
-        {/* Maldives section  */}
-      <div className="luxdest-container">
-        <div className="luxdest-card">
-  
-          {/* CONTENT */}
-          <div className="luxdest-content">
-            <p className="luxdest-tag">{thirdDestination.tag}</p>
-            <h2 className="luxdest-title">
-              {thirdDestination.title}
-            </h2>
-
-            <p className="luxdest-description">
-              {thirdDestination.description}
-            </p>
-
-            {/* META */}
-            <div className="luxdest-meta">
-              <div className="luxdest-meta-item">
-                <img
-                  src={thermometerIcon}
-                  alt="temperature"
-                  className="luxdest-icon"
-                />
-                <span>{thirdDestination.temperature}</span>
-              </div>
-
-              <div className="luxdest-meta-item">
-                <img
-                  src={locationIcon}
-                  alt="location"
+              <div className="luxdest-meta">
+                <div className="luxdest-meta-item">
+                  <img
+                    src={thermometerIcon}
+                    alt="temperature"
                     className="luxdest-icon"
-                />
-                <span>{thirdDestination.meta}</span>
-              </div>
-            </div>
-
-            {/* HIGHLIGHTS */}
-            <div className="luxdest-highlights">
-              <h4>HIGHLIGHTS</h4>
-              <ul className="luxdest-list">
-                {thirdDestination.highlights.map((point, index) => (
-                  <li key={index}> <img src={correctIcon} alt="" className="correct-icon" /> {point}</li>
-                ))}
-              </ul>
-            </div>
-
-            <button className="luxdest-btn">
-              PLAN YOUR TRIP →
-            </button>
-          </div>
-
-                  {/* IMAGE */}
-          <div className="luxdest-image-wrapper">
-            <img
-              src={thirdDestination.image}
-              alt={thirdDestination.title}
-              className="luxdest-image"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-        </div>
-      </div>
-
-                  {/* two more destinations */}
-    <section className="dual-section">
-      <div className="dual-container">
-        {destinations.slice(2,4).map((item) => (
-          <div className="dual-card" key={item.id}>
-            {/* IMAGE */}
-            <div className="dual-image-wrapper">
-              <img
-                src={item.image}
-                alt={item.title}
-                className="dual-image"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-
-            {/* CONTENT */}
-            <div className="dual-content">
-              <p className="dual-tag">{item.tag}</p>
-              <h2 className="dual-title">{item.title}</h2>
-
-              <p className="dual-description">
-                {item.description}
-              </p>
-
-              {/* META */}
-              <div className="dual-meta">
-                <div className="dual-meta-item">
-                  <img src={thermometerIcon} alt=""  className="luxdest-icon" />
-                  <span>{item.temperature}</span>
+                  />
+                  <span>{firstDestination.temperature}</span>
                 </div>
-                <div className="dual-meta-item">
-                  <img src={locationIcon} alt=""     className="luxdest-icon"/>
-                  <span>{item.meta}</span>
+
+                <div className="luxdest-meta-item">
+                  <img
+                    src={locationIcon}
+                    alt="location"
+                    className="luxdest-icon2"
+                  />
+                  <span>{firstDestination.meta}</span>
                 </div>
               </div>
 
-              {/* HIGHLIGHTS */}
               <div className="luxdest-highlights">
                 <h4>HIGHLIGHTS</h4>
                 <ul className="luxdest-list">
-                  {item.highlights.map((point, index) => (
+                  {firstDestination.highlights.map((point, index) => (
                     <li key={index}>
                       <img src={correctIcon} alt="" className="correct-icon" />
                       {point}
@@ -450,223 +258,353 @@ const MarchGallerySection = () => {
                 </ul>
               </div>
 
-              <button className="dual-btn">
-                PLAN YOUR TRIP →
-              </button>
+              <button className="luxdest-btn">PLAN YOUR TRIP →</button>
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
-
-        {/* second div  */}
-   
-      <div className="luxdest-container">
-        <div className="luxdest-card">
-          {/* IMAGE */}
-          <div className="luxdest-image-wrapper">
-            <img
-              src={secondDestination.image}
-              alt={secondDestination.title}
-              className="luxdest-image"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-
-          {/* CONTENT */}
-          <div className="luxdest-content">
-            <p className="luxdest-tag">{secondDestination.tag}</p>
-            <h2 className="luxdest-title">
-              {secondDestination.title}
-            </h2>
-
-            <p className="luxdest-description">
-              {secondDestination.description}
-            </p>
-
-            {/* META */}
-            <div className="luxdest-meta">
-              <div className="luxdest-meta-item">
-                <img
-                  src={thermometerIcon}
-                  alt="temperature"
-                  className="luxdest-icon"
-                />
-                <span>{secondDestination.temperature}</span>
-              </div>
-
-              <div className="luxdest-meta-item">
-                <img
-                  src={locationIcon}
-                  alt="location"
-                  className="luxdest-icon"
-                />
-                <span>{secondDestination.meta}</span>
-              </div>
-            </div>
-
-            {/* HIGHLIGHTS */}
-            <div className="luxdest-highlights">
-              <h4>HIGHLIGHTS</h4>
-              <ul className="luxdest-list">
-                {secondDestination.highlights.map((point, index) => (
-                  <li key={index}> <img src={correctIcon} alt="" className="correct-icon" /> {point}</li>
-                ))}
-              </ul>
-            </div>
-
-            <button className="luxdest-btn">
-              PLAN YOUR TRIP →
-            </button>
           </div>
         </div>
-      </div>
+      </section>
 
+      {/* 2 CARDS */}
+      <section className="dual-section">
+        <div className="dual-container">
+          {destinations.slice(0, 2).map((item) => (
+            <div className="dual-card" key={item.id}>
+              <div className="dual-image-wrapper">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="dual-image"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
 
-                  {/* two more destinations */}
-    <section className="dual-section">
-      <div className="dual-container">
-        {destinations.slice(4,6).map((item) => (
-          <div className="dual-card" key={item.id}>
-            {/* IMAGE */}
-            <div className="dual-image-wrapper">
+              <div className="dual-content">
+                <p className="luxdest-tag">{item.tag}</p>
+                <h2 className="luxdest-title dual-title-fix">{item.title}</h2>
+
+                <p className="luxdest-description dual-description-fix">
+                  {item.description}
+                </p>
+
+                <div className="luxdest-meta">
+                  <div className="luxdest-meta-item">
+                    <img src={thermometerIcon} alt="" className="luxdest-icon" />
+                    <span>{item.temperature}</span>
+                  </div>
+                  <div className="luxdest-meta-item">
+                    <img src={locationIcon} alt="" className="luxdest-icon2" />
+                    <span>{item.meta}</span>
+                  </div>
+                </div>
+
+                <div className="luxdest-highlights">
+                  <h4>HIGHLIGHTS</h4>
+                  <ul className="luxdest-list">
+                    {item.highlights.map((point, index) => (
+                      <li key={index}>
+                        <img src={correctIcon} alt="" className="correct-icon" />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <button className="luxdest-btn">PLAN YOUR TRIP →</button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* MALDIVES FEATURED */}
+      <section className="luxdest-section">
+        <div className="luxdest-container">
+          <div className="luxdest-card reverse">
+            <div className="luxdest-image-wrapper">
               <img
-                src={item.image}
-                alt={item.title}
-                className="dual-image"
+                src={thirdDestination.image}
+                alt={thirdDestination.title}
+                className="luxdest-image"
                 loading="lazy"
                 decoding="async"
               />
             </div>
 
-            {/* CONTENT */}
-            <div className="dual-content">
-              <p className="dual-tag">{item.tag}</p>
-              <h2 className="dual-title">{item.title}</h2>
+            <div className="luxdest-content">
+              <p className="luxdest-tag">{thirdDestination.tag}</p>
+              <h2 className="luxdest-title">{thirdDestination.title}</h2>
 
-              <p className="dual-description">
-                {item.description}
+              <p className="luxdest-description">
+                {thirdDestination.description}
               </p>
 
-              {/* META */}
-              <div className="dual-meta">
-                <div className="dual-meta-item">
-                  <img src={thermometerIcon} alt=""  className="luxdest-icon"/>
-                  <span>{item.temperature}</span>
+              <div className="luxdest-meta">
+                <div className="luxdest-meta-item">
+                  <img
+                    src={thermometerIcon}
+                    alt="temperature"
+                    className="luxdest-icon"
+                  />
+                  <span>{thirdDestination.temperature}</span>
                 </div>
-                <div className="dual-meta-item">
-                  <img src={locationIcon} alt=""     className="luxdest-icon"/>
-                  <span>{item.meta}</span>
+
+                <div className="luxdest-meta-item">
+                  <img
+                    src={locationIcon}
+                    alt="location"
+                    className="luxdest-icon2"
+                  />
+                  <span>{thirdDestination.meta}</span>
                 </div>
               </div>
 
-              {/* HIGHLIGHTS */}
               <div className="luxdest-highlights">
                 <h4>HIGHLIGHTS</h4>
                 <ul className="luxdest-list">
-                  {item.highlights.map((point, index) => (
+                  {thirdDestination.highlights.map((point, index) => (
                     <li key={index}>
-                      <img src={correctIcon} alt="" className="correct-icon"/>
+                      <img src={correctIcon} alt="" className="correct-icon" />
                       {point}
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <button className="dual-btn">
-                PLAN YOUR TRIP →
-              </button>
+              <button className="luxdest-btn">PLAN YOUR TRIP →</button>
             </div>
           </div>
-        ))}
-      </div>
-    </section>
+        </div>
+      </section>
 
-        {/* carosal section  */}
+      {/* 2 MORE CARDS */}
+      <section className="dual-section">
+        <div className="dual-container">
+          {destinations.slice(2, 4).map((item) => (
+            <div className="dual-card" key={item.id}>
+              <div className="dual-image-wrapper">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="dual-image"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
 
+              <div className="dual-content">
+                <p className="luxdest-tag">{item.tag}</p>
+                <h2 className="luxdest-title dual-title-fix">{item.title}</h2>
 
+                <p className="luxdest-description dual-description-fix">
+                  {item.description}
+                </p>
 
+                <div className="luxdest-meta">
+                  <div className="luxdest-meta-item">
+                    <img src={thermometerIcon} alt="" className="luxdest-icon" />
+                    <span>{item.temperature}</span>
+                  </div>
+                  <div className="luxdest-meta-item">
+                    <img src={locationIcon} alt="" className="luxdest-icon2" />
+                    <span>{item.meta}</span>
+                  </div>
+                </div>
 
+                <div className="luxdest-highlights">
+                  <h4>HIGHLIGHTS</h4>
+                  <ul className="luxdest-list">
+                    {item.highlights.map((point, index) => (
+                      <li key={index}>
+                        <img src={correctIcon} alt="" className="correct-icon" />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
+                <button className="luxdest-btn">PLAN YOUR TRIP →</button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
+      {/* SECOND FEATURED */}
+      <section className="luxdest-section">
+        <div className="luxdest-container">
+          <div className="luxdest-card">
+            <div className="luxdest-image-wrapper">
+              <img
+                src={secondDestination.image}
+                alt={secondDestination.title}
+                className="luxdest-image"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
 
+            <div className="luxdest-content">
+              <p className="luxdest-tag">{secondDestination.tag}</p>
+              <h2 className="luxdest-title">{secondDestination.title}</h2>
 
-    {/* <section className="sse-wrapper">
-      <div className="sse-container">
+              <p className="luxdest-description">
+                {secondDestination.description}
+              </p>
 
-        <p className="sse-subtitle">EXCLUSIVE ACCESS</p>
-        <h2 className="sse-title">Seasonal Signature Experiences</h2>
-        <p className="sse-desc">
-          Each season offers unique opportunities for extraordinary experiences available only through our network.
-        </p>
+              <div className="luxdest-meta">
+                <div className="luxdest-meta-item">
+                  <img
+                    src={thermometerIcon}
+                    alt="temperature"
+                    className="luxdest-icon"
+                  />
+                  <span>{secondDestination.temperature}</span>
+                </div>
 
-        <div className="sse-slider-wrapper">
+                <div className="luxdest-meta-item">
+                  <img
+                    src={locationIcon}
+                    alt="location"
+                    className="luxdest-icon2"
+                  />
+                  <span>{secondDestination.meta}</span>
+                </div>
+              </div>
 
-          <div ref={prevRef} className="sse-nav sse-prev">
-            <FiChevronLeft />
+              <div className="luxdest-highlights">
+                <h4>HIGHLIGHTS</h4>
+                <ul className="luxdest-list">
+                  {secondDestination.highlights.map((point, index) => (
+                    <li key={index}>
+                      <img src={correctIcon} alt="" className="correct-icon" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <button className="luxdest-btn">PLAN YOUR TRIP →</button>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div ref={nextRef} className="sse-nav sse-next">
-            <FiChevronRight />
-          </div>
+      {/* LAST 2 CARDS */}
+      <section className="dual-section">
+        <div className="dual-container">
+          {destinations.slice(4, 6).map((item) => (
+            <div className="dual-card" key={item.id}>
+              <div className="dual-image-wrapper">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="dual-image"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
 
-          <Swiper
-            modules={[Navigation]}
-            spaceBetween={30}
-            slidesPerView={3}
-            loop={true}
-            navigation
-            onBeforeInit={(swiper) => {
-              swiper.params.navigation.prevEl = prevRef.current;
-              swiper.params.navigation.nextEl = nextRef.current;
-            }}
-            onInit={(swiper) => {
-              swiper.navigation.init();
-              swiper.navigation.update();
-            }}
-            breakpoints={{
-              0: { slidesPerView: 1 },
-              768: { slidesPerView: 2 },
-              1100: { slidesPerView: 3 },
-            }}
-          >
-            {experiences.map((item, index) => (
-              <SwiperSlide key={index}>
-                <div className="sse-card">
+              <div className="dual-content">
+                <p className="luxdest-tag">{item.tag}</p>
+                <h2 className="luxdest-title dual-title-fix">{item.title}</h2>
 
-                  <div className="sse-image">
-                    <img src={item.image} alt={item.title} />
+                <p className="luxdest-description dual-description-fix">
+                  {item.description}
+                </p>
 
-                    <span className="sse-season-tag">
-                      {item.season}
-                    </span>
+                <div className="luxdest-meta">
+                  <div className="luxdest-meta-item">
+                    <img src={thermometerIcon} alt="" className="luxdest-icon" />
+                    <span>{item.temperature}</span>
+                  </div>
+                  <div className="luxdest-meta-item">
+                    <img src={locationIcon} alt="" className="luxdest-icon2" />
+                    <span>{item.meta}</span>
+                  </div>
+                </div>
 
-                    <div className="sse-overlay">
-                      <h3>{item.title}</h3>
-                      <p>{item.desc}</p>
+                <div className="luxdest-highlights">
+                  <h4>HIGHLIGHTS</h4>
+                  <ul className="luxdest-list">
+                    {item.highlights.map((point, index) => (
+                      <li key={index}>
+                        <img src={correctIcon} alt="" className="correct-icon" />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <button className="luxdest-btn">PLAN YOUR TRIP →</button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* OPTIONAL SLIDER */}
+      {/* <section className="sse-wrapper">
+        <div className="sse-container">
+          <p className="sse-subtitle">EXCLUSIVE ACCESS</p>
+          <h2 className="sse-title">Seasonal Signature Experiences</h2>
+          <p className="sse-desc">
+            Each season offers unique opportunities for extraordinary experiences available only through our network.
+          </p>
+
+          <div className="sse-slider-wrapper">
+            <div ref={prevRef} className="sse-nav sse-prev">
+              <FiChevronLeft />
+            </div>
+
+            <div ref={nextRef} className="sse-nav sse-next">
+              <FiChevronRight />
+            </div>
+
+            <Swiper
+              modules={[Navigation]}
+              spaceBetween={30}
+              slidesPerView={3}
+              loop={true}
+              navigation
+              onBeforeInit={(swiper) => {
+                swiper.params.navigation.prevEl = prevRef.current;
+                swiper.params.navigation.nextEl = nextRef.current;
+              }}
+              onInit={(swiper) => {
+                swiper.navigation.init();
+                swiper.navigation.update();
+              }}
+              breakpoints={{
+                0: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1100: { slidesPerView: 3 },
+              }}
+            >
+              {experiences.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <div className="sse-card">
+                    <div className="sse-image">
+                      <img src={item.image} alt={item.title} />
+                      <span className="sse-season-tag">{item.season}</span>
+                      <div className="sse-overlay">
+                        <h3>{item.title}</h3>
+                        <p>{item.desc}</p>
+                      </div>
+                    </div>
+
+                    <div className="sse-footer">
+                      <span className="sse-price">{item.price}</span>
+                      <button className="sse-btn">ENQUIRE NOW →</button>
                     </div>
                   </div>
-
-                  <div className="sse-footer">
-                    <span className="sse-price">{item.price}</span>
-                    <button className="sse-btn">
-                      ENQUIRE NOW →
-                    </button>
-                  </div>
-
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
-      </div>
-    </section> */}
-
-
-
-     </>
+      </section> */}
+    </>
   );
 };
 
