@@ -5,7 +5,7 @@ import { MapPin, Users, CalendarDays } from "lucide-react";
 import story1 from "../../assets2/EGC Signature/luxary hotel/8.png";
 import story2 from "../../assets2/EGC Signature/luxary hotel/8.png";
 import story3 from "../../assets2/EGC Signature/luxary hotel/8.png";
-import bgPattern from "../../assets/linepatter1.png";
+import bgPattern from "../../assets/linePattern3.png";
 
 const storiesData = [
   {

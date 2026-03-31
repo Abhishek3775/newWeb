@@ -1,6 +1,6 @@
 .favouriteTrips {
   width: 100%;
-  background: #f3f1ec;
+  background: #F5F4EF;
   padding: 28px 0 34px;
   overflow: hidden;
 }
@@ -15,7 +15,7 @@
 
 .topLabel {
   margin: 0 0 8px;
-  font-size: 17px;
+  font-size: 20px;
   text-align: center;
   line-height: 1;
   letter-spacing: 0.12em;
@@ -27,11 +27,11 @@
 
 .heading {
   margin: 0;
-  font-size: 28px;
+  font-size: 44px;
   line-height: 1.2;
   font-weight: 400;
   color: #1f1f1f;
-  /* font-family: "Arial Narrow", Arial, sans-serif; */
+  font-family: "Abel";
 }
 
 .subheading {
@@ -57,7 +57,7 @@
 
 .card {
   position: relative;
-  height: 282px;
+  min-height: 400px;
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -102,7 +102,7 @@
 
 .location {
   margin: 0 0 8px;
-  font-size: 10px;
+  font-size: 11px;
   line-height: 1.2;
   letter-spacing: 0.08em;
   color: #c09551;
@@ -117,7 +117,7 @@
   line-height: 1.35;
   font-weight: 400;
   color: #ffffff;
-  font-family: "Arial Narrow", Arial, sans-serif;
+  font-family: "Abel", sans-serif;
   max-width: 95%;
 }
 
@@ -165,7 +165,7 @@
 
 .customBtn {
   background: #c09551;
-  color: #ffffff;
+  color: #F5F4EF;
   border: none;
   padding: 14px 28px;
   font-size: 11px;
@@ -174,7 +174,7 @@
   text-transform: uppercase;
   font-weight: 500;
   cursor: pointer;
-  font-family: Arial, sans-serif;
+  /* font-family: Arial, sans-serif; */
 }
 
 .viewMore {

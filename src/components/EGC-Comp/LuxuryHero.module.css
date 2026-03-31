@@ -20,7 +20,7 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.35);
 }
 
 /* Content */
@@ -33,7 +33,7 @@
 
 /* Title */
 .title {
-  /* font-family: "Georgia", serif; */
+  font-family: 'Abel';
   font-size: clamp(40px, 7vw, 80px);
   font-weight: 300;
   line-height: 1.1;
@@ -49,6 +49,7 @@
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.85);
   margin-bottom: 30px;
+  font-weight: 300;
 }
 .LDiscover {
   position: absolute;

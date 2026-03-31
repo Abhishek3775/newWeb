@@ -14,7 +14,7 @@ export default function PrivateGroupSection() {
         </p>
 
         <h2 className={styles.heading}>
-          Going away together is one of life's purest pleasures.
+          Going away together is one of life's purest <br /> pleasures.
         </h2>
 
         <p className={styles.description}>
