@@ -176,6 +176,9 @@ const Header = () => {
               <Link to="/blog" className="dropdown-link">
                 BLOG
               </Link>
+              <Link to="/egc-signature" className="dropdown-link">
+                EGC SIGNATURE
+              </Link>
             </div>
           </div>
 

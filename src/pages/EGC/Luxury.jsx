@@ -5,6 +5,7 @@ import FavouriteTrips from '../../components/EGC-Comp/FavouriteTrips'
 import WhyChooseEGC from '../../components/EGC-Comp/WhyChooseEGC'
 import StoriesSection from '../../components/EGC-Comp/StoriesSection'
 import Testimonials from '../../components/EGC-Comp/Testimonials'
+import PlanJourney from '../../components/EGC-Comp/PlanJourney'
 
 const Luxury = () => {
   return (
@@ -15,6 +16,7 @@ const Luxury = () => {
     {<WhyChooseEGC/>}
     {<StoriesSection/>}
     {<Testimonials/>}
+    {<PlanJourney/>}
     </>
   )
 }

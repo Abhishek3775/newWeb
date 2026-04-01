@@ -1,50 +1,49 @@
 /* ============================================================
    PersonalizedJourneys.module.css
+   Fully Responsive - Desktop / Laptop / Tablet / Mobile
    ============================================================ */
 
 .section {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 48px 24px 64px;
-  /* font-family: "Georgia", "Times New Roman", serif; */
+  padding: 60px 24px 80px;
   box-sizing: border-box;
 }
 
 /* ---- Header ---- */
 .header {
   text-align: center;
-  margin-bottom: 36px;
+  margin-bottom: 42px;
 }
 
 .eyebrow {
-  /* font-family: "Arial", sans-serif; */
-  font-size: 17px;
+  font-size: 15px;
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 2.5px;
-  color: #C09551;
+  color: #c09551;
   text-transform: uppercase;
-  margin: 0 0 10px;
+  margin: 0 0 12px;
 }
 
 .heading {
-  font-size: clamp(28px, 5vw, 46px);
+  font-size: clamp(32px, 5vw, 56px);
   font-weight: 400;
   color: #1a1a1a;
   margin: 0 0 14px;
   letter-spacing: -0.5px;
   line-height: 1.1;
+  font-family: "Abel", sans-serif;
 }
 
 .subtext {
-  /* font-family: "Arial", sans-serif; */
-  font-size: clamp(13px, 1.5vw, 15px);
+  font-size: clamp(14px, 1.5vw, 17px);
   text-align: center;
-  color: #555;
-  max-width: 680px;
+  color: #323131;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.7;
+  max-width: 760px;
 }
 
 /* ---- Grid Wrapper ---- */
@@ -52,19 +51,18 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-
-  /* ✅ Space for arrows */
-  padding: 0 48px;
+  padding: 0 54px;
 }
 
 /* ---- Main Grid ---- */
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  gap: 10px;
   width: 100%;
   opacity: 1;
   transform: translateX(0);
+  align-items: stretch;
 }
 
 /* Animations */
@@ -119,21 +117,24 @@
 .rightCol {
   display: grid;
   grid-template-rows: auto 1fr;
-  gap: 8px;
+  gap: 10px;
+  min-height: 100%;
 }
 
 .topRow {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  gap: 10px;
 }
 
 /* ---- Cards ---- */
 .card {
   position: relative;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 2px;
   cursor: pointer;
+  min-width: 0;
+  isolation: isolate;
 }
 
 .cardImg {
@@ -141,11 +142,11 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.5s ease;
+  transition: transform 0.55s ease;
 }
 
 .card:hover .cardImg {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
 .cardOverlay {
@@ -153,9 +154,9 @@
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.72) 0%,
-    rgba(0, 0, 0, 0.25) 50%,
-    rgba(0, 0, 0, 0.05) 100%
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0.38) 42%,
+    rgba(0, 0, 0, 0.08) 100%
   );
   pointer-events: none;
 }
@@ -165,27 +166,28 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 20px 22px 22px;
+  padding: 20px 18px 20px;
   color: #fff;
   z-index: 2;
 }
 
+.cardContentSmall {
+  padding: 14px 14px 16px;
+}
+
 /* ---- Sizes ---- */
 .cardLarge {
-  height: 540px;
+  background-size: cover;
+  height: 650px;
 }
 
 .cardSmall {
-  height: 260px;
+  height: 196px;
 }
 
 .cardBottomRight {
   height: 100% !important;
-  min-height: 268px;
-}
-
-.cardContentSmall {
-  padding: 14px 16px 18px;
+  min-height: 334px;
 }
 
 /* ---- Icons ---- */
@@ -193,10 +195,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.24);
   font-size: 16px;
   margin-bottom: 10px;
   backdrop-filter: blur(4px);
@@ -206,58 +208,74 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.24);
   font-size: 14px;
   margin-bottom: 8px;
   backdrop-filter: blur(4px);
 }
 
 .iconGold {
-  background: #C09551;
+  background: #c09551;
+  color: #fff;
 }
 
 /* ---- Text ---- */
 .cardTag,
 .cardTagSmall {
-  /* font-family: "Arial", sans-serif; */
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
-  color: #C09551;
+  color: #c09551;
 }
 
 .cardTag {
   font-size: 10px;
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
   margin: 0 0 6px;
+  line-height: 1.4;
 }
 
 .cardTagSmall {
-  font-size: 9px;
-  letter-spacing: 1.8px;
+  font-size: 8.5px;
+  letter-spacing: 1.4px;
   margin: 0 0 4px;
+  line-height: 1.4;
 }
 
 .cardTitle {
-  font-size: clamp(20px, 2.5vw, 26px);
+  font-size: clamp(22px, 2.2vw, 28px);
   font-weight: 400;
-  margin: 0 0 8px;
+  margin: 0 0 10px;
   color: #fff;
+  line-height: 1.2;
+  font-family: "Abel", sans-serif;
+  font-weight: 200;
 }
 
 .cardTitleSmall {
-  font-size: clamp(16px, 2vw, 20px);
+  font-size: clamp(16px, 1.8vw, 22px);
   margin: 0;
   color: #fff;
+  line-height: 1.25;
+  font-family: "Abel", sans-serif;
 }
 
 .cardDesc {
-  /* font-family: "Arial", sans-serif; */
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.82);
-  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.84);
+  margin: 0 0 12px;
+  line-height: 1.7;
+  max-width: 92%;
+}
+
+.experiences {
+  font-size: 11px;
+  color: #fff;
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 100;
 }
 
 /* ---- Badges ---- */
@@ -269,10 +287,14 @@
 }
 
 .badge {
-  font-size: 10px;
-  padding: 4px 10px;
-  border: 1px solid rgba(255, 255, 255, 0.55);
+  font-size: 9px;
+  padding: 4px 8px;
+  /* border: 1px solid rgba(255, 255, 255, 0.5); */
   border-radius: 2px;
+  line-height: 1.3;
+  white-space: nowrap;
+  background-color: #c09551;
+  font-weight: 200;
 }
 
 /* ---- Arrow Buttons ---- */
@@ -281,60 +303,206 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-
-  width: 46px;
-  height: 46px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-
-  border: 1px solid #0a0909;
-  /* background: #fff; */
+  border: 1px solid #8f8f8f;
+  background: rgba(255, 255, 255, 0.88);
   font-size: 22px;
   color: #444;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   cursor: pointer;
-  /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18); */
   transition: all 0.25s ease;
 }
 
 .arrow:hover {
-  transform: translateY(-50%) scale(1.02);
-  /* box-shadow: 0 8px 26px rgba(0, 0, 0, 0.25); */
+  transform: translateY(-50%) scale(1.05);
+  background: #fff;
 }
 
 .arrowLeft {
-  left: 0px;
+  left: 0;
 }
 
 .arrowRight {
-  right: 0px;
+  right: 0;
 }
 
-/* ---- Responsive ---- */
-@media (max-width: 900px) {
+/* ============================================================
+   LARGE DESKTOP
+   ============================================================ */
+@media (max-width: 1280px) {
+  .section {
+    max-width: 1200px;
+    padding: 56px 24px 76px;
+  }
+
   .gridWrapper {
-    padding: 0 36px;
+    padding: 0 48px;
   }
 
   .cardLarge {
-    height: 440px;
+    height: 500px;
   }
 
   .cardSmall {
-    height: 210px;
+    height: 185px;
+  }
+
+  .cardBottomRight {
+    min-height: 305px;
   }
 }
 
-@media (max-width: 640px) {
+/* ============================================================
+   LAPTOP
+   ============================================================ */
+@media (max-width: 1100px) {
+  .section {
+    padding: 52px 22px 70px;
+  }
+
   .gridWrapper {
-    padding: 0 24px;
+    padding: 0 42px;
+  }
+
+  .heading {
+    font-size: clamp(30px, 5vw, 48px);
+  }
+
+  .subtext {
+    font-size: 15px;
+  }
+
+  .cardLarge {
+    height: 460px;
+  }
+
+  .cardSmall {
+    height: 172px;
+  }
+
+  .cardBottomRight {
+    min-height: 278px;
+  }
+
+  .cardContent {
+    padding: 18px 16px 18px;
+  }
+
+  .cardDesc {
+    font-size: 11.5px;
+    max-width: 100%;
+  }
+}
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+@media (max-width: 900px) {
+  .section {
+    padding: 48px 18px 64px;
+  }
+
+  .header {
+    margin-bottom: 32px;
+  }
+
+  .eyebrow {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  .heading {
+    font-size: clamp(28px, 6vw, 42px);
+  }
+
+  .subtext {
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 680px;
+  }
+
+  .gridWrapper {
+    padding: 0 38px;
+  }
+
+  .grid {
+    gap: 8px;
+  }
+
+  .rightCol,
+  .topRow {
+    gap: 8px;
+  }
+
+  .cardLarge {
+    height: 400px;
+  }
+
+  .cardSmall {
+    height: 150px;
+  }
+
+  .cardBottomRight {
+    min-height: 242px;
+  }
+
+  .cardTitle {
+    font-size: 22px;
+  }
+
+  .cardTitleSmall {
+    font-size: 16px;
+  }
+
+  .cardDesc {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .badge {
+    font-size: 8.5px;
+    padding: 4px 7px;
+  }
+
+  .arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 20px;
+  }
+}
+
+/* ============================================================
+   SMALL TABLET
+   ============================================================ */
+@media (max-width: 768px) {
+  .section {
+    padding: 44px 16px 58px;
+  }
+
+  .header {
+    margin-bottom: 28px;
+  }
+
+  .gridWrapper {
+    padding: 0 30px;
   }
 
   .grid {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .rightCol {
+    grid-template-rows: auto auto;
+  }
+
+  .topRow {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 
   .cardLarge {
@@ -342,7 +510,32 @@
   }
 
   .cardSmall {
-    height: 180px;
+    height: 210px;
+  }
+
+  .cardBottomRight {
+    min-height: 260px;
+  }
+
+  .cardContent {
+    padding: 18px 16px 18px;
+  }
+
+  .cardTitle {
+    font-size: 24px;
+  }
+
+  .cardTitleSmall {
+    font-size: 18px;
+  }
+
+  .cardDesc {
+    font-size: 12px;
+    max-width: 100%;
+  }
+
+  .badge {
+    font-size: 9px;
   }
 
   .arrow {
@@ -352,10 +545,239 @@
   }
 
   .arrowLeft {
-    left: 4px;
+    left: 2px;
   }
 
   .arrowRight {
-    right: 4px;
+    right: 2px;
+  }
+}
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+@media (max-width: 576px) {
+  .section {
+    padding: 40px 14px 54px;
+  }
+
+  .header {
+    margin-bottom: 24px;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 1.8px;
+    margin-bottom: 10px;
+  }
+
+  .heading {
+    font-size: 34px;
+    margin-bottom: 12px;
+  }
+
+  .subtext {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .gridWrapper {
+    padding: 0 0 54px;
+    overflow: visible;
+  }
+
+  .grid {
+    gap: 12px;
+  }
+
+  .topRow {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .cardLarge {
+    height: 340px;
+  }
+
+  .cardSmall {
+    height: 220px;
+  }
+
+  .cardBottomRight {
+    min-height: 240px;
+  }
+
+  .cardContent {
+    padding: 16px 14px 16px;
+  }
+
+  .cardContentSmall {
+    padding: 14px 14px 16px;
+  }
+
+  .iconCircle {
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .iconCircleSmall {
+    width: 28px;
+    height: 28px;
+    font-size: 13px;
+  }
+
+  .cardTag {
+    font-size: 9px;
+    letter-spacing: 1.4px;
+  }
+
+  .cardTagSmall {
+    font-size: 8px;
+    letter-spacing: 1.2px;
+  }
+
+  .cardTitle {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .cardTitleSmall {
+    font-size: 17px;
+  }
+
+  .cardDesc {
+    font-size: 11px;
+    line-height: 1.65;
+    margin-bottom: 10px;
+  }
+
+  .badges {
+    gap: 5px;
+    margin-bottom: 8px;
+  }
+
+  .badge {
+    font-size: 8px;
+    padding: 4px 7px;
+  }
+
+  .experiences {
+    font-size: 10px;
+  }
+
+  /* arrows bottom center on mobile */
+  .arrow {
+    top: auto;
+    bottom: 0;
+    transform: none;
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  .arrow:hover {
+    transform: scale(1.04);
+  }
+
+  .arrowLeft {
+    left: calc(50% - 48px);
+  }
+
+  .arrowRight {
+    right: calc(50% - 48px);
+  }
+}
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+@media (max-width: 420px) {
+  .section {
+    padding: 36px 12px 50px;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+
+  .subtext {
+    font-size: 12.5px;
+  }
+
+  .cardLarge {
+    height: 300px;
+  }
+
+  .cardSmall {
+    height: 190px;
+  }
+
+  .cardBottomRight {
+    min-height: 220px;
+  }
+
+  .cardContent {
+    padding: 14px 12px 14px;
+  }
+
+  .cardTitle {
+    font-size: 20px;
+  }
+
+  .cardTitleSmall {
+    font-size: 16px;
+  }
+
+  .cardDesc {
+    font-size: 10.5px;
+    line-height: 1.6;
+  }
+
+  .badge {
+    font-size: 7.5px;
+    padding: 3px 6px;
+  }
+
+  .experiences {
+    font-size: 9.5px;
+  }
+}
+
+/* ============================================================
+   VERY SMALL DEVICES
+   ============================================================ */
+@media (max-width: 360px) {
+  .heading {
+    font-size: 27px;
+  }
+
+  .cardLarge {
+    height: 280px;
+  }
+
+  .cardSmall {
+    height: 175px;
+  }
+
+  .cardBottomRight {
+    min-height: 210px;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+  }
+
+  .cardTitleSmall {
+    font-size: 15px;
+  }
+
+  .cardDesc {
+    font-size: 10px;
+  }
+
+  .badge {
+    font-size: 7px;
   }
 }

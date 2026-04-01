@@ -199,7 +199,7 @@ export default function PersonalizedJourneys() {
       setActiveIndex((prev) =>
         direction === "next"
           ? (prev + 1) % slides.length
-          : (prev - 1 + slides.length) % slides.length
+          : (prev - 1 + slides.length) % slides.length,
       );
       setAnimating(false);
       setDir("");

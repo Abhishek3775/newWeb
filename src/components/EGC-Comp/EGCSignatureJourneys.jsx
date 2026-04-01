@@ -37,6 +37,7 @@ const data = [
     image: img3,
     badge: "I",
   },
+  
 ];
 
 // Extended data for infinite carousel effect

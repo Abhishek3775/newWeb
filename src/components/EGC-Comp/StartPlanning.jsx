@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./StartPlanning.module.css";
-import bgImage from "../../assets2/EGC Signature/12.png"; // replace with your image
+import bgImage from "../../assets2/EGC Signature/12.png"; 
 
 export default function StartPlanning() {
   return (
