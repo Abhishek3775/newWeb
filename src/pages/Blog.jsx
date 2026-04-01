@@ -71,6 +71,7 @@ export default function BlogPage() {
       desc: "Floating above ancient fairy chimneys as the first light paints Turkey's otherworldly landscape in shades of amber and rose.",
       img: img6,
       reverse: false,
+      exploreLabel: "CAPPADOCIA",
     },
     {
       id: 2,
@@ -80,6 +81,7 @@ export default function BlogPage() {
       desc: "From Costa Rica's cloud forests to Bali's river valleys, a new wave of elevated escapes is blurring the line between architecture and nature.",
       img: img7,
       reverse: true,
+      exploreLabel: "THE CANOPY",
     },
     {
       id: 3,
@@ -89,6 +91,7 @@ export default function BlogPage() {
       desc: "Centuries-old traditions meet contemporary sensibility in Japan’s most exclusive inns.",
       img: img8,
       reverse: false,
+      exploreLabel: "JAPAN",
     },
   ];
 
@@ -158,7 +161,7 @@ const navigate = useNavigate();
           <p className={styles.tag}>FEATURED STORY</p>
 
           <h1 className={styles.title}>
-            The Art of Slow Travel in <br /> the Indian Ocean
+            The Art of Slow Travel in <br className={styles.heroTitleBreak} /> the Indian Ocean
           </h1>
 
           <p className={styles.description}>
@@ -211,11 +214,15 @@ const navigate = useNavigate();
 
           <div className={styles.journalOverlay}>
             <p className={styles.journalMeta}>
-              {item.category} • {item.read}
+              <span className={styles.journalMetaCat}>{item.category}</span>
+              <span className={styles.journalMetaSep}> • </span>
+              <span className={styles.journalMetaRead}>{item.read}</span>
             </p>
             <h3>{item.title}</h3>
-            <p className={styles.journalDocs}>{item.docs}</p>
-            <span>EXPLORE {item.category} →</span>
+            {item.docs ? (
+              <p className={styles.journalDocs}>{item.docs}</p>
+            ) : null}
+            <span className={styles.journalCta}>EXPLORE {item.category} →</span>
           </div>
         </div>
       ))}
@@ -302,7 +309,9 @@ const navigate = useNavigate();
               {/* Content */}
               <div className={styles.editorsContent}>
                 <p className={styles.editorsMeta}>
-                  {item.category} • {item.read}
+                  <span className={styles.editorsMetaCat}>{item.category}</span>
+                  <span className={styles.editorsMetaSep}> • </span>
+                  <span className={styles.editorsMetaRead}>{item.read}</span>
                 </p>
 
                 <h3>{item.title}</h3>
@@ -311,7 +320,7 @@ const navigate = useNavigate();
 
                 <div className={styles.editorsActions} onClick={()=> navigate("/individualBlog")}>
                   <span>READ MORE →</span>
-                  <span>EXPLORE →</span>
+                  <span>EXPLORE {item.exploreLabel} →</span>
                 </div>
               </div>
             </div>
@@ -384,7 +393,11 @@ const navigate = useNavigate();
 
                 <div className={styles.freshContent}>
                   <p className={styles.freshMeta}>
-                    {item.category} • {item.date} • {item.time}
+                    <span className={styles.freshMetaCat}>{item.category}</span>
+                    <span className={styles.freshMetaRest}>
+                      {" "}
+                      • {item.date} • {item.time}
+                    </span>
                   </p>
 
                   <h3 className={styles.freshHeading}>
