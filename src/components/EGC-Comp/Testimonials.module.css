@@ -1,6 +1,6 @@
 .testimonials {
   width: 100%;
-  background: #f3f1ec;
+  background: #F5F4EF;
   padding: 36px 0 34px;
 }
 
@@ -14,7 +14,7 @@
 
 .topLabel {
   margin: 0 0 10px;
-  font-size: 17px;
+  font-size: 19px;
   text-align: center;
   letter-spacing: 0.08em;
   font-weight: 700;
@@ -25,10 +25,10 @@
 
 .heading {
   margin: 0 0 30px;
-  font-size: 28px;
+  font-size: 38px;
   font-weight: 400;
   color: #1f1f1f;
-  /* font-family: "Arial Narrow", Arial, sans-serif; */
+  font-family: "Abel";
 }
 
 .grid {
@@ -39,9 +39,9 @@
 
 .card {
   background: #ffffff;
-  padding: 20px 22px;
+  padding: 60px 28px;
   text-align: left;
-  min-height: 170px;
+  min-height: 180px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -56,16 +56,19 @@
 .text {
   font-size: 13px;
   line-height: 1.6;
-  color: #555555;
+  color: #131313;
   margin-bottom: 18px;
+  text-align: justify;
+  font-weight: 300;
   /* font-family: Arial, sans-serif; */
 }
 
 .name {
   font-size: 11px;
   letter-spacing: 0.05em;
-  color: #333333;
+  color: #131313;
   text-transform: uppercase;
+  font-weight: 500;
   /* font-family: Arial, sans-serif; */
 }
 

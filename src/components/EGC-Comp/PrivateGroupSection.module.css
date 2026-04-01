@@ -4,12 +4,11 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   text-align: center;
+  background-color: #fff;
 }
 
 /* Content wrapper */
@@ -20,7 +19,7 @@
 /* Eyebrow */
 .eyebrow {
   /* font-family: Arial, sans-serif; */
-  font-size: 17px;
+  font-size: 20px;
   letter-spacing: 2.5px;
   text-align: center;
   color: #c09551;
@@ -31,7 +30,7 @@
 
 /* Heading */
 .heading {
-  /* font-family: "Georgia", serif; */
+  font-family: "Abel";
   font-size: clamp(28px, 4.5vw, 44px);
   font-weight: 400;
   color: #222;

@@ -1,20 +1,53 @@
 /* ===== CONTAINER ===== */
 .hero {
   width: 100%;
-  height: 100vh;
-  min-height: 600px;
-  max-height: 1080px;
+  min-height: 100vh; /* full screen */
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ===== IMAGE ===== */
 .image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center center;
+  object-fit: cover; /* fills full area */
   display: block;
+}
+
+/* ================= LARGE DESKTOP ================= */
+@media (min-width: 1441px) {
+  .hero {
+    min-height: 100vh;
+  }
+
+  .image {
+    min-height: 100vh;
+  }
+}
+
+/* ================= DESKTOP / LAPTOP ================= */
+@media (max-width: 1440px) {
+  .hero {
+    min-height: 95vh;
+  }
+
+  .image {
+    min-height: 95vh;
+  }
+}
+
+/* ================= SMALL LAPTOP ================= */
+@media (max-width: 1200px) {
+  .hero {
+    min-height: 90vh;
+  }
+
+  .image {
+    min-height: 90vh;
+  }
 }
 
 /* ================= LARGE DESKTOP ================= */
@@ -67,32 +100,39 @@
   .image {
     object-position: center center;
   }
+
+  .image {
+    min-height: 80vh;
+    object-position: center;
+  }
+}
+
+/* ================= LARGE MOBILE ================= */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 70vh;
+  }
+
+  .image {
+    min-height: 70vh;
+    object-position: center;
+  }
 }
 
 /* ================= MOBILE ================= */
 @media (max-width: 480px) {
   .hero {
-    height: 55vh;
-    min-height: 340px;
+    min-height: 70vh;
   }
 
   .image {
-    object-position: center center;
+    object-position: center;
   }
 }
 
 /* ================= SMALL MOBILE ================= */
-@media (max-width: 375px) {
+@media (max-width: 400px) {
   .hero {
-    height: 50vh;
-    min-height: 300px;
-  }
-}
-
-/* ================= EXTRA SMALL DEVICES ================= */
-@media (max-width: 320px) {
-  .hero {
-    height: 46vh;
-    min-height: 260px;
+    min-height: 60vh;
   }
 }
