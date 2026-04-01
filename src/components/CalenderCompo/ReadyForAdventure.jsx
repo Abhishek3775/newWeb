@@ -16,7 +16,7 @@ const ReadyForAdventure = () => {
         </h2>
 
         <p className="rfa-description">
-          Let our travel experts craft your perfect journey. From first enquiry to <br />
+          Let our travel experts craft your perfect journey. From first enquiry to
           final farewell, we're with you every step of the way.
         </p>
 

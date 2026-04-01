@@ -17,6 +17,7 @@ import {
   FiMinus,
   FiPlus,
   FiCalendar,
+  FiFilter,
 } from "react-icons/fi";
 import { FaMapMarkerAlt, FaStar } from "react-icons/fa";
 import { LuUsers, LuBedDouble } from "react-icons/lu";
@@ -209,6 +210,7 @@ const CuratedCollection = () => {
     grade: "",
   });
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [showMobileFilters, setShowMobileFilters] = useState(false);
   const [wishlist, setWishlist] = useState([]);
   const [selectedHotel, setSelectedHotel] = useState(null);
   const [modalImgIndex, setModalImgIndex] = useState(0);
@@ -252,6 +254,11 @@ const CuratedCollection = () => {
       [key]: value.startsWith("All") ? "" : value,
     }));
     setOpenDropdown(null);
+
+    // ✅ phone pe select hote hi filters close
+    if (window.innerWidth <= 480) {
+      setShowMobileFilters(false);
+    }
   };
 
   const toggleDropdown = (name) =>
@@ -331,7 +338,6 @@ const CuratedCollection = () => {
       className={`${styles.card} ${isReversed ? styles.cardReverse : ""}`}
       key={hotel.id}
     >
-      {/* Image Block */}
       <div className={styles.imageWrapper}>
         <span className={styles.badge}>{hotel.grade}</span>
         <button
@@ -345,7 +351,6 @@ const CuratedCollection = () => {
         <img src={hotel.image} alt={hotel.name} />
       </div>
 
-      {/* Content Block */}
       <div className={styles.cardContent}>
         <span className={styles.location}>
           <CiLocationOn size={14} className={styles.pinIcon} /> {hotel.location}
@@ -401,44 +406,63 @@ const CuratedCollection = () => {
 
   return (
     <section className={styles.wrapper} onClick={() => setOpenDropdown(null)}>
-      {/* ── Header ── */}
+      {/* Header */}
       <div className={styles.header}>
         <span className={styles.smallTitle}>DISCOVER</span>
         <h2 className={styles.heading}>Our Curated Collection</h2>
         <p className={styles.subText}>
           Filter through 500+ handpicked properties to find your perfect retreat
         </p>
-        <div className={styles.searchBox}>
-          <FiSearch className={styles.searchIcon} />
-          <input
-            type="text"
-            placeholder="Search by name"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
+
+        <div className={styles.searchRow}>
+          <div className={styles.searchBox}>
+            <FiSearch className={styles.searchIcon} />
+            <input
+              type="text"
+              placeholder="Search by name"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+          </div>
+
+          <button
+            className={`${styles.mobileFilterBtn} ${
+              showMobileFilters ? styles.mobileFilterBtnActive : ""
+            }`}
+            onClick={() => setShowMobileFilters((prev) => !prev)}
+            type="button"
+          >
+            <FiFilter />
+          </button>
         </div>
       </div>
 
-      {/* ── Filters Strip ── */}
-      <div className={styles.filtersStrip} onClick={(e) => e.stopPropagation()}>
+      {/* Filters */}
+      <div
+        className={`${styles.filtersStrip} ${
+          showMobileFilters ? styles.filtersStripOpen : ""
+        }`}
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className={styles.filtersInner}>
           {filterConfig.map(({ key, label, options }) => (
             <div className={styles.filterItem} key={key}>
               <label>{label}</label>
+
               <div
                 className={`${styles.customSelect} ${
                   openDropdown === key ? styles.open : ""
-                }`}
+                } ${filters[key] ? styles.hasValue : ""}`}
                 onClick={() => toggleDropdown(key)}
               >
-                <span className={filters[key] ? styles.activeFilter : ""}>
-                  {getLabel(key, options)}
-                </span>
+                <span>{getLabel(key, options)}</span>
+
                 <FiChevronDown
                   className={`${styles.chevron} ${
                     openDropdown === key ? styles.rotated : ""
                   }`}
                 />
+
                 {openDropdown === key && (
                   <ul className={styles.dropdown}>
                     {options.map((opt) => (
@@ -463,7 +487,7 @@ const CuratedCollection = () => {
         </div>
       </div>
 
-      {/* ── Results ── */}
+      {/* Results */}
       <div className={styles.resultsArea}>
         <div className={styles.results}>
           {filtered.length === 0 ? (
@@ -479,7 +503,7 @@ const CuratedCollection = () => {
         </div>
       </div>
 
-      {/* ── Details Modal ── */}
+      {/* Details Modal */}
       {selectedHotel && (
         <div
           className={styles.modalOverlay}
@@ -494,7 +518,6 @@ const CuratedCollection = () => {
             </button>
 
             <div className={styles.modalInner}>
-              {/* LEFT */}
               <div className={styles.modalImageWrap}>
                 <p className={styles.modalTopLabel}>HOTELS IN JAPAN</p>
 
@@ -530,7 +553,6 @@ const CuratedCollection = () => {
                 </div>
               </div>
 
-              {/* RIGHT */}
               <div className={styles.modalContent}>
                 <h2 className={styles.modalTitle}>{selectedHotel.name}</h2>
 
@@ -569,7 +591,7 @@ const CuratedCollection = () => {
         </div>
       )}
 
-      {/* ── Enquiry Form Modal ── */}
+      {/* Enquiry Form Modal */}
       {showEnquiryForm && (
         <div
           className={styles.enquiryOverlay}
@@ -598,7 +620,6 @@ const CuratedCollection = () => {
               className={styles.enquiryForm}
               onSubmit={handleSubmitEnquiry}
             >
-              {/* Dates */}
               <div className={styles.formRow}>
                 <div className={styles.formGroup}>
                   <label>CHECK-IN</label>
@@ -627,7 +648,6 @@ const CuratedCollection = () => {
                 </div>
               </div>
 
-              {/* Guests */}
               <div className={styles.formSection}>
                 <div className={styles.sectionLabel}>
                   <LuUsers /> GUESTS
@@ -692,7 +712,6 @@ const CuratedCollection = () => {
                 </div>
               </div>
 
-              {/* Accommodation */}
               <div className={styles.formSection}>
                 <div className={styles.sectionLabel}>
                   <LuBedDouble /> ACCOMMODATION
@@ -718,7 +737,6 @@ const CuratedCollection = () => {
                 </div>
               </div>
 
-              {/* Requests */}
               <div className={styles.formSection}>
                 <div className={styles.sectionLabel}>SPECIAL REQUESTS</div>
                 <textarea

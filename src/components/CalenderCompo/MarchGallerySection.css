@@ -443,6 +443,10 @@
     font-size: 30px;
   }
 
+  .dual-image {
+    height: 100%;
+  }
+
   .dual-content {
     padding: 36px 24px;
   }

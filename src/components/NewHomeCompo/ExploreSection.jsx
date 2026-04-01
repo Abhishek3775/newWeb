@@ -1,30 +1,29 @@
 import styles from "./ExploreSection.module.css";
-import home1 from "../../assets/newhome1.png"
-import home2 from "../../assets/newhome2.png"
-import home3 from "../../assets/newhome3.png"
-import home4 from "../../assets/newhome4.png"
+import home1 from "../../assets/newhome1.png";
+import home2 from "../../assets/newhome2.png";
+import home3 from "../../assets/newhome3.png";
+import home4 from "../../assets/newhome4.png";
 
 const exploreData = [
   {
     id: 1,
     title: "EGC SIGNATURE JOURNEYS",
-    image:home1,
+    image: home1,
   },
   {
     id: 2,
     title: "DESTINATIONS",
-       image:home2,
-
+    image: home2,
   },
   {
     id: 3,
     title: "ACCOMMODATIONS",
-        image:home3,
+    image: home3,
   },
   {
     id: 4,
     title: "EXPERIENCES",
-        image:home4,
+    image: home4,
   },
 ];
 

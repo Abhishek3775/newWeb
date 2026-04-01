@@ -1,40 +1,38 @@
 /* ============================================
-   NewHero.module.css — Responsive Hero Section
-   ============================================ */
+   NewHero.module.css — Improved Responsive
+============================================ */
 
-/* ---------- Section Container ---------- */
+/* ---------- Section ---------- */
 .hero {
   position: relative;
   width: 100%;
   overflow: hidden;
-  /* Height is driven by the image on desktop (see .background below) */
 }
 
-/* ---------- Background Image ---------- */
+/* ---------- Background ---------- */
 .background {
-  /* On desktop: flow naturally so the full image height is visible */
   position: relative;
   display: block;
   width: 100%;
-  height: auto;        /* <-- lets the image define the section height */
+  height: auto;
   object-fit: contain;
-  object-position: center center;
+  object-position: center;
 }
 
-/* ---------- Dark Gradient Overlay ---------- */
+/* ---------- Overlay ---------- */
 .overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.72) 0%,
-    rgba(0, 0, 0, 0.28) 50%,
-    rgba(0, 0, 0, 0.10) 100%
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.35) 50%,
+    rgba(0, 0, 0, 0.08) 100%
   );
   z-index: 1;
 }
 
-/* ---------- Inner Layout ---------- */
+/* ---------- Inner ---------- */
 .inner {
   position: absolute;
   inset: 0;
@@ -44,19 +42,19 @@
   align-items: flex-end;
   justify-content: space-between;
 
-  padding: 24px 28px;
+  padding: 28px 32px;
   box-sizing: border-box;
 }
 
-/* ---------- Text Content ---------- */
+/* ---------- Text ---------- */
 .content h2 {
   margin: 0;
-  font-size: clamp(1rem, 2.4vw, 1.4rem);
+  font-size: clamp(1rem, 2.2vw, 1.5rem);
   font-weight: 400;
-  line-height: 1.45;
-  letter-spacing: 0.01em;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   color: #ffffff;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 /* ---------- Logo ---------- */
@@ -64,73 +62,79 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  flex-shrink: 0;
-  margin-left: 16px;
 }
 
 .logo img {
-  width: 120px;
+  width: 110px;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
 }
 
 /* ============================================
-   RESPONSIVE BREAKPOINTS
-   ============================================ */
+   RESPONSIVE
+============================================ */
 
-/* ---------- Large Desktop (≥ 1280px) ---------- */
-@media (min-width: 1280px) {
-  /* Image is already position:relative and height:auto — no height override needed */
+/* ---------- Large Desktop ---------- */
+@media (min-width: 1600px) {
   .inner {
-    padding: 32px 40px;
+    padding: 40px 60px;
+  }
+
+  .content h2 {
+    font-size: 1.6rem;
   }
 
   .logo img {
-    width: 88px;
+    width: 130px;
   }
 }
 
-/* ---------- Tablet Landscape (768px – 1279px) ---------- */
-@media (min-width: 768px) and (max-width: 1279px) {
+/* ---------- Laptop ---------- */
+@media (max-width: 1440px) {
+  .inner {
+    padding: 28px 36px;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+}
+
+/* ---------- Tablet Landscape ---------- */
+@media (max-width: 1024px) {
   .hero {
-    height: 280px;
+    height: 360px;
   }
 
   .background {
     position: absolute;
     inset: 0;
-    width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
   .inner {
-    padding: 22px 28px;
+    padding: 22px 26px;
+  }
+
+  .content h2 {
+    font-size: 1.2rem;
   }
 
   .logo img {
-    width: 64px;
+    width: 80px;
   }
 }
 
-/* ---------- Tablet Portrait (480px – 767px) ---------- */
-@media (min-width: 480px) and (max-width: 767px) {
+/* ---------- Tablet Portrait ---------- */
+@media (max-width: 768px) {
   .hero {
-    height: 380px;
+    height: 320px;
   }
 
   .background {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     object-position: center 30%;
-  }
-
-  .inner {
-    padding: 20px 20px;
   }
 
   .content h2 {
@@ -138,70 +142,60 @@
   }
 
   .logo img {
-    width: 58px;
+    width: 70px;
   }
 }
 
-/* ---------- Mobile (≤ 479px) ---------- */
-@media (max-width: 479px) {
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
   .hero {
-    height: 300px;
-  }
-
-  .background {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 25%;
-  }
-
-  .overlay {
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.78) 0%,
-      rgba(0, 0, 0, 0.30) 55%,
-      rgba(0, 0, 0, 0.08) 100%
-    );
+    height: 280px;
   }
 
   .inner {
-    padding: 16px 16px;
-    align-items: flex-end;
+    padding: 18px 18px;
   }
 
   .content h2 {
-    font-size: 0.88rem;
-    line-height: 1.5;
-    letter-spacing: 0.015em;
+    font-size: 0.95rem;
+    line-height: 1.4;
   }
 
   .logo img {
-    width: 48px;
+    width: 60px;
   }
 }
 
-/* ---------- Very Small Screens (≤ 360px) ---------- */
-@media (max-width: 360px) {
+/* ---------- Small Mobile ---------- */
+@media (max-width: 480px) {
   .hero {
-    height: 260px;
+    height: 250px;
   }
 
   .background {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     object-position: center 25%;
   }
 
   .content h2 {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 
   .logo img {
-    width: 40px;
+    width: 52px;
+  }
+}
+
+/* ---------- Very Small ---------- */
+@media (max-width: 360px) {
+  .hero {
+    height: 220px;
+  }
+
+  .content h2 {
+    font-size: 0.78rem;
+  }
+
+  .logo img {
+    width: 45px;
   }
 }

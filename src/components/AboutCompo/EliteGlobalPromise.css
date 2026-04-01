@@ -51,6 +51,7 @@
   color: #C09551;
   font-size: 21px;
   letter-spacing: 2px;
+  font-weight: 600;
 }
 
 #elite-promise-root .elite-promise-title {
@@ -58,6 +59,7 @@
   font-family: "abel";
   font-weight: 300;
   margin: 15px 0;
+  line-height: 1.2;
 }
 
 #elite-promise-root .elite-promise-sub {
@@ -65,17 +67,16 @@
   color: #C09551;
   font-weight: 300;
   margin-bottom: 20px;
-  /* background-color: red; */
   text-align: center;
 }
 
 #elite-promise-root .elite-promise-text {
-  /* max-width: 800px; */
   margin: 0 auto 60px;
   font-size: 15px;
   line-height: 1.8;
   color: #dddddd;
   text-align: center;
+  max-width: 760px;
 }
 
 /* Grid */
@@ -101,21 +102,26 @@
   font-size: 42px;
   color: #C09551;
   margin-bottom: 15px;
+  line-height: 1;
 }
 
 #elite-promise-root .elite-promise-card h3 {
   font-size: 18px;
   margin-bottom: 15px;
   color: #111;
+  font-weight: 500;
 }
 
 #elite-promise-root .elite-promise-card p {
   font-size: 14px;
   line-height: 1.7;
   color: #555;
+  margin: 0;
 }
 
-/* Responsive */
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 1024px) {
   #elite-promise-root .elite-promise-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -128,10 +134,95 @@
   }
 
   #elite-promise-root .elite-promise-card {
-    text-align: center;
+    text-align: left;
   }
 
   #elite-promise-root .elite-promise-title {
-    font-size: 28px;
+    font-size: 30px;
+  }
+}
+
+/* =========================
+   MOBILE EXACT SCREENSHOT
+========================= */
+@media (max-width: 480px) {
+  #elite-promise-root {
+    min-height: auto;
+    padding: 28px 16px 32px;
+  }
+
+  #elite-promise-root .elite-promise-overlay {
+    background: rgba(0, 0, 0, 0.34);
+  }
+
+  #elite-promise-root .elite-promise-inner {
+    margin-top: 0;
+    max-width: 100%;
+  }
+
+  /* HEADER */
+  #elite-promise-root .elite-promise-header {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  #elite-promise-root .elite-promise-small {
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+
+  #elite-promise-root .elite-promise-title {
+    font-size: 24px;
+    line-height: 1.35;
+    margin: 12px 0 10px;
+    max-width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #elite-promise-root .elite-promise-sub {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 14px;
+  }
+
+  #elite-promise-root .elite-promise-text {
+    font-size: 11px;
+    line-height: 1.65;
+    margin: 0 auto 24px;
+    max-width: 100%;
+    color: #f0f0f0;
+  }
+
+  /* GRID */
+  #elite-promise-root .elite-promise-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* CARDS */
+  #elite-promise-root .elite-promise-card {
+    padding: 18px 14px 20px;
+    text-align: left;
+    background: #f5f4ef;
+  }
+
+  #elite-promise-root .elite-promise-number {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+
+  #elite-promise-root .elite-promise-card h3 {
+    font-size: 13px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+
+  #elite-promise-root .elite-promise-card p {
+    font-size: 11px;
+    line-height: 1.55;
+    color: #555;
   }
 }

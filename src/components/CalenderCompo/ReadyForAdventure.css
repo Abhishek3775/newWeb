@@ -184,12 +184,13 @@
   .rfa-buttons {
     flex-direction: column;
     gap: 14px;
+    /* height: 30px; */
     align-items: center;
   }
 
   .rfa-btn-primary,
   .rfa-btn-outline {
-    width: 100%;
+    width: 90%;
     max-width: 300px;
     min-width: unset;
     height: 50px;

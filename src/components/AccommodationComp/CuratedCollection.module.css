@@ -48,6 +48,16 @@ html {
 }
 
 /* ───────────────── SEARCH ───────────────── */
+.searchRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+}
+
 .searchBox {
   position: relative;
   display: inline-flex;
@@ -55,6 +65,7 @@ html {
   width: 380px;
   max-width: 90%;
   margin: 0 auto;
+  flex: 1;
 }
 
 .searchIcon {
@@ -84,6 +95,11 @@ html {
 
 .searchBox input:focus {
   border-color: #c09551;
+}
+
+/* ❌ Desktop pe filter icon hide */
+.mobileFilterBtn {
+  display: none;
 }
 
 /* ───────────────── FILTERS ───────────────── */
@@ -128,7 +144,7 @@ html {
   color: #333;
   cursor: pointer;
   user-select: none;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
   display: flex;
   align-items: center;
 }
@@ -136,6 +152,20 @@ html {
 .customSelect:hover,
 .customSelect.open {
   border-color: #c09551;
+}
+
+/* ✅ active color sirf selected hone par */
+.hasValue {
+  border-color: #c09551 !important;
+}
+
+.hasValue span {
+  color: #c09551 !important;
+  font-weight: 500;
+}
+
+.hasValue .chevron {
+  color: #c09551;
 }
 
 .activeFilter {
@@ -179,6 +209,7 @@ html {
   color: #444;
   cursor: pointer;
   transition: background 0.15s;
+  position: relative;
 }
 
 .dropdownItem:hover {
@@ -189,7 +220,15 @@ html {
 .dropdownItem.selected {
   color: #c09551;
   font-weight: 600;
-  background: #f5f4ef;
+  background: #faf6f0;
+}
+
+.dropdownItem.selected::after {
+  content: "✓";
+  position: absolute;
+  right: 14px;
+  color: #c09551;
+  font-weight: 600;
 }
 
 /* ───────────────── RESULTS ───────────────── */
@@ -542,7 +581,6 @@ html {
   display: block;
 }
 
-/* arrows */
 .sliderBtn {
   position: absolute;
   top: 50%;
@@ -611,7 +649,6 @@ html {
   max-width: 100%;
 }
 
-/* bottom contact strip */
 .expertBox {
   margin-top: auto;
   background: #f4f2ed;
@@ -679,7 +716,6 @@ html {
 }
 
 /* ───────────────── ENQUIRY FORM MODAL ───────────────── */
-
 .enquiryOverlay {
   position: fixed;
   inset: 0;
@@ -769,7 +805,6 @@ html {
   scrollbar-width: thin;
 }
 
-/* Top Date Row */
 .formRow {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -822,7 +857,6 @@ html {
   cursor: pointer;
 }
 
-/* Sections */
 .formSection {
   padding: 22px 0;
   border-bottom: 1px solid #e2d8c9;
@@ -839,7 +873,6 @@ html {
   letter-spacing: 0.5px;
 }
 
-/* Counter rows */
 .counterRow {
   display: flex;
   align-items: center;
@@ -886,7 +919,6 @@ html {
   color: #333;
 }
 
-/* Children */
 .childrenBlock {
   margin-top: 4px;
 }
@@ -951,7 +983,6 @@ html {
   font-size: 16px;
 }
 
-/* Textarea */
 .textarea {
   width: 100%;
   min-height: 94px;
@@ -970,7 +1001,6 @@ html {
   border-color: #c09551;
 }
 
-/* Submit */
 .submitBtn {
   width: 100%;
   height: 54px;
@@ -996,7 +1026,6 @@ html {
 }
 
 /* ───────────────── RESPONSIVE ───────────────── */
-
 @media (max-width: 1024px) {
   .imageWrapper {
     flex: 0 0 42%;
@@ -1213,62 +1242,240 @@ html {
   }
 }
 
-@media (max-width: 576px) {
+/* =========================
+   PHONE ONLY (max-width: 480px)
+   ========================= */
+@media (max-width: 480px) {
   .header {
-    padding: 36px 4% 24px;
+    padding: 42px 24px 20px;
+    background: #ffffff;
   }
 
-  .filtersStrip {
-    padding: 14px 4% 18px;
-  }
-
-  .resultsArea {
-    padding: 24px 4% 40px;
+  .smallTitle {
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
   }
 
   .heading {
-    font-size: 26px;
+    font-size: 32px;
+    line-height: 1.08;
+    margin-bottom: 14px;
   }
 
   .subText {
     font-size: 13px;
+    line-height: 1.45;
+    max-width: 310px;
+    margin: 0 auto 22px;
+  }
+
+  .searchRow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .searchBox {
+    width: 100%;
+    max-width: 100%;
+    flex: 1;
+    margin: 0;
+  }
+
+  .searchBox input {
+    height: 44px;
+    padding: 11px 38px 11px 14px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    border: 1px solid #9e9b95;
+    border-radius: 4px;
+  }
+
+  .searchIcon {
+    right: 14px;
+    font-size: 16px;
+  }
+
+  /* ✅ sirf mobile pe dikhega */
+  .mobileFilterBtn {
+    width: 44px;
+    height: 44px;
+    border: 1px solid #cfc5b8;
+    background: #fff;
+    /* color: #c09551; */
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  /* ✅ active color sirf jab mobile filters open ho */
+  .mobileFilterBtnActive {
+    /* background: #c09551; */
+    color: #c09551;
+    border-color: #c09551;
+  }
+
+  /* hidden by default */
+  .filtersStrip {
+    display: none;
+    background: #ffffff;
+    padding: 0 24px 18px;
+    border-bottom: none;
+    overflow: visible;
+  }
+
+  .filtersStripOpen {
+    display: block;
+  }
+
+  .filtersInner {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-width: 100%;
+  }
+
+  .filterItem {
+    min-width: 100%;
+  }
+
+  .filterItem label {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #131313;
+    margin-bottom: 8px;
+  }
+
+  .customSelect {
+    width: 100%;
+    min-height: 42px;
+    padding: 12px 40px 12px 14px;
+    font-size: 14px;
+    background: #f5f4ef;
+    border: 1px solid #ece7df;
+    border-radius: 0;
+  }
+
+  .chevron {
+    right: 14px;
+    color: #444;
+    font-size: 18px;
+  }
+
+  .dropdown {
+    position: static;
+    width: 100%;
+    margin-top: 8px;
+    border: 1px solid #ebe5dc;
+    border-radius: 0 0 4px 4px;
+    box-shadow: none;
+    max-height: 240px;
+    padding: 6px 0;
+  }
+
+  .dropdownItem {
+    padding: 8px 14px;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  .dropdownItem.selected {
+    position: relative;
+    background: #fff;
+    color: #c09551;
+  }
+
+  .dropdownItem.selected::after {
+    content: "✓";
+    position: absolute;
+    right: 14px;
+    color: #c09551;
+    font-weight: 600;
+  }
+
+  .resultsArea {
+    padding: 18px 24px 34px;
+    background: #edeae3;
+  }
+
+  .results {
+    gap: 18px;
+  }
+
+  .card,
+  .cardReverse {
+    flex-direction: column !important;
+    border-radius: 0;
+    margin-bottom: 0;
+    box-shadow: none;
+    background: #fff;
   }
 
   .imageWrapper {
-    height: 230px;
+    width: 100%;
+    height: 345px;
+    min-height: unset;
+  }
+
+  .badge {
+    top: 18px;
+    left: 18px;
+    font-size: 12px;
+    padding: 7px 16px;
+    border-radius: 0;
+  }
+
+  .wishlistBtn {
+    top: 16px;
+    right: 16px;
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.3);
   }
 
   .cardContent {
-    padding: 18px 16px;
-    gap: 10px;
+    padding: 16px 18px 20px;
+    gap: 8px;
+  }
+
+  .location {
+    font-size: 12px;
+    letter-spacing: 1px;
   }
 
   .hotelName {
-    font-size: 19px;
+    font-size: 18px;
+    margin-top: 2px;
+  }
+
+  .rating {
+    font-size: 13px;
+    gap: 3px;
+  }
+
+  .rating span {
+    font-size: 13px;
+    margin-left: 2px;
   }
 
   .description {
     font-size: 13px;
+    line-height: 1.55;
   }
 
+  .tags,
+  .benefit,
   .priceRow {
-    flex-direction: column;
-    gap: 14px;
-    align-items: flex-start;
+    display: none;
   }
 
-  .btn {
-    width: 100%;
-    text-align: center;
-    padding: 12px;
-  }
-
-  .modalImageBox {
-    height: 240px;
-  }
-}
-
-@media (max-width: 480px) {
   .modalTitle {
     font-size: 22px;
   }
@@ -1301,10 +1508,6 @@ html {
 }
 
 @media (max-width: 420px) {
-  .heading {
-    font-size: 22px;
-  }
-
   .hotelName {
     font-size: 17px;
   }
@@ -1325,7 +1528,7 @@ html {
 
 @media (max-width: 360px) {
   .heading {
-    font-size: 20px;
+    font-size: 28px;
   }
 
   .hotelName {
@@ -1345,7 +1548,7 @@ html {
   }
 
   .smallTitle {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .subText {

@@ -43,6 +43,7 @@
   line-height: 1.05;
   margin: 0 0 18px;
   color: #ffffff;
+  font-family: "Abel", sans-serif;
 }
 
 .jetDescription {
@@ -128,139 +129,163 @@
 }
 
 /* ==========================================
-   MODAL
+   MOBILE EXACT ALIGNMENT
 ========================================== */
 
-.modalOverlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.62);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  z-index: 999;
+@media (max-width: 768px) {
+  .jetHeroSection {
+    min-height: 100vh;
+    padding: 110px 20px 70px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-position: center center !important;
+  }
+
+  .jetOverlay {
+    background: rgba(0, 0, 0, 0.42);
+  }
+
+  .jetContent {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .jetSubtitle {
+    font-size: 13px;
+    margin-bottom: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.6px;
+    text-align: center;
+    max-width: 220px;
+  }
+
+  .jetTitle {
+    font-size: 48px;
+    line-height: 1.05;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+
+  .jetDescription {
+    font-size: 15px;
+    line-height: 1.55;
+    max-width: 310px;
+    margin: 0 auto 26px;
+    text-align: center;
+  }
+
+  .jetButtons {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    flex: 1;
+    min-width: unset;
+    height: 42px;
+    padding: 0 12px;
+    font-size: 11px;
+    letter-spacing: 0.3px;
+  }
+
+  .statsBar {
+    display: none;
+  }
 }
 
-.modalBox {
-  width: 100%;
-  max-width: 680px;
-  background: #f5f4ef;
-  border-radius: 0;
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .jetHeroSection {
+    min-height: 100vh;
+    padding: 120px 18px 65px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-position: center center !important;
+  }
+
+  .jetContent {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .jetSubtitle {
+    font-size: 12px;
+    margin-bottom: 12px;
+    max-width: 220px;
+  }
+
+  .jetTitle {
+    font-size: 34px;
+    line-height: 1.08;
+    margin-bottom: 16px;
+  }
+
+  .jetDescription {
+    font-size: 13px;
+    line-height: 1.55;
+    max-width: 250px;
+    margin-bottom: 22px;
+  }
+
+  .jetButtons {
+    max-width: 290px;
+    gap: 8px;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    height: 40px;
+    font-size: 10px;
+    padding: 0 10px;
+  }
+
+  .statsBar {
+    display: none;
+  }
 }
 
-.modalHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 20px;
-  border-bottom: 1px solid #ddd6cb;
+.discoverIndicator {
+  display: none;
 }
 
-.modalTitleWrap {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
+@media (max-width: 768px) {
+  .discoverIndicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: #ffffff;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
 
-.modalPlaneIcon {
-  color: #c09551;
-  font-size: 18px;
+  .discoverArrow {
+    width: 10px;
+    height: 10px;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    transform: rotate(45deg);
+  }
 }
-
-.modalHeader h2 {
-  font-size: 18px;
-  font-weight: 400;
-  color: #333;
-  margin: 0;
-}
-
-.closeBtn {
-  background: transparent;
-  border: none;
-  color: #333;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.modalDesc {
-  padding: 18px 20px 8px;
-  font-size: 13px;
-  line-height: 1.55;
-  color: #555;
-  margin: 0;
-}
-
-.modalForm {
-  padding: 8px 20px 20px;
-}
-
-.formRow {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
-
-.formGroup {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 14px;
-}
-
-.formGroup label {
-  font-size: 12px;
-  color: #c09551;
-  margin-bottom: 7px;
-  font-weight: 600;
-}
-
-.formGroup input,
-.formGroup select,
-.formGroup textarea {
-  width: 100%;
-  height: 42px;
-  border: 1px solid #cfc8bc;
-  background: #ffffff;
-  padding: 0 12px;
-  font-size: 13px;
-  color: #333;
-  outline: none;
-}
-
-.formGroup textarea {
-  height: 92px;
-  resize: none;
-  padding: 12px;
-}
-
-.phoneWrapper {
-  display: flex;
-  gap: 8px;
-}
-
-.countryCode {
-  max-width: 110px;
-}
-
-.sendBtn {
-  width: 100%;
-  height: 44px;
-  background: #c99645;
-  border: none;
-  color: #ffffff;
-  font-size: 13px;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  margin-top: 6px;
-  transition: all 0.25s ease;
-}
-
-.sendBtn:hover {
-  background: #b8873d;
-}
-
 /* ==========================================
    CURATED EXPEDITIONS
 ========================================== */

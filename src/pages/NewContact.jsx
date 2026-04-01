@@ -1,36 +1,28 @@
-import React from 'react'
-import styles from './NewContact.module.css'; 
+import React from "react";
+import styles from "./NewContact.module.css";
 
-import phoneIcon from "../assets/phone1.png";
-import phoneIcon1 from "../assets/phone.png";
-import emailIcon from "../assets/msg1.png";
-import locationIcon from "../assets/location.png";
-import userIcon from "../assets/user.png";
-import calendarIcon from "../assets/calender.png";
-import messageIcon from "../assets/msg.png";
-import sendIcon from "../assets/send.png";
-import clockIcon from "../assets/clock.png";
-import mailSmallIcon from "../assets/msg.png";
-import flagUs from "../assets/flagUs.png";
-import EnquirySection from '../components/Contact/EnquirySection';
-import TestimonialSection from '../components/Contact/TestimonialSection';
+import EnquirySection from "../components/Contact/EnquirySection";
+import TestimonialSection from "../components/Contact/TestimonialSection";
 
 function NewContact() {
   return (
-    <>
-    {/* first section  */}
-    <section className={styles.firstSection}>
+    <div className={styles.contactPage}>
+      {/* Hero Section */}
+      <section className={styles.firstSection}>
         <h1>TELL US ABOUT YOUR VISION</h1>
-    </section>
+      </section>
 
+      {/* Enquiry Section */}
+      <div className={styles.enquiryWrapper}>
+        <EnquirySection />
+      </div>
 
-    {/* second section  */}
-
-
-{<EnquirySection/>}
-{<TestimonialSection/>}
-    </>
-  )
+      {/* Testimonial Section */}
+      <div className={styles.testimonialWrapper}>
+        <TestimonialSection />
+      </div>
+    </div>
+  );
 }
 
-export default NewContact
+export default NewContact;

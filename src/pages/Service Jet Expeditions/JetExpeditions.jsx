@@ -110,6 +110,10 @@ const JetExpeditions = () => {
             </button>
           </div>
         </div>
+        <div className={styles.discoverIndicator}>
+          <span>DISCOVER</span>
+          <div className={styles.discoverArrow}></div>
+        </div>
 
         {/* Bottom Stats */}
         <div className={styles.statsBar}>

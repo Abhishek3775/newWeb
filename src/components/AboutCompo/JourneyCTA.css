@@ -36,6 +36,7 @@
   font-size: 16px;
   font-family: "inter";
   line-height: 1.7;
+  font-weight: 300;
   color: #F5F4EF;
   margin-bottom: 35px;
 }
@@ -70,7 +71,10 @@
 
 @media (max-width: 768px) {
   .journey-sec-wrapper {
-    padding: 100px 20px;
+    height: 50vh;
+  }
+  .journey-sec-wrapper {
+    padding: 60px 20px;
   }
 
   .journey-sec-title {
@@ -84,7 +88,7 @@
 
 @media (max-width: 480px) {
   .journey-sec-title {
-    font-size: 22px;
+    font-size: 30px;
   }
 
   .journey-sec-btn {

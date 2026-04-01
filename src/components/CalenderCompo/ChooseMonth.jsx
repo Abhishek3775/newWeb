@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ChooseMonth.css";
 
 import locationIcon from "../../assets/locate.png";
 import { useNavigate } from "react-router-dom";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 import jan from "../../assets/january.jpg";
 import feb from "../../assets/february.jpg";
@@ -33,26 +34,43 @@ const monthData = [
 ];
 
 const ChooseMonth = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-const handleClick = (month) => {
-  if (month.toLowerCase() === "march") {
-    navigate("/calender/march");
-  }
-};
+  const handleClick = (month) => {
+    if (month.toLowerCase() === "march") {
+      navigate("/calender/march");
+    }
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? monthData.length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev === monthData.length - 1 ? 0 : prev + 1));
+  };
+
   return (
     <section className="cym-section">
       <div className="cym-container">
         <h2 className="cym-heading">
           Choose Your <span>Month</span>
         </h2>
+
         <p className="cym-subheading">
           Each month offers unique opportunities for extraordinary travel experiences
         </p>
 
+        {/* Desktop / Tablet Grid */}
         <div className="cym-grid">
           {monthData.map((item, index) => (
-            <div key={index} className="cym-card"      onClick={() => handleClick(item.month)} style={{ cursor: "pointer" }}>
+            <div
+              key={index}
+              className="cym-card"
+              onClick={() => handleClick(item.month)}
+              style={{ cursor: "pointer" }}
+            >
               <img
                 src={item.image}
                 alt={item.month}
@@ -76,6 +94,46 @@ const handleClick = (month) => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Mobile Slider */}
+        <div className="cym-mobile-slider">
+          <div
+            className="cym-card cym-mobile-card"
+            onClick={() => handleClick(monthData[currentIndex].month)}
+            style={{ cursor: "pointer" }}
+          >
+            <img
+              src={monthData[currentIndex].image}
+              alt={monthData[currentIndex].month}
+              className="cym-card-img"
+              loading="lazy"
+            />
+            <div className="cym-card-overlay"></div>
+
+            <div className="cym-card-content">
+              <h3>{monthData[currentIndex].month}</h3>
+              <p className="cym-card-sub">{monthData[currentIndex].subtitle}</p>
+
+              <div className="cym-location">
+                <img
+                  src={locationIcon}
+                  alt="location"
+                  className="cym-location-icon"
+                />
+                <span>Featured: {monthData[currentIndex].location}</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="cym-slider-controls">
+            <button className="cym-arrow-btn" onClick={prevSlide}>
+              <FaChevronLeft />
+            </button>
+            <button className="cym-arrow-btn" onClick={nextSlide}>
+              <FaChevronRight />
+            </button>
+          </div>
         </div>
       </div>
     </section>

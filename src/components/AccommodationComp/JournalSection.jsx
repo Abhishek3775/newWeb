@@ -36,13 +36,14 @@ const JournalSection = () => {
         
         {/* Header */}
         <div className={styles.header}>
-          <div>
+          <div className={styles.headerContent}>
             <span className={styles.smallTitle}>JOURNAL</span>
             <h2 className={styles.heading}>Travel Insights</h2>
           </div>
 
-          <p className={styles.viewAll}>
-            View All Articles →
+          {/* Desktop View */}
+          <p className={`${styles.viewAll} ${styles.desktopViewAll}`}>
+            View All Articles <span>→</span>
           </p>
         </div>
 
@@ -55,9 +56,11 @@ const JournalSection = () => {
               </div>
 
               <div className={styles.content}>
-                <span className={styles.meta}>
-                  {item.category} • {item.date}
-                </span>
+                <div className={styles.meta}>
+                  <span className={styles.category}>{item.category}</span>
+                  <span className={styles.dot}> • </span>
+                  <span className={styles.date}>{item.date}</span>
+                </div>
 
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
@@ -65,6 +68,11 @@ const JournalSection = () => {
             </div>
           ))}
         </div>
+
+        {/* Mobile Bottom View */}
+        <p className={`${styles.viewAll} ${styles.mobileViewAll}`}>
+          View All Articles <span>→</span>
+        </p>
 
       </div>
     </section>

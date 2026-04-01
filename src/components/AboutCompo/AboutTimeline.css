@@ -1,16 +1,22 @@
+/* ===== ABOUT TIMELINE SECTION ===== */
+
 .abt-section {
-  padding: 80px 20px;
+  padding: 90px 5%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .abt-container {
   max-width: 1200px;
-  margin: auto;
+  margin: 50px auto 0;
   display: flex;
-  margin-top: 50px;
   gap: 80px;
+  align-items: flex-start;
 }
 
-/* LEFT */
+/* ===== LEFT ===== */
+
 .abt-left {
   flex: 1;
   min-width: 280px;
@@ -18,51 +24,54 @@
 
 .abt-top {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
 .topLine {
-  width: 100px;
+  width: 90px;
   height: 1px;
-  margin-top: 10px;
   background-color: #C09551;
 }
 
 .abt-small-heading {
-  font-size: 21px;
+  font-size: 20px;
   letter-spacing: 2px;
   color: #C09551;
-  margin-bottom: 10px;
+  margin: 0;
+  font-weight: 600;
 }
 
 .abt-big-year {
   font-size: 120px;
   font-weight: 300;
+  line-height: 1;
   color: #C09551;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .abt-timeline-list {
   list-style: none;
   padding-left: 0;
+  margin: 0;
   border-left: 2px solid #e0d8cc;
 }
 
 .abt-timeline-list li {
   padding-left: 20px;
   margin-bottom: 25px;
-  margin-left: 30px;
-
+  margin-left: 28px;
   position: relative;
 }
 
 .abt-timeline-list li::before {
   content: "";
   position: absolute;
-  left: 4px;
+  left: -5px;
   top: 8px;
-  width: 5px;
-  height: 5px;
+  width: 8px;
+  height: 8px;
   background: #C09551;
   border-radius: 50%;
 }
@@ -72,92 +81,232 @@
   color: #C09551;
   display: block;
   margin-bottom: 5px;
+  font-size: 15px;
 }
 
-/* RIGHT */
+.abt-timeline-list li p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== RIGHT ===== */
+
 .abt-right {
   flex: 2;
+  max-width: 700px;
 }
 
 .abt-main-heading {
-  font-size: 45px;
+  font-size: 52px;
   font-weight: 400;
-  font-family: "abel";
+  font-family: "Abel", sans-serif;
   color: #1a1a1a;
-  margin-bottom: 15px;
+  margin-bottom: 22px;
+  line-height: 1.15;
 }
 
 .abt-highlight {
   color: #C09551;
-  font-weight: 700;
-  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 21px;
+  margin-bottom: 28px;
+  line-height: 1.5;
 }
 
 .abt-paragraph {
   color: #555;
-  line-height: 1.8;
-  margin-bottom: 20px;
+  line-height: 1.85;
+  margin-bottom: 24px;
+  font-size: 17px;
+  max-width: 95%;
 }
 
 .abt-quote {
   display: flex;
-  align-items: center;
-  margin-top: 120px;
+  align-items: flex-start;
+  margin-top: 70px;
+  max-width: 520px;
 }
 
 .abt-quote-line {
   width: 3px;
-  height: 40px;
+  height: 48px;
   background: #C09551;
-  margin-right: 15px;
+  margin-right: 16px;
+  flex-shrink: 0;
 }
 
 .abt-quote p {
   font-style: italic;
   color: #444;
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0;
 }
 
-/* Responsive */
+/* ===== LARGE TABLET ===== */
 @media (max-width: 1024px) {
   .abt-container {
-    gap: 40px;
+    gap: 50px;
   }
 
   .abt-big-year {
-    font-size: 90px;
+    font-size: 95px;
+  }
+
+  .abt-main-heading {
+    font-size: 40px;
+  }
+
+  .abt-highlight {
+    font-size: 18px;
+  }
+
+  .abt-paragraph {
+    font-size: 16px;
+  }
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 768px) {
+  .abt-section {
+    padding: 70px 24px;
+  }
+
+  .abt-container {
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 20px;
+  }
+
+  .abt-left {
+    width: 100%;
+  }
+
+  .abt-big-year {
+    font-size: 72px;
+    margin-bottom: 24px;
   }
 
   .abt-main-heading {
     font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .abt-highlight {
+    font-size: 17px;
+    margin-bottom: 20px;
+  }
+
+  .abt-paragraph {
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 100%;
+  }
+
+  .abt-quote {
+    margin-top: 40px;
+  }
+
+  .abt-quote p {
+    font-size: 16px;
   }
 }
 
-@media (max-width: 768px) {
-  .abt-container {
-    flex-direction: column;
-  }
-
-  .abt-big-year {
-    font-size: 70px;
-  }
-
-  .abt-main-heading {
-    font-size: 26px;
-  }
-}
-
+/* ===== MOBILE EXACT SCREENSHOT STYLE ===== */
 @media (max-width: 480px) {
+  .abt-section {
+    padding: 90px 16px 40px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .abt-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 0;
+  }
+
+  /* ✅ LEFT SHOW (important fix) */
+  .abt-left {
+    display: block;
+    width: 100%;
+  }
+
+  .abt-top {
+    gap: 10px;
+    margin-bottom: 6px;
+    
+  }
+
+  .topLine {
+    /* width: 60px; */
+    height: 0px;
+    width: 0px;
+  }
+
+  .abt-small-heading {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+  }
+
+  /* ✅ BIG YEAR */
   .abt-big-year {
-    font-size: 55px;
+    font-size: 64px;
+    margin-bottom: 10px;
+    line-height: 1;
+  }
+
+  /* ❌ timeline hide (screenshot me nahi hai) */
+  .abt-timeline-list {
+    display: none;
+  }
+
+  /* RIGHT */
+  .abt-right {
+    max-width: 100%;
   }
 
   .abt-main-heading {
-    font-size: 22px;
+    font-size: 20px;
+    line-height: 1.35;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    font-weight: 400;
+  }
+
+  .abt-highlight {
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    font-weight: 500;
   }
 
   .abt-paragraph {
     font-size: 14px;
+    line-height: 1.6;
+    text-align: start;
+    margin-bottom: 16px;
+    color: #555;
+  }
+
+  .abt-quote {
+    margin-top: 22px;
+    align-items: flex-start;
+  }
+
+  .abt-quote-line {
+    width: 1px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .abt-quote p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #555;
   }
 }
-
-

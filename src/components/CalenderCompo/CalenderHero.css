@@ -94,7 +94,7 @@
 /* Mobile */
 @media (max-width: 600px) {
   .chx-hero-wrapper {
-    height: 80vh;
+    height: 100vh;
   }
 
   .chx-hero-title {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
+import { FaSearch, FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
 import "./Header.css";
 import hamburger from "../assets/hamburger.png";
 import user from "../assets/user.png";
@@ -8,14 +8,20 @@ import user from "../assets/user.png";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [mobileDropdown, setMobileDropdown] = useState(null);
+
   const location = useLocation();
 
-  const isLightPage = ["/about", "/", "/egc-signature", "/reviews"].includes(
+  const isLightPage = ["/about", "/egc-signature", "/reviews"].includes(
     location.pathname
   );
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const toggleMobileDropdown = (menu) => {
+    setMobileDropdown((prev) => (prev === menu ? null : menu));
   };
 
   const isActive = (path) => {
@@ -25,6 +31,7 @@ const Header = () => {
   useEffect(() => {
     const frameId = window.requestAnimationFrame(() => {
       setMenuOpen(false);
+      setMobileDropdown(null);
     });
 
     return () => window.cancelAnimationFrame(frameId);
@@ -57,7 +64,7 @@ const Header = () => {
 
         {/* Navigation */}
         <nav className={`main-nav ${menuOpen ? "active" : ""}`}>
-          {/* Search inside nav (desktop like screenshot) */}
+          {/* Search inside nav (desktop) */}
           <button className="icon-btn nav-search-btn" aria-label="Search">
             <FaSearch className="icon-image" />
           </button>
@@ -67,13 +74,24 @@ const Header = () => {
           </Link>
 
           {/* Services Dropdown */}
-          <div className="nav-item dropdown">
-            <Link
-              to="/services"
-              className={`nav-link ${isActive("/services")}`}
+          <div
+            className={`nav-item dropdown ${
+              mobileDropdown === "services" ? "mobile-open" : ""
+            }`}
+          >
+            <div
+              className="nav-link mobile-dropdown-toggle"
+              onClick={() => toggleMobileDropdown("services")}
             >
-              SERVICES
-            </Link>
+              <Link
+                to="/services"
+                className={`dropdown-main-link ${isActive("/services")}`}
+              >
+                SERVICES
+              </Link>
+              <FaChevronDown className="mobile-arrow" />
+            </div>
+
             <div className="dropdown-menu">
               <Link to="/private-aviation" className="dropdown-link">
                 Private Aviation
@@ -88,13 +106,24 @@ const Header = () => {
           </div>
 
           {/* Destinations Dropdown */}
-          <div className="nav-item dropdown">
-            <Link
-              to="/destinations"
-              className={`nav-link ${isActive("/destinations")}`}
+          <div
+            className={`nav-item dropdown ${
+              mobileDropdown === "destinations" ? "mobile-open" : ""
+            }`}
+          >
+            <div
+              className="nav-link mobile-dropdown-toggle"
+              onClick={() => toggleMobileDropdown("destinations")}
             >
-              DESTINATIONS
-            </Link>
+              <Link
+                to="/destinations"
+                className={`dropdown-main-link ${isActive("/destinations")}`}
+              >
+                DESTINATIONS
+              </Link>
+              <FaChevronDown className="mobile-arrow" />
+            </div>
+
             <div className="dropdown-menu">
               <Link to="/south-africa" className="dropdown-link">
                 South Africa
@@ -130,7 +159,7 @@ const Header = () => {
             CONTACT
           </Link>
 
-          {/* Hamburger Dropdown (Desktop) */}
+          {/* Desktop Hamburger */}
           <div className="nav-item dropdown hamburger-dropdown desktop-only">
             <button className="icon-btn hamburger-hover-btn" aria-label="Menu">
               <img
@@ -148,6 +177,16 @@ const Header = () => {
                 BLOG
               </Link>
             </div>
+          </div>
+
+          {/* Mobile extra links */}
+          <div className="mobile-extra-links">
+            <Link to="/calender" className="nav-link">
+              CALENDER
+            </Link>
+            <Link to="/blog" className="nav-link">
+              BLOG
+            </Link>
           </div>
         </nav>
 
