@@ -11,8 +11,8 @@
 
 .topLabel {
   color: #c89a52;
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   margin: 0 0 18px 0;
@@ -84,14 +84,16 @@
   font-size: clamp(2rem, 3vw, 3rem);
   font-weight: 300;
   line-height: 1.15;
+  font-family: 'Abel';
 }
 
 .destinationDesc {
   margin: 16px 0 16px;
-  font-size: 0.92rem;
+  font-size: 0.85rem;
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.88);
-  max-width: 560px;
+  /* max-width: 580px; */
+  font-weight: 200;
 }
 
 .tags {
@@ -141,10 +143,12 @@
 
 .heading {
   margin: 0 0 28px;
+  font-family: 'Abel';
   color: #2b2b2b;
   font-size: clamp(2rem, 2.8vw, 3rem);
   font-weight: 300;
   line-height: 1.15;
+  /* background-color: red; */
 }
 
 .featuresList {
@@ -219,8 +223,8 @@
 }
 
 .enquireBtn {
-  min-width: 145px;
-  height: 46px;
+  min-width: 130px;
+  height: 36px;
   background: #c89a52;
   color: #ffffff;
   border: none;

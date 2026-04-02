@@ -29,10 +29,12 @@
 .header h2 {
   margin: 0;
   color: var(--title);
-  font-size: clamp(28px, 3.2vw, 40px);
+  font-size: clamp(35px, 3.5vw, 45px);
   font-weight: 400;
   letter-spacing: -0.03em;
   line-height: 1.05;
+  font-family: 'Abel';
+  color:#131313;
 }
 
 .header p {
@@ -42,7 +44,8 @@
   font-size: clamp(11px, 1.05vw, 13px);
   line-height: 1.45;
   text-align: right;
-  font-weight: 400;
+  font-weight: 300;
+  color: #131313;
 }
 
 /* ----- Layout ----- */
@@ -170,10 +173,11 @@
 .textBlock h3 {
   margin: 0 0 8px;
   color: var(--white);
-  font-size: clamp(20px, 2.1vw, 34px);
-  font-weight: 600;
+  font-size: clamp(25px, 2.2vw, 40px);
+  font-weight: 400;
   line-height: 1.05;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
+  font-family: 'Abel';
 }
 
 .country {

@@ -1,7 +1,8 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"); */
 
 /* Reference palette */
-/* accent ~#c09a6b | charcoal #2d2d2d | cream #f7f4f0 / #f9f7f2 */
+/* accent ~#C09551
+ | charcoal #2d2d2d | cream #f7f4f0 / #f9f7f2 */
 
 /* Blog Hero Section  */
 
@@ -62,8 +63,8 @@
 
 .tag {
   /* font-family: "Montserrat", system-ui, sans-serif; */
-  color: #c5a059;
-  font-size: 14px;
+   color: #C09551;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -72,12 +73,14 @@
 
 .title {
   /* font-family: "Playfair Display", Georgia, "Times New Roman", serif; */
-  font-size: clamp(2.25rem, 4.2vw + 1rem, 4.75rem);
-  font-weight: 400;
+  /* font-size: clamp(2.25rem, 4.2vw + 1rem, 4.75rem); */
+  font-family: 'Abel';
+  font-size: 70px;
+  font-weight: 300;
   line-height: 1.12;
   margin: 0 0 24px;
   color: #ffffff;
-  max-width: 16ch;
+  /* max-width: 16ch; */
 }
 
 .heroTitleBreak {
@@ -85,13 +88,14 @@
 }
 
 .description {
-  /* font-family: "Montserrat", system-ui, sans-serif; */
-  font-size: clamp(15px, 1.1vw + 0.75rem, 19px);
+  font-size: 18px;
   font-weight: 400;
   color: #ffffff;
   margin: 0 0 0;
   line-height: 1.55;
-  max-width: 560px;
+  max-width: 790px;
+  font-weight: 300;
+  /* background-color: red; */
 }
 
 .btn {
@@ -100,13 +104,15 @@
   background: transparent;
   border: none;
   /* font-family: "Montserrat", system-ui, sans-serif; */
-  color: #c5a059;
+  color: #C09551;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   cursor: pointer;
   transition: color 0.25s ease, opacity 0.25s ease;
+  text-decoration: underline;
+  text-underline-offset: 6px;
 }
 
 .btn:hover {
@@ -173,7 +179,7 @@
 /* Root */
 .journalSection {
   background: #f7f4f0;
-  padding: 80px 6%;
+  padding: 40px 6%;
   /* font-family: "Montserrat", system-ui, sans-serif; */
 }
 
@@ -195,9 +201,9 @@
 
 .journalTag {
   /* font-family: "Playfair Display", Georgia, serif; */
-  color: #c09a6b;
-  font-size: 15px;
-  font-weight: 500;
+  color: #C09551;
+  font-size: 18px;
+  font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   margin: 0 0 8px;
@@ -205,25 +211,26 @@
 
 .journalTitle {
   /* font-family: "Playfair Display", Georgia, serif; */
-  font-size: clamp(1.75rem, 2.5vw + 0.5rem, 2.35rem);
+  font-size: clamp(1.95rem, 2.6vw + 0.8rem, 2.55rem);
   font-weight: 400;
   color: #2d2d2d;
   margin: 0;
   letter-spacing: 0.02em;
+  font-family: "Abel";
 }
 
 /* Filters */
 .journalFilters {
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .journalFilterBtn {
   /* font-family: "Montserrat", system-ui, sans-serif; */
-  border: 1px solid #c09a6b;
+  border: 1px solid #C09551;
   background: transparent;
-  color: #c09a6b;
+  color: #C09551;
   padding: 9px 16px;
   cursor: pointer;
   font-size: 11px;
@@ -236,165 +243,337 @@
 }
 
 .journalActive {
-  background: #c09a6b;
+  background: #C09551
+;
   color: #ffffff;
 }
 
-/* Grid */
+
+
+/* =========================
+   JOURNAL / EDITORIAL GRID
+========================= */
+
 .journalGrid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-auto-rows: minmax(220px, 250px);
-  gap: 20px;
+  grid-template-columns: 1.18fr 0.9fr 1fr;
+  grid-auto-rows: 220px;
+  gap: 8px;
+  align-items: stretch;
 }
 
-/* Card */
+/* =========================
+   CARD
+========================= */
+
 .journalCard {
   position: relative;
   overflow: hidden;
   cursor: pointer;
   border-radius: 0;
+  background: #111;
+  isolation: isolate;
 }
 
 .journalCard img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: 0.5s;
+  object-position: center center;
+  display: block;
+  transform: scale(1.01);
+  transition: transform 0.8s ease;
+  will-change: transform;
 }
 
 .journalCard:hover img {
-  transform: scale(1.05);
+  transform: scale(1.055);
 }
 
-/* Overlay */
+/* =========================
+   OVERLAY
+========================= */
+
 .journalOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.72) 0%,
-    rgba(0, 0, 0, 0.25) 45%,
-    transparent 100%
-  );
-  color: #ffffff;
-  padding: 22px 22px 20px;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  padding: 18px 16px 16px;
+  color: #ffffff;
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.74) 0%,
+      rgba(0, 0, 0, 0.48) 18%,
+      rgba(0, 0, 0, 0.22) 42%,
+      rgba(0, 0, 0, 0.08) 65%,
+      rgba(0, 0, 0, 0.02) 100%
+    );
 }
 
+/* =========================
+   META
+========================= */
+
 .journalMeta {
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  margin: 0 0 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin: 0 0 10px;
-  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px;
 }
 
 .journalMetaCat {
-  color: #c09a6b;
+  color: #C09551
+;
 }
 
 .journalMetaSep {
-  color: rgba(255, 255, 255, 0.65);
-  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 3px;
 }
 
 .journalMetaRead {
-  color: #ffffff;
-  font-weight: 500;
-  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  letter-spacing: 0.06em;
 }
+
+/* =========================
+   TITLE
+========================= */
 
 .journalOverlay h3 {
-  /* font-family: "Playfair Display", Georgia, serif; */
-  font-size: clamp(1.1rem, 1.5vw + 0.6rem, 1.45rem);
-  font-weight: 500;
-  margin: 0 0 10px;
-  line-height: 1.25;
+  margin: 0 0 8px;
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
   color: #ffffff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.18);
+  /* background-color: red; */
 }
+
+
+
+/* =========================
+   DESCRIPTION
+========================= */
 
 .journalDocs {
-  /* font-family: "Montserrat", system-ui, sans-serif; */
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.55;
-  margin: 0 0 14px;
-  color: rgba(255, 255, 255, 0.92);
-  max-width: 42ch;
+  margin: 0 0 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.86);
+  max-width: 34ch;
 }
+
+/* =========================
+   CTA
+========================= */
 
 .journalCta {
-  /* font-family: "Montserrat", system-ui, sans-serif; */
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #c09a6b;
+  color: #C09551
+;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Sizes */
+.journalCard:hover .journalCta {
+  transform: translateX(4px);
+  color: #d8ae69;
+}
+
+/* =========================
+   FEATURE SIZE CONTROL
+========================= */
+
+/* Left Tall Card */
 .journalLarge {
   grid-row: span 2;
 }
 
+.journalLarge .journalOverlay {
+  padding: 20px 14px 18px;
+}
+
+.journalLarge .journalMeta {
+  margin-bottom: 10px;
+  font-size: 10px;
+}
+
+.journalLarge h3 {
+  font-size: clamp(2rem, 1.4vw + 1rem, 2.45rem);
+  line-height: 1.08;
+  max-width: 12ch;
+  margin-bottom: 12px;
+}
+
+.journalLarge .journalDocs {
+  font-size: 11px;
+  line-height: 1.5;
+  max-width: 33ch;
+  margin-bottom: 12px;
+}
+
+.journalLarge .journalCta {
+  font-size: 10px;
+}
+
+/* Bottom Wide Card */
 .journalWide {
   grid-column: span 2;
 }
 
-/* Responsive */
-@media (max-width: 1200px) {
-  .journalSection {
-    padding: 64px 5%;
+.journalWide .journalOverlay {
+  padding: 18px 18px 16px;
+}
+
+/* .journalWide h3 {
+  font-size: clamp(1.7rem, 1vw + 1rem, 2rem);
+  max-width: 20ch;
+  line-height: 1.12;
+} */
+
+.journalWide .journalDocs {
+  max-width: 48ch;
+}
+
+/* =========================
+   OPTIONAL IMAGE POSITIONING
+   (for better screenshot-like crop)
+========================= */
+
+.journalLarge img {
+  object-position: center center;
+}
+
+.journalWide img {
+  object-position: center center;
+}
+
+/* =========================
+   LARGE DESKTOP
+========================= */
+@media (min-width: 1440px) {
+  .journalGrid {
+    grid-auto-rows: 245px;
+    gap: 10px;
   }
 
-  .journalTitle {
-    font-size: clamp(28px, 3.2vw, 36px);
+  .journalOverlay {
+    padding: 20px 18px 18px;
+  }
+
+  .journalOverlay h3 {
+    font-size: 2rem;
+  }
+
+  .journalLarge h3 {
+    font-size: 2.5rem;
+  }
+
+  .journalWide h3 {
+    font-size: 2rem;
   }
 }
 
+/* =========================
+   LAPTOP / SMALL DESKTOP
+========================= */
+@media (max-width: 1200px) {
+  .journalGrid {
+    grid-template-columns: 1.08fr 1fr 1fr;
+    grid-auto-rows: 205px;
+    gap: 8px;
+  }
+
+  .journalOverlay {
+    padding: 16px 14px 14px;
+  }
+
+  .journalOverlay h3 {
+    font-size: clamp(1.35rem, 1vw + 0.9rem, 1.8rem);
+  }
+
+  .journalLarge h3 {
+    font-size: clamp(1.8rem, 1.2vw + 1rem, 2.15rem);
+  }
+
+  .journalWide h3 {
+    font-size: clamp(1.55rem, 1vw + 0.9rem, 1.85rem);
+  }
+}
+
+/* =========================
+   TABLET LANDSCAPE
+========================= */
 @media (max-width: 1024px) {
   .journalGrid {
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: minmax(200px, 240px);
-    gap: 16px;
+    grid-auto-rows: 220px;
+    gap: 10px;
+  }
+
+  .journalLarge {
+    grid-row: span 2;
   }
 
   .journalWide {
     grid-column: span 2;
   }
+
+  .journalOverlay {
+    padding: 16px 14px 14px;
+  }
+
+  .journalOverlay h3 {
+    font-size: 1.65rem;
+    max-width: 18ch;
+  }
+
+  .journalLarge h3 {
+    font-size: 2rem;
+    max-width: 12ch;
+  }
+
+  .journalWide h3 {
+    font-size: 1.8rem;
+    max-width: 18ch;
+  }
+
+  .journalDocs {
+    font-size: 11px;
+    max-width: 36ch;
+  }
 }
 
+/* =========================
+   TABLET PORTRAIT
+========================= */
 @media (max-width: 768px) {
-  .journalSection {
-    padding: 48px max(16px, env(safe-area-inset-left)) 48px max(16px, env(safe-area-inset-right));
-  }
-
-  .journalHeader {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .journalFilters {
-    width: 100%;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    gap: 8px;
-    padding-bottom: 4px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
-  }
-
-  .journalFilterBtn {
-    flex-shrink: 0;
-  }
-
   .journalGrid {
     grid-template-columns: 1fr;
-    grid-auto-rows: minmax(240px, 280px);
+    grid-auto-rows: 300px;
+    gap: 12px;
   }
 
   .journalLarge,
@@ -403,37 +582,123 @@
     grid-row: span 1;
   }
 
-  .journalOverlay {
-    padding: 16px;
+  .journalCard {
+    min-height: 300px;
   }
 
-  .journalOverlay h3 {
-    font-size: 18px;
+  .journalOverlay {
+    padding: 18px 16px 16px;
+  }
+
+  .journalMeta {
+    font-size: 10px;
+    margin-bottom: 8px;
+  }
+
+  .journalOverlay h3,
+  .journalLarge h3,
+  .journalWide h3 {
+    font-size: clamp(1.7rem, 2vw + 1rem, 2.1rem);
+    line-height: 1.12;
+    max-width: 16ch;
+    margin-bottom: 10px;
+  }
+
+  .journalDocs,
+  .journalLarge .journalDocs,
+  .journalWide .journalDocs {
+    font-size: 12px;
+    line-height: 1.5;
+    max-width: 36ch;
+    margin-bottom: 10px;
+  }
+
+  .journalCta {
+    font-size: 10px;
   }
 }
 
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 480px) {
-  .journalSection {
-    padding-top: 40px;
-    padding-bottom: 40px;
+  .journalGrid {
+    grid-auto-rows: 270px;
+    gap: 10px;
   }
 
-  .journalTitle {
-    font-size: 26px;
+  .journalCard {
+    min-height: 270px;
   }
 
-  .journalTag {
-    font-size: 14px;
+  .journalOverlay {
+    padding: 16px 14px 14px;
+    background:
+      linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.78) 0%,
+        rgba(0, 0, 0, 0.46) 24%,
+        rgba(0, 0, 0, 0.18) 52%,
+        rgba(0, 0, 0, 0.04) 100%
+      );
   }
 
-  .journalFilterBtn {
-    padding: 6px 10px;
+  .journalMeta {
+    font-size: 9px;
+    letter-spacing: 0.07em;
+    margin-bottom: 7px;
+  }
+
+  .journalOverlay h3,
+  .journalLarge h3,
+  .journalWide h3 {
+    font-size: 1.55rem;
+    line-height: 1.14;
+    max-width: 14ch;
+    margin-bottom: 8px;
+  }
+
+  .journalDocs,
+  .journalLarge .journalDocs,
+  .journalWide .journalDocs {
     font-size: 11px;
-    min-height: 36px;
+    line-height: 1.45;
+    max-width: 95%;
+    margin-bottom: 9px;
   }
 
-  .journalDocs {
-    font-size: 13px;
+  .journalCta {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 360px) {
+  .journalGrid {
+    grid-auto-rows: 245px;
+  }
+
+  .journalCard {
+    min-height: 245px;
+  }
+
+  .journalOverlay {
+    padding: 14px 12px 12px;
+  }
+
+  .journalOverlay h3,
+  .journalLarge h3,
+  .journalWide h3 {
+    font-size: 1.4rem;
+  }
+
+  .journalDocs,
+  .journalLarge .journalDocs,
+  .journalWide .journalDocs {
+    font-size: 10.5px;
   }
 }
 
@@ -629,7 +894,8 @@
 
 .editorsTag {
   /* font-family: "Montserrat", system-ui, sans-serif; */
-  color: #c09a6b;
+  color: #C09551
+;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.22em;
@@ -701,7 +967,8 @@
 }
 
 .editorsMetaCat {
-  color: #c09a6b;
+  color: #C09551
+;
 }
 
 .editorsMetaSep {
@@ -737,7 +1004,8 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: #c09a6b;
+  color: #C09551
+;
   margin-bottom: 10px;
   cursor: pointer;
   transition: opacity 0.2s ease;
@@ -857,7 +1125,8 @@
 /* Tag */
 .destHeroTag {
   /* font-family: "Montserrat", system-ui, sans-serif; */
-  color: #c09a6b;
+  color: #C09551
+;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.22em;
@@ -888,7 +1157,8 @@
 /* Button */
 .destHeroBtn {
   /* font-family: "Montserrat", system-ui, sans-serif; */
-  background: #c09a6b;
+  background: #C09551
+;
   border: none;
   padding: 14px 32px;
   color: #ffffff;
@@ -1250,7 +1520,8 @@
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #c09a6b;
+  color: #C09551
+;
   margin-bottom: 12px;
 }
 
@@ -1297,7 +1568,8 @@
 /* Button */
 .inspiredButton {
   /* font-family: "Montserrat", system-ui, sans-serif; */
-  background: #c09a6b;
+  background: #C09551
+;
   color: #fff;
   border: none;
   padding: 12px 24px;

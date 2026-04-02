@@ -161,7 +161,7 @@ const navigate = useNavigate();
           <p className={styles.tag}>FEATURED STORY</p>
 
           <h1 className={styles.title}>
-            The Art of Slow Travel in <br className={styles.heroTitleBreak} /> the Indian Ocean
+            The Art of Slow Travel in <br /> the Indian Ocean
           </h1>
 
           <p className={styles.description}>
@@ -218,7 +218,22 @@ const navigate = useNavigate();
               <span className={styles.journalMetaSep}> • </span>
               <span className={styles.journalMetaRead}>{item.read}</span>
             </p>
-            <h3>{item.title}</h3>
+
+<h3
+  style={{
+    margin: "0 0 8px",
+    fontFamily: '"Abel", sans-serif',
+    fontWeight: 400,
+    fontSize: "25px",
+    lineHeight: 1.14,
+    letterSpacing: "0.01em",
+    color: "#ffffff",
+    textShadow: "0 1px 1px rgba(0, 0, 0, 0.18)",
+  }}
+>
+  {item.title}
+</h3>
+
             {item.docs ? (
               <p className={styles.journalDocs}>{item.docs}</p>
             ) : null}
