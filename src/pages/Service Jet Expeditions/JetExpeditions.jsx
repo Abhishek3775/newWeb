@@ -26,25 +26,36 @@ import diningImg from "../../assets2/Services/aviation/Jet Expeditions/image/7.p
 import jetImg from "../../assets2/Services/aviation/Jet Expeditions/image/8.png";
 import accessImg from "../../assets2/Services/aviation/Jet Expeditions/image/9.png";
 import bgImage from "../../assets2/Services/aviation/Jet Expeditions/image/11.jpg";
+import icon1 from "../../assets2/Services/aviation/Jet Expeditions/icon1.png";
+import icon2 from "../../assets2/Services/aviation/Jet Expeditions/icon2.png";
+import icon3 from "../../assets2/Services/aviation/Jet Expeditions/icon3.png";
+import icon4 from "../../assets2/Services/aviation/Jet Expeditions/icon4.png";
+import icon5 from "../../assets2/Services/aviation/Jet Expeditions/icon5.png";
+import icon6 from "../../assets2/Services/aviation/Jet Expeditions/icon6.png";
+import icon7 from "../../assets2/Services/aviation/Jet Expeditions/icon7.png";
+import icon8 from "../../assets2/Services/aviation/Jet Expeditions/icon8.png";
+import icon9 from "../../assets2/Services/aviation/Jet Expeditions/icon9.png";
+import { FaArrowRightLong } from "react-icons/fa6";
+
 
 const signatureExperiences = [
   {
     image: diningImg,
-    icon: <FaUtensils />,
+    icon: icon1,
     title: "Michelin-Starred Heights",
     description:
       "Dine at 40,000 feet with menus curated by world-renowned chefs. Each flight features bespoke culinary experiences.",
   },
   {
     image: jetImg,
-    icon: <FaPlane />,
+    icon: icon3,
     title: "Private Jet Comfort",
     description:
       "Travel in our fleet of ultra-long-range aircraft, each configured for maximum comfort and privacy.",
   },
   {
     image: accessImg,
-    icon: <FaStar />,
+    icon: icon2,
     title: "Exclusive Access",
     description:
       "Gain entry to closed-door experiences, private collections, and invitation-only events worldwide.",
@@ -76,65 +87,68 @@ const JetExpeditions = () => {
   return (
     <>
       {/* ================= HERO SECTION ================= */}
-      <section
-        className={styles.jetHeroSection}
-        style={{
-          backgroundImage: `url(${heroBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <div className={styles.jetOverlay}></div>
 
-        <div className={styles.jetContent}>
-          <p className={styles.jetSubtitle}>CURATED FOR THE DISCERNING FEW</p>
+  <section
+    className={styles.jetHeroSection}
+    style={{
+      backgroundImage: `url(${heroBg})`,
+    }}
+  >
+    <div className={styles.jetOverlay}></div>
 
-          <h1 className={styles.jetTitle}>Jet Expeditions</h1>
+    <div className={styles.jetContent}>
+      <p className={styles.jetSubtitle}>
+        Curated for the discerning few
+      </p>
 
-          <p className={styles.jetDescription}>
-            Traverse the world's most captivating destinations aboard your private
-            aircraft. Each journey is a masterpiece of luxury, culture, and unparalleled access.
-          </p>
+      <h1 className={styles.jetTitle}>Jet Expeditions</h1>
 
-          <div className={styles.jetButtons}>
-            <button
-              className={styles.primaryBtn}
-              onClick={() => setShowModal(true)}
-            >
-              BEGIN YOUR JOURNEY
-            </button>
+      <p className={styles.jetDescription}>
+        Traverse the world's most captivating destinations aboard your private
+        aircraft. Each journey is a masterpiece of luxury, culture, and unparalleled access.
+      </p>
 
-            <button className={styles.secondaryBtn}>
-              EXPLORE EXPEDITIONS
-            </button>
-          </div>
-        </div>
-        <div className={styles.discoverIndicator}>
-          <span>DISCOVER</span>
-          <div className={styles.discoverArrow}></div>
-        </div>
+      <div className={styles.jetButtons}>
+        <button
+          className={styles.primaryBtn}
+          onClick={() => setShowModal(true)}
+        >
+          BEGIN YOUR JOURNEY
+        </button>
 
-        {/* Bottom Stats */}
-        <div className={styles.statsBar}>
-          <div className={styles.statItem}>
-            <h3>70+</h3>
-            <p>COUNTRIES</p>
-          </div>
-          <div className={styles.statItem}>
-            <h3>500+</h3>
-            <p>CURATED PROPERTIES</p>
-          </div>
-          <div className={styles.statItem}>
-            <h3>25</h3>
-            <p>YEARS OF EXPERTISE</p>
-          </div>
-          <div className={styles.statItem}>
-            <h3>100%</h3>
-            <p>BESPOKE ITINERARIES</p>
-          </div>
-        </div>
-      </section>
+        <button className={styles.secondaryBtn}>
+          EXPLORE EXPEDITIONS
+        </button>
+      </div>
+    </div>
+
+    {/* Discover */}
+    <div className={styles.discoverIndicator}>
+      <span>DISCOVER</span>
+      <span className={styles.discoverArrow}>⌄</span>
+    </div>
+  </section>
+
+  {/* Stats Section */}
+  <div className={styles.statsBar}>
+    <div className={styles.statItem}>
+      <h3>70+</h3>
+      <p>COUNTRIES</p>
+    </div>
+    <div className={styles.statItem}>
+      <h3>500+</h3>
+      <p>CURATED PROPERTIES</p>
+    </div>
+    <div className={styles.statItem}>
+      <h3>25</h3>
+      <p>YEARS OF EXPERTISE</p>
+    </div>
+    <div className={styles.statItem}>
+      <h3>100%</h3>
+      <p>BESPOKE ITINERARIES</p>
+    </div>
+  </div>
+
 
       {/* ================= MODAL ================= */}
       {showModal && (
@@ -243,11 +257,11 @@ const JetExpeditions = () => {
               <div className={styles.curatedCardContent}>
                 <div className={styles.curatedCardContentHeader}>
                   <div className={styles.curatedCardContentIcon}>
-                    <CiLocationOn color="#C09551" />
+                    <CiLocationOn className={styles.curatedCardContentIcon1} color="#C09551" />
                     <p className={styles.curatedCardMeta}>Africa • Asia • Europe</p>
                   </div>
                   <div className={styles.curatedCardContentIcon}>
-                    <CiCalendar color="#C09551" />
+                    <CiCalendar className={styles.curatedCardContentIcon2} color="#C09551" />
                     <p className={styles.curatedCardMeta}>21 Days</p>
                   </div>
                 </div>
@@ -256,7 +270,7 @@ const JetExpeditions = () => {
                 <p className={styles.curatedCardDesc}>
                   An extraordinary circumnavigation touching Morocco, Japan, and the Mediterranean.
                 </p>
-                <button className={styles.curatedCardLink}>DISCOVER</button>
+                <button className={styles.curatedCardLink}>DISCOVER <FaArrowRightLong color="#C09551" size={8}/></button>
               </div>
             </div>
 
@@ -268,11 +282,11 @@ const JetExpeditions = () => {
               <div className={styles.curatedCardContent}>
                 <div className={styles.curatedCardContentHeader}>
                   <div className={styles.curatedCardContentIcon}>
-                    <CiLocationOn color="#C09551" />
+                    <CiLocationOn className={styles.curatedCardContentIcon1} color="#C09551" />
                     <p className={styles.curatedCardMeta}>Serengeti & Okavango</p>
                   </div>
                   <div className={styles.curatedCardContentIcon}>
-                    <CiCalendar color="#C09551" />
+                    <CiCalendar className={styles.curatedCardContentIcon1} color="#C09551" />
                     <p className={styles.curatedCardMeta}>14 Days</p>
                   </div>
                 </div>
@@ -291,11 +305,11 @@ const JetExpeditions = () => {
               <div className={styles.curatedCardContent}>
                 <div className={styles.curatedCardContentHeader}>
                   <div className={styles.curatedCardContentIcon}>
-                    <CiLocationOn color="#C09551" />
+                    <CiLocationOn className={styles.curatedCardContentIcon1} color="#C09551" />
                     <p className={styles.curatedCardMeta}>Kyoto, Japan</p>
                   </div>
                   <div className={styles.curatedCardContentIcon}>
-                    <CiCalendar color="#C09551" />
+                    <CiCalendar className={styles.curatedCardContentIcon1} color="#C09551" />
                     <p className={styles.curatedCardMeta}>10 Days</p>
                   </div>
                 </div>
@@ -314,11 +328,11 @@ const JetExpeditions = () => {
               <div className={styles.curatedCardContent}>
                 <div className={styles.curatedCardContentHeader}>
                   <div className={styles.curatedCardContentIcon}>
-                    <CiLocationOn color="#C09551" />
+                    <CiLocationOn className={styles.curatedCardContentIcon1} color="#C09551" />
                     <p className={styles.curatedCardMeta}>Antarctica</p>
                   </div>
                   <div className={styles.curatedCardContentIcon}>
-                    <CiCalendar color="#C09551" />
+                    <CiCalendar className={styles.curatedCardContentIcon1} color="#C09551" />
                     <p className={styles.curatedCardMeta}>16 Days</p>
                   </div>
                 </div>
@@ -337,11 +351,11 @@ const JetExpeditions = () => {
               <div className={styles.curatedCardContent}>
                 <div className={styles.curatedCardContentHeader}>
                   <div className={styles.curatedCardContentIcon}>
-                    <CiLocationOn color="#C09551" />
+                    <CiLocationOn className={styles.curatedCardContentIcon1} color="#C09551" />
                     <p className={styles.curatedCardMeta}>Maldives</p>
                   </div>
                   <div className={styles.curatedCardContentIcon}>
-                    <CiCalendar color="#C09551" />
+                    <CiCalendar className={styles.curatedCardContentIcon1} color="#C09551" />
                     <p className={styles.curatedCardMeta}>12 Days</p>
                   </div>
                 </div>
@@ -363,7 +377,7 @@ const JetExpeditions = () => {
       <section className={styles.signatureSection}>
         <div className={styles.signatureContainer}>
           <div className={styles.signatureHeader}>
-            <p className={styles.smallTitle}>BEYOND TRAVEL</p>
+            <p className={styles.ssmallTitle}>BEYOND TRAVEL</p>
             <h2 className={styles.SEmainTitle}>Signature Experiences</h2>
             <p className={styles.subtitle}>
               Every element of your journey is designed to exceed expectations,
@@ -378,7 +392,7 @@ const JetExpeditions = () => {
                   className={styles.signatureCardImage}
                   style={{ backgroundImage: `url(${item.image})` }}
                 >
-                  <div className={styles.iconCircle}>{item.icon}</div>
+                  <div className={styles.iconCircle}><img src={item.icon} alt="icon" className={styles.icon} /></div>
                 </div>
 
                 <div className={styles.signatureCardContent}>
@@ -393,61 +407,87 @@ const JetExpeditions = () => {
 
       {/* ================= AircraftSection ================= */}
       <section className={styles.aircraftLuxurySection}>
-      <div className={styles.aircraftLuxuryContainer}>
-        
-        {/* LEFT IMAGE */}
-        <div className={styles.aircraftImageWrapper}>
-          <img src={images[index]} alt="aircraft" />
+  <div className={styles.aircraftLuxuryContainer}>
+    
+    {/* LEFT SIDE IMAGE - DESKTOP */}
+    <div className={styles.aircraftLeftArea}>
+      <button className={styles.aircraftLeftBtn} onClick={prevSlide}>
+        <FaChevronLeft />
+      </button>
 
-          <button className={styles.aircraftLeftBtn} onClick={prevSlide}>
-            <FaChevronLeft />
-          </button>
+      <div className={styles.aircraftImageWrapper}>
+        <img src={images[index]} alt="aircraft" />
 
-          <button className={styles.aircraftRightBtn} onClick={nextSlide}>
-            <FaChevronRight />
-          </button>
-
-          <div className={styles.aircraftBadge}>
-            <h3>G700</h3>
-            <p>Gulfstream Fleet</p>
-          </div>
+        <div className={styles.aircraftBadge}>
+          <h3>G700</h3>
+          <p>Gulfstream Fleet</p>
         </div>
-
-        {/* RIGHT CONTENT */}
-        <div className={styles.aircraftContent}>
-          <p className={styles.aircraftSmallTitle}>YOUR PRIVATE HAVEN</p>
-
-          <h2 className={styles.aircraftTitle}>The Aircraft</h2>
-
-          <p className={styles.aircraftDesc}>
-            Our fleet of Gulfstream G700 aircraft represents the pinnacle of
-            private aviation. With the industry's tallest, widest, and longest
-            cabin, each journey becomes a destination in itself.
-          </p>
-
-          <p className={styles.aircraftDesc}>
-            Configured with private suites, a full galley kitchen, and dedicated
-            wellness spaces, your aircraft transforms into a flying sanctuary.
-            Every detail has been considered to ensure your comfort at 51,000 feet.
-          </p>
-
-          {/* FEATURES */}
-          <div className={styles.aircraftFeaturesGrid}>
-            {features.map((item, i) => (
-              <div key={i} className={styles.aircraftFeatureItem}>
-                <div className={styles.aircraftIconBox}>{item.icon}</div>
-
-                <div className={styles.aircraftFeatureText}>
-                  <h4>{item.title}</h4>
-                  <p>{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
       </div>
-    </section>
+    </div>
+
+    {/* RIGHT SIDE CONTENT */}
+    <div className={styles.aircraftRightArea}>
+      <div className={styles.aircraftContent}>
+        <p className={styles.aircraftSmallTitle}>YOUR PRIVATE HAVEN</p>
+
+        <h2 className={styles.aircraftTitle}>The Aircraft</h2>
+
+        <p className={styles.aircraftDesc}>
+          Our fleet of Gulfstream G700 aircraft represents the pinnacle of
+          private aviation. With the industry's tallest, widest, and longest
+          cabin, each journey becomes a destination in itself.
+        </p>
+
+        <p className={styles.aircraftDesc}>
+          Configured with private suites, a full galley kitchen, and dedicated
+          wellness spaces, your aircraft transforms into a flying sanctuary.
+          Every detail has been considered to ensure your comfort at 51,000
+          feet.
+        </p>
+
+        {/* FEATURES */}
+        <div className={styles.aircraftFeaturesGrid}>
+          {features.map((item, i) => (
+            <div key={i} className={styles.aircraftFeatureItem}>
+              <div className={styles.aircraftIconBox}><img src={item.icon} alt="icon" className={styles.icon} /></div>
+
+              <div className={styles.aircraftFeatureText}>
+                <h4>{item.title}</h4>
+                <p>{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* MOBILE IMAGE */}
+        <div className={styles.aircraftMobileImageWrap}>
+          <div className={styles.aircraftImageWrapper}>
+            <img src={images[index]} alt="aircraft" />
+
+            <div className={styles.aircraftBadge}>
+              <h3>G700</h3>
+              <p>Gulfstream Fleet</p>
+            </div>
+          </div>
+
+          <div className={styles.aircraftMobileArrows}>
+            <button className={styles.aircraftMobileBtn} onClick={prevSlide}>
+              <FaChevronLeft />
+            </button>
+
+            <button className={styles.aircraftMobileBtn} onClick={nextSlide}>
+              <FaChevronRight />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <button className={styles.aircraftRightBtn} onClick={nextSlide}>
+        <FaChevronRight />
+      </button>
+    </div>
+  </div>
+</section>
 
       {/* ================= OurPhilosophy SECTION ================= */}
     <section className={styles.philosophySection}>
@@ -534,32 +574,32 @@ const images = [img1, img2, img3];
 
 const features = [
   {
-    icon: <FaShieldAlt />,
+    icon: icon4,
     title: "Safety First",
     desc: "FAA-certified crews and aircraft",
   },
   {
-    icon: <FaWifi />,
+    icon: icon5,
     title: "Connected",
     desc: "High-speed global connectivity",
   },
   {
-    icon: <FaBed />,
+    icon: icon6,
     title: "Rest Well",
     desc: "Lie-flat beds and private suites",
   },
   {
-    icon: <FaUsers />,
+    icon: icon7,
     title: "Intimate",
     desc: "Maximum 16 guests per expedition",
   },
   {
-    icon: <FaPlane />,
+    icon: icon8,
     title: "Ultra-Range",
     desc: "Non-stop intercontinental flight",
   },
   {
-    icon: <FaGlobe />,
+    icon: icon9,
     title: "Global Access",
     desc: "Land at exclusive airstrips",
   },

@@ -5,18 +5,23 @@
 .jetHeroSection {
   position: relative;
   width: 100%;
-  min-height: 860px;
+  height: 116vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 0 55px;
   overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
 }
 
 .jetOverlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.38);
+  background: rgba(0, 0, 0, 0.18);
   z-index: 1;
 }
 
@@ -70,6 +75,7 @@
   letter-spacing: 0.4px;
   cursor: pointer;
   transition: all 0.25s ease;
+  text-transform: uppercase;
 }
 
 .primaryBtn {
@@ -93,19 +99,71 @@
 }
 
 /* ==========================================
+   DISCOVER INDICATOR
+========================================== */
+
+.discoverIndicator {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: rgba(255, 255, 255, 0.82);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.discoverIndicator span {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.discoverArrow {
+  font-size: 26px;
+  line-height: 1;
+  margin-top: 2px;
+  color: rgba(255, 255, 255, 0.72);
+  animation: discoverBounce 1.8s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.discoverIndicator:hover {
+  color: #c09551;
+}
+
+.discoverIndicator:hover .discoverArrow {
+  color: #c09551;
+}
+
+@keyframes discoverBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+/* ==========================================
    STATS BAR
 ========================================== */
 
 .statsBar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
   background: #ffffff;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 26px 40px;
-  z-index: 2;
 }
 
 .statItem {
@@ -124,80 +182,143 @@
   font-size: 12px;
   text-align: center;
   color: #2c2c2c;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.8px;
   font-weight: 500;
 }
 
 /* ==========================================
-   MOBILE EXACT ALIGNMENT
+   TABLET
+========================================== */
+
+@media (max-width: 992px) {
+  .jetHeroSection {
+    min-height: 760px;
+    padding: 0 35px;
+  }
+
+  .jetTitle {
+    font-size: 54px;
+  }
+
+  .jetDescription {
+    font-size: 16px;
+  }
+
+  .statsBar {
+    padding: 22px 24px;
+  }
+}
+
+/* ==========================================
+   MOBILE
 ========================================== */
 
 @media (max-width: 768px) {
   .jetHeroSection {
-    min-height: 100vh;
-    padding: 110px 20px 70px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    padding: 0 !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
     background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
   }
 
   .jetOverlay {
-    background: rgba(0, 0, 0, 0.42);
+    background: rgba(0, 0, 0, 0.1) !important;
   }
 
   .jetContent {
-    max-width: 100%;
-    width: 100%;
-    margin-top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 0 18px 90px !important;
+    position: relative !important;
+    z-index: 2 !important;
   }
 
   .jetSubtitle {
-    font-size: 13px;
-    margin-bottom: 14px;
-    line-height: 1.5;
-    letter-spacing: 0.6px;
-    text-align: center;
-    max-width: 220px;
+    font-size: 12px !important;
+    margin-bottom: 12px !important;
+    line-height: 1.3 !important;
+    letter-spacing: 1px !important;
+    text-align: center !important;
+    font-weight: 600 !important;
   }
 
   .jetTitle {
-    font-size: 48px;
-    line-height: 1.05;
-    margin-bottom: 18px;
-    text-align: center;
+    font-size: 40px !important;
+    line-height: 1.12 !important;
+    margin-bottom: 14px !important;
+    text-align: center !important;
   }
 
   .jetDescription {
-    font-size: 15px;
-    line-height: 1.55;
-    max-width: 310px;
-    margin: 0 auto 26px;
-    text-align: center;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    max-width: 380px !important;
+    margin: 0 auto 22px !important;
+    text-align: center !important;
+    color: rgba(255, 255, 255, 0.88) !important;
   }
 
   .jetButtons {
-    width: 100%;
-    max-width: 320px;
-    justify-content: center;
-    gap: 10px;
+    width: 100% !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    flex-direction: row !important ;
+    /* flex-wrap: nowrap !important; */
   }
 
   .primaryBtn,
   .secondaryBtn {
-    flex: 1;
-    min-width: unset;
-    height: 42px;
-    padding: 0 12px;
-    font-size: 11px;
-    letter-spacing: 0.3px;
+    min-width: auto !important;
+    width: auto !important;
+    height: 40px !important;
+    padding: 0 14px !important;
+    font-size: 10px !important;
+    letter-spacing: 0.8px !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+  }
+
+  .discoverIndicator {
+    bottom: 26px;
+  }
+
+  .discoverIndicator span {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .discoverArrow {
+    font-size: 18px;
+    margin-top: 0;
   }
 
   .statsBar {
-    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px 10px;
+    padding: 28px 16px;
+  }
+
+  .statItem h3 {
+    font-size: 28px;
+  }
+
+  .statItem p {
+    font-size: 11px;
+    letter-spacing: 0.8px;
+    margin-top: 6px;
   }
 }
 
@@ -208,84 +329,69 @@
 @media (max-width: 480px) {
   .jetHeroSection {
     min-height: 100vh;
-    padding: 120px 18px 65px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     background-position: center center !important;
   }
 
   .jetContent {
-    width: 100%;
-    max-width: 100%;
-    align-items: center;
+    padding: 0 16px 95px !important;
   }
 
   .jetSubtitle {
-    font-size: 12px;
-    margin-bottom: 12px;
-    max-width: 220px;
+    font-size: 11px !important;
+    margin-bottom: 12px !important;
   }
 
   .jetTitle {
-    font-size: 34px;
-    line-height: 1.08;
-    margin-bottom: 16px;
+    font-size: 34px !important;
+    line-height: 1.15 !important;
+    margin-bottom: 14px !important;
   }
 
   .jetDescription {
-    font-size: 13px;
-    line-height: 1.55;
-    max-width: 250px;
-    margin-bottom: 22px;
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+    max-width: 300px !important;
+    margin-bottom: 20px !important;
   }
 
   .jetButtons {
-    max-width: 290px;
-    gap: 8px;
+    gap: 8px !important;
   }
 
   .primaryBtn,
   .secondaryBtn {
-    height: 40px;
-    font-size: 10px;
-    padding: 0 10px;
+    height: 38px !important;
+    padding: 0 12px !important;
+    font-size: 10px !important;
   }
 
-  .statsBar {
-    display: none;
-  }
-}
-
-.discoverIndicator {
-  display: none;
-}
-
-@media (max-width: 768px) {
   .discoverIndicator {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    position: absolute;
-    bottom: 18px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    color: #ffffff;
-    font-size: 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    bottom: 24px;
+  }
+
+  .discoverIndicator span {
+    font-size: 8px;
+    letter-spacing: 2px;
   }
 
   .discoverArrow {
-    width: 10px;
-    height: 10px;
-    border-right: 1px solid #ffffff;
-    border-bottom: 1px solid #ffffff;
-    transform: rotate(45deg);
+    font-size: 16px;
+  }
+
+  .statsBar {
+    padding: 24px 14px;
+    gap: 22px 8px;
+  }
+
+  .statItem h3 {
+    font-size: 26px;
+  }
+
+  .statItem p {
+    font-size: 10px;
   }
 }
+
 /* ==========================================
    CURATED EXPEDITIONS
 ========================================== */
@@ -294,11 +400,13 @@
   width: 100%;
   background: #f5f4ef;
   padding: 32px 20px 52px;
+  overflow: hidden;
 }
 
 .curatedContainer {
   max-width: 1180px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .curatedHeader {
@@ -307,7 +415,7 @@
 
 .curatedSmallTitle {
   color: #c09551;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.5px;
   margin: 0 0 10px;
@@ -318,23 +426,30 @@
   font-size: 56px;
   font-weight: 300;
   line-height: 1.1;
-  color: #1f1f1f;
+  font-family: "Abel", sans-serif;
+  color: #131313;
   margin: 0 0 14px;
 }
 
 .curatedDescription {
   font-size: 15px;
-  color: #4f4f4f;
+  color: #131313;
   line-height: 1.6;
-  max-width: 760px;
+  max-width: 890px;
+  width: 100%;
   margin: 0;
 }
+
+/* ==========================================
+   GRID
+========================================== */
 
 .curatedGrid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   grid-template-rows: 260px 420px 420px;
   gap: 14px;
+  width: 100%;
 }
 
 .curatedCard {
@@ -344,6 +459,8 @@
   background-repeat: no-repeat;
   overflow: hidden;
   min-height: 220px;
+  width: 100%;
+  border-radius: 2px;
 }
 
 .curatedCardOverlay {
@@ -351,7 +468,7 @@
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.66) 0%,
+    rgba(0, 0, 0, 0.26) 0%,
     rgba(0, 0, 0, 0.22) 42%,
     rgba(0, 0, 0, 0.02) 100%
   );
@@ -371,12 +488,19 @@
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  margin-bottom: 6px;
 }
 
 .curatedCardContentIcon {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+.curatedCardContentIcon1,
+.curatedCardContentIcon2 {
+  margin-bottom: 10px;
+  flex-shrink: 0;
 }
 
 .curatedCardMeta {
@@ -397,19 +521,24 @@
 .curatedCardDesc {
   font-size: 14px;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.85);
   margin: 0;
+  max-width: 90%;
 }
 
 .curatedCardLink {
   margin-top: 14px;
+  display: inline-flex;
   background: transparent;
   border: none;
+  gap: 6px;
+  align-items: center;
   color: #c09551;
   font-size: 13px;
   cursor: pointer;
   padding: 0;
   letter-spacing: 0.4px;
+  text-transform: uppercase;
 }
 
 .featuredBadge {
@@ -424,6 +553,10 @@
   padding: 8px 14px;
   text-transform: uppercase;
 }
+
+/* ==========================================
+   GRID POSITIONING
+========================================== */
 
 .largeCard {
   grid-row: 1 / span 2;
@@ -450,6 +583,10 @@
   grid-row: 3 / 4;
 }
 
+/* ==========================================
+   FOOTER BUTTON
+========================================== */
+
 .curatedFooter {
   display: flex;
   justify-content: center;
@@ -467,15 +604,213 @@
   cursor: pointer;
   transition: all 0.25s ease;
   padding: 0 26px;
+  text-transform: uppercase;
 }
 
+.viewAllBtn:hover {
+  background: #b8873d;
+}
+
+/* ==========================================
+   LARGE TABLET
+========================================== */
+
+@media (max-width: 1100px) {
+  .curatedMainTitle {
+    font-size: 48px;
+  }
+
+  .curatedDescription {
+    max-width: 100%;
+  }
+
+  .curatedGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 240px 360px 360px;
+  }
+
+  .curatedCardContent h3 {
+    font-size: 24px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 768px) {
+  .curatedSection {
+    padding: 30px 16px 46px;
+  }
+
+  .curatedHeader {
+    margin-bottom: 22px;
+  }
+
+  .curatedSmallTitle {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .curatedMainTitle {
+    font-size: 34px;
+    line-height: 1.15;
+    margin-bottom: 12px;
+  }
+
+  .curatedDescription {
+    font-size: 14px;
+    max-width: 100%;
+    width: 100%;
+    line-height: 1.6;
+  }
+
+  .curatedGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    gap: 16px;
+  }
+
+  .largeCard,
+  .smallTopCard,
+  .smallMidCard,
+  .bottomLeftCard,
+  .bottomRightCard {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  .curatedCard {
+    min-height: 280px;
+  }
+
+  .curatedCardContent {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .curatedCardContentHeader {
+    gap: 14px;
+    margin-bottom: 4px;
+  }
+
+  .curatedCardMeta {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .curatedCardContent h3 {
+    font-size: 22px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+
+  .curatedCardDesc {
+    font-size: 13px;
+    line-height: 1.5;
+    max-width: 100%;
+  }
+
+  .curatedCardLink {
+    font-size: 12px;
+    margin-top: 12px;
+  }
+
+  .featuredBadge {
+    top: 14px;
+    left: 14px;
+    font-size: 11px;
+    padding: 7px 12px;
+  }
+
+  .curatedFooter {
+    margin-top: 28px;
+  }
+
+  .viewAllBtn {
+    min-width: 180px;
+    height: 40px;
+    font-size: 12px;
+    padding: 0 22px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .curatedSection {
+    padding: 28px 14px 42px;
+  }
+
+  .curatedSmallTitle {
+    font-size: 13px;
+  }
+
+  .curatedMainTitle {
+    font-size: 28px;
+  }
+
+  .curatedDescription {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .curatedCard {
+    min-height: 240px;
+  }
+
+  .curatedCardContent {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .curatedCardContentHeader {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .curatedCardMeta {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+
+  .curatedCardContent h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .curatedCardDesc {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .curatedCardLink {
+    font-size: 11px;
+    gap: 5px;
+  }
+
+  .featuredBadge {
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+
+  .viewAllBtn {
+    width: 100%;
+    max-width: 260px;
+    min-width: unset;
+  }
+}
 /* ==========================================
    SIGNATURE EXPERIENCES
 ========================================== */
 
 .signatureSection {
   width: 100%;
-  background: #efede8;
+  background: #ffffff;
   padding: 34px 20px 54px;
 }
 
@@ -488,10 +823,11 @@
   margin-bottom: 26px;
 }
 
-.smallTitle {
+.ssmallTitle {
   color: #c99645;
-  font-size: 17px;
-  font-weight: 700;
+  font-size: 18px;
+  text-align: start;
+  font-weight: 500;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   margin: 0 0 14px;
@@ -501,15 +837,16 @@
   font-size: 58px;
   font-weight: 300;
   line-height: 1.1;
-  color: #1f1f1f;
+  font-family: "abel";
+  color: #131313;
   margin: 0 0 14px;
 }
 
 .subtitle {
   font-size: 15px;
   line-height: 1.6;
-  color: #4e4e4e;
-  max-width: 860px;
+  color: #131313;
+  max-width: 900px;
   margin: 0;
 }
 
@@ -544,9 +881,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(15, 15, 15, 0.18);
+  /* background: rgba(15, 15, 15, 0.18); */
   backdrop-filter: blur(1px);
   font-size: 18px;
+}
+
+.icon {
+  height: 24px;
+  width: 24px;
 }
 
 .signatureCardContent {
@@ -556,15 +898,16 @@
 .signatureCardContent h3 {
   font-size: 18px;
   font-weight: 400;
+  font-family: "abel";
   line-height: 1.35;
-  color: #2a2a2a;
+  color: #131313;
   margin: 0 0 12px;
 }
 
 .signatureCardContent p {
   font-size: 14px;
   line-height: 1.5;
-  color: #505050;
+  color: #131313;
   margin: 0;
 }
 
@@ -845,170 +1188,466 @@
   Aircraft SECTION
 ========================= */
 /* ==========================================
-   AIRCRAFT SECTION (PIXEL PERFECT)
+   AIRCRAFT SECTION (DESKTOP + MOBILE EXACT)
 ========================================== */
 
 .aircraftLuxurySection {
   width: 100%;
   background: #f5f4ef;
-  padding: 60px 20px 70px;
+  padding: 42px 40px 44px;
+  overflow: hidden;
 }
 
 .aircraftLuxuryContainer {
   max-width: 1180px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 50px;
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: 18px;
   align-items: center;
 }
 
-/* IMAGE */
+/* ==========================================
+   LEFT SIDE (DESKTOP IMAGE)
+========================================== */
+
+.aircraftLeftArea {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 
 .aircraftImageWrapper {
   position: relative;
+  width: 100%;
+  max-width: 560px;
 }
 
 .aircraftImageWrapper img {
   width: 100%;
-  height: 430px;
+  height: 540px;
   object-fit: cover;
+  display: block;
 }
 
-/* ARROWS */
+/* ==========================================
+   RIGHT SIDE
+========================================== */
+
+.aircraftRightArea {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.aircraftContent {
+  flex: 1;
+  max-width: 500px;
+}
+
+/* ==========================================
+   ARROWS DESKTOP
+========================================== */
 
 .aircraftLeftBtn,
 .aircraftRightBtn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
   border-radius: 50%;
-  border: 1px solid #aaa;
-  background: #f5f4ef;
+  border: 1px solid #8f8f8f;
+  background: transparent;
+  color: #1f1f1f;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 15px;
+}
+
+.aircraftLeftBtn:hover,
+.aircraftRightBtn:hover,
+.aircraftMobileBtn:hover {
+  background: #c09551;
+  color: #ffffff;
+  border-color: #c09551;
 }
 
 .aircraftLeftBtn {
-  left: -45px;
+  position: absolute;
+  left: -48px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
 }
 
 .aircraftRightBtn {
-  right: -45px;
+  flex-shrink: 0;
 }
 
-/* BADGE */
+/* ==========================================
+   BADGE
+========================================== */
 
 .aircraftBadge {
   position: absolute;
-  bottom: -20px;
-  right: 20px;
+  bottom: -22px;
+  right: 16px;
   background: #c09551;
   color: #fff;
-  padding: 16px 22px;
+  padding: 16px 22px 14px;
+  min-width: 162px;
 }
 
 .aircraftBadge h3 {
   margin: 0;
-  font-size: 22px;
+  font-size: 28px;
+  line-height: 1;
   font-weight: 300;
+  font-family: "Abel", sans-serif;
+  color: #ffffff;
 }
 
 .aircraftBadge p {
-  margin: 5px 0 0;
+  margin: 8px 0 0;
   font-size: 13px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.95);
 }
 
-/* CONTENT */
+/* ==========================================
+   TEXT CONTENT
+========================================== */
 
 .aircraftSmallTitle {
   color: #c09551;
+  font-size: 18px;
   font-weight: 700;
-  margin-bottom: 12px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  margin: 0 0 14px;
 }
 
 .aircraftTitle {
-  font-size: 34px;
+  font-size: 42px;
+  line-height: 1.05;
   font-weight: 300;
-  margin-bottom: 18px;
+  font-family: "Abel", sans-serif;
+  color: #131313;
+  margin: 0 0 18px;
 }
 
 .aircraftDesc {
   font-size: 15px;
-  color: #555;
-  margin-bottom: 15px;
-  line-height: 1.5;
+  color: #131313;
+  line-height: 1.45;
+  margin: 0 0 18px;
+  max-width: 480px;
 }
 
-/* FEATURES */
+/* ==========================================
+   FEATURES GRID
+========================================== */
 
 .aircraftFeaturesGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  gap: 22px 18px;
   margin-top: 20px;
+  max-width: 500px;
 }
 
 .aircraftFeatureItem {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .aircraftIconBox {
   width: 34px;
   height: 34px;
-  border: 1px solid #c09551;
+  border: 1px solid rgba(192, 149, 81, 0.75);
   color: #c09551;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
+  font-size: 16px;
+  background: transparent;
 }
 
 .aircraftFeatureText h4 {
-  font-size: 15px;
-  margin-bottom: 5px;
+  margin: 0 0 5px;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #2a2a2a;
 }
 
 .aircraftFeatureText p {
-  font-size: 13px;
-  color: #555;
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.25;
+  color: #666;
+  max-width: 125px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ==========================================
+   MOBILE IMAGE / MOBILE ARROWS
+========================================== */
 
-@media (max-width: 992px) {
-  .aircraftLuxuryContainer {
-    grid-template-columns: 1fr;
+.aircraftMobileImageWrap {
+  display: none;
+}
+
+.aircraftMobileArrows {
+  display: none;
+}
+
+/* ==========================================
+   LARGE TABLET
+========================================== */
+
+@media (max-width: 1100px) {
+  .aircraftLuxurySection {
+    padding: 50px 28px 44px;
   }
 
-  .aircraftImageWrapper img {
-    height: 320px;
+  .aircraftLuxuryContainer {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+
+  .aircraftLeftArea {
+    justify-content: center;
+  }
+
+  .aircraftRightArea {
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .aircraftContent {
+    max-width: 100%;
+  }
+
+  .aircraftDesc {
+    max-width: 100%;
+  }
+
+  .aircraftFeaturesGrid {
+    max-width: 100%;
   }
 
   .aircraftLeftBtn {
     left: 10px;
   }
-
-  .aircraftRightBtn {
-    right: 10px;
-  }
 }
 
-@media (max-width: 600px) {
-  .aircraftFeaturesGrid {
-    grid-template-columns: 1fr;
+/* ==========================================
+   MOBILE EXACT MATCH
+========================================== */
+
+@media (max-width: 768px) {
+  .aircraftLuxurySection {
+    padding: 34px 14px 40px;
+  }
+
+  .aircraftLuxuryContainer {
+    display: block;
+    max-width: 100%;
+  }
+
+  /* DESKTOP IMAGE HIDE */
+  .aircraftLeftArea {
+    display: none;
+  }
+
+  .aircraftRightArea {
+    display: block;
+  }
+
+  .aircraftRightBtn {
+    display: none;
+  }
+
+  .aircraftContent {
+    max-width: 100%;
+  }
+
+  .aircraftSmallTitle {
+    font-size: 13px;
+    margin-bottom: 14px;
+    letter-spacing: 0.3px;
   }
 
   .aircraftTitle {
-    font-size: 28px;
+    font-size: 32px;
+    line-height: 1.08;
+    margin-bottom: 18px;
+  }
+
+  .aircraftDesc {
+    font-size: 13px;
+    line-height: 1.42;
+    margin-bottom: 16px;
+    max-width: 100%;
+  }
+
+  .aircraftFeaturesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 16px;
+    margin-top: 12px;
+    max-width: 100%;
+  }
+
+  .aircraftFeatureItem {
+    align-items: flex-start;
+  }
+
+  .aircraftIconBox {
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .aircraftFeatureText h4 {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+  .aircraftFeatureText p {
+    font-size: 11px;
+    line-height: 1.3;
+    max-width: 100%;
+  }
+
+  /* MOBILE IMAGE SHOW */
+  .aircraftMobileImageWrap {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .aircraftMobileImageWrap .aircraftImageWrapper {
+    max-width: 100%;
+  }
+
+  .aircraftMobileImageWrap .aircraftImageWrapper img {
+    width: 100%;
+    height: 255px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .aircraftMobileImageWrap .aircraftBadge {
+    bottom: -16px;
+    right: 16px;
+    min-width: 138px;
+    padding: 14px 18px 12px;
+  }
+
+  .aircraftMobileImageWrap .aircraftBadge h3 {
+    font-size: 24px;
+  }
+
+  .aircraftMobileImageWrap .aircraftBadge p {
+    font-size: 11px;
+    margin-top: 7px;
+  }
+
+  /* MOBILE ARROWS */
+  .aircraftMobileArrows {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 42px;
+  }
+
+  .aircraftMobileBtn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #8f8f8f;
+    background: transparent;
+    color: #1f1f1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-size: 13px;
   }
 }
 
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+  .aircraftLuxurySection {
+    padding: 30px 12px 36px;
+  }
+
+  .aircraftSmallTitle {
+    font-size: 12px;
+  }
+
+  .aircraftTitle {
+    font-size: 30px;
+  }
+
+  .aircraftDesc {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .aircraftFeaturesGrid {
+    gap: 16px 14px;
+  }
+
+  .aircraftFeatureText h4 {
+    font-size: 12px;
+  }
+
+  .aircraftFeatureText p {
+    font-size: 10px;
+    line-height: 1.35;
+  }
+
+  .aircraftMobileImageWrap .aircraftImageWrapper img {
+    height: 235px;
+  }
+
+  .aircraftMobileImageWrap .aircraftBadge {
+    bottom: -14px;
+    right: 14px;
+    min-width: 126px;
+    padding: 12px 16px 10px;
+  }
+
+  .aircraftMobileImageWrap .aircraftBadge h3 {
+    font-size: 22px;
+  }
+
+  .aircraftMobileImageWrap .aircraftBadge p {
+    font-size: 10px;
+  }
+
+  .aircraftMobileArrows {
+    margin-top: 38px;
+    gap: 20px;
+  }
+
+  .aircraftMobileBtn {
+    width: 34px;
+    height: 34px;
+    font-size: 12px;
+  }
+}
 
 /* ==========================================
    OurPhilosophy SECTION
@@ -1040,7 +1679,7 @@
 .philosophySmallTitle {
   margin: 0 0 14px;
   color: #c09551;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.3px;
   text-transform: uppercase;
@@ -1050,15 +1689,16 @@
   margin: 0 0 18px;
   font-size: 48px;
   line-height: 1.05;
+  font-family: "abel";
   font-weight: 300;
-  color: #2a2a2a;
+  color: #131313;
 }
 
 .philosophyText {
   margin: 0 0 18px;
   font-size: 15px;
   line-height: 1.42;
-  color: #4d4d4d;
+  color: #131313;
   max-width: 690px;
 }
 
@@ -1072,8 +1712,8 @@
 }
 
 .quoteCard {
-  width: 100%;
-  max-width: 430px;
+  width: 650px;
+  max-width: 420px;
   background: #efede8;
   padding: 28px 24px 24px;
 }
@@ -1090,7 +1730,8 @@
   font-size: 26px;
   line-height: 1.42;
   font-weight: 300;
-  color: #4a4a4a;
+  color: #131313;
+  font-family: "abel";
   max-width: 360px;
 }
 
@@ -1252,14 +1893,14 @@
   font-weight: 300;
   /* line-height: 1.2; */
   margin-bottom: 14px;
-  color: #fff;
+  font-family: "abel";
 }
 
 /* SUB TEXT */
 
 .subText {
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.69);
   text-align: center;
   margin-bottom: 22px;
 }

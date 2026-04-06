@@ -88,8 +88,14 @@ const JapanSignatureJourneys = () => {
 
               <div className="japan-signature-footer">
                 <span className="japan-signature-price">
-                  {item.price}
-                </span>
+  {item.price.startsWith("From £") ? (
+    <>
+      From <strong>{item.price.replace("From £", "£")}</strong> per person
+    </>
+  ) : (
+    item.price
+  )}
+</span>
                 <span className="japan-signature-view">
                   VIEW JOURNEY →
                 </span>

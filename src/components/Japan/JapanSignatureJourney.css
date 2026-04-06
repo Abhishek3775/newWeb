@@ -1,7 +1,7 @@
 /* ================= SECTION ================= */
 
 .japan-signature-section {
-  background: #f8f6f3;
+  background: #f5f4ef;
   padding: 90px 6% 120px;
   position: relative;
 }
@@ -10,34 +10,36 @@
 .japan-signature-header {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   margin-bottom: 50px;
   gap: 40px;
   flex-wrap: wrap;
 }
 
 .japan-signature-header h2 {
-  font-size: 34px;
-  font-weight: 400;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 1.1;
+  color: #222;
+  margin: 0;
+  font-family: "Abel", sans-serif;
 }
 
 .japan-signature-header p {
-  max-width: 380px;
-  font-size: 13px;
+  max-width: 430px;
+  font-size: 15px;
   color: #555;
-  line-height: 1.6;
+  line-height: 1.7;
+  margin: 0;
 }
 
 /* CARD */
 .japan-signature-card {
   display: flex;
   flex-direction: column;
-}
-
-.japan-signature-card:hover{
   cursor: pointer;
 }
 
-/* IMAGE */
 .japan-signature-image {
   position: relative;
   height: 560px;
@@ -48,16 +50,20 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 /* NIGHT BADGE */
 .japan-signature-nights {
   position: absolute;
-  top: 16px;
-  left: 16px;
+  top: 18px;
+  left: 18px;
   background: #fff;
-  padding: 6px 10px;
+  padding: 8px 14px;
   font-size: 12px;
+  color: #333;
+  letter-spacing: 0.5px;
+  z-index: 2;
 }
 
 /* OVERLAY */
@@ -66,30 +72,37 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 24px;
+  padding: 26px 24px 20px;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.75),
-    rgba(0, 0, 0, 0)
+    rgba(0, 0, 0, 0.82),
+    rgba(0, 0, 0, 0.08)
   );
   color: #fff;
 }
 
 .japan-signature-locations {
   font-size: 12px;
-  color: #C09551;
+  color: #c09551;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 .japan-signature-overlay h3 {
-  font-size: 18px;
-  margin: 6px 0;
-  font-weight: 400;
+  font-size: 34px;
+  margin: 0 0 12px 0;
+  font-weight: 300;
+  line-height: 1.15;
+  font-family: "Abel", sans-serif;
 }
 
 .japan-signature-overlay p {
-  font-size: 13px;
-  line-height: 1.6;
-  color: #ddd;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #f2f2f2;
+  margin: 0;
+  max-width: 95%;
 }
 
 /* FOOTER */
@@ -97,59 +110,148 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 2px;
+  padding: 16px 2px 0;
   margin-top: 10px;
+  gap: 16px;
 }
 
 .japan-signature-price {
-  font-size: 13px;
+  font-size: 18px;
+  color: #222;
+}
+
+.japan-signature-price strong {
+  font-weight: 700;
 }
 
 .japan-signature-view {
-  font-size: 12px;
-  color: #C09551;
-  letter-spacing: 1px;
-  cursor: pointer;
+  font-size: 16px;
+  color: #c09551;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
 }
 
 /* NAV BUTTONS */
 .japan-signature-nav {
   position: absolute;
-  bottom: 40px;
+  bottom: 38px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 16px;
+  gap: 20px;
+  z-index: 5;
 }
 
 .japan-signature-nav button {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  border: 1px solid #ccc;
+  border: 1px solid #2f2f2f;
   background: transparent;
   cursor: pointer;
   font-size: 16px;
+  color: #2f2f2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.japan-signature-nav button:hover {
+  background: #222;
+  color: #fff;
 }
 
 /* TABLET */
 @media (max-width: 992px) {
-  .japan-signature-image {
-    height: 480px;
+  .japan-signature-section {
+    padding: 80px 40px 120px;
   }
 
   .japan-signature-header {
     flex-direction: column;
+    gap: 18px;
   }
-}
 
-/* MOBILE */
-@media (max-width: 576px) {
-  .japan-signature-section {
-    padding: 70px 20px 110px;
+  .japan-signature-header h2 {
+    font-size: 36px;
   }
 
   .japan-signature-image {
-    height: 380px;
+    height: 500px;
+  }
+
+  .japan-signature-overlay h3 {
+    font-size: 28px;
+  }
+
+  .japan-signature-overlay p {
+    font-size: 16px;
+  }
+}
+
+/* ================= EXACT PHONE VIEW ================= */
+/* PHONE CARD CENTER FIX */
+@media (max-width: 576px) {
+  .swiper-slide {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .japan-signature-card {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .japan-signature-image {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .japan-signature-footer {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+}
+
+/* SMALL PHONE */
+@media (max-width: 380px) {
+  .japan-signature-section {
+    padding: 42px 20px 95px;
+  }
+
+  .japan-signature-header h2 {
+    font-size: 25px;
+  }
+
+  .japan-signature-header p {
+    font-size: 13px;
+  }
+
+  .japan-signature-image {
+    height: 370px;
+  }
+
+  .japan-signature-overlay h3 {
+    font-size: 17px;
+  }
+
+  .japan-signature-overlay p {
+    font-size: 11.5px;
+  }
+
+  .japan-signature-price {
+    font-size: 11.5px;
+  }
+
+  .japan-signature-view {
+    font-size: 11px;
   }
 }

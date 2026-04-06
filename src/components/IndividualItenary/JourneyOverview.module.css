@@ -29,13 +29,14 @@
 .title {
   font-size: 42px;
   font-weight: 300;
-  color: #222;
+  font-family: "abel";
+  color: #131313;
   line-height: 1.2;
 }
 
 .description {
   margin-top: 22px;
-  color: #555;
+  color: #131313;
   font-size: 15px;
   line-height: 1.8;
 }
@@ -76,8 +77,8 @@
 }
 
 .iconWrapper img {
-  width: 22px;
-  height: 22px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
 }
 
@@ -85,13 +86,14 @@
 .cardTitle {
   font-size: 18px;
   font-weight: 400;
-  color: #222;
+  color: #131313;
+  font-family: "abel";
   margin-bottom: 10px;
 }
 
 .cardDesc {
   font-size: 13.5px;
-  color: #666;
+  color: #131313;
   line-height: 1.6;
 }
 

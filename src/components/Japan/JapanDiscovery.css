@@ -4,7 +4,7 @@
   background: #ffffff;
   padding: 80px 5%;
   box-sizing: border-box;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  /* font-family: "Helvetica Neue", Arial, sans-serif; */
 }
 
 /* CONTAINER */
@@ -45,13 +45,14 @@
 .content-top h2 {
   font-size: 32px;
   font-weight: 400;
+  font-family: "abel";
   color: #131313;
   margin-bottom: 20px;
 }
 
 .content-top p {
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 1.5;
   color: #555;
 }
 
@@ -85,7 +86,7 @@
 .divider {
   width: 1px;
   height: 40px;
-  background: #d6d2cd;
+  background: #C09551;
 }
 
 /* ================= QUOTE ================= */
@@ -104,7 +105,8 @@
 
 .discovery-quote span {
   font-size: 13px;
-  color: #777;
+  color: #131313;
+  font-weight: 300;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -120,12 +122,28 @@
 }
 
 @media (max-width: 768px) {
+
+  .discovery-container {
+    flex-direction: column;
+  }
+
+  /* Content upar */
+  .discovery-content {
+    order: 1;
+  }
+
+  /* Image niche */
+  .discovery-image {
+    order: 2;
+  }
   .content-top {
     padding: 40px;
   }
 
   .discovery-quote {
     padding: 40px;
+    text-align: start;
+    line-height: 1;
   }
 
   .content-top h2 {
@@ -137,13 +155,16 @@
   }
 
   .stats-strip {
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: center;
+    gap: 10px;
   }
 
-  .divider {
-    display: none;
-  }
+  .stats-strip {font-size: 15px;}
+
+  .stat span { font-size: 10px;} 
+  
 }
 
 @media (max-width: 480px) {
@@ -158,5 +179,10 @@
 
   .content-top p {
     font-size: 14px;
+  }
+  .divider {
+    /* display: none; */
+    height: 10px;
+    width: 5px;
   }
 }

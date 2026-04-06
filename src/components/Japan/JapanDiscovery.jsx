@@ -18,12 +18,7 @@ const JapanDiscovery = () => {
             <h2>The Art of Japanese Discovery</h2>
 
             <p>
-              Japan reveals itself in whispered moments—the flutter of a silk kimono
-              against centuries-old stone, the precise arc of a tea master's gesture,
-              the silent majesty of Mount Fuji emerging through morning mist.
-              Our bespoke journeys unlock doors that remain closed to ordinary travelers,
-              offering you access to imperial gardens after hours, private kaiseki dinners
-              with three-Michelin-starred chefs, and intimate encounters with living national treasures.
+              Japan reveals itself in whispered moments-the flutter of a silk kimono against centuries-old stone, the precise arc of a tea master's gesture, the silent majesty of Mount Fuji emerging through morning mist. Our bespoke journeys unlock doors that remain closed to ordinary travelers, offering you access to imperial gardens after hours, private kaiseki dinners with three-Michelin-starred chefs, and intimate encounters with living national treasures who guard Japan's most precious traditions.
             </p>
           </div>
 

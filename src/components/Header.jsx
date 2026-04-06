@@ -80,7 +80,7 @@ const Header = () => {
             }`}
           >
             <div
-              className="nav-link mobile-dropdown-toggle"
+              className="mobile-dropdown-toggle"
               onClick={() => toggleMobileDropdown("services")}
             >
               <Link
@@ -112,7 +112,7 @@ const Header = () => {
             }`}
           >
             <div
-              className="nav-link mobile-dropdown-toggle"
+              className="mobile-dropdown-toggle"
               onClick={() => toggleMobileDropdown("destinations")}
             >
               <Link
@@ -189,6 +189,9 @@ const Header = () => {
             </Link>
             <Link to="/blog" className="nav-link">
               BLOG
+            </Link>
+            <Link to="/egc-signature" className="nav-link">
+              EGC SIGNATURE
             </Link>
           </div>
         </nav>

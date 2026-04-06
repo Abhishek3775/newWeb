@@ -1,18 +1,59 @@
 .section {
-  background: #f5f3ef;
-  padding: 50px 0;
+  background: #f4f1eb;
+  padding: 72px 0 70px;
 }
 
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 28px;
 }
 
+/* =========================
+   TOP HEADING
+========================= */
+.topContent {
+  text-align: center;
+  max-width: 980px;
+  margin: 0 auto 46px;
+}
+
+.smallLabel {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #c09551;
+  margin-bottom: 10px;
+}
+
+.mainTitle {
+  margin: 0;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.08;
+  font-weight: 300;
+  color: #131313;
+  font-family: "abel";
+  letter-spacing: -0.5px;
+}
+
+.subText {
+  margin: 18px auto 0;
+  max-width: 860px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #131313;
+  font-weight: 400;
+}
+
+/* =========================
+   MAIN GRID
+========================= */
 .grid {
   display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 22px;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+  gap: 24px;
   align-items: start;
 }
 
@@ -21,7 +62,6 @@
 ========================= */
 .mapWrapper {
   width: 100%;
-  height: 100%;
   overflow: hidden;
   background: #ddd;
 }
@@ -31,7 +71,7 @@
   height: 100%;
   display: block;
   object-fit: cover;
-  min-height: 780px;
+  min-height: 690px;
 }
 
 /* =========================
@@ -40,19 +80,20 @@
 .rightPanel {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 /* Accordion Item */
 .accordionItem {
-  background: #fff;
-  border: 1px solid #e3d4bc;
+  background: #fbfaf8;
+  border: 1px solid #e1d2bc;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.28s ease;
 }
 
 .activeItem {
   border-color: #c09551;
+  background: #fbfaf8;
 }
 
 /* Header */
@@ -64,7 +105,7 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 14px;
-  padding: 14px 14px 12px;
+  padding: 15px 16px 14px;
   cursor: pointer;
   text-align: left;
 }
@@ -77,9 +118,9 @@
 }
 
 .dayBadge {
-  width: 28px;
-  height: 28px;
-  min-width: 28px;
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
   border-radius: 50%;
   background: #c09551;
   color: #fff;
@@ -96,32 +137,33 @@
   font-size: 15px;
   line-height: 1.35;
   font-weight: 400;
-  color: #333;
+  color: #131313;
+  font-family: "abel";
 }
 
 .locationRow {
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-top: 5px;
+  margin-top: 4px;
 }
 
 .locationIcon {
-  width: 12px;
-  height: 12px;
+  width: 11px;
+  height: 11px;
   object-fit: contain;
-  opacity: 0.85;
+  opacity: 0.8;
 }
 
 .locationRow span {
   font-size: 11px;
-  color: #7a7a7a;
+  color: #131313;
   line-height: 1.3;
 }
 
 .arrow {
   font-size: 16px;
-  color: #9a9a9a;
+  color: #131313;
   line-height: 1;
   margin-top: 3px;
   flex-shrink: 0;
@@ -129,42 +171,47 @@
 
 /* Content */
 .accordionContent {
-  padding: 0 14px 14px 14px;
+  padding: 0 16px 14px 16px;
 }
 
 .contentImageWrapper {
   width: 100%;
   overflow: hidden;
   margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.highlightsBlocktitle {
+  font-size: 12px;
+  font-family: "inter";
+  font-weight: 500;
 }
 
 .contentImage {
   width: 100%;
-  height: 165px;
+  height: 160px;
   object-fit: cover;
   display: block;
 }
 
 .contentDescription {
   font-size: 12px;
-  color: #666;
-  line-height: 1.55;
+  color: #131313;
+  line-height: 1.7;
   margin: 0 0 14px;
 }
 
-.highlightsBlock h4 {
-  font-size: 12px;
-  color: #333;
-  font-weight: 600;
-  margin: 0 0 10px;
+.highlightsBlock {
+  margin-bottom: 10px;
 }
 
 .highlightsGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px 18px;
+  gap: 10px 20px;
+  padding-top: 2px;
   padding-bottom: 12px;
-  border-bottom: 1px solid #e3d4bc;
+  border-bottom: 1px solid #dfcfb7;
 }
 
 .highlightItem {
@@ -172,7 +219,7 @@
   align-items: flex-start;
   gap: 6px;
   font-size: 11px;
-  color: #666;
+  color: #131313;
   line-height: 1.45;
 }
 
@@ -198,23 +245,28 @@
 
 .mealRow span {
   font-size: 11px;
-  color: #666;
-}
-.contentImageWrapper {
-  cursor: pointer;
+  color: #6a6a6a;
 }
 
 /* =========================
    LAPTOP
 ========================= */
 @media (max-width: 1199px) {
+  .container {
+    padding: 0 24px;
+  }
+
   .grid {
     grid-template-columns: 1fr 1fr;
-    gap: 18px;
+    gap: 20px;
   }
 
   .mapImage {
-    min-height: 740px;
+    min-height: 660px;
+  }
+
+  .subText {
+    font-size: 16px;
   }
 }
 
@@ -223,22 +275,22 @@
 ========================= */
 @media (max-width: 991px) {
   .section {
-    padding: 40px 0;
+    padding: 56px 0 58px;
+  }
+
+  .topContent {
+    margin-bottom: 34px;
   }
 
   .grid {
     grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  .mapWrapper {
-    max-width: 100%;
+    gap: 30px;
   }
 
   .mapImage {
     min-height: auto;
     height: auto;
-    aspect-ratio: 1 / 1.15;
+    aspect-ratio: 1 / 1.08;
   }
 
   .rightPanel {
@@ -255,19 +307,39 @@
   }
 
   .section {
-    padding: 32px 0 42px;
+    padding: 42px 0 44px;
+  }
+
+  .topContent {
+    margin-bottom: 28px;
+  }
+
+  .smallLabel {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+  }
+
+  .mainTitle {
+    font-size: clamp(28px, 8vw, 38px);
+  }
+
+  .subText {
+    font-size: 14px;
+    line-height: 1.65;
+    margin-top: 14px;
   }
 
   .grid {
-    gap: 22px;
+    gap: 24px;
   }
 
   .mapImage {
-    aspect-ratio: 1 / 1.18;
+    aspect-ratio: 1 / 1.15;
   }
 
   .accordionHeader {
-    padding: 12px 12px 11px;
+    padding: 13px 12px 12px;
     gap: 10px;
   }
 
@@ -276,9 +348,9 @@
   }
 
   .dayBadge {
-    width: 26px;
-    height: 26px;
-    min-width: 26px;
+    width: 27px;
+    height: 27px;
+    min-width: 27px;
     font-size: 13px;
   }
 
@@ -324,8 +396,30 @@
     padding: 0 14px;
   }
 
+  .section {
+    padding: 36px 0 40px;
+  }
+
+  .topContent {
+    margin-bottom: 24px;
+  }
+
+  .smallLabel {
+    font-size: 12px;
+    letter-spacing: 1.4px;
+  }
+
+  .mainTitle {
+    font-size: 30px;
+  }
+
+  .subText {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
   .mapImage {
-    aspect-ratio: 1 / 1.22;
+    aspect-ratio: 1 / 1.2;
   }
 
   .accordionHeader {
@@ -349,8 +443,8 @@
   }
 
   .locationIcon {
-    width: 11px;
-    height: 11px;
+    width: 10px;
+    height: 10px;
   }
 
   .locationRow span {
@@ -367,16 +461,11 @@
 
   .contentImage {
     height: 135px;
-    margin-bottom: 10px;
   }
 
   .contentDescription {
     font-size: 11px;
     margin-bottom: 12px;
-  }
-
-  .highlightsBlock h4 {
-    font-size: 11px;
   }
 
   .highlightItem {

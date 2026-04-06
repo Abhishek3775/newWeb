@@ -3,10 +3,10 @@ import styles from "./YourVessel.module.css";
 
 import vesselImage from "../../assets/vessel-main.png";
 
-import guestIcon from "../../assets/people.png";
+import guestIcon from "../../assets/people1.png";
 import suiteIcon from "../../assets/guest-icon.png";
 import shipIcon from "../../assets/ship-icon.png";
-import speedIcon from "../../assets/waves.png";
+import speedIcon from "../../assets/pool1.png";
 
 const vesselStats = [
   {

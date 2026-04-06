@@ -1,11 +1,18 @@
 import React from "react";
 import "./EliteDifference.css";
-import { LuShield } from "react-icons/lu";
-import { CiGlobe } from "react-icons/ci";
-import { LuClock3 } from "react-icons/lu";
-import { LuAward } from "react-icons/lu";
-import { LuUser } from "react-icons/lu";
-import { LuSparkles } from "react-icons/lu";
+// import { LuShield } from "react-icons/lu";
+// import { CiGlobe } from "react-icons/ci";
+// import { LuClock3 } from "react-icons/lu";
+// import { LuAward } from "react-icons/lu";
+// import { LuUser } from "react-icons/lu";
+import icon1 from "../../assets/insurance.png"
+import icon2 from "../../assets/globe.png"
+import icon3 from "../../assets/time2.png"
+import icon4 from "../../assets/award.png"
+import icon5 from "../../assets/people1.png"
+import icon6 from "../../assets/glow-star.png"
+
+// import { LuSparkles } from "react-icons/lu";
 import bgimg from "../../assets/linepatter1.png";
 
 
@@ -35,7 +42,7 @@ const EliteDifference = () => {
         {/* Feature Cards */}
         <div className="elite-diff-grid">
           <div className="elite-diff-card">
-            <LuShield className="elite-diff-icon" />
+            <img src={icon1} className="elite-diff-icon"/> 
             <h4>24/7 Concierge Support</h4>
             <p>
               Round-the-clock assistance from your dedicated travel specialist,
@@ -44,7 +51,7 @@ const EliteDifference = () => {
           </div>
 
           <div className="elite-diff-card">
-            <CiGlobe className="elite-diff-icon" />
+            <img src={icon2} className="elite-diff-icon"/> 
             <h4>Global Access</h4>
             <p>
               Exclusive partnerships with over 2,000 luxury properties and
@@ -53,7 +60,7 @@ const EliteDifference = () => {
           </div>
 
           <div className="elite-diff-card">
-            <LuClock3 className="elite-diff-icon" />
+            <img src={icon3} className="elite-diff-icon"/> 
             <h4>Tailored Itineraries</h4>
             <p>
               Every journey is meticulously crafted to your preferences, timing,
@@ -62,7 +69,7 @@ const EliteDifference = () => {
           </div>
 
           <div className="elite-diff-card">
-            <LuAward className="elite-diff-icon" />
+            <img src={icon4} className="elite-diff-icon"/> 
             <h4>Award-Winning Service</h4>
             <p>
               Recognized by leading travel publications for exceptional client
@@ -71,7 +78,7 @@ const EliteDifference = () => {
           </div>
 
           <div className="elite-diff-card">
-            <LuUser className="elite-diff-icon" />
+            <img src={icon5} className="elite-diff-icon"/> 
             <h4>Expert Local Guides</h4>
             <p>
               Handpicked specialists who bring destinations to life with insider
@@ -80,7 +87,7 @@ const EliteDifference = () => {
           </div>
 
           <div className="elite-diff-card">
-            <LuSparkles className="elite-diff-icon" />
+            <img src={icon6} className="elite-diff-icon"/> 
             <h4>Exclusive Privileges</h4>
             <p>
               VIP amenities, private access, and unique experiences unavailable

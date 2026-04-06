@@ -7,12 +7,12 @@ import room2 from "../../assets/deluxe-suite.png";
 import room3 from "../../assets/owner-suite.png";
 
 // Amenity Icons (PNG)
-import diningIcon from "../../assets/dining.png";
-import barIcon from "../../assets/bar.png";
-import fitnessIcon from "../../assets/fitness.png";
-import poolIcon from "../../assets/pool.png";
-import wifiIcon from "../../assets/wifi.png";
-import cameraIcon from "../../assets/camera.png";
+import diningIcon from "../../assets/meal.png";
+import barIcon from "../../assets/wineglass.png";
+import fitnessIcon from "../../assets/wight.png";
+import poolIcon from "../../assets/pool1.png";
+import wifiIcon from "../../assets/wifi1.png";
+import cameraIcon from "../../assets/camra.png";
 
 import SuiteModal from "./SuiteModal";
 

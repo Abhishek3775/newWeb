@@ -11,22 +11,19 @@ const JapanHeroSection = () => {
       <div className="japan-hero-overlay"></div>
 
       <div className="japan-hero-inner">
-        <p className="japan-hero-subtitle">
-          AN ODYSSEY OF REFINEMENT
-        </p>
+        <p className="japan-hero-subtitle">AN ODYSSEY OF REFINEMENT</p>
 
         <h1 className="japan-hero-title">Japan</h1>
 
         <p className="japan-hero-description">
-          Where ancient traditions meet with modern
+          Where ancient traditions meet with modern elegance,
           <br />
-           elegance,
           creating moments that transcend time itself.
         </p>
 
         <div className="japan-hero-button-wrap">
           <button className="japan-hero-button">
-            BEGIN YOUR JOURNEY →
+            BEGIN YOUR JOURNEY <span>→</span>
           </button>
         </div>
       </div>
