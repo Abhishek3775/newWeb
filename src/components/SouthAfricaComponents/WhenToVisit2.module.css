@@ -1,0 +1,234 @@
+/* ================= WRAPPER ================= */
+.wrapper {
+  width: 100%;
+  background: #f5f4ef;
+}
+
+/* ================= HERO ================= */
+.hero {
+  position: relative;
+  height: 78vh;
+  min-height: 620px;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+/* ================= HERO CONTENT ================= */
+.content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;   /* neeche align */
+  align-items: flex-start;     /* left align */
+  text-align: left;
+
+  padding: 0 70px 60px;
+  color: #fff;
+}
+
+/* TITLE */
+.content h1 {
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  font-weight: 300;
+  line-height: 1.05;
+  margin: 0 0 28px;
+  color: #f5f4ef;
+  font-family: "Abel", sans-serif;
+  max-width: 1100px;
+}
+
+/* DESCRIPTION */
+.desc {
+  max-width: 980px;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.86);
+  margin: 0 0 28px;
+}
+
+/* CTA LINK */
+.link {
+  color: #c09551;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 1px;
+  background: #c09551;
+}
+
+/* ================= INFO SECTION ================= */
+.infoSection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  background: #f5f4ef;
+  padding: 48px 70px 52px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* CARD */
+.card {
+  text-align: left;
+}
+
+.icon {
+  font-size: 22px;
+  color: #df9d32;
+  margin-bottom: 14px;
+}
+
+.card h4 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #2f2f2f;
+  margin: 0 0 10px;
+}
+
+.card p {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ================= LARGE TABLET ================= */
+@media (max-width: 1100px) {
+  .hero {
+    min-height: 560px;
+    height: 72vh;
+  }
+
+  .content {
+    padding: 0 45px 50px;
+  }
+
+  .content h1 {
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    margin-bottom: 22px;
+  }
+
+  .desc {
+    max-width: 760px;
+    font-size: 0.95rem;
+    margin-bottom: 22px;
+  }
+
+  .infoSection {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    padding: 40px 45px;
+  }
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 768px) {
+  .hero {
+    height: 72vh;
+    min-height: 520px;
+  }
+
+  .content {
+    padding: 0 28px 38px;
+  }
+
+  .content h1 {
+    font-size: clamp(2.1rem, 8vw, 3.4rem);
+    line-height: 1.08;
+    margin-bottom: 18px;
+  }
+
+  .desc {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    max-width: 100%;
+    margin-bottom: 18px;
+  }
+
+  .link {
+    font-size: 15px;
+  }
+
+  .infoSection {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 24px;
+    padding: 34px 28px 38px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 576px) {
+  .hero {
+    height: 78vh;
+    min-height: 560px;
+  }
+
+  .content {
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 20px 30px;
+  }
+
+  .content h1 {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+    line-height: 1.08;
+    margin-bottom: 16px;
+    max-width: 100%;
+  }
+
+  .desc {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    margin-bottom: 16px;
+    max-width: 100%;
+  }
+
+  .link {
+    font-size: 14px;
+  }
+
+  .infoSection {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 30px 20px 34px;
+  }
+
+  .card h4 {
+    font-size: 12.5px;
+  }
+
+  .card p {
+    font-size: 13px;
+  }
+}

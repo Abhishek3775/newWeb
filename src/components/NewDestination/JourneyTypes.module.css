@@ -1,9 +1,9 @@
 .section {
   width: 100%;
-  background: #efede8;
+  background: #ffffff;
   padding: 28px 70px 28px;
   box-sizing: border-box;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  /* font-family: "Helvetica Neue", Arial, sans-serif; */
 }
 
 /* =========================
@@ -23,7 +23,7 @@
 
 .kicker {
   display: inline-block;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
   color: #be8a3d;
   letter-spacing: 0.8px;
@@ -35,20 +35,22 @@
   font-size: 54px;
   line-height: 1.05;
   font-weight: 300;
-  color: #1f1f1f;
+  font-family: "abel";
+  color: #131313;
   letter-spacing: -0.8px;
 }
 
 .descriptionBlock {
-  max-width: 420px;
+  max-width: 480px;
   padding-top: 12px;
+  
 }
 
 .descriptionBlock p {
   margin: 0;
   font-size: 14px;
   line-height: 1.45;
-  color: #5e5b56;
+  color: #131313;
   text-align: right;
 }
 
@@ -170,6 +172,7 @@
   font-size: 20px;
   line-height: 1.08;
   font-weight: 300;
+  font-family: "abel";
   color: #fff;
   letter-spacing: 0.1px;
 }

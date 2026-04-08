@@ -4,7 +4,7 @@
 
 .impHero {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   min-height: 550px;
   background-size: cover;
   background-position: center center;
@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
 }
 
 .impOverlay {
@@ -39,7 +39,7 @@
 .impContent {
   position: relative;
   z-index: 2;
-  top: 25px;
+  top: 45px;
   max-width: 700px;
 }
 
@@ -55,6 +55,7 @@
   font-size: clamp(32px, 6vw, 72px);
   font-weight: 400;
   white-space: nowrap;
+  font-family: "abel";
   margin-bottom: 10px;
   line-height: 1.1;
 }
@@ -74,19 +75,23 @@
   margin-bottom: 30px;
 }
 
+.impDetails span {display: flex; align-items: center; gap: 4px;}
+
 .impPricing {
-  font-size: clamp(13px, 1.4vw, 16px);
+  font-size: clamp(13px, 1.4vw, 12px);
   color: #eee;
   margin-top: 80px;
   border: 1px solid rgba(255, 255, 255, 0.35);
   padding: 12px 20px;
   display: inline-block;
+  font-weight: 200;
   border-radius: 2px;
 }
 
 .impPricing span {
   color: #C09551;
   font-weight: 600;
+  font-size: 14px;
 }
 
 .impBtn {
@@ -119,7 +124,7 @@
   .impOverlay {
     flex-direction: column; justify-content: center; align-items: center;
     text-align: center; padding: 40px 6% 100px;
-    background: linear-gradient(to top, rgba(0,0,0,0.75) 50%, rgba(0,0,0,0.35) 100%);
+    background: linear-gradient(to top, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.15) 100%);
   }
   .impContent { max-width: 90%; padding: 0; }
   .impDetails { justify-content: center; gap: 15px; }
@@ -129,8 +134,8 @@
 
 @media (max-width: 480px) {
   .impContent { padding: 20px 5%; }
-  .impTitle { font-size: clamp(28px, 7vw, 48px); }
-  .impSubtitle { text-align: center;}
+  .impTitle { font-size: 40px; }
+  .impSubtitle { text-align: center; font-size: 15px;}
   .impBtn { width: 100%; margin-top: 30px; padding: 14px 0; }
-  .impDetails { flex-direction: column; gap: 10px; }
+  .impDetails { flex-direction: row; gap: 10px; }
 }

@@ -1,48 +1,52 @@
 import React from "react";
-import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+// import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { FiArrowRight } from "react-icons/fi";
+import { FiPhone } from "react-icons/fi";
+import { CiMail } from "react-icons/ci";
 import "./ReserveExperience.css";
+
+import reserveBg from "../../assets/joureny2.png"; // <-- apni image yahan use karo
 
 const ReserveExperience = () => {
   return (
-    <section className="reserve-section">
+    <section
+      className="reserve-section"
+      style={{ backgroundImage: `url(${reserveBg})` }}
+    >
+      <div className="reserve-overlay"></div>
+
       <div className="reserve-container">
+        <p className="reserve-subtitle">YOUR JOURNEY AWAITS</p>
 
-        <p className="reserve-subtitle">BEGIN YOUR JOURNEY</p>
-
-        <h2 className="reserve-title">Reserve Your Experience</h2>
+        <h2 className="reserve-title">Begin Your Journey</h2>
 
         <p className="reserve-description">
-          Each rhino trekking experience is meticulously curated to provide rare,
-          close-range encounters while respecting the natural behavior of these endangered giants.
-          Our long-standing partnerships with private reserves and conservation teams have been built over decades.
-        </p>
-
-        <p className="reserve-note">
-          Minimum 4 weeks advance booking required
+          Every extraordinary journey begins with a conversation. Our South
+          Africa specialists await to craft your bespoke itinerary, tailored to
+          your every desire.
         </p>
 
         <div className="reserve-contact">
           <div className="contact-item">
             <div className="icon-box">
-              <FaPhoneAlt />
+              <FiPhone />
             </div>
-            <span>+44 2074269888</span>
+            <span>+442074269888</span>
           </div>
 
           <div className="divider"></div>
 
           <div className="contact-item">
             <div className="icon-box">
-              <FaEnvelope />
+              <CiMail />
             </div>
             <span>southafrica@eliteconcierge.com</span>
           </div>
         </div>
 
         <button className="reserve-btn">
-          BEGIN YOUR JOURNEY →
+          BEGIN YOUR JOURNEY <FiArrowRight className="btn-arrow" />
         </button>
-
       </div>
     </section>
   );

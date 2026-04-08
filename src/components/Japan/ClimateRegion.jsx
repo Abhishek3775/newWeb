@@ -14,7 +14,7 @@ const regions = [
   {
     name: "Hokkaido",
     image: hokkaidoImg,
-    desc: "Japan's northernmost island offers cold winters with heavy snow and cool, pleasant summers.",
+    desc: "Japan's northernmost island offers cold winters with heavy snow and cool, pleasant summers without the humidity of the mainland.",
     best: "February (snow), July-August (summer escape)",
     winter: "-8°C to 0°C",
     summer: "18°C to 26°C",
@@ -77,14 +77,12 @@ const ClimateRegion = () => {
   return (
     <section className="cr-wrapper">
       <div className="cr-container">
-        <p className="cr-subtitle">REGIONAL WEATHER</p>
         <h2 className="cr-title">Climate by Region</h2>
         <p className="cr-desc">
           Japan stretches across diverse climate zones. Understanding regional
           variations helps you plan the perfect itinerary.
         </p>
 
-        {/* Tabs */}
         <div className="cr-tabs">
           {regions.map((item, index) => (
             <button
@@ -97,7 +95,6 @@ const ClimateRegion = () => {
           ))}
         </div>
 
-        {/* Content */}
         <div className={`cr-content ${active % 2 !== 0 ? "reverse" : ""}`}>
           <div className="cr-image">
             <img src={region.image} alt={region.name} />

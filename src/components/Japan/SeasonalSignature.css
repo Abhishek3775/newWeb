@@ -1,62 +1,51 @@
-/* ================= SECTION ================= */
-
+/* SECTION */
 .sse-wrapper {
-  background: #ffffff;
-  padding: 120px 20px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #f4f5ef;
+  padding: 110px 20px;
   text-align: center;
 }
 
+/* CONTAINER */
 .sse-container {
-  max-width: 1300px;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* ================= HEADER ================= */
-
+/* HEADER */
 .sse-subtitle {
-  color: #C09551;
-  letter-spacing: 4px;
-  font-size: 21px;
-  text-align: center; 
-  margin-bottom: 18px;
-  font-weight: 500;
-  text-align: center;
+  color: #c09551;
+  letter-spacing: 3px;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 .sse-title {
-  font-size: 48px;
-  font-weight: 300;
-  margin-bottom: 18px;
-  color: #111;
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 10px;
 }
 
 .sse-desc {
-  max-width: 650px;
-  margin: 0 auto 80px;
-  font-size: 15px;
-  color: #666;
-  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 60px;
+  font-size: 14px;
+  color: #555;
 }
 
-/* ================= SLIDER WRAPPER ================= */
-
+/* SLIDER */
 .sse-slider-wrapper {
   position: relative;
 }
 
-/* ================= CARD ================= */
-
+/* CARD */
 .sse-card {
-  background: transparent;
-  text-align: center;
+  text-align: left;
 }
 
-/* ================= IMAGE ================= */
-
+/* IMAGE */
 .sse-image {
   position: relative;
-  height: 520px; /* taller like 2nd image */
+  height: 460px;
   overflow: hidden;
 }
 
@@ -64,216 +53,105 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: 0.6s ease;
 }
 
-/* ================= SEASON TAG ================= */
-
+/* TAG */
 .sse-season-tag {
   position: absolute;
-  top: 22px;
-  left: 22px;
-  background: rgba(255,255,255,0.95);
-  padding: 8px 16px;
-  font-size: 12px;
+  top: 15px;
+  left: 15px;
+  background: #fff;
+  padding: 6px 12px;
+  font-size: 11px;
+  color: #c09551;
   letter-spacing: 1px;
-  font-weight: 500;
 }
 
-/* ================= DARK OVERLAY ================= */
-
+/* OVERLAY */
 .sse-overlay {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.85) 0%,
-    rgba(0,0,0,0.55) 40%,
-    rgba(0,0,0,0.2) 70%,
-    rgba(0,0,0,0) 100%
-  );
+  bottom: 0;
+  padding: 20px;
   color: #fff;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.97), transparent);
 }
 
 .sse-overlay h3 {
-  font-size: 22px;
-  font-weight: 500;
-  margin-bottom: 14px;
-  line-height: 1.3;
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-family: "abel";
+  font-weight: 400;
+  color: #c09551;
 }
 
 .sse-overlay p {
-  font-size: 14px;
-  line-height: 1.7;
-  opacity: 0.95;
+  font-size: 13px;
+  font-weight: 300;
+  opacity: 0.9;
 }
 
-/* ================= FOOTER ================= */
-
+/* FOOTER */
 .sse-footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding-top: 18px;
-  font-size: 14px;
+  margin-top: 10px;
+  font-size: 13px;
 }
 
-.sse-price {
-  color: #555;
-}
-
-.sse-btn {
-  background: none;
+.sse-footer button {
   border: none;
-  color: #C09551;
-  font-size: 14px;
+  background: none;
+  color: #c09551;
+  display: flex;
+  gap: 5px;
+  align-items: center;
   cursor: pointer;
-  letter-spacing: 0.5px;
-  transition: 0.3s ease;
 }
 
-.sse-btn:hover {
-  opacity: 0.7;
-}
-
-/* ================= NAVIGATION BUTTONS ================= */
-
+/* NAV */
 .sse-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 55px;
-  height: 55px;
-  background: #ffffff;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  border: 1px solid #e5e5e5;
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 20;
-  transition: 0.3s ease;
-  font-size: 22px;
-  color: #333;
-}
-
-.sse-nav:hover {
-  background: #C09551;
-  color: #fff;
-  border-color: #C09551;
+  z-index: 10;
+  border: 1px solid #ddd;
 }
 
 .sse-prev {
-  left: -70px;
+  left: -50px;
 }
 
 .sse-next {
-  right: -10px;
+  right: -50px;
 }
 
-/* ================= HOVER EFFECT ================= */
-
+/* HOVER */
 .sse-card:hover img {
-  transform: scale(1.08);
+  transform: scale(1.05);
+  transition: 0.4s;
 }
 
-/* ================= RESPONSIVE ================= */
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .sse-title {
+    font-size: 28px;
+  }
 
-@media (max-width: 1200px) {
+  .sse-image {
+    height: 350px;
+  }
+
   .sse-prev,
   .sse-next {
     display: none;
-  }
-}
-
-@media (max-width: 992px) {
-  .sse-image {
-    height: 460px;
-  }
-}
-
-@media (max-width: 768px) {
-  .sse-title {
-    font-size: 34px;
-  }
-
-  .sse-image {
-    height: 380px;
-  }
-
-  .sse-overlay h3 {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 767px) {
-  .swiper-slide {
-    display: flex;
-    justify-content: center;
-  }
-
-  .sse-card {
-    width: 100%;
-  }
-
-  .sse-image {
-    width: 100%;
-  }
-
-  .sse-footer {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-  }
-
-  .sse-price {
-    width: 100%;
-    text-align: center;
-  }
-
-  .sse-btn {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .sse-image {
-    height: 300px;
-  }
-
-  .sse-footer {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .sse-price {
-    text-align: center;
-    width: 100%;
-  }
-
-  .sse-btn {
-    text-align: center;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .sse-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .sse-desc {
-    text-align: center;
   }
 }

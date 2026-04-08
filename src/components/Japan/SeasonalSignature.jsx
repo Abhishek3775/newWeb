@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 
 import "swiper/css";
@@ -34,7 +35,6 @@ const experiences = [
     price: "From £25,000 per couple",
     image: autumnImg,
   },
-
 ];
 
 const SeasonalSignature = () => {
@@ -63,23 +63,27 @@ const SeasonalSignature = () => {
 
           <Swiper
             modules={[Navigation]}
-            spaceBetween={30}
+            spaceBetween={35}
             slidesPerView={3}
-            // centeredSlides={true} 
             loop={true}
-            navigation
-            onBeforeInit={(swiper) => {
-              swiper.params.navigation.prevEl = prevRef.current;
-              swiper.params.navigation.nextEl = nextRef.current;
+            navigation={{
+              prevEl: prevRef.current,
+              nextEl: nextRef.current,
             }}
-            onInit={(swiper) => {
-              swiper.navigation.init();
-              swiper.navigation.update();
+            onSwiper={(swiper) => {
+              setTimeout(() => {
+                swiper.params.navigation.prevEl = prevRef.current;
+                swiper.params.navigation.nextEl = nextRef.current;
+
+                swiper.navigation.destroy();
+                swiper.navigation.init();
+                swiper.navigation.update();
+              });
             }}
-             breakpoints={{
-              0: { slidesPerView: 1, spaceBetween: 0 },  // spaceBetween: 0 karo mobile pe
-              768: { slidesPerView: 2 },
-              1100: { slidesPerView: 3 },
+            breakpoints={{
+              0: { slidesPerView: 1, spaceBetween: 0 },
+              768: { slidesPerView: 2, spaceBetween: 20 },
+              1100: { slidesPerView: 3, spaceBetween: 35 },
             }}
           >
             {experiences.map((item, index) => (
@@ -87,7 +91,7 @@ const SeasonalSignature = () => {
                 <div className="sse-card">
 
                   <div className="sse-image">
-                    <img src={item.image} alt={item.title} />
+                    <img src={item.image} alt="" />
 
                     <span className="sse-season-tag">
                       {item.season}
@@ -100,10 +104,8 @@ const SeasonalSignature = () => {
                   </div>
 
                   <div className="sse-footer">
-                    <span className="sse-price">{item.price}</span>
-                    <button className="sse-btn">
-                      ENQUIRE NOW →
-                    </button>
+                    <span>{item.price}</span>
+                    <button>ENQUIRE NOW <FaArrowRightLong color="#C09551"/></button>
                   </div>
 
                 </div>

@@ -1,6 +1,6 @@
-.monthlyGuideSection {
+  .monthlyGuideSection {
   width: 100%;
-  background: #f6f5f1;
+  background: #ffffff;
   padding: 60px 20px 18px;
   overflow: hidden;
 }
@@ -16,8 +16,8 @@
   margin: 0 0 8px;
   color: #c09551;
   font-family: "Inter", sans-serif;
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   text-align: center;
@@ -25,8 +25,8 @@
 
 .monthlyGuideTitle {
   margin: 0 0 22px;
-  color: #1f1f1f;
-  font-family: "Cormorant Garamond", serif;
+  color: #131313;
+  font-family: "abel", serif;
   font-size: 52px;
   font-weight: 400;
   line-height: 1;

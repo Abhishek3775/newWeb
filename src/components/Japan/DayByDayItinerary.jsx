@@ -15,7 +15,6 @@ import img9 from "../../assets2/japan/Imperial Odyssey/DayByDay/9.png";
 import { LuBed } from "react-icons/lu";
 import { CiForkAndKnife } from "react-icons/ci";
 
-
 const GOLD = "#c09551";
 
 const itineraryData = [
@@ -163,26 +162,23 @@ const itineraryData = [
     ],
     image: img9,
   },
+  {
+    day: 10,
+    city: "TOKYO",
+    subtitle: "Farewell Japan",
+    title: "Depart Tokyo",
+    location: "Airport Transfer",
+    meals: ["Breakfast"],
+    description:
+      "After a final leisurely breakfast, your private transfer will escort you to the airport for your onward journey, carrying memories of Japan's timeless elegance and extraordinary hospitality.",
+    highlights: [
+      "Private airport transfer",
+      "Farewell concierge assistance",
+      "Smooth departure arrangements",
+    ],
+    image: img1,
+  },
 ];
-
-const HotelIcon = () => (
-  <svg width="11" height="11" viewBox="0 0 11 11" fill="none" style={{ flexShrink: 0 }}>
-    <path d="M1.2 9.2V4.1H9.8V9.2" stroke={GOLD} strokeWidth="0.8" />
-    <path d="M1.2 4.1L5.5 1.2L9.8 4.1" stroke={GOLD} strokeWidth="0.8" />
-    <path d="M3.4 5.6H4.8" stroke={GOLD} strokeWidth="0.8" />
-    <path d="M6.2 5.6H7.6" stroke={GOLD} strokeWidth="0.8" />
-  </svg>
-);
-
-const MealIcon = () => (
-  <svg width="11" height="11" viewBox="0 0 11 11" fill="none" style={{ flexShrink: 0 }}>
-    <path d="M2 1.6V5.2" stroke={GOLD} strokeWidth="0.8" />
-    <path d="M3.4 1.6V5.2" stroke={GOLD} strokeWidth="0.8" />
-    <path d="M2 3.5H3.4" stroke={GOLD} strokeWidth="0.8" />
-    <path d="M6.8 1.6V9.2" stroke={GOLD} strokeWidth="0.8" />
-    <path d="M8.6 1.6C8.6 3.2 8.1 4 6.8 4" stroke={GOLD} strokeWidth="0.8" />
-  </svg>
-);
 
 const BulletIcon = () => (
   <svg width="12" height="12" viewBox="0 0 12 12" style={{ flexShrink: 0, marginTop: 2 }}>
@@ -223,6 +219,7 @@ const DayByDayItinerary = () => {
           </div>
         </div>
 
+        {/* QUICK VIEW */}
         {viewMode === "quick" && (
           <div className={styles.quickViewContainer}>
             <div className={styles.daysList}>
@@ -234,7 +231,7 @@ const DayByDayItinerary = () => {
                     <div className={styles.dayCity}>{item.city}</div>
                     <div className={styles.dayTitle}>{item.title}</div>
                     <div className={styles.dayLocation}>
-                      <LuBed />
+                      <LuBed color="#c09551" size={12} />
                       <span>{item.location}</span>
                     </div>
                   </div>
@@ -248,6 +245,7 @@ const DayByDayItinerary = () => {
           </div>
         )}
 
+        {/* DETAILED VIEW */}
         {viewMode === "detailed" && (
           <div className={styles.detailedViewContainer}>
             {itineraryData.map((item, idx) => {
@@ -282,11 +280,11 @@ const DayByDayItinerary = () => {
 
                       <div className={styles.footer}>
                         <div className={styles.footerItem}>
-                          <LuBed color="#c09551"/>
+                          <LuBed color="#c09551" size={12} />
                           <span>{item.location}</span>
                         </div>
                         <div className={styles.footerItem}>
-                          <CiForkAndKnife color="#c09551"/>
+                          <CiForkAndKnife color="#c09551" size={12} />
                           <span>{item.meals.join(", ")}</span>
                         </div>
                       </div>

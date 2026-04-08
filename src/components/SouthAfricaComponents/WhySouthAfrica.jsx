@@ -7,11 +7,12 @@ const WhySouthAfrica = () => {
     <section className="why-section">
       {/* Left Content */}
       <div className="why-content">
-    
         <h5 className="why-label">WHY SOUTH AFRICA?</h5>
 
         <h2 className="why-title">
-          “Ever shared a private moment with an endangered black rhino?”
+          “Ever shared a private moment
+          <br />
+          with an endangered black rhino?”
         </h2>
 
         <p className="why-description">
@@ -35,9 +36,14 @@ const WhySouthAfrica = () => {
       {/* Right Image */}
       <div className="why-image-wrapper">
         <img src={africaImage} alt="South Africa Beach" />
+
         <div className="experience-box">
           <h3>20+</h3>
-          <p>Years says crafting<br />African journeys</p>
+          <p>
+            Years crafting
+            <br />
+            African journeys
+          </p>
         </div>
       </div>
     </section>

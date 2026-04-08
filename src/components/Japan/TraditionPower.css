@@ -1,127 +1,282 @@
 /* ================= SECTION ================= */
-
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 .tp-section {
-  background: #f7f6f3;
-  padding: 100px 20px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #ffffff;
+  padding: 95px 32px 0;
+  /* font-family: "Helvetica Neue", Arial, sans-serif; */
   color: #222;
 }
 
 .tp-container {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 /* ================= TOP LAYOUT ================= */
-
 .tp-top {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 80px;
-  margin-bottom: 80px;
+  grid-template-columns: 0.9fr 1.25fr;
+  gap: 85px;
+  align-items: start;
+  padding-bottom: 80px;
 }
 
-/* LEFT SIDE */
+/* ================= LEFT SIDE ================= */
+.tp-left {
+  padding-top: 6px;
+}
 
 .tp-subtitle {
-  font-size: 13px;
-  letter-spacing: 2px;
-  color: #C09551;
-  margin-bottom: 20px;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  line-height: 1.25;
+  color: #c09551;
+  margin-bottom: 26px;
+  font-weight: 500;
+  max-width: 320px;
+  text-transform: uppercase;
 }
 
 .tp-title {
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 1.2;
-  margin-bottom: 20px;
+  font-size: 56px;
+  font-weight: 300;
+  line-height: 1.04;
+  margin-bottom: 34px;
+  color: #131313;
+  /* font-family: inherit; */
+  font-family: "abel";
 }
 
 .tp-line {
-  width: 60px;
-  height: 2px;
-  background: #C09551;
+  width: 78px;
+  height: 1px;
+  background: #c09551;
 }
 
-/* RIGHT SIDE */
+/* ================= RIGHT SIDE ================= */
+.tp-right {
+  padding-right: 10px;
+}
 
 .tp-description {
   font-size: 18px;
-  line-height: 1.8;
-  color: #555;
-  margin-bottom: 30px;
+  line-height: 1.52;
+  color: #131313;
+  margin-bottom: 42px;
+  font-weight: 300;
+  max-width: 760px;
 }
 
 .tp-quote {
-  border-left: 3px solid #C09551;
-  padding-left: 20px;
+  border-left: 2px solid #c09551;
+  padding-left: 26px;
+  max-width: 720px;
 }
 
 .tp-quote p {
-  font-style: italic;
-  font-size: 14px;
-  margin-bottom: 8px;
+  font-size: 18px;
+  line-height: 1.45;
+  color: #131313;
+  margin-bottom: 18px;
+  font-weight: 300;
 }
 
 .tp-quote span {
-  font-size: 12px;
-  color: #777;
+  font-size: 13px;
+  color: #131313;
+  font-weight: 400;
 }
 
-/* ================= STATS ================= */
-
+/* ================= STATS SECTION ================= */
 .tp-stats {
+  background: #F5F4EF;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-  border-top: 1px solid #e0ddd7;
-  padding-top: 50px;
+  gap: 55px;
+  padding: 68px 56px 72px;
+  margin: 0 calc(50% - 50vw);
+  padding-left: calc((100vw - 1200px) / 2 + 56px);
+  padding-right: calc((100vw - 1200px) / 2 + 56px);
 }
 
 .tp-stat-item h3 {
-  color: #C09551;
-  font-size: 36px;
-  font-weight: 500;
-  margin-bottom: 10px;
+  color: #c09551;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 14px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 .tp-stat-title {
   font-size: 14px;
-  letter-spacing: 1px;
-  font-weight: 600;
-  margin-bottom: 10px;
+  letter-spacing: 0.4px;
+  font-weight: 500;
+  margin-bottom: 14px;
+  color: #242424;
+  text-transform: uppercase;
+  line-height: 1.35;
 }
 
 .tp-stat-desc {
   font-size: 14px;
-  color: #666;
-  line-height: 1.6;
+  color: #4d4d4d;
+  line-height: 1.45;
+  max-width: 230px;
+  font-weight: 300;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= LARGE LAPTOP ================= */
+@media (max-width: 1280px) {
+  .tp-section {
+    padding: 90px 24px 0;
+  }
 
+  .tp-top {
+    gap: 70px;
+    padding-bottom: 70px;
+  }
+
+  .tp-title {
+    font-size: 50px;
+  }
+
+  .tp-description {
+    font-size: 17px;
+  }
+
+  .tp-stats {
+    gap: 40px;
+    padding: 60px 40px 64px;
+    padding-left: max(24px, calc((100vw - 1200px) / 2 + 40px));
+    padding-right: max(24px, calc((100vw - 1200px) / 2 + 40px));
+  }
+}
+
+/* ================= TABLET ================= */
 @media (max-width: 992px) {
+  .tp-section {
+    padding: 80px 22px 0;
+  }
+
   .tp-top {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 44px;
+    padding-bottom: 60px;
+  }
+
+  .tp-left {
+    padding-top: 0;
+  }
+
+  .tp-subtitle {
+    max-width: 100%;
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+
+  .tp-title {
+    font-size: 44px;
+    margin-bottom: 24px;
+  }
+
+  .tp-description {
+    font-size: 16px;
+    line-height: 1.65;
+    margin-bottom: 30px;
+    max-width: 100%;
+  }
+
+  .tp-quote {
+    max-width: 100%;
+    padding-left: 20px;
+  }
+
+  .tp-quote p {
+    font-size: 17px;
   }
 
   .tp-stats {
     grid-template-columns: repeat(2, 1fr);
+    gap: 34px 28px;
+    padding: 52px 28px 56px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .tp-stat-desc {
+    max-width: 100%;
   }
 }
 
+/* ================= MOBILE ================= */
 @media (max-width: 600px) {
   .tp-section {
-    padding: 70px 20px;
+    padding: 70px 18px 0;
+  }
+
+  .tp-top {
+    gap: 36px;
+    padding-bottom: 48px;
+  }
+
+  .tp-subtitle {
+    font-size: 14px;
+    line-height: 1.35;
+    margin-bottom: 16px;
+    max-width: 280px;
   }
 
   .tp-title {
-    font-size: 28px;
+    font-size: 34px;
+    line-height: 1.08;
+    margin-bottom: 20px;
+  }
+
+  .tp-line {
+    width: 64px;
+  }
+
+  .tp-description {
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 26px;
+  }
+
+  .tp-quote {
+    padding-left: 16px;
+    border-left-width: 2px;
+  }
+
+  .tp-quote p {
+    font-size: 16px;
+    line-height: 1.55;
+    margin-bottom: 14px;
+  }
+
+  .tp-quote span {
+    font-size: 12px;
   }
 
   .tp-stats {
     grid-template-columns: 1fr;
     gap: 30px;
+    padding: 46px 18px 52px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .tp-stat-item h3 {
+    font-size: 34px;
+    margin-bottom: 10px;
+  }
+
+  .tp-stat-title {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .tp-stat-desc {
+    font-size: 14px;
+    line-height: 1.6;
   }
 }

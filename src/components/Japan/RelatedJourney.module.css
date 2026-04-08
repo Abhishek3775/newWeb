@@ -21,7 +21,8 @@
   font-size: clamp(28px, 4vw, 44px);
   font-weight: 400;
   margin-bottom: 60px;
-  color: #1c1c1c;
+  font-family: "abel";
+  color: #131313;
 }
 
 .rjGrid {
@@ -61,7 +62,7 @@
 }
 
 .rjDuration { font-size: 12px; letter-spacing: 1px; opacity: 0.85; color: #C09551; }
-.rjTitle { font-size: clamp(16px, 1.8vw, 22px); font-weight: 400; margin: 8px 0; }
+.rjTitle { font-size: clamp(16px, 1.8vw, 22px); font-weight: 400; margin: 8px 0; font-family: "abel"; }
 .rjPrice { font-size: 14px; opacity: 0.9; }
 
 @media (max-width: 1024px) {

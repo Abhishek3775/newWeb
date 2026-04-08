@@ -1,18 +1,15 @@
 import React from "react";
 import "./SumoBookingModal.css";
-import modalImg from "../../assets/sumoPopUP.jpg"; // left image
+import modalImg from "../../assets/sumoPopUP.jpg";
 
 const SumoBookingModal = ({ closeModal }) => {
   return (
     <div className="sbm-overlay" onClick={closeModal}>
-      <div
-        className="sbm-modal"
-        onClick={(e) => e.stopPropagation()}
-      >
+      <div className="sbm-modal" onClick={(e) => e.stopPropagation()}>
         {/* Close Button */}
-        <span className="sbm-close" onClick={closeModal}>
+        <button className="sbm-close" onClick={closeModal} aria-label="Close">
           ×
-        </span>
+        </button>
 
         {/* Left Image */}
         <div className="sbm-left">
@@ -21,23 +18,30 @@ const SumoBookingModal = ({ closeModal }) => {
 
         {/* Right Form */}
         <div className="sbm-right">
-          <h2>Start Your Journey Today</h2>
+          <h2 className="sbm-title">Start Your Journey Today</h2>
 
           <form className="sbm-form">
+            <div className="sbm-section-title">GUEST INFORMATION</div>
 
-            <div className="sbm-row">
+            <div className="sbm-row sbm-row-3">
               <select>
                 <option>Title*</option>
                 <option>Mr</option>
                 <option>Mrs</option>
+                <option>Ms</option>
               </select>
+
               <input type="text" placeholder="First Name*" />
               <input type="text" placeholder="Last Name*" />
             </div>
 
-            <div className="sbm-row">
-              <input type="text" placeholder="Phone Number*" />
+            <div className="sbm-row sbm-row-2">
+              <input type="text" placeholder="🇮🇳 Phone Number*" />
               <input type="email" placeholder="Email Address*" />
+            </div>
+
+            <div className="sbm-section-title sbm-mt">
+              TELL US MORE ABOUT YOUR SUMO EXPERIENCE
             </div>
 
             <textarea
@@ -47,12 +51,17 @@ const SumoBookingModal = ({ closeModal }) => {
             <div className="sbm-checkbox">
               <label>
                 <input type="checkbox" />
-                I accept the Privacy Policy.
+                <span>
+                  I accept the <a href="/">Privacy Policy</a>.
+                </span>
               </label>
 
               <label>
                 <input type="checkbox" />
-                Yes! I would like to receive news and updates.
+                <span>
+                  Yes! I would like to receive news, updates, and other
+                  information from Elite Global Concierge.
+                </span>
               </label>
             </div>
 
@@ -60,6 +69,17 @@ const SumoBookingModal = ({ closeModal }) => {
               SPEAK TO AN EXPERT
             </button>
 
+            <p className="sbm-note">
+              To review full details of our affiliated partners who may contact
+              you, and to understand how your information may be used for direct
+              marketing, please refer to our Privacy Policy. If you prefer not
+              to receive marketing communications or wish to limit contact from
+              our affiliates, you may request not to be contacted, unsubscribe
+              at any time, or email us at privacy@eliteglobalconcierge.com.
+              Communications may include calls or messages sent via automated
+              systems. Your consent to receive such communications is not a
+              condition of purchasing our services.
+            </p>
           </form>
         </div>
       </div>

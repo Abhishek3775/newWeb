@@ -1,20 +1,21 @@
 import React from "react";
 import "./ReserveExperience.css";
 import { FiPhone, FiMail } from "react-icons/fi";
-import BgImage from "../../assets/sumo-journey.png"
 
 const ReserveExperience = () => {
   return (
     <section className="re-wrapper">
-      <div className="re-container">
+      <div className="re-overlay"></div>
 
+      <div className="re-container">
         <p className="re-subtitle">BEGIN YOUR JOURNEY</p>
+
         <h2 className="re-title">Reserve Your Experience</h2>
 
         <p className="re-description">
-          Each sumo experience is meticulously crafted to ensure unprecedented access 
-          while respecting the sacred traditions of this ancient sport. Our relationships 
-          with sumo stables have been cultivated over decades.
+          Each sumo experience is meticulously crafted to ensure unprecedented
+          access while respecting the sacred traditions of this ancient sport.
+          Our relationships with sumo stables have been cultivated over decades.
         </p>
 
         <p className="re-note">
@@ -40,9 +41,8 @@ const ReserveExperience = () => {
         </div>
 
         <button className="re-button">
-          BEGIN YOUR JOURNEY →
+          BEGIN YOUR JOURNEY <span>→</span>
         </button>
-
       </div>
     </section>
   );
