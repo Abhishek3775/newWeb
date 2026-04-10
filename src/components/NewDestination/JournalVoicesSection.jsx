@@ -58,6 +58,7 @@ const JournalVoicesSection = () => {
       className={styles.section}
       style={{ "--journal-pattern": `url(${linepattern2})` }}
     >
+      <div className={styles.bgpattern}>
       <div className={styles.custom}>
         <div className={styles.block}>
           <p className={styles.kicker}>Client Voices</p>
@@ -85,7 +86,9 @@ const JournalVoicesSection = () => {
           </div>
         </div>
       </div>
+      </div>
 
+      <div className={styles.bgpattern}>
       <div className={styles.custom}>
         <div className={styles.block}>
           <p className={styles.kicker}>The EGC Journal</p>
@@ -117,6 +120,7 @@ const JournalVoicesSection = () => {
             ))}
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

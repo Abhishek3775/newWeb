@@ -44,15 +44,6 @@ const journeyData = [
       "Aurora chasing, polar expeditions, and slumbers under boreal light.",
     destinations: "6 DESTINATIONS",
     image: arcticImg,
-    miniTags: [
-      "Svalbard, Norway",
-      "Greenland Ice Fjords",
-      "Iceland’s Arctic Coast",
-      "Canadian High Arctic",
-      "Nunavut",
-      "Lapland, Finland",
-      "North Pole Expedition",
-    ],
   },
   {
     title: "Coastal & Maritime",
@@ -112,13 +103,13 @@ const JourneyTypes = () => {
                   <p className={styles.region}>{item.region}</p>
                   <p className={styles.desc}>{item.description}</p>
 
-                  {item.miniTags && (
+                  {/* {item.miniTags && (
                     <div className={styles.miniTagBox}>
                       {item.miniTags.map((tag, i) => (
                         <span key={i}>{tag}</span>
                       ))}
                     </div>
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>

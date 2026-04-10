@@ -2,7 +2,7 @@
   width: 100%;
   background: #f4f2ee;
   padding: 34px 0 46px;
-  font-family: "Inter", sans-serif;
+  /* font-family: "Inter", sans-serif; */
 }
 
 .container {
@@ -29,9 +29,9 @@
 
 .subTitle {
   margin: 0 0 10px;
-  color: #b78d47;
+  color: #C09551;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   line-height: 1;
@@ -44,7 +44,7 @@
   font-weight: 300;
   line-height: 1.05;
   letter-spacing: -0.5px;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: 'Abel';
 }
 
 .rightContent {
@@ -58,7 +58,7 @@
   color: #4a4a4a;
   font-size: 15px;
   font-weight: 400;
-  text-align: justify;
+  text-align: right;
 }
 
 /* =========================
@@ -112,13 +112,13 @@
   transform: translate(-50%, -50%);
   margin: 0;
   color: #ffffff;
-  font-size: 32px;
-  font-weight: 300;
+  font-size: 40px;
+  font-weight: 200;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Abel";
 }
 
 /* =========================
@@ -136,7 +136,7 @@
   height: 40px;
   border: none;
   outline: none;
-  background: #b78d47;
+  background: #C09551;
   color: #ffffff;
   font-size: 11px;
   font-weight: 500;
