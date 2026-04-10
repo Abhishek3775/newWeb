@@ -10,6 +10,7 @@ import bgImage from "../../assets2/Services/11.png"
 import icon1 from "../../assets2/Services/icon1.png"
 import icon2 from "../../assets2/Services/icon2.png"
 import Bgimg from '../../assets/linepatter1.png'
+import heroImg from '../../assets2/Services/image 1.jpg'
 
 
 
@@ -24,20 +25,30 @@ export default function Services() {
 
       {/* ===== HERO ===== */}
       <section className={styles.servicesHeroSection}>
-        <div className={styles.servicesHeroOverlay}>
-          <h5 className={styles.servicesHeroSubtitle}>EXCELLENCE DEFINED</h5>
-          <p className={styles.servicesHeroTitle}>Our Services</p>
-          <p className={styles.servicesHeroTagline}>Curating Extraordinary Experiences Worldwide</p>
-          <p className={styles.servicesHeroDesc}>
-            From private aviation to bespoke travel management, we deliver unparalleled luxury
-            services tailored to discerning individuals and corporations seeking excellence in every detail.
-          </p>
-          <div className={styles.heroExploreWrap}>
-            <button className={styles.heroBtn}>EXPLORE</button>
-            <div className={styles.sArrow}>⌄</div>
-          </div>
+      {/* Background Image */}
+      <img src={heroImg} alt="Our Services" className={styles.servicesHeroImage} />
+
+      {/* Dark Overlay + Content */}
+      <div className={styles.servicesHeroOverlay}>
+        <h5 className={styles.servicesHeroSubtitle}>EXCELLENCE DEFINED</h5>
+
+        <h1 className={styles.servicesHeroTitle}>Our Services</h1>
+
+        <p className={styles.servicesHeroTagline}>
+          Curating Extraordinary Experiences Worldwide
+        </p>
+
+        <p className={styles.servicesHeroDesc}>
+          From private aviation to bespoke travel management, we deliver unparalleled luxury
+          services tailored to discerning individuals and corporations seeking excellence in every detail.
+        </p>
+
+        <div className={styles.heroExploreWrap}>
+          <button className={styles.heroBtn}>EXPLORE</button>
+          <div className={styles.sArrow}>⌄</div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* ===== NINE PILLARS ===== */}
       <section className={styles.pillarsSection}>
@@ -320,40 +331,38 @@ export default function Services() {
   className={styles.journeySection}
   style={{
     backgroundImage: `url(${bgImage})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
   }}
 >
   <div className={styles.journeyOverlay}></div>
 
   <div className={styles.journeyContent}>
     <h5 className={styles.journeySubtitle}>YOUR JOURNEY AWAITS</h5>
+
     <h2 className={styles.journeyTitle}>Begin Your Journey</h2>
+
     <p className={styles.journeyText}>
       Every extraordinary journey begins with a conversation. Our Japan
       specialists await to craft your bespoke itinerary, tailored to your every desire.
     </p>
 
     {/* Contact Row */}
-    <div className={styles.journeyContact}>
-      <div className={styles.contactItem}>
-        <div className={styles.iconBox}>
-          <img src={icon1} alt="phone-icon" />
-        </div>
-        <span>+442074269888</span>
-      </div>
-
-      <div className={styles.divider}></div>
-
-      <div className={styles.contactItem}>
-        <div className={styles.iconBox}>
-          <img src={icon2} alt="mail-icon" className="icon-2"/>
-
-        </div>
-        <span>southafrica@eliteconcierge.com</span>
-      </div>
+ <div className={styles.journeyContact}>
+  <a href="tel:+442074269888" className={styles.contactItem}>
+    <div className={styles.iconBox}>
+      <img src={icon1} alt="phone" />
     </div>
+    <span>+442074269888</span>
+  </a>
+
+  <div className={styles.divider}></div>
+
+  <a href="mailto:southafrica@eliteconcierge.com" className={styles.contactItem}>
+    <div className={styles.iconBox}>
+      <img src={icon2} alt="mail" className={styles.iconBox2}/>
+    </div>
+    <span>southafrica@eliteconcierge.com</span>
+  </a>
+</div>
 
     <button className={styles.journeyBtn}>
       BEGIN YOUR JOURNEY <span>→</span>

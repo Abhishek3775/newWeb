@@ -1,7 +1,9 @@
 import React from "react";
 import "./EliteJourney.css";
-import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
-import bgimg from "../../assets2/Experience/PERSONALIZED JOURNEYS/12.jpg";
+// import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import bgimg from "../../assets2/Experience/PERSONALIZED JOURNEYS/12.png";
+import icon1 from "../../assets/phone.png";
+import icon2 from "../../assets/msg.png";
 
 const EliteJourney = () => {
   return (
@@ -27,7 +29,7 @@ const EliteJourney = () => {
         <div className="elite-journey-contact">
           <div className="elite-contact-item">
             <div className="elite-icon-box">
-              <FaPhoneAlt />
+              <img src={icon1} className="elite-icon1-box"/>
             </div>
             <span>+442074269888</span>
           </div>
@@ -36,7 +38,7 @@ const EliteJourney = () => {
 
           <div className="elite-contact-item">
             <div className="elite-icon-box">
-              <FaEnvelope />
+              <img src={icon2} className="elite-icon2-box"/>
             </div>
             <span>southafrica@eliteconcierge.com</span>
           </div>

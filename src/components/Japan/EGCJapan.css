@@ -142,10 +142,11 @@
   }
 }
 
-/* Mobile Landscape & Small Tablets (481px - 768px) */
+/* ================= TABLET + MOBILE ================= */
 @media (max-width: 768px) {
   .egc-difference {
-    padding: 50px 0;
+    padding: 55px 0 70px;
+    background-color: #ffffff;
   }
 
   .egc-container {
@@ -154,54 +155,83 @@
 
   .egc-content {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 42px;
+    align-items: start;
   }
 
   .egc-text {
     padding-right: 0;
-  }
-
-  .egc-title {
-    font-size: 2.25rem;
+    text-align: left;
   }
 
   .egc-label {
-    font-size: 0.8125rem;
+    font-size: 0.78rem;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+
+  .egc-title {
+    font-size: 2rem;
+    line-height: 1.18;
+    margin-bottom: 20px;
+    font-family: "Abel", sans-serif;
   }
 
   .egc-intro {
-    font-size: 0.9375rem;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 28px;
+    max-width: 100%;
   }
 
   .egc-features {
-    gap: 28px;
+    gap: 20px;
   }
 
   .egc-feature h3 {
-    font-size: 1.0625rem;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
   }
 
   .egc-feature p {
-    font-size: 0.875rem;
+    font-size: 1.95rem;
+    line-height: 1.8;
+    text-align: left;
+    color: #4a4a4a;
   }
 
   .egc-images {
-    min-height: 450px;
-    margin-top: 30px;
+    min-height: 420px;
+    margin-top: 10px;
+  }
+
+  .image-container {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .main-image {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
   }
 
   .overlay-image {
-    left: -30px;
-    bottom: -25px;
-    width: 55%;
+    width: 52%;
+    max-height: 220px;
+    left: -18px;
+    bottom: -18px;
     border: 6px solid white;
   }
 }
 
-/* Mobile Devices (up to 480px) */
+/* ================= EXACT PHONE VIEW ================= */
 @media (max-width: 480px) {
   .egc-difference {
-    padding: 40px 0;
+    padding: 48px 0 65px;
   }
 
   .egc-container {
@@ -209,52 +239,106 @@
   }
 
   .egc-content {
-    gap: 40px;
+    gap: 36px;
+  }
+
+  .egc-text {
+    text-align: left;
   }
 
   .egc-label {
-    font-size: 0.75rem;
-    letter-spacing: 1.5px;
-    margin-bottom: 12px;
+    font-size: 0.92rem;
+    letter-spacing: 1.6px;
+    margin-bottom: 10px;
   }
 
   .egc-title {
-    font-size: 1.875rem;
-    margin-bottom: 24px;
+    font-size: 1.95rem;
+    line-height: 1.15;
+    margin-bottom: 18px;
+    max-width: 300px;
   }
 
   .egc-intro {
-    font-size: 0.875rem;
-    margin-bottom: 32px;
-  }
-
-  .egc-features {
-    gap: 24px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    max-width: 320px;
   }
 
   .egc-feature h3 {
-    font-size: 1rem;
+    font-size: 0.98rem;
     margin-bottom: 10px;
   }
 
   .egc-feature p {
-    font-size: 0.8125rem;
-    line-height: 1.6;
+    font-size: 0.98rem;
+    line-height: 1.75;
+    text-align: left;
   }
 
   .egc-images {
-    min-height: 350px;
-    margin-top: 20px;
+    min-height: 360px;
+    margin-top: 8px;
+  }
+
+  .image-container {
+    max-width: 330px;
+    margin: 0 auto;
+  }
+
+  .main-image {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
   }
 
   .overlay-image {
-    left: -20px;
-    bottom: -20px;
-    width: 60%;
+    width: 56%;
+    max-height: 180px;
+    left: -12px;
+    bottom: -14px;
     border: 5px solid white;
   }
 }
 
+/* ================= SMALL PHONE ================= */
+@media (max-width: 375px) {
+  .egc-title {
+    font-size: 1.75rem;
+    max-width: 270px;
+  }
+
+  .egc-intro {
+    font-size: 0.82rem;
+    max-width: 280px;
+  }
+
+  .egc-feature h3 {
+    font-size: 0.92rem;
+  }
+
+  .egc-feature p {
+    font-size: 0.8rem;
+    line-height: 1.7;
+  }
+
+  .egc-images {
+    min-height: 320px;
+  }
+
+  .main-image {
+    height: 320px;
+  }
+
+  .overlay-image {
+    width: 58%;
+    max-height: 160px;
+    left: -10px;
+    bottom: -12px;
+    border: 4px solid white;
+  }
+}
 /* Extra Small Mobile (up to 375px) */
 @media (max-width: 375px) {
   .egc-title {

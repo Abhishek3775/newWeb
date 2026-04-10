@@ -1,10 +1,9 @@
 /* ================= HERO SECTION ================= */
-
 .sah-hero-section {
   position: relative;
   width: 100%;
   height: 100vh;
-  min-height: 600px;
+  min-height: 700px;
   overflow: hidden;
 }
 
@@ -21,7 +20,7 @@
 .sah-hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.45);
 }
 
 /* Content */
@@ -29,88 +28,189 @@
   position: relative;
   z-index: 2;
   height: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 0 16px;
   color: #ffffff;
-}
-
-/* Title */
-.sah-hero-title {
-  font-size: 3rem;
-  font-weight: 400;
-  letter-spacing: 2px;
-  color: #F5F4EF;
-}
-
-/* Subtitle */
-.sah-hero-subtitle {
-  margin-top: 16px;
-  font-size: 1rem;
-  opacity: 0.8;
-}
-
-/* Description */
-.sah-hero-description {
-  margin-top: 16px;
-  max-width: 700px;
-  font-size: 0.95rem;
-  line-height: 1.6;
   text-align: center;
-  opacity: 0.6;
+  padding: 0 20px;
 }
 
-/* Stats */
+/* ================= TITLE ================= */
+.sah-hero-title {
+  font-size: clamp(3rem, 9vw, 8rem);
+  font-weight: 300;
+  font-family: "Abel", sans-serif;
+  letter-spacing: 1px;
+  color: #f5f4ef;
+  line-height: 1;
+  margin: 0;
+}
+
+/* ================= SUBTITLE ================= */
+.sah-hero-subtitle {
+  margin-top: 34px;
+  font-size: clamp(1.2rem, 2vw, 1rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.4;
+}
+
+/* ================= DESCRIPTION ================= */
+.sah-hero-description {
+  margin-top: 28px;
+  max-width: 760px;
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.82);
+  text-align: center;
+}
+
+/* ================= STATS ================= */
 .sah-hero-stats {
- display: flex;
- margin-top: 20px;
- 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin-top: 55px;
+  flex-wrap: wrap;
+}
+
+.sah-stat-box {
+  text-align: center;
 }
 
 .sah-stat-box h3 {
-  color: #C09551;
-  font-size: 1.25rem;
+  color: #c09551;
+  font-size: clamp(1.8rem, 2vw, 2.1rem);
   font-weight: 600;
+  margin: 0;
 }
 
 .sah-stat-box p {
-  margin-top: 8px;
-  font-size: 0.7rem;
+  margin-top: 10px;
+  font-size: 0.62rem;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 2px;
-  opacity: 0.7;
+  letter-spacing: 1.6px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
 }
 
-/* Tablet */
-@media (min-width: 640px) {
+/* ================= TABLET ================= */
+@media (max-width: 992px) {
+  .sah-hero-section {
+    min-height: 650px;
+  }
+
   .sah-hero-title {
-    font-size: 4rem;
+    font-size: clamp(2.8rem, 10vw, 5.5rem);
+  }
+
+  .sah-hero-subtitle {
+    margin-top: 26px;
+    font-size: 1.5rem;
   }
 
   .sah-hero-description {
+    margin-top: 22px;
+    max-width: 680px;
     font-size: 1rem;
   }
 
   .sah-hero-stats {
-    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin-top: 45px;
+  }
+
+  .sah-stat-box h3 {
+    font-size: 1.8rem;
+  }
+
+  .sah-stat-box p {
+    font-size: 0.75rem;
   }
 }
 
-/* Desktop */
-@media (min-width: 1024px) {
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .sah-hero-section {
+    height: 100vh;
+    min-height: 720px;
+  }
+
+  .sah-hero-content {
+    padding: 0 18px;
+  }
+
   .sah-hero-title {
-    font-size: 5rem;
+    font-size: clamp(3rem, 14vw, 4.6rem);
+    line-height: 1.05;
   }
 
   .sah-hero-subtitle {
-    font-size: 1.1rem;
+    margin-top: 22px;
+    font-size: 1.2rem;
   }
 
   .sah-hero-description {
-    font-size: 1.05rem;
+    margin-top: 18px;
+    font-size: 0.98rem;
+    line-height: 1.8;
+    max-width: 95%;
+  }
+
+  .sah-hero-stats {
+    gap: 28px;
+    margin-top: 40px;
+  }
+
+  .sah-stat-box h3 {
+    font-size: 1.6rem;
+  }
+
+  .sah-stat-box p {
+    font-size: 0.72rem;
+    letter-spacing: 1.2px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+  .sah-hero-section {
+    min-height: 760px;
+  }
+
+  .sah-hero-title {
+    font-size: clamp(2.8rem, 15vw, 4.2rem);
+  }
+
+  .sah-hero-subtitle {
+    font-size: 1.08rem;
+    margin-top: 18px;
+  }
+
+  .sah-hero-description {
+    font-size: 0.92rem;
+    line-height: 1.75;
+    margin-top: 16px;
+  }
+
+  .sah-hero-stats {
+    gap: 22px;
+    margin-top: 34px;
+  }
+
+  .sah-stat-box h3 {
+    font-size: 1.4rem;
+  }
+
+  .sah-stat-box p {
+    font-size: 0.68rem;
+    letter-spacing: 1px;
   }
 }

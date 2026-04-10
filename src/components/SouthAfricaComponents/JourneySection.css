@@ -1,220 +1,339 @@
 /* ================= SECTION ================= */
-
 .journey-section {
+  position: relative;
   width: 100%;
-  padding: 140px 20px;
+  min-height: 540px;
+  padding: 90px 20px 80px;
   text-align: center;
   box-sizing: border-box;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================= OVERLAY ================= */
+.journey-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.42);
+  z-index: 1;
 }
 
 /* ================= CONTAINER ================= */
-
 .journey-container {
-  max-width: 950px;
+  position: relative;
+  z-index: 2;
+  max-width: 980px;
+  width: 100%;
   margin: 0 auto;
+  padding-top: 8px;
 }
 
 /* ================= SUBTITLE ================= */
-
 .journey-subtitle {
-  color: #b48a45;
-  font-size: 14px;
-  letter-spacing: 3px;
+  color: #c09551;
+  font-size: 17px;
+  letter-spacing: 1.8px;
   font-weight: 600;
   margin-bottom: 18px;
-  text-align: center;
+  text-transform: uppercase;
 }
 
 /* ================= TITLE ================= */
-
 .journey-title {
-  font-size: 48px;
+  font-size: clamp(2.4rem, 5vw, 4rem);
   font-weight: 300;
-  color: #131313;
-  margin-bottom: 28px;
-  letter-spacing: 1px;
-  line-height: 1.2;
+  color: #f5f4ef;
+  margin-bottom: 22px;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+  font-family: "Abel", sans-serif;
 }
 
 /* ================= DESCRIPTION ================= */
-
 .journey-description {
-  font-size: 16px;
-  color: #e0e0e0;
-  max-width: 680px;
-  margin: 0 auto 55px auto;
-  line-height: 1.9;
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 760px;
+  margin: 0 auto 42px auto;
+  line-height: 1.55;
 }
 
 /* ================= CONTACT ================= */
-
 .journey-contact {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  margin-bottom: 50px;
+  gap: 28px;
+  margin-bottom: 38px;
   flex-wrap: wrap;
-  /* background-color: red; */
 }
 
 .contact-item {
   display: flex;
   align-items: center;
-  gap: 15px;
-  color: #131313;
+  gap: 14px;
+  color: #f5f4ef;
   font-size: 15px;
-  /* width: 300px;;
-  background-color: blue; */
+  font-weight: 400;
 }
 
 .icon-box {
-  width: 48px;
-  height: 48px;
-  border: 1px solid #d8d3cb;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
-  color: #131313;
+  background: transparent;
+  color: #ffffff;
   transition: 0.3s ease;
+  flex-shrink: 0;
 }
 
 .icon-box svg {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .icon-box:hover {
-  border-color: #b48a45;
-  color: #b48a45;
+  border-color: #c09551;
+  color: #c09551;
 }
 
 .divider {
   width: 1px;
-  height: 45px;
-  background: #d8d3cb;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.95);
 }
 
 /* ================= BUTTON ================= */
-
 .journey-btn {
-  background: #b48a45;
-  color: white;
+  background: #c09551;
+  color: #fff;
   border: none;
-  padding: 18px 50px;
+  min-width: 260px;
+  padding: 17px 42px;
   font-size: 13px;
   letter-spacing: 1px;
   cursor: pointer;
   transition: 0.3s ease;
+  font-weight: 500;
 }
 
 .journey-btn:hover {
-  background: #9f773a;
+  background: #a97d3f;
   transform: translateY(-2px);
 }
 
-/* ========================================= */
-/* =============== RESPONSIVE ============== */
-/* ========================================= */
-
-/* Large Screens */
+/* ================= LARGE DESKTOP ================= */
 @media (min-width: 1400px) {
+  .journey-section {
+    min-height: 600px;
+  }
+
   .journey-title {
-    font-size: 56px;
+    font-size: 4.2rem;
   }
 
   .journey-description {
-    font-size: 17px;
+    font-size: 18px;
   }
 }
 
-/* Laptop */
+/* ================= LAPTOP ================= */
 @media (max-width: 1200px) {
   .journey-title {
-    font-size: 42px;
+    font-size: 3.3rem;
+  }
+
+  .journey-description {
+    max-width: 700px;
   }
 }
 
-/* Tablet */
+/* ================= TABLET ================= */
 @media (max-width: 992px) {
   .journey-section {
-    padding: 110px 20px;
+    min-height: 500px;
+    padding: 80px 22px;
   }
 
   .journey-title {
-    font-size: 36px;
+    font-size: 2.9rem;
   }
 
   .journey-description {
     font-size: 15px;
+    max-width: 640px;
+    margin-bottom: 34px;
   }
-/* 
-  .journey-contact {
-    gap: 30px;
-  } */
 
-      .journey-contact {
-        gap: 30px;
-        display: flex;
-        justify-content: left;
-        /* align-items: center; */
-        align-items: baseline;
-    }
+  .journey-contact {
+    gap: 22px;
+    margin-bottom: 34px;
+  }
+
+  .contact-item {
+    font-size: 14px;
+  }
+
+  .journey-btn {
+    min-width: 240px;
+  }
 }
 
-/* Mobile Large */
+/* ================= MOBILE LARGE ================= */
 @media (max-width: 768px) {
   .journey-section {
-    padding: 90px 20px;
+    min-height: 520px;
+    padding: 70px 22px 60px;
+    background-position: center;
+  }
+
+  .journey-container {
+    max-width: 100%;
+  }
+
+  .journey-subtitle {
+    font-size: 15px;
+    margin-bottom: 16px;
+    letter-spacing: 1.5px;
   }
 
   .journey-title {
-    font-size: 30px;
+    font-size: 2.15rem;
+    margin-bottom: 18px;
+    line-height: 1.15;
   }
 
   .journey-description {
     font-size: 14px;
-    margin-bottom: 40px;
+    line-height: 1.65;
+    max-width: 92%;
+    margin: 0 auto 34px auto;
   }
 
-  .divider {
-    display: none;
-  }
-
+  /* 👇 IMPORTANT: row me hi rakho */
   .journey-contact {
-    flex-direction: column;
-    gap: 20px;
-  }
-}
-
-/* Mobile Small */
-@media (max-width: 480px) {
-  .journey-section {
-    padding: 70px 15px;
-  }
-
-  .journey-subtitle {
-    font-size: 12px;
-    letter-spacing: 2px;
-  }
-
-  .journey-title {
-    font-size: 24px;
-  }
-
-  .journey-description {
-    font-size: 13px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: nowrap;
+    margin-bottom: 34px;
   }
 
   .contact-item {
-    font-size: 13px;
-    text-align: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .icon-box {
+    width: 42px;
+    height: 42px;
+  }
+
+  .icon-box svg {
+    font-size: 14px;
+  }
+
+  .divider {
+    display: block;
+    width: 1px;
+    height: 34px;
   }
 
   .journey-btn {
     width: 100%;
-    max-width: 320px;
-    padding: 16px 20px;
+    max-width: 430px;
+    padding: 18px 22px;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+}
+
+/* ================= MOBILE SMALL ================= */
+@media (max-width: 480px) {
+  .journey-section {
+    min-height: 450px;
+    padding: 28px 10px 56px;
+  }
+
+  .journey-subtitle {
+    font-size: 12px;
+    letter-spacing: 1.8px;
+    margin-bottom: 14px;
+  }
+
+  .journey-title {
+    font-size: 2rem;
+    line-height: 1.12;
+    margin-bottom: 18px;
+  }
+
+  .journey-description {
+    font-size: 13px;
+    max-width: 95%;
+    line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .journey-contact {
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .contact-item {
+    gap: 8px;
+    font-size: 10.5px;
+  }
+
+  .icon-box {
+    width: 32px;
+    height: 32px;
+  }
+
+  .divider {
+    height: 30px;
+    width: 1px;
+  }
+
+  .journey-btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 17px 18px;
+    font-size: 12px;
+  }
+}
+
+/* ================= EXTRA SMALL ================= */
+@media (max-width: 375px) {
+  .journey-title {
+    font-size: 1.8rem;
+  }
+
+  .journey-description {
+    font-size: 12.5px;
+  }
+
+  .contact-item {
+    font-size: 9.8px;
+  }
+
+  .icon-box {
+    width: 31px;
+    height: 31px;
+  }
+  .divider {
+    height: 30px;
+    width: 12px;
   }
 }

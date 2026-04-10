@@ -1,4 +1,6 @@
-/* JourneyOverview.module.css */
+/* =========================================================
+   JOURNEY OVERVIEW — EXACT SCREENSHOT STYLE + RESPONSIVE
+========================================================= */
 
 * {
   margin: 0;
@@ -7,337 +9,611 @@
 }
 
 .section {
-  background-color: #ffffff;
-  padding: 40px 20px;
-}
-
-@media (min-width: 768px) {
-  .section {
-    padding: 60px 40px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .section {
-    padding: 80px 60px;
-  }
+  width: 100%;
+  background: #ffffff;
+  padding: 48px 20px 60px;
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1360px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.72fr);
+  gap: 44px;
+  align-items: start;
 }
 
-@media (max-width: 1024px) {
-  .container {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-}
-
-/* LEFT SECTION */
+/* =========================
+   LEFT SIDE
+========================= */
 .leftSection {
   display: flex;
   flex-direction: column;
-  gap: 30px;
 }
 
-/* Header */
 .header {
-  margin-bottom: 10px;
+  margin-bottom: 26px;
 }
 
 .sectionLabel {
-  color: #C09551;
-  font-size: 17px;
+  color: #c09551;
+  font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 12px;
+  letter-spacing: 1.3px;
+  margin-bottom: 10px;
 }
 
 .mainTitle {
-  font-size: 32px;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin-bottom: 16px;
-  line-height: 1.3;
-}
-
-@media (min-width: 768px) {
-  .mainTitle {
-    font-size: 40px;
-  }
+  font-size: 54px;
+  line-height: 1.08;
+  font-weight: 400;
+  color: #1b1b1b;
+  font-family: "Abel", sans-serif;
+  margin-bottom: 18px;
 }
 
 .description {
+  max-width: 690px;
   font-size: 14px;
-  line-height: 1.7;
-  color: #666;
+  line-height: 1.95;
+  color: #4a4a4a;
 }
 
-/* Highlights Section */
+/* =========================
+   JOURNEY HIGHLIGHTS
+========================= */
 .highlightsSection {
-  margin-top: 20px;
+  margin-bottom: 26px;
 }
 
 .sectionTitle {
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.15;
+  font-weight: 400;
+  color: #1b1b1b;
+  /* font-family: "Abel", sans-serif; */
+  margin-bottom: 20px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #1a1a1a;
-  margin-bottom: 16px;
 }
 
 .highlightsList {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px;
 }
 
 .highlightItem {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 12px;
   font-size: 14px;
-  color: #666;
-  line-height: 1.6;
+  color: #555555;
+  line-height: 1.75;
 }
 
-.checkmark {
-  color: #C09551;
-  font-weight: 700;
+.tickIcon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
-/* Best Time Box */
+/* =========================
+   BEST TIME BOX
+========================= */
 .bestTimeBox {
-  background-color: #f0ede6;
-  padding: 16px;
-  border-left: 4px solid #C09551;
+  background: #f4f1ea;
+  padding: 22px 22px;
+  margin-bottom: 26px;
 }
 
 .bestTimeTitle {
-  font-size: 11px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 400;
+  color: #c09551;
+  /* font-family: "Abel", sans-serif; */
+  margin-bottom: 10px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #C09551;
-  margin-bottom: 6px;
+  line-height: 1.1;
 }
 
 .bestTimeText {
-  font-size: 13px;
-  color: #1a1a1a;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #3c3c3c;
 }
 
-/* What's Included Box */
+/* =========================
+   INCLUDED BOX
+========================= */
 .includedBox {
-  border: 2px solid #C09551;
-  padding: 20px;
+  border: 1.5px solid #d3b07b;
+  padding: 22px 22px 18px;
 }
 
 .includedTitle {
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 400;
+  color: #1b1b1b;
+  /* font-family: "Abel", sans-serif; */
+  margin-bottom: 18px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #1a1a1a;
-  margin-bottom: 16px;
+  line-height: 1.1;
 }
 
 .includedGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-bottom: 16px;
+  column-gap: 28px;
+  row-gap: 14px;
+  margin-bottom: 18px;
 }
 
 .includedItem {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
-  font-size: 13px;
-  color: #666;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #5a5a5a;
+}
+
+.tickIconSmall {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-top: 4px;
 }
 
 .viewAllButton {
-  background: none;
+  background: transparent;
   border: none;
-  color: #C09551;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
   padding: 0;
-  text-align: left;
-  transition: color 0.2s;
+  color: #c09551;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.25s ease;
 }
 
 .viewAllButton:hover {
-  color: #C09551;
+  opacity: 0.8;
 }
 
-/* RIGHT SECTION */
+/* =========================
+   RIGHT SIDE MAP
+========================= */
 .rightSection {
-  background-color: #e8e6de;
-  border-radius: 8px;
+  background: #f3f0ea;
   padding: 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  gap: 16px;
+  min-height: 100%;
 }
 
-/* Map Header */
 .mapHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 12px;
-  width: 100%;   /* ⭐ important */
+  width: 100%;
+  margin-bottom: 14px;
 }
 
 .mapTitle {
-  font-size: 17px;
-  font-weight: 700;
+  color: #c09551;
+  font-size: 13px;
+  font-weight: 600;
   text-transform: uppercase;
-  align-self: flex-start;
-  letter-spacing: 1px;
-  color: #C09551;
+  letter-spacing: 1.3px;
 }
 
-.zoomButtons {
-  display: flex;
-  gap: 8px;
-}
-
-
-
-/* Map Container */
 .mapContainer {
-  position: relative;
-  width: 90%;
+  width: 100%;
   height: 720px;
-  background-color: #ffffff;
-  border-radius: 8px;
+  background: #ffffff;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.mapSvg {
-  width: 100%;
-  height: 100%;
-  transition: transform 0.3s ease;
-}
-
 .mapImage {
   width: 100%;
   height: 100%;
-  object-fit: full;
-  transition: transform 0.3s ease;
-  transform-origin: center;
+  object-fit: cover;
+  display: block;
 }
 
-.labelsContainer {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.label {
-  position: absolute;
-  pointer-events: auto;
-}
-
-.labelText {
-  background-color: #333;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 11px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.currentLocation {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  background-color: #ff1493;
-  border-radius: 50%;
-  border: 3px solid white;
-  top: 20%;
-  right: 8%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Compass Rose */
-.compassContainer {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  pointer-events: none;
-}
-
-.compassLabel {
-  font-size: 12px;
-  font-weight: 600;
-  color: #666;
-}
-
-.compassSvg {
-  width: 32px;
-  height: 32px;
-}
-
-/* Route Summary */
+/* =========================
+   ROUTE SUMMARY
+========================= */
 .routeSummary {
   display: flex;
-  align-self: flex-start;
-  gap: 8px;
   flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
   font-size: 12px;
-  font-weight: 600;
-  margin-top: 12px;
+  line-height: 1.7;
 }
 
 .routeCity {
-  color: #C09551;
+  color: #9a7a45;
   white-space: nowrap;
 }
 
 .routeSeparator {
-  color: #999;
+  color: #9f9f9f;
 }
 
-@media (max-width: 768px) {
+/* =========================================================
+   LAPTOP
+========================================================= */
+@media (max-width: 1200px) {
   .container {
-    grid-template-columns: 1fr;
-  }
-
-  .mapContainer {
-    height: 280px;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 34px;
   }
 
   .mainTitle {
-    font-size: 28px;
+    font-size: 46px;
+  }
+
+  .sectionTitle,
+  .bestTimeTitle,
+  .includedTitle {
+    font-size: 26px;
+  }
+
+  .mapContainer {
+    height: 620px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+@media (max-width: 992px) {
+  .section {
+    padding: 42px 20px 56px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+
+  .rightSection {
+    width: 100%;
+  }
+
+  .mapContainer {
+    height: 560px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+@media (max-width: 768px) {
+  .section {
+    padding: 34px 16px 48px;
+  }
+
+  .container {
+    gap: 28px;
+  }
+
+  .header {
+    margin-bottom: 22px;
+  }
+
+  .sectionLabel,
+  .mapTitle {
+    font-size: 12px;
+    letter-spacing: 1.1px;
+  }
+
+  .mainTitle {
+    font-size: 36px;
+    line-height: 1.08;
+    margin-bottom: 14px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .sectionTitle,
+  .bestTimeTitle,
+  .includedTitle {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .highlightsList {
+    gap: 12px;
+  }
+
+  .highlightItem,
+  .includedItem,
+  .bestTimeText {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .bestTimeBox,
+  .includedBox {
+    padding: 18px 16px;
   }
 
   .includedGrid {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .rightSection {
+    padding: 16px;
+  }
+
+  .mapContainer {
+    height: 430px;
+  }
+
+  .routeSummary {
+    gap: 8px;
+    font-size: 11px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+@media (max-width: 480px) {
+  .section {
+    padding: 30px 14px 42px;
+  }
+
+  .mainTitle {
+    font-size: 30px;
+  }
+
+  .sectionTitle,
+  .bestTimeTitle,
+  .includedTitle {
+    font-size: 22px;
+  }
+
+  .description,
+  .highlightItem,
+  .includedItem,
+  .bestTimeText {
+    font-size: 13px;
+  }
+
+  .tickIcon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .tickIconSmall {
+    width: 13px;
+    height: 13px;
+  }
+
+  .mapContainer {
+    height: 320px;
+  }
+
+  .routeSummary {
+    font-size: 10px;
+    gap: 6px;
+  }
+
+  .viewAllButton {
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   POPUP MODAL
+========================================================= */
+
+.popupOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.42);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 9999;
+}
+
+.popupBox {
+  position: relative;
+  width: 100%;
+  max-width: 1020px;
+  background: #ffffff;
+  padding: 30px 30px 34px;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
+  animation: popupFade 0.25s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@keyframes popupFade {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.popupClose {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  border: none;
+  background: transparent;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  color: #777;
+}
+
+.popupGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+}
+
+.popupColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.popupLabel {
+  color: #c09551;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.popupTitle {
+  font-size: 52px;
+  line-height: 1.08;
+  font-weight: 400;
+  color: #1b1b1b;
+  margin-bottom: 24px;
+  font-family: "Abel", sans-serif;
+}
+
+.popupList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.popupItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.popupIcon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.popupCross {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: #c09551;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.downloadBtn {
+  margin-top: 28px;
+  border: none;
+  background: transparent;
+  color: #c09551;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+}
+
+/* =========================================================
+   POPUP RESPONSIVE
+========================================================= */
+
+@media (max-width: 992px) {
+  .popupBox {
+    max-width: 900px;
+    padding: 34px 28px 28px;
+  }
+
+  .popupGrid {
+    gap: 34px;
+  }
+
+  .popupTitle {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .popupOverlay {
+    padding: 16px;
+  }
+
+  .popupBox {
+    padding: 28px 20px 24px;
+    max-height: 88vh;
+  }
+
+  .popupGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .popupTitle {
+    font-size: 32px;
+    margin-bottom: 18px;
+  }
+
+  .popupItem {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 480px) {
+  .popupBox {
+    padding: 24px 16px 20px;
+  }
+
+  .popupClose {
+    top: 10px;
+    right: 14px;
+    font-size: 26px;
+  }
+
+  .popupLabel {
+    font-size: 12px;
+  }
+
+  .popupTitle {
+    font-size: 28px;
+  }
+
+  .popupItem {
+    font-size: 13px;
+  }
+
+  .downloadBtn {
+    font-size: 12px;
   }
 }

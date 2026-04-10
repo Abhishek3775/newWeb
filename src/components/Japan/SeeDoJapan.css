@@ -1,7 +1,7 @@
 .see-section {
   /* background: #f5f4ef; */
   padding: 100px 20px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  /* font-family: "Helvetica Neue", Arial, sans-serif; */
 }
 
 .see-container {
@@ -22,13 +22,14 @@
 .see-header h2 {
   font-size: 40px;
   font-weight: 400;
-  color: #222;
+  color: #131313;
+  font-family: "abel";
 }
 
 .see-header p {
   max-width: 450px;
   font-size: 14px;
-  color: #555;
+  color: #131313;
   line-height: 1.6;
   text-align: right;
 }
@@ -64,6 +65,7 @@
 .see-content h3 {
   font-size: 18px;
   color: #C09551;
+  font-family: "abel";
   font-weight: 500;
   margin-bottom: 8px;
 }
@@ -85,7 +87,7 @@
   height: 50px;
   background: white;
   border-radius: 50%;
-  border: 1px solid #ddd;
+  border: 1px solid #131313;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,11 +129,95 @@
 }
 
 @media (max-width: 768px) {
+  .see-section {
+    padding: 60px 20px 80px;
+  }
+
+  /* HEADER */
+  .see-header {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  .see-header h2 {
+    font-size: 32px;
+    text-align: center;
+    line-height: 1.2;
+    max-width: 420px;
+  }
+
+  .see-header p {
+    text-align: left;
+    max-width: 320px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* SWIPER CENTER FIX */
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .see-card {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  /* IMAGE */
   .see-image {
-    height: 350px;
+    height: 320px;
+    width: 100%;
+  }
+
+  /* CONTENT */
+  .see-content {
+    padding: 14px 4px 6px;
+  }
+
+  .see-content h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .see-content p {
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  /* NAV BUTTONS → bottom center */
+  .see-swiper-wrapper {
+    padding-bottom: 60px;
   }
 
   .nav-btn {
-    display: none;
+    display: flex !important;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    transform: none;
+    width: 42px;
+    height: 42px;
+  }
+
+  /* Proper spacing */
+  .left {
+    left: 50%;
+    transform: translateX(-60px); /* left button */
+  }
+
+  .right {
+    left: 50%;
+    transform: translateX(20px); /* right button */
+  }
+  .see-container {
+    max-width: 100%;
+  }
+
+  .swiper {
+    width: 100%;
   }
 }

@@ -1,0 +1,314 @@
+/* ================= SECTION ================= */
+.signatureSection {
+  background: #f5f4ef;
+  padding: 80px 32px 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ================= HEADER ================= */
+.signatureHeader {
+  max-width: 1320px;
+  margin: 0 auto 34px;
+  display: flex;
+  justify-content: space-between;
+  /* font-family: "abel"; */
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.signatureHeader h2 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: #131313;
+  margin: 0;
+  font-family: "Abel", sans-serif;
+}
+
+.signatureHeader p {
+  max-width: 460px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #131313;
+  margin: 0;
+  text-align: right;
+}
+
+.signatureHeader p span {
+  color: #c09551;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ================= SLIDER WRAPPER ================= */
+.sliderWrapper {
+  max-width: 1320px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ================= SWIPER ================= */
+.swiperCustom {
+  overflow: visible !important;
+}
+
+/* ================= CARD ================= */
+.journeyCard {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= IMAGE ================= */
+.journeyImage {
+  position: relative;
+  height: 630px;
+  overflow: hidden;
+  background: #ddd;
+}
+
+.journeyImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ================= NIGHT BADGE ================= */
+.nights {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #fff;
+  color: #444;
+  padding: 7px 12px;
+  font-size: 13px;
+  font-weight: 400;
+  z-index: 2;
+}
+
+/* ================= OVERLAY ================= */
+.imageOverlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 22px 18px 20px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.48) 40%,
+    rgba(0, 0, 0, 0.055) 100%
+  );
+  color: #fff;
+}
+
+.locations {
+  display: block;
+  font-size: 13px;
+  color: #c09551;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.imageOverlay h3 {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 0 8px;
+  font-family: "abel";
+  color: #fff;
+  line-height: 1.3;
+}
+
+.imageOverlay p {
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+/* ================= FOOTER ================= */
+.journeyFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 2px 0;
+}
+
+.price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+}
+
+.view {
+  font-size: 13px;
+  color: #c09551;
+  letter-spacing: 0.6px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.view span {
+  margin-left: 8px;
+}
+
+/* ================= NAV BUTTONS ================= */
+.navBtn {
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #999;
+  background: rgba(245, 244, 239, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  transition: all 0.3s ease;
+  color: #222;
+}
+
+.navBtn:hover {
+  background: #fff;
+  border-color: #666;
+}
+
+.prevBtn {
+  left: -18px;
+}
+
+.nextBtn {
+  right: -18px;
+}
+
+/* ================= LARGE TABLET ================= */
+@media (max-width: 1199px) {
+  .journeyImage {
+    height: 560px;
+  }
+
+  .prevBtn {
+    left: -12px;
+  }
+
+  .nextBtn {
+    right: -12px;
+  }
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 991px) {
+  .signatureSection {
+    padding: 70px 24px 60px;
+  }
+
+  .signatureHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 28px;
+  }
+
+  .signatureHeader p {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .journeyImage {
+    height: 520px;
+  }
+
+  .navBtn {
+    display: none;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 767px) {
+  .signatureSection {
+    padding: 60px 16px 50px;
+  }
+
+  .signatureHeader {
+    margin-bottom: 24px;
+    gap: 16px;
+  }
+
+  .signatureHeader h2 {
+    font-size: 2rem;
+  }
+
+  .signatureHeader p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .journeyImage {
+    height: 500px;
+  }
+
+  .nights {
+    top: 14px;
+    left: 14px;
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .imageOverlay {
+    padding: 18px 16px 18px;
+  }
+
+  .locations {
+    font-size: 12px;
+  }
+
+  .imageOverlay h3 {
+    font-size: 20px;
+  }
+
+  .imageOverlay p {
+    font-size: 13px;
+  }
+
+  .journeyFooter {
+    padding-top: 16px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .price {
+    font-size: 13px;
+  }
+
+  .view {
+    font-size: 12px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+  .journeyImage {
+    height: 460px;
+  }
+
+  .imageOverlay h3 {
+    font-size: 18px;
+  }
+
+  .imageOverlay p {
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+
+  .journeyFooter {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .view {
+    font-size: 12px;
+  }
+}

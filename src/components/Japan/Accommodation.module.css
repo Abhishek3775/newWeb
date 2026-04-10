@@ -22,11 +22,13 @@
 
 .heading {
   font-size: 36px;
+  font-family: "abel";
 }
 
 .description {
   /* color: #777; */
   align-self: flex-end;
+  font-weight: 300;
   max-width: 500px;
 }
 
@@ -34,6 +36,7 @@
   display: flex;
   gap: 10px;
   margin: 20px 0;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -66,20 +69,33 @@
 .contentSection {
   display: flex;
   flex-direction: column;
+  padding: 30px;
   gap: 10px;
 }
 
+.icon { height: 15px; width: 15px;}
+
 .location {
   font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
   color: #C09551;
+}
+
+.location span {
+  color: #131313;
 }
 
 .title {
   font-size: 28px;
+  font-family: "abel";
 }
 
 .text {
-  color: #555;
+  color: #131313;
+  max-width: 500px;
+  font-weight: 300;
 }
 
 .tags span {
@@ -138,5 +154,11 @@
 
   .grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tags { 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
   }
 }

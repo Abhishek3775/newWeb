@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./EditorsSelection.module.css";
-import destinationImg from "../../assets/maldives.jpg";
+import destinationImg from "../../assets2/Destination/2.png";
 import starts from "../../assets/stars.png";
 
 const features = [

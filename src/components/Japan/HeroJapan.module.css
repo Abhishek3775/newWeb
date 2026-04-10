@@ -2,39 +2,24 @@
 
 .heroSection {
   position: relative;
-  height: 85vh;
-  min-height: 700px;
+  height: 95vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  justify-content: end;
-  padding: 0 100px 30px;
+  justify-content: flex-end;
+  padding: 0 100px 40px;
   color: #ffffff;
   overflow: hidden;
 }
 
-
-/* link button  */
-.heroLink{
-color: #C09551;
-font-size: 30px;
-text-decoration: underline #C09551;
-text-underline-offset: 8px;
-}
-
-.heroLink:hover {
-  cursor: pointer;
-color: #ffcb78;
-}
 /* ================= DARK OVERLAY ================= */
 
 .heroOverlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.18);
   z-index: 1;
 }
 
@@ -46,66 +31,48 @@ color: #ffcb78;
   max-width: 900px;
   display: flex;
   flex-direction: column;
-  /* background-color: red; */
+  gap: 6px;
   padding: 20px;
 }
 
-.heroSubtitle {
-  font-size: 14px;
-  letter-spacing: 4px;
-  color: #C09551;
-  margin-bottom: 28px;
-  font-weight: 500;
-  width: 100%;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.line {
-  height: 4px;
-  width: 100px;
-  background-color: #C09551;
-}
-
 .heroContent h1 {
-  font-size: 78px;
+  font-size: 88px;
   font-weight: 300;
-  line-height: 1.05;
-  margin-bottom: 28px;
+  font-family: "abel";
+  line-height: 1.01;
+  margin: 0 0 28px 0;
+  color: #ffffff;
 }
 
 .heroDesc {
-  font-size: 14px;
-  opacity: 0.85;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 0.1;
+  opacity: 0.95;
   text-align: left;
+  max-width: 780px;
+  margin: 0 0 55px 0;
+  color: #ffffff;
 }
 
-/* ================= RIGHT ICONS ================= */
+/* ================= LINK BUTTON ================= */
 
-.heroIcons {
-  position: absolute;
-  right: 60px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  z-index: 2;
-}
-
-.heroIcons img {
-  width: 42px;
-  height: 42px;
-  opacity: 0.85;
+.heroLink {
+  color: #c09551;
+  font-size: 40px;
+  font-weight: 500;
+  text-decoration: underline #c09551;
+  text-underline-offset: 12px;
+  text-decoration-thickness: 2px;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: fit-content;
+  line-height: 0.1;
 }
 
-.heroIcons img:hover {
-  opacity: 1;
-  transform: scale(1.15);
+.heroLink:hover {
+  color: #ffcb78;
+  text-decoration-color: #ffcb78;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -114,52 +81,138 @@ color: #ffcb78;
   .heroContent h1 {
     font-size: 64px;
   }
+
+  .heroDesc {
+    font-size: 22px;
+  }
+
+  .heroLink {
+    font-size: 36px;
+  }
 }
 
 @media (max-width: 992px) {
   .heroSection {
-    padding: 0 60px;
+    padding: 0 60px 35px;
   }
 
   .heroContent h1 {
-    font-size: 48px;
+    font-size: 52px;
   }
 
-  .heroIcons {
-    right: 30px;
+  .heroDesc {
+    font-size: 20px;
+    max-width: 650px;
+  }
+
+  .heroLink {
+    font-size: 32px;
   }
 }
 
 @media (max-width: 768px) {
   .heroSection {
-    height: 85vh;
-    padding: 0 30px;
+    height: 58vh;
+    padding: 0 28px 28px;
+    justify-content: flex-end;
+    background-position: center;
+  }
+
+  .heroContent {
+    padding: 0;
+    max-width: 100%;
+    margin-bottom: 20px;
   }
 
   .heroContent h1 {
-    font-size: 36px;
+    font-size: 34px;
+    line-height: 1.15;
+    font-weight: 300;
+    max-width: 400px;
+    margin-bottom: 22px;
+  }
+
+  .heroDesc {
+    font-size: 17px;
+    line-height: 1.45;
+    max-width: 310px;
+    margin-bottom: 38px;
+  }
+
+  .heroLink {
+    font-size: 24px;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+    max-width: 300px;
+  }
+}
+
+/* ================= EXACT PHONE VIEW ================= */
+
+@media (max-width: 480px) {
+  .heroSection {
+    height: 52vh;
+    padding: 0 22px 34px;
+    justify-content: flex-end;
+    background-position: center;
+  }
+
+  .heroOverlay {
+    background: rgba(0, 0, 0, 0.30);
+  }
+
+  .heroContent {
+    padding: 0;
+    margin-bottom: 18px;
+    align-items: flex-start;
+    gap: 2px; /* content items ke bich halka gap */
+  }
+
+  .heroContent h1 {
+    font-size: 21px;
+    line-height: 1.05;   /* line ke bich ka gap kam */
+    font-weight: 300;
+    max-width: 380px;
+    margin: 0 0 10px 0;  /* niche ka gap kam */
+  }
+
+  .heroDesc {
+    font-size: 15px;
+    line-height: 1.2;    /* description lines close */
+    max-width: 290px;
+    margin: 0 0 16px 0;  /* link se pehle gap kam */
+    opacity: 0.95;
+  }
+
+  .heroLink {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.1;    /* normal readable */
+    max-width: 290px;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 2px;
+  }
+}
+/* ================= SMALL PHONE ================= */
+
+@media (max-width: 380px) {
+  .heroSection {
+    padding: 0 18px 28px;
+  }
+
+  .heroContent h1 {
+    font-size: 27px;
+    max-width: 440px;
   }
 
   .heroDesc {
     font-size: 14px;
+    max-width: 250px;
+    margin-bottom: 34px;
   }
 
-  .heroIcons img {
-    width: 30px;
-    height: 30px;
-  }
-}
-
-@media (max-width: 480px) {
-  .heroSection {
-    height: 75vh;
-  }
-
-  .heroContent h1 {
-    font-size: 28px;
-  }
-
-  .heroIcons {
-    display: none;
+  .heroLink {
+    font-size: 18px;
+    max-width: 250px;
   }
 }

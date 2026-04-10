@@ -27,7 +27,8 @@
 .title {
   font-size: 42px;
   font-weight: 400;
-  color: #1e1e1e;
+  color: #131313;
+  font-family: "abel";
   margin: 0;
   line-height: 1.2;
 }
@@ -77,6 +78,7 @@
   font-size: 30px;
   font-weight: 400;
   margin-bottom: 14px;
+  font-family: "abel";
   line-height: 1.2;
 }
 

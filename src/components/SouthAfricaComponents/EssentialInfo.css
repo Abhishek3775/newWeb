@@ -1,6 +1,6 @@
 /* ===== SECTION BACKGROUND ===== */
 .essential-section {
-  background-color: #d7d3cc;
+  background-color: #F5F4EF;
   padding: 90px 20px;
 }
 
@@ -13,7 +13,7 @@
 /* ===== HEADINGS ===== */
 .sub-heading {
   text-align: center;
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 2px;
   color: #C09551;
   font-weight: 600;
@@ -24,7 +24,8 @@
   text-align: center;
   font-size: 42px;
   font-weight: 400;
-  color: #2b2b2b;
+  color: #131313;
+  font-family: "abel";
   margin-bottom: 60px;
 }
 
@@ -53,7 +54,7 @@
 }
 
 .info-card h4 {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 1.5px;
   color: #C09551;
@@ -63,7 +64,7 @@
 
 .info-card p {
   font-size: 15px;
-  color: #444;
+  color: #131313;
   line-height: 1.6;
 }
 
@@ -76,7 +77,7 @@
 
 .tips-card {
   background-color: #ffffff;
-  padding: 26px;
+  padding: 6px;
   /* background-color: red; */
 }
 
@@ -88,7 +89,7 @@
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 18px;
-  color: #111;
+  color: #C09551;
 }
 
 .tips-card h4 img {

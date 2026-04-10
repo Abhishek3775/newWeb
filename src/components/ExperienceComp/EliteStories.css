@@ -12,7 +12,7 @@
 .elite-story-section {
   background-color: #f0ede6;          /* warm beige from screenshot */
   padding: clamp(50px, 7vw, 90px) clamp(16px, 5%, 60px);
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
   color: #222;
 }
 
@@ -37,13 +37,13 @@
   font-size: clamp(26px, 4vw, 44px);
   margin: 0 0 14px;
   font-weight: 400;
-  font-family: "Georgia", serif;
-  color: #1a1a1a;
+  font-family: "abel";
+  color: #131313;
 }
 
 .elite-story-desc {
   font-size: clamp(13px, 1.4vw, 15px);
-  color: #666;
+  color: #131313;
   max-width: 620px;
   margin: 0 auto clamp(36px, 5vw, 56px);
   line-height: 1.7;
@@ -151,7 +151,7 @@
 .elite-story-exp-box h3 {
   font-size: clamp(18px, 2vw, 22px);
   font-weight: 400;
-  font-family: "Georgia", serif;
+  font-family: "abel", serif;
   margin: 0 0 16px;
   color: #1a1a1a;
 }

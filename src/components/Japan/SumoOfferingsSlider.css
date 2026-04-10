@@ -1,33 +1,74 @@
 .so-main {
-  background: #F5F4EF;
-  padding: 100px 20px;
+  background: #f5f4ef;
+  padding: 70px 32px 90px;
+  /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  color: #131313;
 }
 
 .so-container {
-  max-width: 1300px;
-  margin: auto;
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
 /* Heading */
 .so-heading {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 34px;
 }
 
 .so-heading p {
-  color: #C09551;
-  font-size: 13px;
+  color: #c09551;
+  font-size: 14px;
+  font-weight: 500;
   letter-spacing: 2px;
+  margin: 0 0 12px;
+  text-transform: uppercase;
 }
 
 .so-heading h2 {
-  font-size: 38px;
+  font-size: 68px;
   font-weight: 400;
+  margin: 0;
+  color: #131313;
+  line-height: 1.1;
+}
+
+/* Tabs */
+.so-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 34px;
+  flex-wrap: wrap;
+}
+
+.so-tabBtn {
+  border: 1px solid #e6e1d9;
+  background: #fff;
+  color: #2b2b2b;
+  padding: 12px 18px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-weight: 500;
+}
+
+.so-tabBtn.active {
+  background: #c09551;
+  border-color: #c09551;
+  color: #fff;
 }
 
 /* Slider */
 .so-sliderWrap {
   position: relative;
+  padding: 0 44px;
+}
+
+.so-slideViewport {
+  overflow: hidden;
 }
 
 /* Arrows */
@@ -35,27 +76,431 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  border: 1px solid #ccc;
+  border: 1px solid #b9b4ab;
   background: #fff;
-  z-index: 10;
+  color: #131313;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  transition: all 0.25s ease;
+  z-index: 5;
+}
+
+.so-arrow:hover {
+  background: #c09551;
+  border-color: #c09551;
+  color: #fff;
 }
 
 .prev {
-  left: -20px;
+  left: -8px;
 }
 
 .next {
-  right: -20px;
+  right: -8px;
 }
 
-/* IMPORTANT: remove extra padding from child sections */
-.so-swiper .so-section,
-.so-swiper .gtv-section,
-.so-swiper .psd-section {
-  padding: 0 !important;
-  background: transparent !important;
+/* Card */
+.so-card {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  background: #fff;
+  min-height: 530px;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.so-card-img-right .so-cardImgWrap {
+  order: 2;
+}
+
+.so-card-img-right .so-cardContent {
+  order: 1;
+}
+
+.so-cardImgWrap {
+  position: relative;
+  min-height: 530px;
+}
+
+.so-cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Price badge */
+.so-priceBadge {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  background: rgba(245, 244, 239, 0.95);
+  padding: 14px 18px 12px;
+}
+
+.so-priceFrom {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #c09551;
+  text-transform: uppercase;
+}
+
+.so-priceValue {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #c09551;
+  font-weight: 400;
+}
+
+/* Content */
+.so-cardContent {
+  padding: 36px 38px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.so-tag {
+  font-size: 14px;
+  color: #c09551;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
+
+.so-title {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0 0 18px;
+  color: #1c1c1c;
+  line-height: 1.2;
+  font-family: "Abel", sans-serif;
+}
+
+.so-desc {
+  font-size: 14px;
+  line-height: 1.85;
+  color: #4a4a4a;
+  margin: 0 0 22px;
+  max-width: 95%;
+}
+
+/* Meta */
+.so-metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.so-metaItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #444;
+}
+
+/* Divider */
+.so-divider {
+  height: 1px;
+  background: #ddd8d0;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+/* Includes */
+.so-includesTitle {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0 0 14px;
+  color: #1f1f1f;
+  text-transform: uppercase;
+}
+
+.so-includesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 26px;
+  margin-bottom: 28px;
+}
+
+.so-includeItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #4a4a4a;
+  line-height: 1.5;
+}
+
+.so-includeIcon {
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.so-includeImg {
+  width: 10px;
+  height: 10px;
+  object-fit: contain;
+}
+
+/* Buttons */
+.so-btnRow {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.so-btn {
+  width: 210px;
+  height: 48px;
+  border: 1px solid #c09551;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.so-btn-outline {
+  background: #fff;
+  color: #c09551;
+}
+
+.so-btn-outline:hover {
+  background: #c09551;
+  color: #fff;
+}
+
+.so-btn-primary {
+  background: #c09551;
+  color: #fff;
+  gap: 8px;
+}
+
+.so-btn-primary:hover {
+  background: #a88455;
+  border-color: #a88455;
+}
+
+.so-btnArrow {
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1199px) {
+  .so-heading h2 {
+    font-size: 48px;
+  }
+
+  .so-card {
+    grid-template-columns: 44% 56%;
+  }
+
+  .so-cardContent {
+    padding: 32px 30px 28px;
+  }
+
+  .so-title {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 991px) {
+  .so-main {
+    padding: 56px 20px 72px;
+  }
+
+  .so-heading h2 {
+    font-size: 40px;
+  }
+
+  .so-sliderWrap {
+    padding: 0 34px;
+  }
+
+  .so-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .so-cardImgWrap {
+    min-height: 340px;
+    height: 340px;
+    order: -1 !important;
+  }
+
+  .so-cardContent {
+    padding: 28px 24px 30px;
+  }
+
+  .so-includesGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .prev {
+    left: -2px;
+  }
+
+  .next {
+    right: -2px;
+  }
+}
+
+@media (max-width: 767px) {
+  .so-main {
+    padding: 48px 16px 60px;
+  }
+
+  .so-heading {
+    margin-bottom: 26px;
+  }
+
+  .so-heading p {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+  }
+
+  .so-heading h2 {
+    font-size: 34px;
+  }
+
+  .so-tabs {
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .so-tabBtn {
+    font-size: 10px;
+    padding: 10px 14px;
+  }
+
+  .so-sliderWrap {
+    padding: 0 28px;
+  }
+
+  .so-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
+  }
+
+  .so-cardImgWrap {
+    min-height: 260px;
+    height: 260px;
+  }
+
+  .so-cardContent {
+    padding: 24px 18px 24px;
+  }
+
+  .so-tag {
+    font-size: 12px;
+  }
+
+  .so-title {
+    font-size: 24px;
+  }
+
+  .so-desc {
+    font-size: 13px;
+    line-height: 1.75;
+    max-width: 100%;
+  }
+
+  .so-metaRow {
+    gap: 14px;
+  }
+
+  .so-metaItem {
+    font-size: 12px;
+  }
+
+  .so-includesGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .so-includeItem {
+    font-size: 13px;
+  }
+
+  .so-btnRow {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .so-btn {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 479px) {
+  .so-main {
+    padding: 40px 12px 50px;
+  }
+
+  .so-heading h2 {
+    font-size: 28px;
+  }
+
+  .so-tabBtn {
+    width: 100%;
+  }
+
+  .so-tabs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .so-sliderWrap {
+    padding: 0 22px;
+  }
+
+  .so-cardImgWrap {
+    min-height: 220px;
+    height: 220px;
+  }
+
+  .so-priceBadge {
+    top: 14px;
+    left: 14px;
+    padding: 10px 12px;
+  }
+
+  .so-title {
+    font-size: 21px;
+  }
+
+  .so-desc {
+    font-size: 12.5px;
+  }
+
+  .so-arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+  }
 }

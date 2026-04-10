@@ -46,7 +46,7 @@
 
 .subText {
   margin-top: 22px;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.78);
   font-size: clamp(0.88rem, 1.2vw, 1rem);
   font-weight: 300;
   line-height: 1.6;
@@ -61,8 +61,8 @@
   width: 100%;
   max-width: 320px;
   height: 34px;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.32);
+  border: 1px solid rgba(255, 255, 255, 0.04);
   border-radius: 2px;
   display: flex;
   align-items: center;

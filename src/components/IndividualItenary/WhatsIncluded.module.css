@@ -1,5 +1,5 @@
 .section {
-  background: #f8f8f8;
+  background: #ffffff;
   padding: 70px 0 78px;
 }
 
@@ -64,6 +64,7 @@
 .imageTitle {
   font-size: 19px;
   font-weight: 300;
+  font-family: 'abel';
   line-height: 1.2;
   margin: 0;
 }
@@ -79,14 +80,15 @@
   font-size: 33px;
   line-height: 1.15;
   font-weight: 300;
-  color: #222;
+  color: #131313;
+  font-family: "abel";
   margin: 0;
 }
 
 .description {
   margin-top: 22px;
   max-width: 500px;
-  color: #555;
+  color: #131313;
   font-size: 15px;
   line-height: 1.65;
   font-weight: 400;
@@ -105,7 +107,7 @@
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  color: #666;
+  color: #131313;
   font-size: 15px;
   line-height: 1.55;
 }

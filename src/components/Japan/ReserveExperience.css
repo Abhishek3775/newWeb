@@ -1,65 +1,69 @@
 /* ================= WRAPPER ================= */
-/* 
-    style={{
-        backgroundImage: `url(${BgImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }} */
 .re-wrapper {
-  background: #F5F4EF;
-  padding: 120px 20px;
+  position: relative;
+  min-height: 70vh;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+
   background-image: url('../../assets/sumo-journey.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* ================= CONTAINER ================= */
+/* ================= DARK OVERLAY ================= */
+.re-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+}
 
+/* ================= CONTENT ================= */
 .re-container {
-  max-width: 800px;
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
   margin: auto;
 }
 
 /* ================= TEXT ================= */
-
 .re-subtitle {
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: 3px;
   color: #C09551;
-  margin-bottom: 15px;
-  text-align: center;
+  margin-bottom: 18px;
 }
 
 .re-title {
-  font-size: 48px;
-  font-weight: 400;
+  font-size: 56px;
+  font-weight: 300;
+  font-family: 'abel';
+  color: #ffffff;
   margin-bottom: 25px;
-  color: #d4d4d4;
 }
 
 .re-description {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.8;
- color: #d4d4d4;
-  margin-bottom: 25px;
+  color: #e5e5e5;
+  margin-bottom: 20px;
 }
 
 .re-note {
-  font-size: 14px;
- color: #d4d4d4;
+  font-size: 15px;
+  color: #e5e5e5;
   margin-bottom: 40px;
 }
 
 /* ================= CONTACT ================= */
-
 .re-contact {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 35px;
   margin-bottom: 50px;
   flex-wrap: wrap;
 }
@@ -69,45 +73,66 @@
   align-items: center;
   gap: 12px;
   font-size: 14px;
-  color: #d4d4d4;
+  color: #fff;
 }
 
+/* ICON BOX */
 .re-icon {
-  width: 45px;
-  height: 45px;
-  border: 1px solid #ddd;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255,255,255,0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 18px;
 }
 
+/* DIVIDER */
 .re-divider {
   width: 1px;
   height: 40px;
-  background: #ccc;
+  background: rgba(255,255,255,0.4);
 }
 
 /* ================= BUTTON ================= */
-
 .re-button {
   background: #C09551;
   color: #fff;
   border: none;
-  padding: 18px 50px;
+  padding: 18px 55px;
   font-size: 14px;
   letter-spacing: 1px;
   cursor: pointer;
   transition: 0.3s ease;
 }
 
+.re-button span {
+  margin-left: 10px;
+}
+
 .re-button:hover {
-  background: #a97d3f;
+  background: #a97c3e;
 }
 
 /* ================= RESPONSIVE ================= */
 
+/* TABLET */
+@media (max-width: 992px) {
+  .re-title {
+    font-size: 42px;
+  }
+
+  .re-description {
+    font-size: 15px;
+  }
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
+  .re-wrapper {
+    padding: 90px 18px;
+    min-height: auto;
+  }
 
   .re-title {
     font-size: 34px;
@@ -118,27 +143,51 @@
   }
 
   .re-contact {
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
   }
 
+  .re-icon {
+    width: 28px;
+    height: 28px;
+  }
+
   .re-divider {
-    display: none;
-  }
-}
-
-@media (max-width: 480px) {
-
-  .re-wrapper {
-    padding: 80px 15px;
-  }
-
-  .re-title {
-    font-size: 26px;
+    /* display: none; */
   }
 
   .re-button {
     width: 100%;
+  }
+}
+
+/* SMALL MOBILE (exact 2nd image look) */
+@media (max-width: 480px) {
+  .re-wrapper {
+    padding: 70px 16px;
+  }
+
+  .re-title {
+    font-size: 28px;
+  }
+
+  .re-description {
+    font-size: 13.5px;
+  }
+
+  .re-note {
+    font-size: 13px;
+  }
+
+   .re-icon {
+    width: 31px;
+    height: 31px;
+  }
+
+  .re-contact span { font-size: 9.2px;}
+
+  .re-button {
     padding: 16px;
+    font-size: 13px;
   }
 }

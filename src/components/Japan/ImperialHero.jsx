@@ -1,9 +1,11 @@
 import React from "react";
 import img from "../../assets2/japan/Imperial Odyssey/1.png";
 import styles from "./ImperialHero.module.css";
-import { GrLocation } from "react-icons/gr";
+// import { GrLocation } from "react-icons/gr";
 import { FiUsers } from "react-icons/fi";
-import { MdOutlineDateRange } from "react-icons/md";
+import { CiCalendar } from "react-icons/ci";
+import { GoLocation } from "react-icons/go";
+// import { MdOutlineDateRange } from "react-icons/md";
 
 const ImperialHero = () => {
   return (
@@ -14,8 +16,8 @@ const ImperialHero = () => {
                 <h1 className={styles.impTitle}>Imperial Odyssey</h1>
                 <p className={styles.impLocations}>Tokyo · Hakone · Kyoto · Nara · Kanazawa</p>
                 <div className={styles.impDetails}>
-                  <span><MdOutlineDateRange color="#d1a650" /> 14 Days</span>
-                  <span><GrLocation color="#d1a650" /> 5 Cities</span>
+                  <span><CiCalendar color="#d1a650" /> 14 Days</span>
+                  <span><GoLocation color="#d1a650" size={13}/> 5 Cities</span>
                   <span><FiUsers color="#d1a650" /> 8 Guests</span>
                 </div>
                 <div className={styles.impPricing}>

@@ -24,10 +24,6 @@ const itineraryData = [
     image: dubrovnikArrival,
     description:
       "Arrive at Dubrovnik Airport where your private transfer awaits. Embark your vessel and settle into your ocean-view suite before a welcome cocktail reception and gala dinner.",
-    description2:
-      "Begin your Adriatic adventure in one of Europe’s most iconic coastal cities, where medieval walls meet sparkling sea views and timeless old-world charm.",
-    description3:
-      "Spend the evening relaxing aboard and preparing for the unforgettable voyage ahead.",
     highlights: [
       "Private airport transfer",
       "Welcome champagne reception",
@@ -91,10 +87,6 @@ const itineraryData = [
     image: korculaImage,
     description:
       "Step into the timeless charm of Korčula, a fortified medieval town often associated with the legendary explorer Marco Polo.",
-    description2:
-      "Surrounded by ancient walls and framed by the sparkling Adriatic Sea, this historic island town invites you to slow down and experience its rich heritage, elegant architecture, and warm Mediterranean spirit.",
-    description3:
-      "Wander through narrow stone streets, discover Gothic-Renaissance buildings, artisan shops, and postcard-worthy viewpoints.",
   },
   {
     day: 9,
@@ -124,6 +116,16 @@ const JourneyItinerary = () => {
     <>
       <section className={styles.section}>
         <div className={styles.container}>
+          {/* TOP HEADING */}
+          <div className={styles.topContent}>
+            <span className={styles.smallLabel}>DAY BY DAY</span>
+            <h2 className={styles.mainTitle}>Your Itinerary</h2>
+            <p className={styles.subText}>
+              Nine extraordinary days exploring the best of the Adriatic coast,
+              from ancient cities to hidden islands.
+            </p>
+          </div>
+
           <div className={styles.grid}>
             {/* LEFT MAP */}
             <div className={styles.mapWrapper}>
@@ -191,27 +193,30 @@ const JourneyItinerary = () => {
                           {item.description}
                         </p>
 
-                        <div className={styles.highlightsBlock}>
-                          <h4>Highlights</h4>
-
-                          <div className={styles.highlightsGrid}>
-                            {item.highlights?.map((highlight, i) => (
-                              <div key={i} className={styles.highlightItem}>
-                                <span className={styles.chevron}>›</span>
-                                <span>{highlight}</span>
-                              </div>
-                            ))}
+                        {item.highlights?.length > 0 && (
+                          <div className={styles.highlightsBlock}>
+                            <h1 className={styles.highlightsBlocktitle}>Highlights</h1>
+                            <div className={styles.highlightsGrid}>
+                              {item.highlights.map((highlight, i) => (
+                                <div key={i} className={styles.highlightItem}>
+                                  <span className={styles.chevron}>›</span>
+                                  <span>{highlight}</span>
+                                </div>
+                              ))}
+                            </div>
                           </div>
-                        </div>
+                        )}
 
-                        <div className={styles.mealRow}>
-                          <img
-                            src={mealIcon}
-                            alt="Meal"
-                            className={styles.mealIcon}
-                          />
-                          <span>Meals: {item.meals}</span>
-                        </div>
+                        {item.meals && (
+                          <div className={styles.mealRow}>
+                            <img
+                              src={mealIcon}
+                              alt="Meal"
+                              className={styles.mealIcon}
+                            />
+                            <span>Meals: {item.meals}</span>
+                          </div>
+                        )}
                       </div>
                     )}
                   </div>

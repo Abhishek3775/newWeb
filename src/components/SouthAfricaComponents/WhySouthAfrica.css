@@ -1,104 +1,142 @@
+/* ================= SECTION ================= */
 .why-section {
-  display: flex;
-  gap: 60px;
-  padding: 80px 6%;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 80px;
+  padding: 100px 6%;
+  background: #ffffff;
   align-items: center;
+  overflow: hidden;
 }
 
-/* LEFT CONTENT */
+/* ================= LEFT CONTENT ================= */
 .why-content {
-  flex: 1;
+  max-width: 620px;
 }
 
-.breadcrumb {
-  font-size: 13px;
-  color: #777;
-  margin-bottom: 20px;
-}
-
+/* LABEL */
 .why-label {
-  color: #C09551;
-  font-size: 16px;
+  color: #c09551;
+  font-size: 22px;
+  font-weight: 600;
   letter-spacing: 2px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+  text-transform: uppercase;
 }
 
+/* TITLE */
 .why-title {
-  font-size: 32px;
-  font-weight: 400;
-  margin-bottom: 24px;
-  line-height: 1.3;
+  font-size: 44px;
+  font-weight: 300;
+  font-family: "Abel", sans-serif;
+  margin-bottom: 26px;
+  line-height: 1.22;
+  color: #131313;
 }
 
+/* DESCRIPTION */
 .why-description {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 24px;
+  font-size: 16px;
+  color: #131313;
+  line-height: 1.85;
+  margin-bottom: 28px;  
+  font-weight: 300;
+  max-width: 560px;
 }
 
+/* ================= CUSTOM BULLET LIST ================= */
 .why-list {
-  padding-left: 18px;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 .why-list li {
-  font-size: 14px;
-  color: #444;
-  margin-bottom: 12px;
-  line-height: 1.6;
-}
-
-li::marker {
-  color: #C09551;
-  font-size: 20px; 
-}
-
-
-/* RIGHT IMAGE */
-.why-image-wrapper {
-  flex: 1;
   position: relative;
+  padding-left: 18px;
+  font-size: 15px;
+  color: #131313;
+  font-weight: 300;
+  margin-bottom: 14px;
+  line-height: 1.7;
+}
+
+.why-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 6px;
+  height: 6px;
+  background: #c09551;
+  border-radius: 50%;
+}
+
+/* ================= RIGHT IMAGE ================= */
+.why-image-wrapper {
+  position: relative;
+  width: 100%;
 }
 
 .why-image-wrapper img {
   width: 100%;
-  height: auto;
+  height: 600px;
   object-fit: cover;
-  border-radius: 4px;
+  display: block;
 }
 
-/* EXPERIENCE BOX */
+/* ================= EXPERIENCE BOX ================= */
 .experience-box {
   position: absolute;
-  bottom: -30px;
-  left: -30px;
-  background:#F5F4EF;
-  padding: 24px 28px;
-  border: 1px solid #e5c07b;
-  text-align: center;
+  bottom: -28px;
+  left: -42px;
+  background: #f5f4ef;
+  border: 1px solid #c09551;
+  padding: 34px 28px;
+  min-width: 170px;
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .experience-box h3 {
-  color: #C09551;
-  font-size: 22px;
-  margin-bottom: 6px;
+  color: #c09551;
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0 0 10px;
+  line-height: 1;
 }
 
 .experience-box p {
-  font-size: 13px;
-  color: #555;
-  line-height: 1.4;
+  font-size: 15px;
+  color: #c09551;
+  line-height: 1.35;
+  margin: 0;
 }
 
-/* TABLET */
-@media (max-width: 992px) {
+/* ================= TABLET ================= */
+@media (max-width: 1100px) {
   .why-section {
-    flex-direction: column;
-    gap: 40px;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    padding: 80px 5%;
+  }
+
+  .why-content {
+    max-width: 100%;
+  }
+
+  .why-description {
+    max-width: 100%;
   }
 
   .why-title {
-    font-size: 28px;
+    font-size: 36px;
+  }
+
+  .why-image-wrapper img {
+    height: 500px;
   }
 
   .experience-box {
@@ -107,23 +145,96 @@ li::marker {
   }
 }
 
-/* MOBILE */
-@media (max-width: 576px) {
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
   .why-section {
     padding: 60px 20px;
+    gap: 38px;
+  }
+
+  .why-label {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  .why-title {
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+  }
+
+  .why-description {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+  }
+
+  .why-list li {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+    padding-left: 16px;
+  }
+
+  .why-list li::before {
+    width: 5px;
+    height: 5px;
+    top: 10px;
+  }
+
+  .why-image-wrapper img {
+    height: 360px;
+  }
+
+  .experience-box {
+    position: static;
+    margin-top: 18px;
+    width: fit-content;
+    min-width: auto;
+    min-height: auto;
+    padding: 24px 22px;
+  }
+
+  .experience-box h3 {
+    font-size: 30px;
+  }
+
+  .experience-box p {
+    font-size: 14px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+  .why-section {
+    padding: 50px 16px;
   }
 
   .why-title {
     font-size: 24px;
   }
 
-  .why-description,
+  .why-description {
+    font-size: 13.5px;
+  }
+
   .why-list li {
-    font-size: 14px;
+    font-size: 13.5px;
+  }
+
+  .why-image-wrapper img {
+    height: 300px;
   }
 
   .experience-box {
-    position: static;
-    margin-top: 20px;
+    padding: 20px 18px;
+  }
+
+  .experience-box h3 {
+    font-size: 26px;
+  }
+
+  .experience-box p {
+    font-size: 13px;
   }
 }

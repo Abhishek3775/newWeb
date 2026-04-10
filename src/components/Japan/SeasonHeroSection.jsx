@@ -12,7 +12,7 @@ const SeasonHeroSection = () => {
 
       <div className={styles.content}>
         {/* Breadcrumb */}
-        <div className={styles.breadcrumb}>
+        {/* <div className={styles.breadcrumb}>
           <a href="#">Home</a>
           <span>/</span>
           <a href="#">Destinations</a>
@@ -20,7 +20,7 @@ const SeasonHeroSection = () => {
           <a href="#">Japan</a>
           <span>/</span>
           <span className={styles.current}>When to Visit</span>
-        </div>
+        </div> */}
 
         {/* Subtitle */}
         <p className={styles.kicker}>UNDERSTANDING JAPAN&apos;S SEASONS</p>

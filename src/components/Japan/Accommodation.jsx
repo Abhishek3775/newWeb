@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import styles from "./Accommodation.module.css";
 
+import icon from "../../assets/location.png"
+
+
 import imgI1 from "../../assets2/japan/Imperial Odyssey/Accommodations/city1/1.png"
 import imgI2 from "../../assets2/japan/Imperial Odyssey/Accommodations/city1/2.png"
 import imgI3 from "../../assets2/japan/Imperial Odyssey/Accommodations/city1/3.png"
@@ -44,7 +47,7 @@ const data = {
       nights: "3 nights",
       image: imgI1,
       description:
-        "Rising above the historic Imperial Palace gardens, The Peninsula Tokyo epitomizes Japanese hospitality fused with contemporary luxury.",
+        "Rising above the historic Imperial Palace gardens, The Peninsula Tokyo epitomizes Japanese hospitality fused with contemporary luxury. Each room offers views of the palace moats or the glittering Ginza skyline.",
       tags: [
         "Imperial Palace views",
         "Rooftop terrace dining",
@@ -187,7 +190,8 @@ export default function Accommodation() {
 
         <div className={styles.contentSection}>
           <p className={styles.location}>
-            {activeTab} | {current.main.nights}
+            <img src={icon} className={styles.icon} alt="" />
+            {activeTab} <span> | {current.main.nights}</span>
           </p>
           <h2 className={styles.title}>{current.main.title}</h2>
           <p className={styles.text}>{current.main.description}</p>

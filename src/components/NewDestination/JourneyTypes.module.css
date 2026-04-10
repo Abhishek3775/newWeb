@@ -3,9 +3,10 @@
 ========================= */
 .section {
   width: 100%;
-  background: #efede8;
-  padding: 32px 72px 36px;
+  background: #ffffff;
+  padding: 28px 70px 28px;
   box-sizing: border-box;
+  /* font-family: "Helvetica Neue", Arial, sans-serif; */
 }
 
 /* =========================
@@ -25,12 +26,10 @@
 
 .kicker {
   display: inline-block;
-  font-size: 16px;
-  font-weight: 700;
-  color: #C09551
-;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  color: #be8a3d;
+  letter-spacing: 0.8px;
   margin-bottom: 10px;
 }
 
@@ -39,21 +38,21 @@
   font-size: 52px;
   line-height: 1.04;
   font-weight: 300;
-  color: #1a1a1a;
-  letter-spacing: -0.5px;
-  font-family: 'Abel';
+  font-family: "abel";
+  color: #131313;
+  letter-spacing: -0.8px;
 }
 
 .descriptionBlock {
-  max-width: 450px;
-  padding-top: 14px;
-  flex-shrink: 0;
+  max-width: 480px;
+  padding-top: 12px;
+  
 }
 
 .descriptionBlock p {
   margin: 0;
-  font-size: 13.5px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.45;
   color: #131313;
   text-align: right;
 }
@@ -182,11 +181,12 @@
 }
 
 .bottomContent h3 {
+  font-family: "abel";
   margin: 0 0 6px;
   font-size: 28px;
   line-height: 1.1;
   font-weight: 300;
-  color: #ffffff;
+  color: #fff;
   letter-spacing: 0.1px;
   font-family: 'Abel';
   font-weight: 200;

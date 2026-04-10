@@ -69,6 +69,7 @@
   font-weight: 300;
   line-height: 1.1;
   margin: 0 0 22px;
+  font-family: "abel";
   color: #fff;
 }
 
@@ -103,9 +104,9 @@
 }
 
 .elite-icon-box {
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.65);
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,6 +115,12 @@
   flex-shrink: 0;
 }
 
+.elite-icon1-box , .elite-icon2-box {
+    height: 15px;
+    width: 15px;
+}
+
+.elite-icon2-box {margin-bottom: 5px; margin-right: 3px;}
 .elite-divider {
   width: 1px;
   height: 24px;
@@ -170,88 +177,184 @@
 /* =========================
    MOBILE
 ========================= */
-
 @media (max-width: 768px) {
   .elite-journey-section {
-    min-height: 400px;
-    padding: 50px 18px;
+    min-height: 420px;
+    padding: 54px 18px;
+    background-position: center center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .elite-journey-overlay {
+    background: rgba(0, 0, 0, 0.38);
+  }
+
+  .elite-journey-container {
+    max-width: 340px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
   }
 
   .elite-journey-subtitle {
-    font-size: 15px;
+    font-size: 14px;
     margin-bottom: 14px;
+    letter-spacing: 1.4px;
+    line-height: 1.4;
   }
 
   .elite-journey-title {
     font-size: 38px;
+    line-height: 1.08;
     margin-bottom: 18px;
   }
 
   .elite-journey-desc {
     font-size: 13px;
-    line-height: 1.7;
-    margin-bottom: 34px;
+    line-height: 1.75;
+    margin: 0 auto 30px;
+    max-width: 320px;
+    color: rgba(255, 255, 255, 0.92);
   }
 
   .elite-journey-contact {
-    gap: 16px;
-    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
   }
 
   .elite-contact-item {
-    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: left;
+    color: #fff;
+    max-width: 100%;
   }
 
+  .elite-contact-item span { font-size: 9px;}
+
   .elite-icon-box {
-    width: 38px;
-    height: 38px;
-    font-size: 13px;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.95);
+  }
+
+  .elite-icon1-box,
+  .elite-icon2-box {
+    width: 13px;
+    height: 13px;
+    object-fit: contain;
+  }
+
+  .elite-icon2-box {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 4px;
+    margin-right: 3px;
+  }
+
+  
+
+  .elite-divider {
+    width: 1px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.35);
+    display: block;
   }
 
   .elite-journey-btn {
-    padding: 16px 34px;
-    min-width: 220px;
+    width: auto;
+    min-width: 240px;
+    max-width: 100%;
+    padding: 15px 28px;
     font-size: 12px;
+    letter-spacing: 0.7px;
+  }
+
+  .elite-journey-btn span {
+    margin-left: 12px;
+    font-size: 14px;
   }
 }
 
 /* =========================
    SMALL MOBILE
 ========================= */
-
 @media (max-width: 520px) {
   .elite-journey-section {
-    min-height: 380px;
-    padding: 42px 16px;
+    min-height: 400px;
+    padding: 46px 16px;
+    background-position: center center;
+  }
+
+  .elite-journey-container {
+    max-width: 310px;
+  }
+
+  .elite-journey-subtitle {
+    font-size: 13px;
+    margin-bottom: 12px;
+    letter-spacing: 1.3px;
   }
 
   .elite-journey-title {
-    font-size: 32px;
+    font-size: 33px;
+    margin-bottom: 16px;
   }
 
   .elite-journey-desc {
     font-size: 12.5px;
-    margin-bottom: 28px;
+    line-height: 1.72;
+    margin-bottom: 26px;
+    max-width: 290px;
   }
 
   .elite-journey-contact {
-    flex-direction: column;
-    gap: 14px;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .elite-contact-item {
+    font-size: 11.5px;
+    gap: 8px;
+  }
+
+  .elite-icon-box {
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+  }
+
+  .elite-icon1-box,
+  .elite-icon2-box {
+    width: 12px;
+    height: 12px;
   }
 
   .elite-divider {
     display: none;
   }
 
-  .elite-contact-item {
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-  }
-
   .elite-journey-btn {
     width: 100%;
-    max-width: 280px;
-    padding: 15px 24px;
+    max-width: 255px;
+    padding: 14px 20px;
+    font-size: 11.5px;
   }
+
+  .elite-journey-btn span {
+    margin-left: 10px;
+  }
+  /* .elite-icon-box span{
+    font-size: 2px;
+  } */
 }

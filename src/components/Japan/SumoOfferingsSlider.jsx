@@ -12,12 +12,12 @@ import correct from "../../assets/correct.png";
 
 
 /* ─── Design tokens (match reference: cream bg, tan gold, dark gray type) ─ */
-const GOLD    = "#c19a6b";
+const GOLD    = "#C09551";
 const GOLD_DK = "#a88455";
-const BG      = "#f9f7f2";
+const BG      = "#F5F4ef";
 const WHITE   = "#ffffff";
-const TEXT    = "#333333";
-const TEXT_MUTED = "#555555";
+const TEXT    = "#131313";
+const TEXT_MUTED = "#131313";
 const LINE    = "#e5e2dc";
 
 /* ─── Placeholder images (swap for your real asset imports) ─────────────── */
@@ -84,7 +84,7 @@ const btnBase = {
   cursor: "pointer",
   transition: "background .25s, color .25s, border-color .25s",
   whiteSpace: "nowrap",
-  fontFamily: "inherit",
+  // fontFamily: "inherit",
 };
 const btnOutlineStyle = { ...btnBase, border: `1px solid ${GOLD}`, background: WHITE, color: GOLD };
 const btnPrimaryStyle = { ...btnBase, border: `1px solid ${GOLD}`, background: GOLD, color: WHITE };
@@ -107,10 +107,10 @@ const PriceBadge = ({ price, bp }) => {
         boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
       }}
     >
-      <p style={{ margin: 0, fontSize: 9, letterSpacing: 2, color: GOLD, fontWeight: 500, lineHeight: 1.4 }}>
+      <p style={{ margin: 0, fontSize: 12, letterSpacing: 2, color: GOLD, fontWeight: 700, lineHeight: 1.4 }}>
         {fromLine}
       </p>
-      <p style={{ margin: "4px 0 0", fontSize: bp === "mobile" ? 13 : 14, color: TEXT, fontWeight: 400, lineHeight: 1.35 }}>
+      <p style={{ margin: "4px 0 0", fontSize: bp === "mobile" ? 12 : 13, color: GOLD, fontWeight: 300, lineHeight: 1.35 }}>
         {rest}
       </p>
     </div>
@@ -179,6 +179,7 @@ const Title = ({ bp, children }) => (
   <h3 style={{
     fontSize: bp === "mobile" ? 19 : bp === "mobileLg" ? 21 : bp === "tablet" ? 23 : 26,
     fontWeight: 400,
+    fontFamily:"abel",
     margin: "0 0 14px",
     lineHeight: 1.25,
     color: TEXT,
@@ -201,7 +202,7 @@ const BtnRow = ({ bp, onViewMore, onReserve }) => (
   <div style={{ display: "flex", gap: bp === "mobile" ? 10 : 16, flexWrap: "wrap", alignItems: "center" }}>
     <button
       type="button"
-      style={{ ...btnOutlineStyle, ...(bp === "mobile" ? { flex: "1 1 auto", minWidth: "min(100%, 140px)", justifyContent: "center" } : {}) }}
+      style={{ ...btnOutlineStyle, ...(bp === "mobile" ? { flex: "1 1 auto", minWidth: "min(100%, 200px)", justifyContent: "center" } : {}) }}
       onMouseOver={(e) => {
         e.currentTarget.style.background = GOLD;
         e.currentTarget.style.color = WHITE;
@@ -394,7 +395,7 @@ export default function SumoOfferingsSlider() {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    fontFamily: "system-ui, sans-serif",
+    // fontFamily: "system-ui, sans-serif",
   });
 
   const sectionPad = isNarrow ? "40px 12px 48px" : isMobile ? "52px 20px 56px" : bp === "tablet" ? "64px 28px 72px" : "80px 40px 88px";
@@ -405,7 +406,7 @@ export default function SumoOfferingsSlider() {
       style={{
         background: BG,
         padding: sectionPad,
-        fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
+        // fontFamily: '"Helvetica Neue", Helvetica, Arial, sans-serif',
         color: TEXT,
         WebkitFontSmoothing: "antialiased",
       }}
@@ -422,6 +423,7 @@ export default function SumoOfferingsSlider() {
             fontWeight: 400,
             margin: 0,
             color: TEXT,
+            fontFamily:"abel",
             letterSpacing: 0.5,
             lineHeight: 1.2,
           }}>

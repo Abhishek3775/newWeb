@@ -1,51 +1,51 @@
 import React from "react";
-import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import styles from "./PlanJourney.module.css";
 import bgImage from "../../assets/guide-journey.png";
+import phone from "../../assets/phone.png";
+import mail from "../../assets/msg.png";
 
 const PlanJourney = () => {
   return (
-    <section className={styles.section} style={{ backgroundImage: `url(${bgImage})` }}>
-      <div className={styles.container}>
-        <p className={styles.subtitle}>READY TO PLAN?</p>
+    <section
+      className={styles.section}
+      style={{ backgroundImage: `url(${bgImage})` }}
+    >
+      <div className={styles.overlay}></div>
 
-        <h2 className={styles.title}>Let Us Craft Your Perfect Journey</h2>
+      <div className={styles.container}>
+        <p className={styles.subtitle}>YOUR JOURNEY AWAITS</p>
+
+        <h2 className={styles.title}>Begin Your Journey</h2>
 
         <p className={styles.description}>
-          Our Japan specialists will help you choose the ideal season
-          and create a bespoke itinerary tailored to your dreams.
-        </p>
-
-        <p className={styles.note}>
-          Minimum 4 weeks advance booking required
+          Every extraordinary journey begins with a conversation. Our Japan
+          specialists await to craft your bespoke itinerary, tailored to your
+          every desire.
         </p>
 
         <div className={styles.contact}>
-
           <div className={styles.contactItem}>
             <div className={styles.iconBox}>
-              <FaPhoneAlt color="#fff"/>
+              <img src={phone} alt="Phone" className={styles.icon1} />
             </div>
-
             <span>+442074269888</span>
           </div>
 
+          <div className={styles.divider}></div>
 
           <div className={styles.contactItem}>
             <div className={styles.iconBox}>
-              <FaEnvelope color="#fff"/>
+              <img src={mail} alt="Mail" className={styles.icon2} />
             </div>
-            <span>japan@eliteconcierge.com</span>
+            <span>southafrica@eliteconcierge.com</span>
           </div>
         </div>
 
-
         <button className={styles.btn}>
-          START PLANNING <span className={styles.arrow}>→</span>
+          BEGIN YOUR JOURNEY <span className={styles.arrow}>→</span>
         </button>
       </div>
     </section>
-      
   );
 };
 

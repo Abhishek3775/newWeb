@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./LuxuryHero.module.css";
-import heroBg from "../../assets/journey-cta-bg.jpg";
+import heroBg from "../../assets2/Destination/1.png";
 import { FiSearch } from "react-icons/fi";
 
 const statsData = [

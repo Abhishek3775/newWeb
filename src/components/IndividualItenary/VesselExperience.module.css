@@ -1,5 +1,5 @@
 .section {
-  background: #f5f4ef;
+  background: #ffffff;
   padding: 70px 0 80px;
 }
 
@@ -90,7 +90,8 @@
 .roomTitle {
   font-size: 18px;
   font-weight: 400;
-  color: #2a2a2a;
+  color: #131313;
+  font-family: 'abel';
   margin: 0 0 14px;
 }
 
@@ -107,7 +108,7 @@
   position: relative;
   padding-left: 12px;
   font-size: 13px;
-  color: #666;
+  color: #131313;
   line-height: 1.45;
 }
 
@@ -133,7 +134,7 @@
 
 .price {
   font-size: 14px;
-  color: #2d2d2d;
+  color: #131313;
 }
 
 .viewBtn {
@@ -155,7 +156,7 @@
 
 .amenityCard {
   border: 1px solid #d8b98b;
-  background: transparent;
+  background: #F5F4EF;
   text-align: center;
   padding: 42px 22px;
 }
@@ -180,13 +181,14 @@
 .amenityTitle {
   font-size: 18px;
   font-weight: 400;
-  color: #2a2a2a;
+  color: #131313;
+  font-family: "abel";
   margin: 0 0 14px;
 }
 
 .amenityDesc {
   font-size: 11px;
-  color: #666;
+  color: #131313;
   line-height: 1.6;
   max-width: 240px;
   margin: 0 auto;

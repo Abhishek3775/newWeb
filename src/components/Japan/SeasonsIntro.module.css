@@ -120,19 +120,34 @@
 @media (max-width: 768px) {
   .highlights {
     grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 40px 30px;
+    gap: 40px;
+    padding: 50px 25px;
+    text-align: center;
   }
 
-  .mainTitle {
-    font-size: 32px;
+  .highlightCard {
+    align-items: center;   /* center align */
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
   }
 
-  .description {
+  .highlightCard img {
+    width: 28px !important;
+    height: 28px !important;
+    margin-bottom: 8px;
+  }
+
+  .title {
+    text-align: center;   /* important */
     font-size: 14px;
+    letter-spacing: 1.5px;
   }
 
-  .content {
-    padding: 100px 20px 120px;
+  .text {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 300px;   /* text control for nice wrapping */
   }
 }

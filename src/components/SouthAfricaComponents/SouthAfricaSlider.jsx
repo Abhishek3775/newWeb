@@ -13,7 +13,6 @@ import whale from "../../assets/whale.jpg";
 import penguin from "../../assets/penguin.jpg";
 import hotel from "../../assets/hotel.jpg";
 
-/* ARRAY DATA */
 const slidesData = [
   {
     id: 1,
@@ -27,14 +26,14 @@ const slidesData = [
     image: balloon,
     title: "Hot Air Balloon Safari",
     description:
-      "Float silently over the African bushveld at sunrise watching wildlife wake beneath.",
+      "Float silently over the African bushveld at sunrise, watching wildlife wake beneath.",
   },
   {
     id: 3,
     image: helicopter,
     title: "Helicopter Wine Tour",
     description:
-      "Soar over the dramatic Cape Peninsula before landing at exclusive vineyard estate.",
+      "Soar over the dramatic Cape Peninsula before landing at an exclusive vineyard estate.",
   },
   {
     id: 4,
@@ -68,7 +67,7 @@ const SouthAfricaSlider = () => {
       <div className="saus-container">
         {/* HEADER */}
         <div className="saus-header">
-          <h2>See & Do Unique to South Africa</h2>
+          <h2>See &amp; Do Unique to South Africa</h2>
           <p>
             Moments that can only happen here - from tracking endangered rhinos
             on foot to floating over the bushveld at sunrise.
@@ -79,19 +78,20 @@ const SouthAfricaSlider = () => {
         <div className="saus-slider-wrapper">
           <Swiper
             onSwiper={(swiper) => (swiperRef.current = swiper)}
-            spaceBetween={24}
+            spaceBetween={18}
             slidesPerView={3}
-            speed={900}
+            speed={850}
             breakpoints={{
-              0: { slidesPerView: 1.1, spaceBetween: 16 },
-              768: { slidesPerView: 2, spaceBetween: 20 },
-              1200: { slidesPerView: 3, spaceBetween: 24 },
+              0: { slidesPerView: 1.08, spaceBetween: 14 },
+              640: { slidesPerView: 1.45, spaceBetween: 16 },
+              900: { slidesPerView: 2.1, spaceBetween: 18 },
+              1200: { slidesPerView: 3, spaceBetween: 18 },
             }}
           >
-            {slidesData.map((slide,index) => (
+            {slidesData.map((slide, index) => (
               <SwiperSlide key={slide.id}>
                 <div
-                  className="saus-card"
+                  className="saus-slide-item"
                   onClick={() => {
                     if (index === 0) {
                       navigate("/south-africa/rhino-tracking");
@@ -99,8 +99,11 @@ const SouthAfricaSlider = () => {
                   }}
                   style={{ cursor: "pointer" }}
                 >
-                  <img src={slide.image} alt={slide.title} />
-                  <div className="saus-text">
+                  <div className="saus-card">
+                    <img src={slide.image} alt={slide.title} />
+                  </div>
+
+                  <div className="saus-card-content">
                     <h3>{slide.title}</h3>
                     <p>{slide.description}</p>
                   </div>
@@ -113,6 +116,7 @@ const SouthAfricaSlider = () => {
           <button
             className="saus-arrow saus-prev"
             onClick={() => swiperRef.current?.slidePrev()}
+            aria-label="Previous"
           >
             <FaChevronLeft />
           </button>
@@ -120,6 +124,7 @@ const SouthAfricaSlider = () => {
           <button
             className="saus-arrow saus-next"
             onClick={() => swiperRef.current?.slideNext()}
+            aria-label="Next"
           >
             <FaChevronRight />
           </button>

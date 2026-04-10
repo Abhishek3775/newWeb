@@ -1,46 +1,69 @@
+/* ================= SECTION ================= */
 .fs-season-wrapper {
-  background-color: #F5F4EF;
-  padding: 100px 20px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: #f5f4ef;
+  padding: 70px 24px 90px;
+  overflow: hidden;
 }
 
 .fs-season-container {
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1500px;
+  margin: 0 auto;
   text-align: center;
+  position: relative;
 }
 
+/* ================= HEADER ================= */
 .fs-season-subtitle {
-  color: #C09551;
-  letter-spacing: 3px;
-  font-size: 21px;
-  text-align: center;
-  margin-bottom: 15px;
-  text-align: center;
+  color: #c09551;
+  letter-spacing: 2px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 18px;
+  text-transform: uppercase;
 }
 
 .fs-season-title {
-  font-size: 42px;
-  font-weight: 400;
-  margin-bottom: 60px;
+  font-size: 66px;
+  line-height: 1.08;
+  font-weight: 300;
+  font-family: "Abel", sans-serif;
+  color: #1a1a1a;
+  margin-bottom: 58px;
 }
 
-/* SWIPER WRAPPER */
+/* ================= SWIPER WRAPPER ================= */
 .fs-swiper-wrapper {
   position: relative;
+  padding: 0 70px;
 }
 
-/* CARD */
+.fs-swiper-wrapper .swiper {
+  overflow: visible;
+}
+
+.fs-swiper-wrapper .swiper-slide {
+  height: auto;
+  display: flex;
+}
+
+/* ================= CARD ================= */
 .fs-season-card {
-  background: white;
+  background: #fff;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
 }
 
-/* IMAGE */
+/* ================= IMAGE ================= */
 .fs-season-image {
   position: relative;
-  height: 420px;
+  height: 590px;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .fs-season-image img {
@@ -48,98 +71,239 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.8s ease;
 }
 
-/* TAG */
+/* ================= TOP TAG ================= */
 .fs-season-tag {
   position: absolute;
-  top: 15px;
-  left: 15px;
-  background: white;
-  padding: 6px 12px;
+  top: 24px;
+  left: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 11px 18px;
   font-size: 12px;
+  font-weight: 500;
+  color: #555;
+  z-index: 2;
 }
 
-/* OVERLAY */
+/* ================= DARK OVERLAY ================= */
+.fs-season-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.72) 8%,
+    rgba(0, 0, 0, 0.22) 40%,
+    rgba(0, 0, 0, 0) 68%
+  );
+  z-index: 1;
+}
+
 .fs-season-overlay {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: white;
+  left: 34px;
+  right: 28px;
+  bottom: 24px;
+  z-index: 2;
+  color: #fff;
 }
 
 .fs-name {
-  color: #C09551;
+  color: #c09551;
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
 }
 
 .fs-season-name {
-  font-size: 26px;
-  margin-bottom: 5px;
+  font-size: 34px;
+  line-height: 1.1;
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  margin-bottom: 8px;
+  color: #fff;
 }
 
 .fs-season-temp {
-  font-size: 14px;
+  font-size: 16px;
+  color: #f1f1f1;
+  line-height: 1.5;
 }
 
-/* CONTENT */
+/* ================= CONTENT ================= */
 .fs-season-content {
-  padding: 20px;
+  background: #fff;
+  padding: 26px 28px 28px;
+  min-height: 120px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .fs-season-content p {
   font-size: 14px;
-  color: #555;
-  margin-bottom: 20px;
+  line-height: 1.55;
+  color: #5a5a5a;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 2 line cut like screenshot */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-.fs-season-btn {
-  background: none;
-  border: none;
-  color: #C09551;
-  font-size: 13px;
-  cursor: pointer;
-  padding: 0;
-}
-
-/* NAV BUTTONS */
+/* ================= NAV BUTTONS ================= */
 .fs-nav-btn {
   position: absolute;
-  top: 45%;
+  top: 50%;
   transform: translateY(-50%);
-  width: 45px;
-  height: 45px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  background: white;
-  border: 1px solid #ddd;
+  background: transparent;
+  border: 1px solid #9f9f9f;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 10;
-  transition: 0.3s ease;
+  z-index: 20;
+  transition: all 0.3s ease;
+  font-size: 30px;
+  color: #3a3a3a;
 }
 
 .fs-nav-btn:hover {
-  background: #C09551;
-  color: white;
-  border-color: #C09551;
+  background: #c09551;
+  color: #fff;
+  border-color: #c09551;
 }
 
 .fs-nav-left {
-  left: -60px;
+  left: 0;
 }
 
 .fs-nav-right {
-  right: -60px;
+  right: 0;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+/* ================= HOVER ================= */
+@media (hover: hover) {
+  .fs-season-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+  }
+
+  .fs-season-card:hover img {
+    transform: scale(1.05);
+  }
+}
+
+/* ================= TABLET ================= */
+@media (max-width: 1199px) {
+  .fs-season-title {
+    font-size: 52px;
+  }
+
+  .fs-swiper-wrapper {
+    padding: 0 45px;
+  }
+
   .fs-season-image {
-    height: 350px;
+    height: 500px;
+  }
+
+  .fs-season-name {
+    font-size: 30px;
+  }
+
+  .fs-nav-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 26px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .fs-season-wrapper {
+    padding: 60px 16px 70px;
+  }
+
+  .fs-season-subtitle {
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+  }
+
+  .fs-season-title {
+    font-size: 38px;
+    margin-bottom: 34px;
+  }
+
+  .fs-swiper-wrapper {
+    padding: 0;
+  }
+
+  .fs-season-image {
+    height: 430px;
+  }
+
+  .fs-season-tag {
+    top: 18px;
+    left: 18px;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .fs-season-overlay {
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+  }
+
+  .fs-name {
+    font-size: 14px;
+  }
+
+  .fs-season-name {
+    font-size: 28px;
+  }
+
+  .fs-season-temp {
+    font-size: 14px;
+  }
+
+  .fs-season-content {
+    padding: 20px 20px 24px;
+    min-height: auto;
+  }
+
+  .fs-season-content p {
+    -webkit-line-clamp: 3;
   }
 
   .fs-nav-btn {
     display: none;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+  .fs-season-title {
+    font-size: 30px;
+  }
+
+  .fs-season-image {
+    height: 390px;
+  }
+
+  .fs-season-name {
+    font-size: 24px;
+  }
+
+  .fs-season-content p {
+    font-size: 13px;
+    line-height: 1.6;
   }
 }

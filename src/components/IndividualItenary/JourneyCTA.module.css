@@ -65,6 +65,7 @@
   font-size: 36px;
   line-height: 1.18;
   font-weight: 300;
+  font-family: "abel";
   margin: 0;
   color: #ffffff;
 }
@@ -116,6 +117,8 @@
   height: 16px;
   object-fit: contain;
 }
+
+.icon2Box { margin-bottom: 5px; margin-right: 3px;}
 
 .divider {
   width: 1px;

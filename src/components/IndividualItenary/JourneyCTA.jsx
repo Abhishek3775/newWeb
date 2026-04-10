@@ -41,7 +41,7 @@ const JourneyCTA = () => {
 
             <div className={styles.contactItem}>
               <div className={styles.iconBox}>
-                <img src={mailIcon} alt="Email" />
+                <img src={mailIcon} className={styles.icon2Box} alt="Email" />
               </div>
               <span>southafrica@eliteconcierge.com</span>
             </div>

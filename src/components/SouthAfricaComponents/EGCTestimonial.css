@@ -1,0 +1,77 @@
+/* ================= SECTION ================= */
+.egc-testimonial-section {
+  background: #F5F4EF;   /* 👈 CHANGE THIS ANYTIME */
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* ================= CONTAINER ================= */
+.egc-testimonial-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ================= TEXT ================= */
+.egc-testimonial-text {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #4a4a4a;
+  margin-bottom: 40px;
+}
+
+/* ================= AUTHOR ================= */
+.egc-testimonial-author {
+  margin-bottom: 30px;
+}
+
+.egc-testimonial-name {
+  font-size: 15px;
+  color: #222;
+  margin-bottom: 6px;
+}
+
+.egc-testimonial-country {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.egc-testimonial-experience {
+  font-size: 14px;
+  color: #c09551;
+}
+
+/* ================= INDICATOR ================= */
+.egc-testimonial-indicator {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.egc-testimonial-indicator span {
+  width: 8px;
+  height: 8px;
+  background: #d6d2cb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.egc-testimonial-indicator span.active {
+  background: #c09551;
+  width: 22px;
+  border-radius: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .egc-testimonial-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .egc-testimonial-text {
+    font-size: 14px;
+  }
+}

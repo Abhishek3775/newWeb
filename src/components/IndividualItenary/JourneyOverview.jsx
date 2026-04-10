@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./JourneyOverview.module.css";
 
-import shipIcon from "../../assets/ship.png";
+import shipIcon from "../../assets/ship-icon.png";
 import compassIcon from "../../assets/compass.png";
-import foodIcon from "../../assets/food.png";
-import wavesIcon from "../../assets/waves.png";
+import foodIcon from "../../assets/meal.png";
+import wavesIcon from "../../assets/pool1.png";
 
 const features = [
   {

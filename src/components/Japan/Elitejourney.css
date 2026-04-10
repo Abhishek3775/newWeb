@@ -1,5 +1,5 @@
 /* ============================================================
-   ELITE JOURNEY — IMAGE MATCH
+   ELITE JOURNEY — EXACT MOBILE + DESKTOP MATCH
 ============================================================ */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
@@ -13,7 +13,6 @@
 /* =========================
    SECTION
 ========================= */
-
 .elite-journey-section {
   position: relative;
   width: 100%;
@@ -33,14 +32,13 @@
 .elite-journey-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.42);
   z-index: 1;
 }
 
 /* =========================
    CONTAINER
 ========================= */
-
 .elite-journey-container {
   position: relative;
   z-index: 2;
@@ -53,45 +51,43 @@
 /* =========================
    HEADER
 ========================= */
-
 .elite-journey-subtitle {
   color: #c79a52;
-  font-size: 22px;
+  font-size: 17px;
   text-align: center;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  margin: 0 0 18px;
+  margin: 0 0 16px;
 }
 
 .elite-journey-title {
   font-size: clamp(42px, 5vw, 58px);
   font-weight: 300;
-  line-height: 1.1;
-  margin: 0 0 22px;
+  line-height: 1.08;
+  margin: 0 0 20px;
   color: #fff;
 }
 
 .elite-journey-desc {
   max-width: 760px;
-  margin: 0 auto 48px;
+  margin: 0 auto 40px;
   text-align: center;
   font-size: 14px;
-  line-height: 1.8;
+  line-height: 1.75;
   color: rgba(255, 255, 255, 0.92);
 }
 
 /* =========================
    CONTACT ROW
 ========================= */
-
 .elite-journey-contact {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
-  margin-bottom: 38px;
-  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 34px;
+  flex-wrap: nowrap;
 }
 
 .elite-contact-item {
@@ -101,47 +97,61 @@
   color: #fff;
   font-size: 14px;
   font-weight: 300;
+  white-space: nowrap;
 }
 
 .elite-icon-box {
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.65);
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   font-size: 14px;
   flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.elite-icon1,
+.elite-icon2 {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.elite-icon2 {
+  margin-bottom: 2px;
+  margin-right: 2px;
 }
 
 .elite-divider {
   width: 1px;
   height: 24px;
   background: rgba(255, 255, 255, 0.45);
+  flex-shrink: 0;
 }
 
 /* =========================
    BUTTON
 ========================= */
-
 .elite-journey-btn {
   background: #c79a52;
   color: #fff;
   border: none;
-  padding: 18px 48px;
-  min-width: 240px;
-  font-size: 13px;
+  padding: 17px 42px;
+  min-width: 250px;
+  font-size: 14px;
   font-weight: 500;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .elite-journey-btn span {
-  margin-left: 18px;
-  font-size: 14px;
+  margin-left: 14px;
+  font-size: 15px;
 }
 
 .elite-journey-btn:hover {
@@ -151,10 +161,9 @@
 /* =========================
    TABLET
 ========================= */
-
 @media (max-width: 992px) {
   .elite-journey-section {
-    min-height: 420px;
+    min-height: 430px;
     padding: 55px 20px;
   }
 
@@ -169,90 +178,190 @@
 }
 
 /* =========================
-   MOBILE
+   MOBILE — EXACT LIKE IMAGE
 ========================= */
-
 @media (max-width: 768px) {
   .elite-journey-section {
-    min-height: 400px;
-    padding: 50px 18px;
+    min-height: 90vh;
+    padding: 56px 20px 46px;
+    background-position: center center;
+    align-items: center;
+  }
+
+  .elite-journey-container {
+    max-width: 100%;
   }
 
   .elite-journey-subtitle {
-    font-size: 15px;
+    font-size: 16px;
     margin-bottom: 14px;
+    letter-spacing: 1.4px;
   }
 
   .elite-journey-title {
     font-size: 38px;
+    line-height: 1.12;
     margin-bottom: 18px;
   }
 
   .elite-journey-desc {
-    font-size: 13px;
-    line-height: 1.7;
-    margin-bottom: 34px;
+    max-width: 92%;
+    font-size: 15px;
+    line-height: 1.45;
+    margin: 0 auto 30px;
   }
 
+  /* IMPORTANT: keep contact in SAME ROW */
   .elite-journey-contact {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 16px;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
+    flex-wrap: nowrap;
   }
 
   .elite-contact-item {
-    font-size: 13px;
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  .elite-contact-item span {
+    font-size: 12px;
+    line-height: 1.2;
+    white-space: nowrap;
   }
 
   .elite-icon-box {
-    width: 38px;
-    height: 38px;
-    font-size: 13px;
+    width: 36px;
+    height: 36px;
   }
 
-  .elite-journey-btn {
-    padding: 16px 34px;
-    min-width: 220px;
-    font-size: 12px;
-  }
-}
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media (max-width: 520px) {
-  .elite-journey-section {
-    min-height: 380px;
-    padding: 42px 16px;
-  }
-
-  .elite-journey-title {
-    font-size: 32px;
-  }
-
-  .elite-journey-desc {
-    font-size: 12.5px;
-    margin-bottom: 28px;
-  }
-
-  .elite-journey-contact {
-    flex-direction: column;
-    gap: 14px;
+  .elite-icon1,
+  .elite-icon2 {
+    width: 15px;
+    height: 15px;
   }
 
   .elite-divider {
     display: none;
   }
 
-  .elite-contact-item {
+  .elite-journey-btn {
+    min-width: 280px;
+    padding: 16px 28px;
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE — EXACT SCREENSHOT FEEL
+========================= */
+@media (max-width: 520px) {
+  .elite-journey-section {
+    min-height: 16vh;
+    padding: 52px 16px 42px;
+  }
+
+  .elite-journey-subtitle {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  .elite-journey-title {
+    font-size: 31px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .elite-journey-desc {
+    max-width: 360px;
+    font-size: 13px;
+    line-height: 1.45;
+    margin-bottom: 28px;
+  }
+
+  /* EXACT CONTACT ROW LIKE SCREENSHOT */
+  .elite-journey-contact {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+    flex-wrap: nowrap;
+  }
+
+  .elite-contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 11px;
+  }
+
+  .elite-contact-item span {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .elite-icon-box {
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+  }
+
+  .elite-icon1,
+  .elite-icon2 {
+    width: 14px;
+    height: 14px;
+  }
+
+  .elite-divider {
+    display: none;
   }
 
   .elite-journey-btn {
     width: 100%;
     max-width: 280px;
-    padding: 15px 24px;
+    min-width: unset;
+    padding: 15px 20px;
+    font-size: 13px;
+  }
+
+  .elite-journey-btn span {
+    margin-left: 10px;
+  }
+}
+
+/* =========================
+   EXTRA SMALL MOBILE
+========================= */
+@media (max-width: 390px) {
+  .elite-journey-title {
+    font-size: 28px;
+  }
+
+  .elite-journey-desc {
+    font-size: 12.5px;
+    max-width: 320px;
+  }
+
+  .elite-journey-contact {
+    gap: 10px;
+  }
+
+  .elite-contact-item span {
+    font-size: 10px;
+  }
+
+  .elite-icon-box {
+    width: 32px;
+    height: 32px;
+  }
+
+  .elite-journey-btn {
+    max-width: 260px;
+    font-size: 12px;
   }
 }

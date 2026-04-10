@@ -5,7 +5,7 @@ const stats = [
   {
     number: "1,500+",
     title: "YEARS OF TRADITION",
-    desc: "Sumo’s origins trace back to Shinto rituals of ancient Japan",
+    desc: "Sumo's origins trace back to Shinto rituals of ancient Japan",
   },
   {
     number: "6",
@@ -28,17 +28,16 @@ const TraditionPower = () => {
   return (
     <section className="tp-section">
       <div className="tp-container">
-
         {/* TOP CONTENT */}
         <div className="tp-top">
-
           <div className="tp-left">
             <p className="tp-subtitle">
               A LIVING TESTAMENT TO JAPANESE HERITAGE
             </p>
 
             <h2 className="tp-title">
-              Where Tradition Meets Power
+              Where Tradition Meets <br />
+              Power
             </h2>
 
             <div className="tp-line"></div>
@@ -46,12 +45,12 @@ const TraditionPower = () => {
 
           <div className="tp-right">
             <p className="tp-description">
-              For over 1,500 years, sumo has embodied the soul of Japan —
-              a sacred sport where ritual, discipline, and raw power converge
-              in moments of breathtaking intensity. Our exclusive sumo experiences
-              offer you privileged access to this closed world, from private morning
-              training sessions at prestigious heya to ringside seats at the Grand
-              Tournament, accompanied by insights from former champions.
+              For over 1,500 years, sumo has embodied the soul of Japan-a sacred sport
+              where ritual, discipline, and raw power converge in moments of breathtaking
+              intensity. Our exclusive sumo experiences offer you privileged access to this
+              closed world, from private morning training sessions at prestigious heya to
+              ringside seats at the Grand Tournament, accompanied by insights from
+              former champions.
             </p>
 
             <div className="tp-quote">
@@ -62,7 +61,6 @@ const TraditionPower = () => {
               <span>— Takanohana Koji, Former Yokozuna</span>
             </div>
           </div>
-
         </div>
 
         {/* BOTTOM STATS */}
@@ -75,7 +73,6 @@ const TraditionPower = () => {
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

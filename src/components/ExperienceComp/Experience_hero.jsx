@@ -6,7 +6,7 @@ const Experiencehero = () => {
     <section className={styles.hero}>
       <div className={styles.overlay}>
         <div className={styles.content}>
-          <p className={styles.subtitle}>ELITE GLOBAL CONCIERGE</p>
+          {/* <p className={styles.subtitle}>ELITE GLOBAL CONCIERGE</p> */}
 
           <h1 className={styles.title}>
             Extraordinary Experiences <br />
@@ -19,14 +19,14 @@ const Experiencehero = () => {
             impressions.
           </p>
 
-          <div className={styles.btnGroup}>
+          {/* <div className={styles.btnGroup}>
             <button className={`${styles.btn} ${styles.btnPrimary}`}>
               View Dates &amp; Prices
             </button>
             <button className={`${styles.btn} ${styles.btnOutline}`}>
               Download Brochure
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
 
