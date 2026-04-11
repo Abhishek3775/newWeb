@@ -222,6 +222,8 @@
   color: #fff;
 }
 
+.imgicon { height: 18px; width: 18px; filter: brightness(100);}
+
 /* ---- Text ---- */
 .cardTag,
 .cardTagSmall {

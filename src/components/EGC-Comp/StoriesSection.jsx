@@ -6,6 +6,9 @@ import story1 from "../../assets2/EGC Signature/luxary hotel/8.png";
 import story2 from "../../assets2/EGC Signature/luxary hotel/8.png";
 import story3 from "../../assets2/EGC Signature/luxary hotel/8.png";
 import bgPattern from "../../assets/linePattern3.png";
+import icon1 from "../../assets/location.png";
+import icon2 from "../../assets/people1.png";
+import icon3 from "../../assets/date.png";
 
 const storiesData = [
   {
@@ -102,17 +105,17 @@ const StoriesSection = () => {
 
             <div className={styles.metaRow}>
               <div className={styles.metaItem}>
-                <MapPin size={13} strokeWidth={1.7} className={styles.metaItemIcon}/>
+                <img src={icon1} className={styles.metaItemIcon}/>
                 <span>{currentStory.location}</span>
               </div>
 
               <div className={styles.metaItem}>
-                <Users size={13} strokeWidth={1.7} className={styles.metaItemIcon}/>
+                <img src={icon2} className={styles.metaItemIcon}/>
                 <span>{currentStory.guests}</span>
               </div>
 
               <div className={styles.metaItem}>
-                <CalendarDays size={13} strokeWidth={1.7} className={styles.metaItemIcon}/>
+                <img src={icon3} className={styles.metaItemIcon}/>
                 <span>{currentStory.duration}</span>
               </div>
             </div>

@@ -8,7 +8,16 @@ import img3 from "../../assets2/IndividualBlog/4.png"
 const MaldivesArticle = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
-  const handlePrint = () => {
+const changePage = (pageNo) => {
+  setCurrentPage(pageNo);
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
+const handlePrint = () => {
     window.print();
   };
 
@@ -222,22 +231,25 @@ const MaldivesArticle = () => {
         </div>
       )}
 
-      {/* Navigation */}
+       {/* ================= NAVIGATION ================= */}
       <div className={styles.navigation}>
-        <button 
-          className={styles.navBtn} 
-          onClick={() => setCurrentPage(currentPage - 1)}
+        <button
+          className={styles.navBtn}
+          onClick={() => changePage(currentPage - 1)}
           disabled={currentPage === 1}
         >
           ← Previous
         </button>
+
         <div className={styles.pageIndicator}>
-          Page <span className={styles.currentPage}>{currentPage}</span> of <span className={styles.totalPages}>3</span>
+          Page <span className={styles.currentPage}>{currentPage}</span> of{" "}
+          <span className={styles.totalPages}>3</span>
         </div>
-        <button 
-          className={styles.navBtn} 
-          onClick={() => setCurrentPage(currentPage + 1)}
-          disabled={currentPage === 3}
+
+        <button
+          className={styles.navBtn}
+          onClick={() => changePage(currentPage + 1)}
+          disabled={currentPage === 4}
         >
           Next →
         </button>

@@ -1153,6 +1153,8 @@
     padding: 20px 12px;
   }
 
+  .SEmainTitle { font-size: 30px;}
+
   .statItem h3 {
     font-size: 18px;
   }
@@ -1652,15 +1654,20 @@
 /* ==========================================
    OurPhilosophy SECTION
 ========================================== */
+/* ==========================================
+   OurPhilosophy SECTION
+========================================== */
 
 .philosophySection {
   width: 100%;
   background: #ffffff;
   padding: 36px 20px 34px;
+  overflow-x: hidden;
 }
 
 .philosophyContainer {
   max-width: 1180px;
+  width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1.2fr 0.85fr;
@@ -1674,6 +1681,7 @@
 
 .philosophyLeft {
   max-width: 690px;
+  width: 100%;
 }
 
 .philosophySmallTitle {
@@ -1692,14 +1700,16 @@
   font-family: "abel";
   font-weight: 300;
   color: #131313;
+  word-break: break-word;
 }
 
 .philosophyText {
   margin: 0 0 18px;
   font-size: 15px;
-  line-height: 1.42;
+  line-height: 1.6;
   color: #131313;
   max-width: 690px;
+  word-break: break-word;
 }
 
 /* ==========================================
@@ -1709,13 +1719,15 @@
 .philosophyRight {
   display: flex;
   justify-content: flex-end;
+  width: 100%;
 }
 
 .quoteCard {
-  width: 650px;
+  width: 100%;
   max-width: 420px;
   background: #efede8;
   padding: 28px 24px 24px;
+  box-sizing: border-box;
 }
 
 .quoteIcon {
@@ -1733,6 +1745,7 @@
   color: #131313;
   font-family: "abel";
   max-width: 360px;
+  word-break: break-word;
 }
 
 .quoteLine {
@@ -1795,7 +1808,13 @@
   }
 
   .philosophyContainer {
-    gap: 26px;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    width: 100%;
+  }
+
+  .philosophyLeft {
+    max-width: 100%;
   }
 
   .philosophySmallTitle {
@@ -1804,30 +1823,39 @@
   }
 
   .philosophyTitle {
-    font-size: 34px;
+    font-size: 30px;
     margin-bottom: 16px;
-    line-height: 1.12;
+    line-height: 1.2;
   }
 
   .philosophyText {
-    font-size: 14px;
+    font-size: 13.5px;
     line-height: 1.6;
     margin-bottom: 16px;
+    max-width: 100%;
+  }
+
+  .philosophyRight {
+    width: 100%;
+    justify-content: center;
   }
 
   .quoteCard {
-    padding: 22px 18px 20px;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 16px;
   }
 
   .quoteIcon {
-    font-size: 38px;
+    font-size: 34px;
     margin-bottom: 6px;
   }
 
   .quoteText {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.45;
     margin-bottom: 22px;
+    max-width: 100%;
   }
 
   .quoteAuthorBlock h4 {

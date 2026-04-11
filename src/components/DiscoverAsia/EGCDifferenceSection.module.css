@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap");
 
 .section {
-  --bg: #f7f6f2;
+  --bg: #ffffff;
   --text: #2c2a27;
   --muted: #5e5a55;
   --gold: #b88c3c;
@@ -41,7 +41,7 @@
   margin: 0 0 12px;
   color: var(--gold);
   font-family: "Inter", sans-serif;
-  font-size: 12px;
+  font-size: 17px;
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -50,7 +50,7 @@
 .heading {
   margin: 0 0 clamp(28px, 4vw, 42px);
   color: var(--text);
-  font-family: "Cormorant Garamond", serif;
+  font-family: "abel", serif;
   font-size: clamp(40px, 5vw, 62px);
   font-weight: 400;
   line-height: 1.04;
@@ -105,7 +105,7 @@
 .title {
   margin: 0;
   color: var(--text);
-  font-family: "Cormorant Garamond", serif;
+  font-family: "abel", serif;
   font-size: clamp(28px, 2.3vw, 42px);
   font-weight: 400;
   line-height: 1.08;
@@ -237,11 +237,12 @@
 /* Quote Text */
 .quote1 {
   margin: 0;
-  color: #2b2926;
+  color: #131313;
   font-size: 25px;
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: 0.01em;
+  font-family: "abel";
   text-align: center;
   /* background-color: red; */
 }
@@ -257,7 +258,7 @@
 /* Author */
 .author1 {
   margin: 0;
-  color: #6b6864;
+  color: #131313;
   font-family: "Inter", sans-serif;
   font-size: 12px;
   letter-spacing: 0.18em;

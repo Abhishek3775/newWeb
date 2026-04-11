@@ -1,11 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  FaChevronLeft,
-  FaChevronRight,
-  // FaMapMarkerAlt,
-  // FaStar,
-} from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { RiMapPin2Line } from "react-icons/ri";
 
 import "swiper/css";
@@ -24,11 +19,9 @@ const SouthAfricaShowcase = () => {
   const swiperRef = useRef(null);
   const [activeTab, setActiveTab] = useState("destinations");
 
-  // ✅ Modal state
   const [selectedHotel, setSelectedHotel] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  /* DESTINATIONS DATA */
   const destinations = [
     {
       id: 1,
@@ -53,14 +46,12 @@ const SouthAfricaShowcase = () => {
     },
   ];
 
-  /* HOTELS DATA */
   const hotels = [
     {
       id: 1,
       name: "Singita Lebombo Lodge",
       location: "KRUGER NATIONAL PARK",
       price: "£1,200",
-      rating: 5,
       image: singita,
       gallery: [singita, Ellerman, silo],
       description:
@@ -73,7 +64,6 @@ const SouthAfricaShowcase = () => {
       name: "Ellerman House",
       location: "CAPE TOWN",
       price: "£800",
-      rating: 5,
       image: Ellerman,
       gallery: [Ellerman, singita, silo],
       description:
@@ -86,7 +76,6 @@ const SouthAfricaShowcase = () => {
       name: "The Silo Hotel",
       location: "CAPE TOWN",
       price: "£650",
-      rating: 5,
       image: silo,
       gallery: [silo, Ellerman, singita],
       description:
@@ -99,7 +88,6 @@ const SouthAfricaShowcase = () => {
       name: "Royal Malewane",
       location: "GREATER KRUGER",
       price: "£850",
-      rating: 5,
       image: RoyalMalewane,
       gallery: [RoyalMalewane, singita, silo],
       description:
@@ -112,7 +100,6 @@ const SouthAfricaShowcase = () => {
       name: "Grootbos Private Nature Reserve",
       location: "WALKER BAY",
       price: "£950",
-      rating: 5,
       image: silo,
       gallery: [silo, Ellerman, singita],
       description:
@@ -122,7 +109,6 @@ const SouthAfricaShowcase = () => {
     },
   ];
 
-  // ✅ body scroll lock when modal opens
   useEffect(() => {
     if (selectedHotel) {
       document.body.style.overflow = "hidden";
@@ -135,12 +121,9 @@ const SouthAfricaShowcase = () => {
     };
   }, [selectedHotel]);
 
-  // ✅ ESC close
   useEffect(() => {
     const handleEsc = (e) => {
-      if (e.key === "Escape") {
-        setSelectedHotel(null);
-      }
+      if (e.key === "Escape") setSelectedHotel(null);
     };
 
     window.addEventListener("keydown", handleEsc);
@@ -199,17 +182,38 @@ const SouthAfricaShowcase = () => {
             <Swiper
               key={activeTab}
               onSwiper={(swiper) => (swiperRef.current = swiper)}
-              spaceBetween={20}
+              spaceBetween={24}
               slidesPerView={3}
               speed={850}
+              centeredSlides={false}
               breakpoints={{
-                0: { slidesPerView: 1.08, spaceBetween: 16 },
-                640: { slidesPerView: 1.4, spaceBetween: 18 },
-                900: { slidesPerView: 2.1, spaceBetween: 22 },
-                1200: { slidesPerView: 3, spaceBetween: 20 },
+                0: {
+                  slidesPerView: 1.08,
+                  spaceBetween: 16,
+                  centeredSlides: true,
+                },
+                480: {
+                  slidesPerView: 1.08,
+                  spaceBetween: 18,
+                  centeredSlides: true,
+                },
+                768: {
+                  slidesPerView: 1.45,
+                  spaceBetween: 20,
+                  centeredSlides: false,
+                },
+                992: {
+                  slidesPerView: 2.1,
+                  spaceBetween: 22,
+                  centeredSlides: false,
+                },
+                1200: {
+                  slidesPerView: 3,
+                  spaceBetween: 24,
+                  centeredSlides: false,
+                },
               }}
             >
-              {/* DESTINATIONS */}
               {activeTab === "destinations" &&
                 destinations.map((item) => (
                   <SwiperSlide key={item.id}>
@@ -225,18 +229,12 @@ const SouthAfricaShowcase = () => {
                   </SwiperSlide>
                 ))}
 
-              {/* HOTELS */}
               {activeTab === "hotels" &&
                 hotels.map((hotel) => (
                   <SwiperSlide key={hotel.id}>
                     <div className="hotel-card">
                       <div className="hotel-image">
                         <img src={hotel.image} alt={hotel.name} />
-
-                        {/* <div className="rating-badge">
-                          <FaStar className="star-icon" />
-                          <span>FIVE STAR</span>
-                        </div> */}
                       </div>
 
                       <div className="hotel-content">
@@ -265,7 +263,7 @@ const SouthAfricaShowcase = () => {
                 ))}
             </Swiper>
 
-            {/* SIDE NAVIGATION */}
+            {/* BOTTOM NAV */}
             <div className="bottom-navigation">
               <button
                 className="custom-nav"
@@ -288,10 +286,7 @@ const SouthAfricaShowcase = () => {
       {/* ================= HOTEL MODAL ================= */}
       {selectedHotel && (
         <div className="hotel-modal-overlay" onClick={closeHotelModal}>
-          <div
-            className="hotel-modal"
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className="hotel-modal" onClick={(e) => e.stopPropagation()}>
             <button className="hotel-modal-close" onClick={closeHotelModal}>
               ×
             </button>
@@ -299,7 +294,6 @@ const SouthAfricaShowcase = () => {
             <p className="hotel-modal-label">HOTELS IN SOUTH AFRICA</p>
 
             <div className="hotel-modal-body">
-              {/* LEFT IMAGE */}
               <div className="hotel-modal-image-wrap">
                 <img
                   src={selectedHotel.gallery[currentImageIndex]}
@@ -326,7 +320,6 @@ const SouthAfricaShowcase = () => {
                 )}
               </div>
 
-              {/* RIGHT CONTENT */}
               <div className="hotel-modal-content">
                 <h2>{selectedHotel.name}</h2>
 
@@ -339,7 +332,9 @@ const SouthAfricaShowcase = () => {
 
                 <div className="hotel-modal-cta">
                   <div className="hotel-modal-cta-left">
-                    <div className="hotel-modal-logo"><img src={logo} alt="" /></div>
+                    <div className="hotel-modal-logo">
+                      <img src={logo} alt="" />
+                    </div>
 
                     <div>
                       <h4>SPEAK TO AN EXPERT</h4>

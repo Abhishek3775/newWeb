@@ -122,7 +122,7 @@ const JetExpeditions = () => {
       </div>
     </div>
 
-    {/* Discover */}
+    
     <div className={styles.discoverIndicator}>
       <span>DISCOVER</span>
       <span className={styles.discoverArrow}>⌄</span>

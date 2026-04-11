@@ -131,9 +131,11 @@
 }
 
 .cardTitle {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 400;
   margin-bottom: 12px;
+  margin-top: 10px;
+  font-family: "abel";
   color: #1A1A1A;
 }
 
@@ -173,11 +175,11 @@
 
 @media (max-width: 480px) {
   .journeySection {
-    padding: 70px 5%;
+    padding: 40px 5%;
   }
 
   .mainHeading {
-    font-size: 22px;
+    font-size: 28px;
   }
 
   .highlightText {

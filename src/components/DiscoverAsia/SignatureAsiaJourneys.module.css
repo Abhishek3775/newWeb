@@ -1,7 +1,7 @@
 .section {
   width: 100%;
-  background: #f4f2ee;
-  padding: 14px 0 28px;
+  background: #ffffff;
+  padding: 44px 0 28px;
   font-family: "Inter", sans-serif;
 }
 
@@ -23,7 +23,7 @@
 .subTitle {
   margin: 0 0 8px;
   color: #b78d47;
-  font-size: 12px;
+  font-size: 17px;
   font-weight: 600;
   letter-spacing: 1.1px;
   text-transform: uppercase;
@@ -37,7 +37,7 @@
   font-weight: 300;
   line-height: 1.04;
   letter-spacing: -0.5px;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "abel", sans-serif;
 }
 
 /* =========================
@@ -118,7 +118,7 @@
   font-size: 17px;
   font-weight: 300;
   line-height: 1.1;
-  font-family: "Inter", sans-serif;
+  font-family: "abel", sans-serif;
 }
 
 .subText {

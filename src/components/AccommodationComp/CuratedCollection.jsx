@@ -7,6 +7,8 @@ import img4 from "../../assets2/Accommodation/4.png";
 import img5 from "../../assets2/Accommodation/5.png";
 import correct from "../../assets/correct2.png";
 import logo from "../../assets/elite-logo.png";
+import tickIcon from "../../assets/correct.png";
+
 import {
   FiSearch,
   FiHeart,
@@ -46,12 +48,6 @@ const hotelsData = [
       "Award-Winning Spa",
     ],
     benefit: "Complimentary sunset dolphin cruise & private dining experience",
-    highlights: [
-      "Private Beach Villas",
-      "Star Gazing",
-      "Organic Gardens",
-      "Award-Winning Spa",
-    ],
   },
   {
     id: 2,
@@ -75,12 +71,6 @@ const hotelsData = [
       "Michelin Dining",
     ],
     benefit: "Room upgrade & exclusive beach cabana access",
-    highlights: [
-      "Ocean View Suites",
-      "Guerlain Spa",
-      "Private Yacht",
-      "Michelin Dining",
-    ],
   },
   {
     id: 3,
@@ -104,12 +94,6 @@ const hotelsData = [
       "Sunset Terraces",
     ],
     benefit: "Private caldera yacht tour with champagne dinner",
-    highlights: [
-      "Infinity Pool Suites",
-      "Wine Cellar Tours",
-      "Helicopter Transfers",
-      "Sunset Terraces",
-    ],
   },
   {
     id: 4,
@@ -133,12 +117,6 @@ const hotelsData = [
       "Private Chalets",
     ],
     benefit: "Private ski guide & apres-ski spa experience",
-    highlights: [
-      "Ski-In/Ski-Out",
-      "35m Indoor Pool",
-      "Japanese Restaurant",
-      "Private Chalets",
-    ],
   },
   {
     id: 5,
@@ -162,12 +140,6 @@ const hotelsData = [
       "Cultural Experiences",
     ],
     benefit: "Exclusive access to private tea ceremony & cultural tour",
-    highlights: [
-      "Panoramic City Views",
-      "Traditional Spa",
-      "Private Dining",
-      "Cultural Experiences",
-    ],
   },
 ];
 
@@ -182,6 +154,7 @@ const countryOptions = [
   "Italy",
   "UAE",
 ];
+
 const destinationOptions = [
   "All Destinations",
   "Indian Ocean",
@@ -191,6 +164,7 @@ const destinationOptions = [
   "Asia Pacific",
   "Middle East",
 ];
+
 const typeOptions = [
   "All Types",
   "Beach Resort",
@@ -199,6 +173,7 @@ const typeOptions = [
   "Safari Lodge",
   "Private Island",
 ];
+
 const gradeOptions = ["All Grades", "Ultra Luxury", "Luxury", "Premium"];
 
 const CuratedCollection = () => {
@@ -209,6 +184,7 @@ const CuratedCollection = () => {
     type: "",
     grade: "",
   });
+
   const [openDropdown, setOpenDropdown] = useState(null);
   const [showMobileFilters, setShowMobileFilters] = useState(false);
   const [wishlist, setWishlist] = useState([]);
@@ -255,7 +231,6 @@ const CuratedCollection = () => {
     }));
     setOpenDropdown(null);
 
-    // ✅ phone pe select hote hi filters close
     if (window.innerWidth <= 480) {
       setShowMobileFilters(false);
     }
@@ -279,6 +254,7 @@ const CuratedCollection = () => {
   );
 
   const getLabel = (key, options) => (filters[key] ? filters[key] : options[0]);
+
   const modalImages = selectedHotel
     ? [selectedHotel.image, selectedHotel.image, selectedHotel.image]
     : [];
@@ -317,6 +293,7 @@ const CuratedCollection = () => {
 
   const handleSubmitEnquiry = (e) => {
     e.preventDefault();
+
     console.log("Enquiry Submitted:", {
       hotel: selectedHotel?.name,
       ...enquiryForm,
@@ -340,6 +317,7 @@ const CuratedCollection = () => {
     >
       <div className={styles.imageWrapper}>
         <span className={styles.badge}>{hotel.grade}</span>
+
         <button
           className={`${styles.wishlistBtn} ${
             wishlist.includes(hotel.id) ? styles.wishlisted : ""
@@ -348,6 +326,7 @@ const CuratedCollection = () => {
         >
           <FiHeart />
         </button>
+
         <img src={hotel.image} alt={hotel.name} />
       </div>
 
@@ -390,6 +369,7 @@ const CuratedCollection = () => {
               ${hotel.price.toLocaleString()}<span>/night</span>
             </h4>
           </div>
+
           <button
             className={styles.btn}
             onClick={() => {
@@ -449,19 +429,21 @@ const CuratedCollection = () => {
             <div className={styles.filterItem} key={key}>
               <label>{label}</label>
 
-              <div
-                className={`${styles.customSelect} ${
-                  openDropdown === key ? styles.open : ""
-                } ${filters[key] ? styles.hasValue : ""}`}
-                onClick={() => toggleDropdown(key)}
-              >
-                <span>{getLabel(key, options)}</span>
+              <div className={styles.selectWrapper}>
+                <div
+                  className={`${styles.customSelect} ${
+                    openDropdown === key ? styles.open : ""
+                  } ${filters[key] ? styles.hasValue : ""}`}
+                  onClick={() => toggleDropdown(key)}
+                >
+                  <span>{getLabel(key, options)}</span>
 
-                <FiChevronDown
-                  className={`${styles.chevron} ${
-                    openDropdown === key ? styles.rotated : ""
-                  }`}
-                />
+                  <FiChevronDown
+                    className={`${styles.chevron} ${
+                      openDropdown === key ? styles.rotated : ""
+                    }`}
+                  />
+                </div>
 
                 {openDropdown === key && (
                   <ul className={styles.dropdown}>
@@ -476,7 +458,16 @@ const CuratedCollection = () => {
                         }`}
                         onClick={() => handleFilter(key, opt)}
                       >
-                        {opt}
+                        <span>{opt}</span>
+
+                        {(filters[key] === opt ||
+                          (!filters[key] && opt.startsWith("All"))) && (
+                          <img
+                            src={tickIcon}
+                            alt="selected"
+                            className={styles.tickIcon}
+                          />
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -687,6 +678,7 @@ const CuratedCollection = () => {
                   {enquiryForm.children.map((child, index) => (
                     <div key={index} className={styles.childRow}>
                       <label>Age</label>
+
                       <select
                         value={child}
                         onChange={(e) =>

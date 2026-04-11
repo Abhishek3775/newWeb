@@ -10,11 +10,18 @@ import img6 from "../../assets2/EGC Signature/9.png";
 import img8 from "../../assets2/EGC Signature/10.png";
 import img7 from "../../assets2/EGC Signature/11.png";
 
-import { LuUsers } from "react-icons/lu";
-import { FaRegCompass } from "react-icons/fa6";
-import { CiHeart } from "react-icons/ci";
-import { FaRegStar } from "react-icons/fa6";
-import { PiHeartbeatBold } from "react-icons/pi";
+import users from "../../assets/people1.png";
+import heart from "../../assets/heart.png";
+import heart1 from "../../assets/wind-heart.png";
+import compass from "../../assets/compass.png";
+import star from "../../assets/glow-star.png";
+
+
+// import { LuUsers } from "react-icons/lu";
+// import { FaRegCompass } from "react-icons/fa6";
+// import { CiHeart } from "react-icons/ci";
+// import { FaRegStar } from "react-icons/fa6";
+// import { PiHeartbeatBold } from "react-icons/pi";
 import { useNavigate } from "react-router-dom";
 
 const slides = [
@@ -29,7 +36,7 @@ const slides = [
         "Intimate escapes designed for two, from secluded beach villas to private wine tastings in Tuscan vineyards.",
       badges: ["Private Dining", "Spa Retreats", "Scenic Stays"],
       experiences: "48 experiences available",
-      icon: <CiHeart />,
+      icon: heart,
       iconGold: false,
       bg: img1,
     },
@@ -38,14 +45,14 @@ const slides = [
         tag: "ADVENTURES TOGETHER",
         title: "Families Travels",
         path: "/luxury-group-holiday",
-        icon: <LuUsers />,
+        icon: users,
         bg: img2,
       },
       {
         tag: "PERSONAL DISCOVERY",
         title: "Solo Explorers",
         path: "/luxury-group-holiday",
-        icon: <FaRegCompass />,
+        icon: compass,
         bg: img3,
       },
     ],
@@ -57,7 +64,7 @@ const slides = [
         "Thrilling expeditions for those who crave adrenaline, from heli-skiing to underwater explorations.",
       badges: ["Extreme Sports", "Expeditions", "Wildlife"],
       experiences: "41 experiences available",
-      icon: <FaRegStar />,
+      icon: star,
       iconGold: true,
       bg: img4,
     },
@@ -70,14 +77,14 @@ const slides = [
         tag: "SHARED LEGACIES",
         title: "Multi-Generational Travel",
         path: "/luxury-group-holiday",
-        icon: <LuUsers />,
+        icon: users,
         bg: img5,
       },
       {
         tag: "TRAVEL TOGETHER",
         title: "Luxury Group Holidays",
         path: "/luxury-group-holiday",
-        icon: <LuUsers />,
+        icon: users,
         bg: img6,
       },
     ],
@@ -89,7 +96,7 @@ const slides = [
         "Rejuvenating escapes centered on wellbeing and balance — from secluded spa retreats to guided mindfulness and immersive nature experiences.",
       badges: ["Yoga & Meditation", "Holistic Healing", "Spa Retreats"],
       experiences: "24 experiences available",
-      icon: <PiHeartbeatBold />,
+      icon: heart1,
       iconGold: true,
       bg: img7,
     },
@@ -101,7 +108,7 @@ const slides = [
         "Celebrate love with bespoke escapes for two — from overwater villas and private island retreats to intimate candlelit dinners beneath the stars.",
       badges: ["Private Villas", "Romantic Dining", "Island Retreats"],
       experiences: "36 experiences available",
-      icon: <CiHeart />,
+      icon: heart,
       iconGold: false,
       bg: img8,
     },
@@ -131,7 +138,7 @@ function LargeCard({ card, extraClass }) {
             card.iconGold ? styles.iconGold : ""
           }`}
         >
-          {card.icon}
+          <img src={card.icon} alt="" className={styles.imgicon}/>
         </span>
         <p className={styles.cardTag}>{card.tag}</p>
         <h3 className={styles.cardTitle}>{card.title}</h3>
@@ -176,7 +183,8 @@ function SmallCard({ card }) {
       <img src={card.bg} alt={card.title} className={styles.cardImg} />
       <div className={styles.cardOverlay} />
       <div className={`${styles.cardContent} ${styles.cardContentSmall}`}>
-        <span className={styles.iconCircleSmall}>{card.icon}</span>
+        <span className={styles.iconCircleSmall}>          <img src={card.icon} alt="" className={styles.imgicon}/>
+</span>
         <p className={styles.cardTagSmall}>{card.tag}</p>
         <h3 className={styles.cardTitleSmall}>{card.title}</h3>
       </div>

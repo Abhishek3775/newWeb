@@ -1,40 +1,38 @@
 /* ================= SECTION ================= */
 .saus-section {
-  padding: 80px 36px 70px;
+  width: 100%;
   background: #ffffff;
+  padding: 72px 28px 48px;
   overflow: hidden;
 }
 
 .saus-container {
-  max-width: 1320px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
 /* ================= HEADER ================= */
 .saus-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 30px;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 }
 
 .saus-header h2 {
-  font-size: clamp(2rem, 3vw, 3rem);
-  font-weight: 300;
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  font-weight: 400;
   font-family: "Abel", sans-serif;
   color: #1a1a1a;
-  margin: 0;
-  line-height: 1.15;
+  margin: 0 0 18px;
+  line-height: 1.12;
+  max-width: 620px;
+  letter-spacing: 0.2px;
 }
 
 .saus-header p {
-  max-width: 480px;
-  font-size: 14px;
+  max-width: 540px;
+  font-size: 15px;
   font-weight: 300;
-  color: #131313;
-  line-height: 1.7;
-  text-align: right;
+  color: #5d5d5d;
+  line-height: 1.5;
   margin: 0;
 }
 
@@ -43,17 +41,26 @@
   position: relative;
 }
 
+.saus-slider-wrapper .swiper {
+  overflow: visible !important;
+}
+
+.saus-slider-wrapper .swiper-slide {
+  height: auto;
+}
+
 /* ================= EACH SLIDE ================= */
 .saus-slide-item {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 /* ================= CARD IMAGE ================= */
 .saus-card {
   position: relative;
   width: 100%;
-  aspect-ratio: 0.7 / 1;
+  height: 500px;
   overflow: hidden;
   background: #ddd;
 }
@@ -67,119 +74,131 @@
 
 /* ================= CONTENT BELOW IMAGE ================= */
 .saus-card-content {
-  padding: 12px 4px 0;
+  padding: 14px 0 0;
 }
 
 .saus-card-content h3 {
-  font-size: 18px;
+  font-size: 28px;
   font-weight: 400;
-  color: #c09551;
-  margin: 0 0 8px;
-  font-family: "abel";
-  line-height: 1.3;
+  color: #c49a57;
+  margin: 0 0 10px;
+  font-family: "Abel", sans-serif;
+  line-height: 1.15;
 }
 
 .saus-card-content p {
-  font-size: 13px;
-  color: #131313;
-  line-height: 1.55;
+  font-size: 14px;
+  color: #1c1c1c;
+  line-height: 1.5;
   margin: 0;
   font-weight: 300;
   max-width: 95%;
 }
 
-/* ================= ARROWS ================= */
+/* ================= BOTTOM NAV ================= */
+.saus-bottom-nav {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 28px;
+}
+
 .saus-arrow {
-  position: absolute;
-  top: 43%;
-  transform: translateY(-50%);
-  width: 38px;
-  height: 38px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
-  border: 1px solid #8d8d8d;
-  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #7c7c7c;
+  background: transparent;
   cursor: pointer;
   z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: 0.25s ease;
   color: #111;
+  font-size: 14px;
 }
 
 .saus-arrow:hover {
   background: #fff;
-  border-color: #444;
-}
-
-.saus-prev {
-  left: -18px;
-}
-
-.saus-next {
-  right: -18px;
+  transform: translateY(-2px);
 }
 
 /* ================= LARGE TABLET ================= */
 @media (max-width: 1199px) {
   .saus-card {
-    aspect-ratio: 0.72 / 1;
+    height: 460px;
   }
 
-  .saus-prev {
-    left: -10px;
+  .saus-card-content h3 {
+    font-size: 24px;
   }
 
-  .saus-next {
-    right: -10px;
+  .saus-card-content p {
+    font-size: 13.5px;
   }
 }
 
 /* ================= TABLET ================= */
 @media (max-width: 991px) {
   .saus-section {
-    padding: 70px 24px 60px;
+    padding: 64px 22px 42px;
   }
 
   .saus-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
     margin-bottom: 24px;
   }
 
-  .saus-header p {
-    text-align: left;
+  .saus-header h2 {
+    margin-bottom: 14px;
     max-width: 100%;
   }
 
+  .saus-header p {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .saus-card {
+    height: 430px;
+  }
+
   .saus-card-content h3 {
-    font-size: 17px;
+    font-size: 22px;
+    margin-bottom: 8px;
   }
 
   .saus-card-content p {
     font-size: 13px;
-  }
-
-  .saus-arrow {
-    display: none;
+    max-width: 100%;
   }
 }
 
 /* ================= MOBILE ================= */
 @media (max-width: 767px) {
   .saus-section {
-    padding: 60px 16px 50px;
+    padding: 50px 16px 38px;
+  }
+
+  .saus-header {
+    margin-bottom: 22px;
   }
 
   .saus-header h2 {
-    font-size: 2rem;
-    line-height: 1.2;
+    font-size: 2.15rem;
+    line-height: 1.15;
+    margin-bottom: 14px;
+    max-width: 320px;
   }
 
   .saus-header p {
     font-size: 13px;
-    line-height: 1.65;
+    line-height: 1.5;
+    max-width: 310px;
+  }
+
+  .saus-card {
+    height: 325px;
   }
 
   .saus-card-content {
@@ -187,28 +206,64 @@
   }
 
   .saus-card-content h3 {
-    font-size: 17px;
-    margin-bottom: 6px;
+    font-size: 16px;
+    margin-bottom: 8px;
+    line-height: 1.25;
   }
 
   .saus-card-content p {
-    font-size: 12.8px;
-    line-height: 1.55;
+    font-size: 12px;
+    line-height: 1.45;
     max-width: 100%;
+  }
+
+  .saus-bottom-nav {
+    margin-top: 24px;
+    gap: 16px;
+  }
+
+  .saus-arrow {
+    width: 42px;
+    height: 42px;
+    font-size: 13px;
   }
 }
 
 /* ================= SMALL MOBILE ================= */
 @media (max-width: 480px) {
+  .saus-section {
+    padding: 42px 14px 34px;
+  }
+
   .saus-header h2 {
-    font-size: 1.8rem;
+    font-size: 1.95rem;
+    max-width: 290px;
+  }
+
+  .saus-header p {
+    font-size: 12.5px;
+    max-width: 290px;
+  }
+
+  .saus-card {
+    height: 300px;
   }
 
   .saus-card-content h3 {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .saus-card-content p {
-    font-size: 12.5px;
+    font-size: 11.5px;
+    line-height: 1.42;
+  }
+
+  .saus-bottom-nav {
+    margin-top: 20px;
+  }
+
+  .saus-arrow {
+    width: 40px;
+    height: 40px;
   }
 }

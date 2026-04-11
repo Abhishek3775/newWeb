@@ -17,7 +17,6 @@ const JapanHeroSection = () => {
 
         <p className="japan-hero-description">
           Where ancient traditions meet with modern elegance,
-          <br />
           creating moments that transcend time itself.
         </p>
 

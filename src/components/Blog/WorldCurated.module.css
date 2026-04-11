@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   min-height: 400px;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -40,7 +40,7 @@
 
 .stayLabel {
   font-size: 17px;
-  font-weight: 400;
+  font-weight: 700;
   color: #C09551;
   text-align: center;
   text-transform: uppercase;
@@ -53,6 +53,7 @@
   font-weight: 300;
   color: #ffffff;
   margin: 0 0 25px 0;
+  font-family: "abel";
   line-height: 1.2;
   letter-spacing: 0.5px;
   animation: fadeInUp 0.8s ease 0.2s both;

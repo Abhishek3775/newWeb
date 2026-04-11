@@ -200,7 +200,7 @@
 @media (max-width: 768px) {
   .elite-journey-section {
     min-height: 520px;
-    padding: 70px 18px 60px;
+    padding: 50px 18px 30px;
     background-position: center center;
   }
 
@@ -269,7 +269,7 @@
 @media (max-width: 480px) {
   .elite-journey-section {
     min-height: 540px;
-    padding: 60px 16px 50px;
+    padding: 40px 16px 20px;
   }
 
   .elite-journey-subtitle {

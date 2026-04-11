@@ -34,9 +34,9 @@
 .title {
   font-size: 48px;
   font-weight: 300;
-  color: #333;
+  color: #131313;
   margin: 0;
-  /* font-family: 'Georgia', serif; */
+  font-family: 'abel', serif;
   letter-spacing: 0.5px;
   line-height: 1.2;
 }
@@ -138,17 +138,17 @@
 }
 
 .readTime {
-  color: #999;
+  color: #131313;
   font-weight: 400;
 }
 
 .articleTitle {
   font-size: 18px;
   font-weight: 400;
-  color: #333;
+  color: #131313;
   margin: 0;
   line-height: 1.4;
-  /* font-family: 'Georgia', serif; */
+  font-family: 'abel', serif;
   transition: color 0.3s ease;
 }
 

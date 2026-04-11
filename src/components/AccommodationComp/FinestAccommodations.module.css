@@ -283,7 +283,7 @@
 /* ─── Small Mobile (up to 480px) ─── */
 @media (max-width: 480px) {
   .heroSection {
-    min-height: 130vh;
+    min-height: 120vh;
     background-position: center center;
   }
 

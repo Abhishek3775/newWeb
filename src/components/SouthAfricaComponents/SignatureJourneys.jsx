@@ -36,15 +36,6 @@ const journeys = [
     price: "From £14,500 per person",
     image: img1,
   },
-  // {
-  //   nights: "11 Nights",
-  //   locations: "Cape Town · Safari · Winelands",
-  //   title: "Luxury Explorer Escape",
-  //   desc:
-  //     "A beautifully balanced journey blending dramatic coastlines, private game reserves, and refined culinary experiences.",
-  //   price: "From £16,200 per person",
-  //   image: img1,
-  // },
 ];
 
 const SignatureJourneys = () => {
@@ -52,7 +43,6 @@ const SignatureJourneys = () => {
 
   return (
     <section className={styles.signatureSection}>
-      {/* HEADER */}
       <div className={styles.signatureHeader}>
         <h2>EGC Signature Journeys</h2>
 
@@ -63,32 +53,44 @@ const SignatureJourneys = () => {
         </p>
       </div>
 
-      {/* SLIDER */}
       <div className={styles.sliderWrapper}>
-        <button
-          className={`${styles.navBtn} ${styles.prevBtn}`}
-          onClick={() => swiperRef.current?.slidePrev()}
-          aria-label="Previous"
-        >
-          <FaChevronLeft />
-        </button>
-
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
-          spaceBetween={18}
+          spaceBetween={26}
           slidesPerView={3}
+          centeredSlides={false}
           breakpoints={{
-            0: { slidesPerView: 1.08, spaceBetween: 16 },
-            640: { slidesPerView: 1.4, spaceBetween: 18 },
-            900: { slidesPerView: 2.1, spaceBetween: 20 },
-            1200: { slidesPerView: 3, spaceBetween: 18 },
+            0: {
+              slidesPerView: 1.08,
+              spaceBetween: 16,
+              centeredSlides: true,
+            },
+            480: {
+              slidesPerView: 1.08,
+              spaceBetween: 18,
+              centeredSlides: true,
+            },
+            768: {
+              slidesPerView: 1.45,
+              spaceBetween: 20,
+              centeredSlides: false,
+            },
+            992: {
+              slidesPerView: 2.1,
+              spaceBetween: 22,
+              centeredSlides: false,
+            },
+            1200: {
+              slidesPerView: 3,
+              spaceBetween: 24,
+              centeredSlides: false,
+            },
           }}
           className={styles.swiperCustom}
         >
           {journeys.map((item, i) => (
             <SwiperSlide key={i}>
               <div className={styles.journeyCard}>
-                {/* IMAGE */}
                 <div className={styles.journeyImage}>
                   <img src={item.image} alt={item.title} />
 
@@ -101,7 +103,6 @@ const SignatureJourneys = () => {
                   </div>
                 </div>
 
-                {/* FOOTER */}
                 <div className={styles.journeyFooter}>
                   <span className={styles.price}>{item.price}</span>
                   <span className={styles.view}>
@@ -113,13 +114,24 @@ const SignatureJourneys = () => {
           ))}
         </Swiper>
 
-        <button
-          className={`${styles.navBtn} ${styles.nextBtn}`}
-          onClick={() => swiperRef.current?.slideNext()}
-          aria-label="Next"
-        >
-          <FaChevronRight />
-        </button>
+        {/* Bottom Navigation */}
+        <div className={styles.bottomNav}>
+          <button
+            className={styles.navBtn}
+            onClick={() => swiperRef.current?.slidePrev()}
+            aria-label="Previous"
+          >
+            <FaChevronLeft />
+          </button>
+
+          <button
+            className={styles.navBtn}
+            onClick={() => swiperRef.current?.slideNext()}
+            aria-label="Next"
+          >
+            <FaChevronRight />
+          </button>
+        </div>
       </div>
     </section>
   );

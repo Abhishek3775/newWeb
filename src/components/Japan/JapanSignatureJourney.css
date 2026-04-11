@@ -116,8 +116,9 @@
 }
 
 .japan-signature-price {
-  font-size: 18px;
-  color: #222;
+  font-size: 13px;
+  width: 200px;
+  color: #131313;
 }
 
 .japan-signature-price strong {

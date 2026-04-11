@@ -139,18 +139,18 @@
 .mainTitle {
   font-size: 42px;
   font-weight: 300;
-  color: #333;
+  color: #131313;
   margin: 50px 0 30px 0;
-  /* font-family: 'Georgia', serif; */
+  font-family: 'abel', serif;
   letter-spacing: 0.5px;
 }
 
 .sectionTitle {
   font-size: 36px;
   font-weight: 300;
-  color: #333;
+  color: #131313;
   margin: 50px 0 30px 0;
-  /* font-family: 'Georgia', serif; */
+  font-family: 'abel', serif;
   letter-spacing: 0.5px;
 }
 
@@ -171,8 +171,8 @@
 
 .imageCaption {
   font-size: 13px;
-  color: #666;
-  text-align: center;
+  color: #131313;
+  text-align: start;
   margin: 0;
   font-style: italic;
   line-height: 1.6;
@@ -196,14 +196,19 @@
   margin-bottom: 12px;
 }
 
-/* ============================================
-   QUOTE STYLES
-   ============================================ */
+/* QUOTE PERFECT CENTER */
 
 .quoteContainer {
   margin: 60px 0;
-  text-align: center;
   padding: 40px 0;
+  border-top: 1px solid #e4c492 ;
+  border-bottom: 1px solid #e4c492;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .quote {
@@ -212,17 +217,19 @@
   color: #333;
   line-height: 1.8;
   font-style: italic;
-  margin: 0 0 20px 0;
-  /* font-family: 'Georgia', serif; */
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto 20px auto;
+  text-align: center;
 }
 
 .quoteAttribution {
   font-size: 12px;
-  color: #999;
+  color: #131313;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin: 0;
-  font-weight: 400;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* ============================================
@@ -291,7 +298,8 @@
 .tagLabel {
   font-size: 13px;
   font-weight: 600;
-  color: #333;
+  color: #131313;
+  /* margin-top: 5px; */
   margin: 0;
   flex-shrink: 0;
 }
@@ -307,7 +315,7 @@
   border: 1px solid #ccc;
   padding: 6px 12px;
   color: #333;
-  background-color: #ffffff;
+  background-color: #F5F4EF;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -324,7 +332,9 @@
 .authorBox {
   border: 1px solid #ddd;
   padding: 40px;
-  background-color: #F5F4EF;
+  width: 990px;
+  transform: translateX(25%);
+  background-color: #ffffff;
   margin: 50px 0;
 }
 
@@ -755,5 +765,45 @@
   body {
     margin: 0;
     padding: 0;
+  }
+}
+
+/* AUTHOR BOX MOBILE ALIGN FIX */
+
+@media (max-width: 480px) {
+  .authorBox {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    margin: 35px 0;
+    transform: translateX(0);
+    box-sizing: border-box;
+  }
+
+  .authorBoxContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .authorDetails {
+    width: 100%;
+  }
+
+  .authorBoxTitle,
+  .authorBoxName,
+  .authorBio {
+    text-align: center;
+  }
+
+  .authorAvatar {
+    width: 52px;
+    height: 52px;
+  }
+
+  .authorAvatarName {
+    font-size: 18px;
   }
 }

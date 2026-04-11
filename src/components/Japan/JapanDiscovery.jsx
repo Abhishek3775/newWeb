@@ -1,6 +1,7 @@
 import React from "react";
 import "./JapanDiscovery.css";
 import teaImage from "../../assets/japanDiscovery.png"; 
+import icon from "../../assets/infinit.png"; 
 
 const JapanDiscovery = () => {
   return (
@@ -39,7 +40,7 @@ const JapanDiscovery = () => {
             <div className="divider"></div>
 
             <div className="stat">
-              <h3>∞</h3>
+              <h3><img src={icon} alt="" /></h3>
               <span>POSSIBILITIES</span>
             </div>
           </div>

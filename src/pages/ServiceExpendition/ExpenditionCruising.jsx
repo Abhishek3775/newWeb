@@ -29,6 +29,9 @@ import whyicon4 from "../../assets2/Services/aviation/cruising/icon/4.png";
 import whyicon5 from "../../assets2/Services/aviation/cruising/icon/5.png";
 import whyicon6 from "../../assets2/Services/aviation/cruising/icon/6.png";
 
+import ecVicon2 from "../../assets/people.png";
+import ecVicon1 from "../../assets/time.png";
+
 import bgImage from "../../assets2/Services/aviation/cruising/2.png";
 import timeicon from "../../assets/time2.png";
 import phoneicon from "../../assets/phone.png";
@@ -79,12 +82,12 @@ const VoyageCard = ({
       <div className={styles.ecVoyageFooter}>
         <div className={styles.ecVoyageLeft}>
           <span className={styles.ecVoyageMeta}>
-            <CiClock2 className={styles.ecVoyageIcon} />
+            <img src={ecVicon1} className={styles.ecVoyageIcon} />
             {days}
           </span>
 
           <span className={styles.ecVoyageMeta}>
-            <LuUsers className={styles.ecVoyageIcon} />
+            <img src={ecVicon2} className={styles.ecVoyageIcon} />
             {guests}
           </span>
         </div>

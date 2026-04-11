@@ -142,7 +142,7 @@
   font-size: 54px;
   line-height: 1;
   font-family: "inter";
-  font-weight: 300;
+  font-weight: 600;
   color: #c09551;
   margin-bottom: 6px;
 }
@@ -279,7 +279,7 @@
   }
 
   .founder-main-heading {
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 16px;
     line-height: 1.2;
   }

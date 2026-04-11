@@ -44,7 +44,7 @@
   font-weight: 300;
   line-height: 1.05;
   letter-spacing: -0.5px;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "abel", sans-serif;
 }
 
 .rightContent {
@@ -55,7 +55,7 @@
 
 .rightContent p {
   margin: 0;
-  color: #4a4a4a;
+  color: #131313;
   font-size: 15px;
   font-weight: 400;
   text-align: justify;
@@ -118,7 +118,7 @@
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: "abel", sans-serif;
 }
 
 /* =========================

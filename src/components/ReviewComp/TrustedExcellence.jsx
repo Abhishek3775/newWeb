@@ -6,10 +6,11 @@ import {
   Globe,
   BadgeCheck,
   Clock3,
-  Users,
-  TimerReset,
-  ShieldCheck,
 } from "lucide-react";
+
+import { FaUsers,FaRegCheckCircle , FaRegQuestionCircle } from "react-icons/fa";
+
+
 
 const stats = [
   {
@@ -32,7 +33,7 @@ const stats = [
   },
   {
     id: 4,
-    icon: <BadgeCheck size={24} strokeWidth={1.7} />,
+    icon: <FaRegCheckCircle size={24} strokeWidth={1.7} />,
     value: "98%",
     label: "Satisfaction Rate",
   },
@@ -44,19 +45,19 @@ const stats = [
   },
   {
     id: 6,
-    icon: <Users size={24} strokeWidth={1.7} />,
+    icon: <FaUsers size={24} strokeWidth={1.7} />,
     value: "5,000+",
     label: "Elite Clients",
   },
   {
     id: 7,
-    icon: <TimerReset size={24} strokeWidth={1.7} />,
+    icon: <FaRegQuestionCircle size={24} strokeWidth={1.7} />,
     value: "<15min",
     label: "Response Time",
   },
   {
     id: 8,
-    icon: <ShieldCheck size={24} strokeWidth={1.7} />,
+    icon: <BadgeCheck size={24} strokeWidth={1.7} />,
     value: "95%",
     label: "Client Retention",
   },

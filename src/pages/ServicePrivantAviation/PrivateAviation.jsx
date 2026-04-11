@@ -15,12 +15,12 @@ import journeysImg_3 from "../../assets2/Services/aviation/Jet Expeditions/3.png
 import tickIcon from "../../assets/correct.png";
 import BrandStrip from "../../components/BrandStrip/BrandStrip";
 import Bgimg from '../../assets/linepatter1.png'
-import icon1 from '../../assets/plane.png'
-import icon2 from '../../assets/envolope.png'
-import icon3 from '../../assets/setting.png'
+import icon1 from '../../assets/plane1.png'
+import icon2 from '../../assets/membership.png'
+import icon3 from '../../assets/setting2.png'
 import icon4 from '../../assets/globe.png'
 import icon5 from '../../assets/time2.png'
-import icon6 from '../../assets/car.png'
+import icon6 from '../../assets/car1.png'
 
 
 

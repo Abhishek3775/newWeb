@@ -68,6 +68,7 @@
 
 .stat {
   text-align: center;
+  justify-content: center;
 }
 
 .stat h3 {
@@ -75,6 +76,13 @@
   color: #C09551;
   margin-bottom: 5px;
   font-weight: 500;
+}
+
+.stat img {
+  height: 20px;
+  align-content: center;
+  justify-content: center;
+  width: 26px;
 }
 
 .stat span {
@@ -184,5 +192,404 @@
     /* display: none; */
     height: 10px;
     width: 5px;
+  }
+}
+/* ==========================================
+   JAPAN DISCOVERY SECTION
+========================================== */
+
+.discovery-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 70px 6%;
+  overflow-x: hidden;
+}
+
+.discovery-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 48px;
+  align-items: stretch;
+}
+
+/* ==========================================
+   LEFT IMAGE
+========================================== */
+
+.discovery-image {
+  width: 100%;
+}
+
+.discovery-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 640px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==========================================
+   RIGHT CONTENT
+========================================== */
+
+.discovery-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #ffffff;
+  min-height: 640px;
+}
+
+.content-top {
+  padding: 42px 40px 34px;
+}
+
+.content-top h2 {
+  font-size: 56px;
+  line-height: 1.08;
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin: 0 0 26px;
+}
+
+.content-top p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #3f3f3f;
+  margin: 0;
+}
+
+/* ==========================================
+   STATS STRIP — PERFECT ALIGNMENT
+========================================== */
+
+.stats-strip {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background: #f5f4ef;
+  padding: 26px 34px;
+  gap: 0;
+}
+
+.stat {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 18px;
+}
+
+.stat h3 {
+  margin: 0 0 10px;
+  color: #c09551;
+  font-size: 46px;
+  font-weight: 400;
+  font-family: "Abel", sans-serif;
+  line-height: 1;
+  min-height: 46px; /* all icons/numbers aligned */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat h3 img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  display: block;
+}
+
+.stat span {
+  font-size: 13px;
+  color: #4d4d4d;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.35;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.divider {
+  width: 1px;
+  background: #e0d4c2;
+  flex-shrink: 0;
+  align-self: center;
+  height: 38px;
+}
+
+/* ==========================================
+   QUOTE
+========================================== */
+
+.discovery-quote {
+  padding: 28px 40px 36px;
+}
+
+.discovery-quote p {
+  margin: 0 0 12px;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #222;
+  font-family: "Abel", sans-serif;
+  font-weight: 400;
+}
+
+.discovery-quote span {
+  font-size: 14px;
+  color: #5c5c5c;
+  display: inline-block;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 992px) {
+  .discovery-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .discovery-image img {
+    min-height: 500px;
+  }
+
+  .discovery-content {
+    min-height: auto;
+  }
+
+  .content-top h2 {
+    font-size: 44px;
+  }
+}
+
+/* ==========================================
+   MOBILE — EXACT SCREENSHOT STYLE
+========================================== */
+
+@media (max-width: 640px) {
+  .discovery-section {
+    padding: 0;
+    background: #ffffff;
+  }
+
+  .discovery-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 100%;
+  }
+
+  /* ORDER CHANGE FOR MOBILE */
+  .discovery-content {
+    order: 1;
+    background: #ffffff;
+    min-height: auto;
+  }
+
+  .discovery-image {
+    order: 2;
+    background: #ffffff;
+    padding: 18px 20px 30px;
+  }
+
+  .discovery-image img {
+    width: 100%;
+    height: 250px;
+    min-height: unset;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* TOP CONTENT */
+  .content-top {
+    padding: 28px 22px 26px;
+  }
+
+  .content-top h2 {
+    font-size: 32px;
+    line-height: 1.22;
+    margin: 0 0 16px;
+    color: #1d1d1d;
+    max-width: 260px;
+    font-weight: 400;
+  }
+
+  .content-top p {
+    font-size: 12.5px;
+    line-height: 1.52;
+    color: #3f3f3f;
+    margin: 0;
+  }
+
+  /* STATS STRIP */
+  /* STATS STRIP */
+.stats-strip {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 18px 10px;
+  gap: 0;
+  background: #efede8;
+}
+
+.stat {
+  flex: 1;
+  min-width: 0;
+  padding: 0 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat h3 {
+  font-size: 26px;
+  margin: 0 0 7px;
+  line-height: 1;
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat h3 img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: block;
+}
+
+.stat span {
+  font-size: 9px;
+  letter-spacing: 1.2px;
+  line-height: 1.35;
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.divider {
+  height: 30px;
+  width: 1px;
+  background: #d8c8b0;
+  align-self: center;
+}
+  /* QUOTE */
+  .discovery-quote {
+    padding: 18px 22px 22px;
+    background: #ffffff;
+  }
+
+  .discovery-quote p {
+    font-size: 12.5px;
+    line-height: 1.5;
+    margin: 0 0 8px;
+    color: #333;
+    font-family: inherit;
+  }
+
+  .discovery-quote span {
+    font-size: 10px;
+    color: #666;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 390px) {
+  .content-top {
+    padding: 26px 18px 24px;
+  }
+
+  .content-top h2 {
+    font-size: 28px;
+    max-width: 230px;
+  }
+
+  .content-top p {
+    font-size: 12px;
+  }
+
+  .stats-strip {
+  padding: 16px 8px;
+}
+
+.stat {
+  padding: 0 6px;
+}
+
+.stat h3 {
+  font-size: 24px;
+  min-height: 26px;
+  margin-bottom: 6px;
+}
+
+.stat h3 img {
+  width: 27px;
+  height: 27px;
+}
+
+.stat span {
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.divider {
+  height: 26px;
+}
+  .discovery-quote {
+    padding: 16px 18px 20px;
+  }
+
+  .discovery-quote p {
+    font-size: 12px;
+  }
+
+  .discovery-quote span {
+    font-size: 9.5px;
+  }
+
+  .discovery-image {
+    padding: 16px 18px 26px;
+  }
+
+  .discovery-image img {
+    height: 230px;
+  }
+}
+
+/* ==========================================
+   EXTRA SMALL
+========================================== */
+
+@media (max-width: 320px) {
+  .content-top h2 {
+    font-size: 25px;
+  }
+
+  .content-top p {
+    font-size: 11.5px;
+  }
+
+  .stat h3 {
+    font-size: 22px;
+  }
+
+  .stat span {
+    font-size: 8px;
+  }
+
+  .discovery-image img {
+    height: 210px;
   }
 }

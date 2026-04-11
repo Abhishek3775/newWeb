@@ -26,7 +26,7 @@ const slidesData = [
     image: balloon,
     title: "Hot Air Balloon Safari",
     description:
-      "Float silently over the African bushveld at sunrise, watching wildlife wake beneath.",
+      "Float silently over the African bushveld at sunrise, watching wildlife wake beneath...",
   },
   {
     id: 3,
@@ -78,14 +78,36 @@ const SouthAfricaSlider = () => {
         <div className="saus-slider-wrapper">
           <Swiper
             onSwiper={(swiper) => (swiperRef.current = swiper)}
-            spaceBetween={18}
+            spaceBetween={24}
             slidesPerView={3}
             speed={850}
+            centeredSlides={false}
             breakpoints={{
-              0: { slidesPerView: 1.08, spaceBetween: 14 },
-              640: { slidesPerView: 1.45, spaceBetween: 16 },
-              900: { slidesPerView: 2.1, spaceBetween: 18 },
-              1200: { slidesPerView: 3, spaceBetween: 18 },
+              0: {
+                slidesPerView: 1.08,
+                spaceBetween: 16,
+                centeredSlides: true,
+              },
+              480: {
+                slidesPerView: 1.08,
+                spaceBetween: 18,
+                centeredSlides: true,
+              },
+              768: {
+                slidesPerView: 1.45,
+                spaceBetween: 20,
+                centeredSlides: false,
+              },
+              992: {
+                slidesPerView: 2.1,
+                spaceBetween: 22,
+                centeredSlides: false,
+              },
+              1200: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+                centeredSlides: false,
+              },
             }}
           >
             {slidesData.map((slide, index) => (
@@ -112,22 +134,24 @@ const SouthAfricaSlider = () => {
             ))}
           </Swiper>
 
-          {/* ARROWS */}
-          <button
-            className="saus-arrow saus-prev"
-            onClick={() => swiperRef.current?.slidePrev()}
-            aria-label="Previous"
-          >
-            <FaChevronLeft />
-          </button>
+          {/* BOTTOM NAV */}
+          <div className="saus-bottom-nav">
+            <button
+              className="saus-arrow"
+              onClick={() => swiperRef.current?.slidePrev()}
+              aria-label="Previous"
+            >
+              <FaChevronLeft />
+            </button>
 
-          <button
-            className="saus-arrow saus-next"
-            onClick={() => swiperRef.current?.slideNext()}
-            aria-label="Next"
-          >
-            <FaChevronRight />
-          </button>
+            <button
+              className="saus-arrow"
+              onClick={() => swiperRef.current?.slideNext()}
+              aria-label="Next"
+            >
+              <FaChevronRight />
+            </button>
+          </div>
         </div>
       </div>
     </section>
