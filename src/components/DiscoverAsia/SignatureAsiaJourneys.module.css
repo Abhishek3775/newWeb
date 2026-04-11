@@ -1,7 +1,7 @@
 .section {
   width: 100%;
-  background: #ffffff;
-  padding: 44px 0 28px;
+  background: #f4f2ee;
+  padding: 14px 0 28px;
   font-family: "Inter", sans-serif;
 }
 
@@ -23,7 +23,7 @@
 .subTitle {
   margin: 0 0 8px;
   color: #b78d47;
-  font-size: 17px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 1.1px;
   text-transform: uppercase;
@@ -33,11 +33,11 @@
 .heading {
   margin: 0;
   color: #1f1f1f;
-  font-size: 53px;
+  font-size: clamp(35px,40px,50px);
   font-weight: 300;
   line-height: 1.04;
   letter-spacing: -0.5px;
-  font-family: "abel", sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
 }
 
 /* =========================
@@ -115,15 +115,15 @@
 
 .cardContent h3 {
   margin: 0 0 4px;
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 300;
   line-height: 1.1;
-  font-family: "abel", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .subText {
   margin: 0 0 6px;
-  color: #b78d47;
+  color: #C09551;
   font-size: 10px;
   line-height: 1.4;
   font-weight: 400;
@@ -140,7 +140,7 @@
 .learnBtn {
   border: none;
   background: transparent;
-  color: #b78d47;
+  color: #C09551;
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.8px;

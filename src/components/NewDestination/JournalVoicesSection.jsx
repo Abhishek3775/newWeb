@@ -58,6 +58,7 @@ const JournalVoicesSection = () => {
       className={styles.section}
       style={{ "--journal-pattern": `url(${linepattern2})` }}
     >
+      <div className={styles.bgpattern}>
       <div className={styles.custom}>
         {/* CLIENT VOICES */}
         <div className={styles.block}>
@@ -121,6 +122,7 @@ const JournalVoicesSection = () => {
             ))}
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

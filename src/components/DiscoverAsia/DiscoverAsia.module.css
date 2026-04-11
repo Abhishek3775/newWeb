@@ -37,17 +37,17 @@
 
 .title {
   margin: 0 0 14px 0;
-  font-size: 64px;
   font-weight: 300;
+  font-size: clamp(32px, 5vw, 64px);
   line-height: 1;
   color: #ffffff;
   letter-spacing: -1px;
-  font-family: "abel", sans-serif;
+  font-family: "Inter", sans-serif;
   text-align: center;
 }
 
 .title span {
-  color: #b78d47;
+  color: #C09551;
 }
 
 .subtitle {
@@ -185,9 +185,9 @@
 
 .label {
   margin: 5px 0 0;
-  color: #111111;
+  color: #131313;
   font-size: 0.72rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1.5px;
   line-height: 1.4;
   text-transform: uppercase;

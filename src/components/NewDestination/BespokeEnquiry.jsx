@@ -5,6 +5,7 @@ import bgImage from "../../assets/bespoke-bg.png";
 import phoneIcon from "../../assets/phone1.png";
 import mailIcon from "../../assets/msg1.png";
 import clockIcon from "../../assets/clock.png";
+import star from "../../assets/star-list.png";
 
 const BespokeEnquiry = () => {
   return (
@@ -12,7 +13,7 @@ const BespokeEnquiry = () => {
       className={styles.bespokeSection}
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      <div className={styles.overlay}></div>
+      {/* <div className={styles.overlay}></div> */}
 
       <div className={styles.wrapper}>
         {/* LEFT SIDE */}
@@ -23,15 +24,31 @@ const BespokeEnquiry = () => {
 
           <p className={styles.desc}>
             Every Aurum journey begins with a conversation. Share your vision -
-            however specific or open-ended - and our team of expert travel
+            however specific or open - ended - and our team of expert travel
             architects will craft an itinerary that exceeds imagination.
           </p>
 
           <ul className={styles.list}>
-            <li>Personal travel architect assigned within 2 hours</li>
-            <li>Complimentary consultation with zero obligation</li>
-            <li>Access to properties not listed publicly</li>
-            <li>24/7 on-ground support throughout your journey</li>
+            <li>
+              {" "}
+              <img src={star} alt="star list" /> Personal travel architect
+              assigned within 2 hours
+            </li>
+            <li>
+              {" "}
+              <img src={star} alt="star list" /> Complimentary consultation with
+              zero obligation
+            </li>
+            <li>
+              {" "}
+              <img src={star} alt="star list" /> Access to properties not listed
+              publicly
+            </li>
+            <li>
+              {" "}
+              <img src={star} alt="star list" /> 24/7 on-ground support
+              throughout your journey
+            </li>
           </ul>
 
           <div className={styles.contactRow}>
@@ -44,7 +61,7 @@ const BespokeEnquiry = () => {
             </div>
 
             <div className={styles.contactItem}>
-              <img src={mailIcon} alt="email"  />
+              <img src={mailIcon} alt="email" />
               <div>
                 <p>EMAIL</p>
                 <span>concierge@aurumtravel.com</span>
@@ -78,7 +95,10 @@ const BespokeEnquiry = () => {
 
             <div className={styles.field}>
               <label>DREAM DESTINATION(S)</label>
-              <input type="text" placeholder="e.g. Japan & Africa, anywhere..." />
+              <input
+                type="text"
+                placeholder="e.g. Japan & Africa, anywhere..."
+              />
             </div>
 
             <div className={styles.row2}>

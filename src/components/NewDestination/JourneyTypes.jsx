@@ -103,13 +103,13 @@ const JourneyTypes = () => {
                   <p className={styles.region}>{item.region}</p>
                   <p className={styles.desc}>{item.description}</p>
 
-                  {item.miniTags && (
+                  {/* {item.miniTags && (
                     <div className={styles.miniTagBox}>
                       {item.miniTags.map((tag, i) => (
                         <span key={i}>{tag}</span>
                       ))}
                     </div>
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>

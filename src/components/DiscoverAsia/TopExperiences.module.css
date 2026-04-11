@@ -5,7 +5,7 @@
 .section {
   width: 100%;
   background: #f3f1ec;
-  padding: 42px 0 28px;
+  padding: 12px 0 28px;
   font-family: "Inter", sans-serif;
 }
 
@@ -27,7 +27,7 @@
 .subTitle {
   margin: 0 0 8px;
   color: #c2944a;
-  font-size: 17px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.95px;
   text-transform: uppercase;
@@ -41,7 +41,7 @@
   font-weight: 300;
   line-height: 1.02;
   letter-spacing: -0.55px;
-  font-family: "abel", sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
 }
 
 .description {
@@ -116,7 +116,7 @@
   left: 10px;
   z-index: 3;
   background: #ffffff;
-  color: #b78d47;
+  color: #C09551;
   font-size: 7.8px;
   font-weight: 500;
   letter-spacing: 0.55px;

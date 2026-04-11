@@ -1,25 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Abel&family=Inter:wght@400;500;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap"); */
 
 /* ==============================
    SECTION
 ============================== */
 .section {
-  --bg-page: #f8f7f3;
-  --card: #efede7;
-  --text: #22201d;
-  --text-muted: #6d6963;
-  --text-soft: #8a847c;
-  --gold: #c09551;
-  --divider: #d0b178;
+  --bg-page: #fffff;
+  --card: #F5F4EF;
+  --text: #2b2926;
+  --text-muted: #6b6864;
+  --text-soft: #8a8680;
+  --gold: #C09551;
+  --divider: #C09551;
 
   position: relative;
   width: 100%;
   box-sizing: border-box;
   padding: 36px 0 38px;
   background-color: var(--bg-page);
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
   overflow: hidden;
   isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  /* gap: 40px; */
 }
 
 /* Background pattern */
@@ -74,16 +77,18 @@
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 .heading {
   margin: 0 0 26px;
   color: var(--text);
-  font-family: "Abel", sans-serif;
-  font-size: 56px;
+  font-size: clamp(36px, 4.5vw, 54px);
   font-weight: 400;
-  line-height: 1.08;
-  letter-spacing: 0;
+  line-height: 1.12;
+  letter-spacing: 0.01em;
+  font-family: 'Abel';
+  /* font-size: 56px; */
 }
 
 /* ==============================
