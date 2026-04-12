@@ -204,7 +204,8 @@
   }
 
   .inputWrapper {
-    flex-direction: column;
+    flex-direction: row;
+    gap: 5px;
   }
 
   .input {
@@ -251,8 +252,8 @@
   }
 
   .inputWrapper {
-    flex-direction: column;
-    gap: 0;
+    flex-direction: row;
+    gap: 5;
   }
 
   .input {

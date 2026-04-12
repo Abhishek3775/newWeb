@@ -131,7 +131,7 @@ const Header = () => {
               <Link to="/japan" className="dropdown-link">
                 Japan
               </Link>
-              <Link to="/itinerary" className="dropdown-link">
+              <Link to="/itinerary/:id" className="dropdown-link">
                 Itinerary
               </Link>
             </div>

@@ -659,3 +659,168 @@
     display: none !important;
   }
 }
+/* ================= RESPONSIVE CTA BUTTONS ALL DEVICES ================= */
+
+/* Large Laptop */
+@media (max-width: 1200px) {
+  .buttonRow {
+    gap: 12px;
+  }
+
+  .ctaButton {
+    min-width: 220px;
+    height: 46px;
+    font-size: 13px;
+    padding: 0 18px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .buttonRow {
+    width: 100%;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .ctaButton {
+    width: calc(50% - 6px);
+    min-width: unset;
+    height: 44px;
+    font-size: 12px;
+    padding: 0 14px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .buttonRow {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+
+  .ctaButton {
+    width: 48%;
+    height: 42px;
+    min-width: unset;
+    font-size: 11px;
+    padding: 0 10px;
+    gap: 6px;
+  }
+
+  .ctaButton img,
+  .goldIcon,
+  .whiteIcon {
+    width: 13px;
+    height: 13px;
+  }
+
+  .arrow {
+    margin-left: 4px;
+    font-size: 12px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .buttonRow {
+    gap: 8px;
+  }
+
+  .ctaButton {
+    width: 100%;
+    height: 40px;
+    font-size: 10px;
+    padding: 0 8px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+  .buttonRow {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ctaButton {
+    width: 100%;
+    font-size: 10px;
+    height: 38px;
+  }
+}
+
+/* ================= LOGO KE ANDAR TABS GHUSNE KA FIX ================= */
+
+/* Desktop */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.logo {
+  flex: 0 0 auto;      /* logo shrink na ho */
+  min-width: max-content;
+}
+
+.main-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 22px;           /* pehle zyada tha to kam karo */
+  min-width: 0;
+}
+
+.header-actions {
+  flex: 0 0 auto;
+}
+
+/* Large Laptop */
+@media (max-width: 1400px) {
+  .main-nav {
+    gap: 18px;
+  }
+
+  .nav-link,
+  .dropdown-main-link {
+    font-size: 12px;
+  }
+}
+
+/* Laptop */
+@media (max-width: 1280px) {
+  .header-container {
+    padding: 0 20px;
+    gap: 18px;
+  }
+
+  .main-nav {
+    gap: 14px;
+  }
+
+  .logo-title {
+    font-size: 11px;
+  }
+
+  .logo-subtitle {
+    font-size: 9px;
+  }
+
+  .enquire-btn {
+    padding: 11px 16px;
+    font-size: 12px;
+  }
+}
+
+/* Tablet ke niche mobile menu already open hota hai */
+@media (max-width: 1024px) {
+  .main-nav {
+    gap: 0;
+  }
+}

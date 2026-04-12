@@ -33,7 +33,7 @@ const Footer = () => {
                 className="logo-icon"
                 alt="Elite Global Logo"
               />
-              <span className="logo-name">ELITE GLOBAL</span>
+              {/* <span className="logo-name">ELITE GLOBAL</span> */}
             </div>
 
             <p className="footer-description">

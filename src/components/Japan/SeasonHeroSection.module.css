@@ -3,8 +3,9 @@
 .heroSection {
   position: relative;
   width: 100%;
-  min-height: 60vh;
- padding: 190px 20px 80px;
+  height: 100vh;          /* full screen */
+  min-height: 100vh;     /* always 100vh */
+  padding: 120px 20px 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,187 +30,126 @@
   max-width: 1200px;
   text-align: center;
   color: #fff;
-}
-
-/* Breadcrumb */
-.breadcrumb {
-  position: absolute;
-  top: -110px;
-  left: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  /* font-family: "abel", sans-serif; */
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.breadcrumb a {
-  color: rgba(255, 255, 255, 0.85);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-.current {
-  color: rgba(255, 255, 255, 0.75);
+  padding: 0 10px;
 }
 
 /* Subtitle */
 .kicker {
-  margin: 0 0 18px;
+  margin: 0 0 16px;
   color: #c09551;
-  /* font-family: "Inter", sans-serif; */
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  text-align: center;
 }
 
 /* Heading */
 .title {
-  margin: 0 0 26px;
+  margin: 0 0 22px;
   font-family: "abel", serif;
-  font-size: 40px;
+  font-size: 52px;
   font-weight: 400;
   line-height: 1.05;
   color: #fff;
-
 }
 
 /* Description */
 .description {
-  max-width: 880px;
-  margin: 0 auto 22px;
-  /* font-family: "Inter", sans-serif; */
-  font-size: 12px;
+  max-width: 850px;
+  margin: 0 auto 20px;
+  font-size: 15px;
   line-height: 1.8;
-  font-weight:300;
-  /* color: rgba(255, 255, 255, 0.92); */
-  text-align: center;
+  font-weight: 300;
 }
 
 /* Quote */
 .quote {
   margin: 0;
-  /* font-family: "Cormorant Garamond", serif; */
   font-size: 24px;
   font-style: italic;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.75);
   line-height: 1.5;
-  text-align: center;
 }
 
-/* ---------- Large Desktop ---------- */
-@media (min-width: 1440px) {
-  .heroSection {
-    min-height: 560px;
-  }
-
-  .description {
-    font-size: 18px;
-  }
-}
-
-/* ---------- Laptop ---------- */
-@media (max-width: 1200px) {
-  .heroSection {
-    min-height: 460px;
-  }
-
-  .breadcrumb {
-    top: -95px;
-  }
-
-  .description {
-    max-width: 760px;
-  }
-}
-
-/* ---------- Tablet ---------- */
+/* ===================== Tablet ===================== */
 @media (max-width: 992px) {
   .heroSection {
-    min-height: 420px;
-    padding: 26px 24px 50px;
-  }
-
-  .breadcrumb {
-    position: static;
-    justify-content: center;
-    margin-bottom: 34px;
-  }
-
-  .kicker {
-    font-size: 13px;
-  }
-
-  .description {
-    font-size: 15px;
-    line-height: 1.75;
-  }
-
-  .quote {
-    font-size: 24px;
-  }
-}
-
-/* ---------- Mobile ---------- */
-@media (max-width: 768px) {
-  .heroSection {
-    min-height: 380px;
-    padding: 24px 18px 44px;
+    padding: 110px 24px 50px;
   }
 
   .title {
-    font-size: clamp(32px, 9vw, 46px);
-    margin-bottom: 20px;
+    font-size: 42px;
   }
 
   .description {
     font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 18px;
+    max-width: 700px;
   }
 
   .quote {
-    font-size: 20px;
-    line-height: 1.5;
-  }
-
-  .breadcrumb {
-    font-size: 11px;
-    gap: 4px;
-    margin-bottom: 24px;
-  }
-
-  .kicker {
-    margin-bottom: 14px;
-    font-size: 12px;
-    letter-spacing: 0.1em;
+    font-size: 21px;
   }
 }
 
-/* ---------- Small Mobile ---------- */
-@media (max-width: 480px) {
+/* ===================== Mobile ===================== */
+@media (max-width: 768px) {
   .heroSection {
-    min-height: 340px;
-    padding: 20px 14px 36px;
+    height: 100vh;
+    min-height: 100vh;
+    padding: 90px 18px 40px;
+    align-items: center;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .kicker {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    margin-bottom: 14px;
+  }
+
+  .title {
+    font-size: clamp(30px, 9vw, 42px);
+    line-height: 1.15;
+    margin-bottom: 16px;
   }
 
   .description {
     font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    max-width: 100%;
   }
 
   .quote {
-    font-size: 18px;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 0 6px;
+  }
+}
+
+/* ===================== Small Mobile ===================== */
+@media (max-width: 480px) {
+  .heroSection {
+    padding: 80px 14px 30px;
   }
 
-  .breadcrumb {
-    justify-content: flex-start;
-    text-align: left;
+  .kicker {
+    font-size: 15px;
   }
 
-  .content {
-    text-align: center;
+  .title {
+    font-size: clamp(26px, 9vw, 34px);
+  }
+
+  .description {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .quote {
+    font-size: 15px;
   }
 }

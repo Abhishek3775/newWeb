@@ -272,85 +272,110 @@
   }
 }
 
-/* =========================
-   MOBILE CONTACT FIX
-========================= */
+/* PHONE KE LIYE CONTACT PART ROW ME ALIGN */
 @media (max-width: 767px) {
   .contactBar {
     width: 100%;
-    max-width: 320px;
+    max-width: 100%;
     margin: 24px auto 0;
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;      /* row me */
     justify-content: center;
-    gap: 12px;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: nowrap;       /* ek line me */
   }
 
   .contactItem {
-    width: 100%;
+    width: auto;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    gap: 12px;
-    font-size: 13px;
-    text-align: left;
-    word-break: break-word;
-  }
-
-  .iconBox {
-    width: 38px;
-    height: 38px;
-    min-width: 38px;
-  }
-
-  .iconBox img {
-    width: 15px;
-    height: 15px;
+    justify-content: center;
+    gap: 8px;
+    font-size: 10px;
+    text-align: center;
+    white-space: nowrap;
   }
 
   .divider {
-    width: 100%;
-    height: 1px;
+    width: 1px;
+    height: 24px;
     background: rgba(255, 255, 255, 0.45);
-  }
-}
-
-@media (max-width: 480px) {
-  .contactBar {
-    max-width: 290px;
-    gap: 10px;
-  }
-
-  .contactItem {
-    font-size: 12px;
-    gap: 10px;
   }
 
   .iconBox {
-    width: 36px;
-    height: 36px;
-    min-width: 36px;
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
   }
 
   .iconBox img {
     width: 14px;
     height: 14px;
   }
+
+  .buttonRow { flex-direction: row;}
+
+  .ctaButton { width: 120px;}
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
   .contactBar {
-    max-width: 100%;
+    gap: 10px;
   }
 
   .contactItem {
-    font-size: 11px;
+    font-size: 9px;
+    gap: 6px;
   }
 
-  .iconBox {
-    width: 34px;
-    height: 34px;
-    min-width: 34px;
+  .divider {
+    height: 20px;
+  }
+}
+/* PHONE KE LIYE CTA BUTTONS BHI ROW ME */
+@media (max-width: 767px) {
+  .buttonRow {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;   /* side by side */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;     /* ek line me */
+  }
+
+  .ctaButton {
+    width: 48%;
+    min-width: unset;
+    height: 42px;
+    padding: 0 10px;
+    font-size: 11px;
+    gap: 6px;
+  }
+
+  .ctaButton img,
+  .goldIcon,
+  .whiteIcon {
+    width: 13px;
+    height: 13px;
+  }
+
+  .arrow {
+    margin-left: 4px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .buttonRow {
+    gap: 8px;
+  }
+
+  .ctaButton {
+    height: 40px;
+    font-size: 10px;
+    padding: 0 8px;
   }
 }

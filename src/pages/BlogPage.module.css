@@ -748,10 +748,10 @@
 
 /* Title */
 .saharaTitle {
-  /* font-family: "Playfair Display", Georgia, serif; */
+  font-family: "abel";
   font-size: clamp(1.5rem, 2.2vw + 0.75rem, 2.125rem);
-  font-weight: 500;
-  color: #333333;
+  font-weight: 600;
+  color: #131313;
   line-height: 1.28;
   margin: 0 0 22px;
   letter-spacing: 0.02em;
@@ -760,7 +760,7 @@
 /* Text */
 .saharaText {
   font-size: 15px;
-  color: #444444;
+  color: #131313;
   line-height: 1.75;
   margin: 0 0 18px;
 }
@@ -813,7 +813,7 @@
   font-size: clamp(1.15rem, 1.5vw + 0.65rem, 1.5rem);
   font-weight: 400;
   font-style: italic;
-  color: #3a3a3a;
+  color: #131313;
   line-height: 1.55;
   margin: 0 0 16px;
 }
@@ -912,10 +912,10 @@
 }
 
 .editorsTitle {
-  /* font-family: "Playfair Display", Georgia, serif; */
+  font-family: "abel";
   font-size: clamp(1.65rem, 2.2vw + 0.65rem, 2rem);
   font-weight: 400;
-  color: #2d2d2d;
+  color: #131313;
   margin: 0;
   letter-spacing: 0.02em;
 }

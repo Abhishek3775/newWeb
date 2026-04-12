@@ -27,7 +27,9 @@
 
 .description {
   /* color: #777; */
-  align-self: flex-end;
+  align-self: center;
+  text-align: end;
+  font-size: 14px;
   font-weight: 300;
   max-width: 500px;
 }
@@ -149,8 +151,14 @@
 
 @media (max-width: 600px) {
   .heading {
-    font-size: 24px;
+    font-size: 20px;
   }
+
+  .header { flex-direction: column; justify-content: center; align-items: center; gap: 5px;}
+
+  .subheading {font-size: 11px; text-align: center;}
+
+  .description { font-size: 12px; text-align: center;}
 
   .grid {
     grid-template-columns: repeat(2, 1fr);
